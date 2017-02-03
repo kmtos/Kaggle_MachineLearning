@@ -7,7 +7,7 @@ import pandas as pd
 import sys
 from collections import defaultdict
 sys.path.insert(0, '/home/kyletos/Kaggle/Tools/')
-from formatting import targetFeatureSplit
+from formatting import *
 
 pd.set_option('display.max_columns', 100000000000)
 pd.set_option('display.max_rows', 1000000000000)
@@ -17,6 +17,8 @@ df_ORI = pd.read_csv('train.csv',header=0)
 print (df_ORI.dtypes ) 
 df = df_ORI.fillna('-1')
 print("NaN = -1")
+
+
 df['Gender'] = df['Sex'].map( {'female': 0, 'male': 1} ).astype(int)
 del df['Sex']
 print("Gender map(Sex): 'male'= 1 and 'female'= 0")
@@ -26,14 +28,14 @@ del df['Embarked']
 print("Destinaion map(Embarked): 'NaN' = -1,'S'=0, 'C'=1 , 'Q'=2 ")
 
 df['CabLet'] = df['Cabin'].map( lambda x: x[0])
-df['CabLetter'] = df['CabLet'].map( { '-': -1, 'C': 1, 'E': 2, 'G': 3, 'D': 4, 'A': 5, 'B': 6, 'F': 7, 'T': 8}).astype(int)
+df['CabLetter'] = df['CabLet'].map( { '-': -1, 'C': 0, 'E': 1, 'G': 2, 'D': 3, 'A': 4, 'B': 5, 'F': 6, 'T': 7}).astype(int)
 del df['Cabin']
 del df['CabLet']
-print("CabLetter map(Cabin)= 'NaN'= -1, 'C'= 1, 'E'= 2, 'G'= 3, 'D'= 4, 'A'= 5, 'B'= 6, 'F'= 7, 'T'= 8")
+print("CabLetter map(Cabin)= 'NaN'= -1, 'C'= 0, 'E'= 1, 'G'= 2, 'D'= 3, 'A'= 4, 'B'= 5, 'F'= 6, 'T'= 7")
 
-df['TicketBeginLetter'] = df['Ticket'].map( lambda x: -1 if x == -1 else True if x[0].isdigit() else False)
+df['TicketBeginLetter'] = df['Ticket'].map( lambda x: -1 if x == -1 else 1 if x[0].isdigit() else 0)
 del df['Ticket']
-print("TicketBeginLetter map(Ticket): True if Letter is in name, False if no letter in name.")
+print("TicketBeginLetter map(Ticket): 1 if Letter is in name, 0 if no letter in name.")
 
 df['AgeGroup'] = df['Age'].map(lambda x: -1 if x == '-1' else 0 if x >= 0 and x < 10 else 1 if x >= 10 and x < 20 else 2 if x >= 20 and x < 30 else 3 if x >= 30 and x < 50 else 4 if x >= 50 else -1)
 del df['Age']
@@ -49,7 +51,7 @@ print("FamilySize = SibSp + Parch")
 ##################################
 # All numerical or boolean features
 print("\n\n#################### All Features ########################################\n" , df.columns.values )
-df_train_features = df[['Gender', 'AgeGroup', 'FamilySize', 'CabLetter', 'Destination', 'Pclass', 'Fare', 'TicketBeginLetter']].copy()
+df_train_features = df[['Survived', 'Gender', 'AgeGroup', 'FamilySize', 'CabLetter', 'Destination', 'Pclass', 'Fare', 'TicketBeginLetter']].copy()
 print("\n\n################################# Total interesting features ######################\n" , df_train_features.columns.values )
 
 #Portion of features that I use in final selection
@@ -63,6 +65,7 @@ labels_selection, features_selection = targetFeatureSplit(np_train_features_sele
 ################
 sys.path.insert(0, '/home/kyletos/Kaggle/Algorithms/')
 
+"""
 # SVM Classifiers
 from SVM_functions import *
 svmClassifier(features=features_selection, labels=labels_selection, kernel='linear', C_smoothness=1, kFolds=10, printScores=True, polyDegree=1, gamma='auto', classWeight='balanced')
@@ -71,6 +74,7 @@ svmClassifier(features=features_selection, labels=labels_selection, kernel=custo
 
 paramDict= {'kernel':('sigmoid', 'rbf'), 'C':[1, 10, 30, 70, 100], 'gamma':[.01, .05, .1, 1, 10, 30, 70, 100], 'class_weight':[None, 'balanced', {0:.35, 1:.65}]}
 best_params = svmClassifierGridSearch( features=features_selection, labels=labels_selection, parameters=paramDict, cross_validation=10)
+"""
 
 """
 ##############################
@@ -86,39 +90,25 @@ for ir in df_train_features.itertuples():
   df_train_features.iloc[int(ir[0]), df_train_features.columns.get_loc('nanSum')] = nanSum
 df_train_features = df_train_features[df_train_features['nanSum'] < len(df_train_features.columns) / 2]
 print("AFTER REMOVAL: len(df_train_features)=", len(df_train_features) )
-
-
+"""
 ################
 # Visualization
 ################
-survived = df["Survived"].values
-labels = []
-labels.append(['Age', 'Gender'])
-labels.append(['FamilySize', 'Gender'])
-labels.append(['CabLetter', 'Gender'])
-labels.append(['TicketBeginLetter', 'Gender'])
-labels.append(['Fare', 'Gender'])
-labels.append(['Pclass', 'Gender'])
-labels.append(['Destination', 'Gender'])
-labels.append(['FamilySize', 'Age'])
-labels.append(['Fare', 'Pclass'])
+pairs = []
+pairs.append(['AgeGroup', 'Gender'])
+pairs.append(['FamilySize', 'Gender'])
+"""
+pairs.append(['CabLetter', 'Gender'])
+pairs.append(['TicketBeginLetter', 'Gender'])
+pairs.append(['Fare', 'Gender'])
+pairs.append(['Pclass', 'Gender'])
+pairs.append(['Destination', 'Gender'])
+pairs.append(['FamilySize', 'AgeGroup'])
+pairs.append(['Fare', 'Pclass'])
+"""
+plotGridOf2DsWithColor(df_train_features, pairs, ["blue", "red"], [ "o", "s"], "SVM_FeatureComb.png", "png" , 0.01, 110)
 
-
-colors = ["b", "r"]
-np_labels = np.array(labels)
-for i in range(9):
-  print("Plot", i )
-  plt.subplot(3,3,i+1)
-  plt.xlabel(np_labels[i][0])
-  plt.ylabel(np_labels[i][1])
-  np_train_features = df_train_features[[ np_labels[i][0], np_labels[i][1] ]].values
-  for ii in range(len(survived )):
-    plt.scatter(np_train_features[ii][0], np_train_features[ii][1], color = colors[survived[ii]] )
-  plt.grid(True)
-plt.savefig("SVM_FeatureComb.png", format='png')
-plt.show()
-
-
+"""
 #################
 # Percentages
 #################
