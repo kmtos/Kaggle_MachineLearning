@@ -25,7 +25,7 @@ features should be a dataframe, with the first column being the predicted label 
 pairs should be a list of arrays with the two values to be plotted together.
 colors should have as many values as unique label values.
 """
-def plotGridOf2DsWithColor(features, pairs, colors, markerShapes, plotName, fileTypeSuffix, alphaValue, size):
+def plotGridOf2DsWithColor(features, pairs, colors, markerShapes, plotName, fileTypeSuffix, alphaValue, size, offSetMulti):
   if len(features.ix[:,0].unique() ) != len(colors):
     print ("Numer of colors=", len(colors), "\tNumber of unique features=", len(features.ix[:,0].unique() ) )
     print ("\nNumber of colors does not correspond to number of unique label values. Please fix!")
@@ -51,12 +51,39 @@ def plotGridOf2DsWithColor(features, pairs, colors, markerShapes, plotName, file
       xOffSet = .05 * math.cos(2*math.pi/ (1.0 * (1+ite) * len(labelsUnique) ) ) / xUnique
       yOffSet = .05 * math.sin(2*math.pi/ (1.0 * (1+ite) * len(labelsUnique) ) ) / yUnique
       legendLabel = features.columns[0] + '=' + str(labelsUnique[ite] )
-      plt.scatter(dfList[ite].ix[:,0] + xOffSet, dfList[ite].ix[:,1] + yOffSet, color = colors[ite], marker=markerShapes[ite], alpha=alphaValue, s=110, label=legendLabel)
+      plt.scatter(dfList[ite].ix[:,0] + xOffSet*offSetMulti, dfList[ite].ix[:,1] + yOffSet*offSetMulti, color = colors[ite], marker=markerShapes[ite], alpha=alphaValue, s=110, label=legendLabel)
       # The rest of the for loop is for mamking the legend. It's complicated because it's difficult to get the alpha of a scatterplot different on the legend. Had to make lines to do it.
       globals()['line%s' % ite] = pylab.Line2D( range(1), range(1), color='white', marker=markerShapes[ite], markersize=10, markerfacecolor=colors[ite], alpha=1) 
       lineTuple.append(globals()['line%s' % ite] )
       lineNameTuple.append(legendLabel)
     plt.grid(True)
-  leg = plt.legend(tuple(lineTuple), tuple(lineNameTuple), bbox_to_anchor=(1.0, -1), loc=4, fontsize=8)
+  leg = plt.legend(tuple(lineTuple), tuple(lineNameTuple), bbox_to_anchor=(0, 0), loc=0, fontsize=8)
   plt.savefig(plotName, format=fileTypeSuffix)
   plt.show()
+
+#####################################################################
+# For Writing out true and false positives and negatives or a sample
+#####################################################################
+def printTrueFalsePosNeg(labels_test=None, pred=None):
+  if labels_test is None or pred is None:
+    print ("You gave me nothing to compare and print, numbnut.")
+    return
+  if len(labels_test) != len(pred):
+    print ("The lengths of the test and predicted aren't the same. Soemthing is wrong.")
+  sumTruePositives = 0
+  sumTrueNegatives = 0
+  sumFalseNegative = 0
+  sumFalsePositve = 0
+  for i in range(len(pred)):
+    iTrue = labels_test[i]
+    iPred = pred[i]
+    if iPred == iTrue and iPred == 1:
+      sumTruePositives += 1
+    if iPred == iTrue and iPred == 0:
+      sumTrueNegatives += 1
+    if iPred != iTrue and iTrue == 1:
+      sumFalseNegative += 1
+    if iPred != iTrue and iPred == 1:
+      sumFalsePositve += 1
+  print ("sumTruePositives= " , sumTruePositives , "\tsumTrueNegatives= " , sumTrueNegatives, "\tsumFalseNegative= " , sumFalseNegative , "\tsumFalsePositve= " , sumFalsePositve)
+

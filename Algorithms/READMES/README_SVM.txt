@@ -68,7 +68,8 @@
     1a3) gamma = auto: How much influence   a single training example has. Large gamma means other points have to be closer
     1a4) class_weight = None: For if one class is more abundant. Can use 'balanced' or attribute fraction to each class( {0:.1, 1:.9} ). NOTE: You want the fractions to add up to 1.
   1b) To search the parameters space use "from sklearn.model_selection import GridSearchCV" to optimize via "score"
-
+    1b1) parameters= dict of parameters to search
+    1b2) cv=None: 1)None: default 3-fold cross-validation, 2) int= # of folds.
 
 
 

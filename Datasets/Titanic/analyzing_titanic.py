@@ -2,7 +2,6 @@ import string
 import numpy as np
 import csv
 import matplotlib.pyplot as plt
-import sys
 import pandas as pd
 import sys
 from collections import defaultdict
@@ -65,17 +64,42 @@ labels_selection, features_selection = targetFeatureSplit(np_train_features_sele
 ################
 sys.path.insert(0, '/home/kyletos/Kaggle/Algorithms/')
 
-"""
-# SVM Classifiers
-from SVM_functions import *
-svmClassifier(features=features_selection, labels=labels_selection, kernel='linear', C_smoothness=1, kFolds=10, printScores=True, polyDegree=1, gamma='auto', classWeight='balanced')
+# k-Nearest Neighbors
+from KNearestNeighbors import *
+kNNClassifier( features=features_selection, labels=labels_selection, kFolds=10, printScores=False, kValue=5, weights='distance', metric='minkowski', power=2)
+kNNClassifier( features=features_selection, labels=labels_selection, kFolds=10, printScores=False, kValue=20, weights=distanceWeight, metric='chebyshev', power=5)
 
+# Decision Trees
+from Trees import *
+treeClassifier(features=features_selection, labels=labels_selection, maxDepth=5, criterion='entropy', minSamplesSplit=4, minSamplesLeaf=2, minWeightFractionLeaf=0., classWeight=None, 
+	       kFolds=10, printScores=True)
+
+# SVM Classifiers
+from SVM import *
+svmClassifier(features=features_selection, labels=labels_selection, kernel='linear', C_smoothness=1, kFolds=10, printScores=True, polyDegree=1, gamma='auto', classWeight='balanced')
 svmClassifier(features=features_selection, labels=labels_selection, kernel=customKernel_circle, C_smoothness=1, kFolds=10, printScores=True, polyDegree=3, gamma='auto', classWeight='balanced')
 
-paramDict= {'kernel':('sigmoid', 'rbf'), 'C':[1, 10, 30, 70, 100], 'gamma':[.01, .05, .1, 1, 10, 30, 70, 100], 'class_weight':[None, 'balanced', {0:.35, 1:.65}]}
-best_params = svmClassifierGridSearch( features=features_selection, labels=labels_selection, parameters=paramDict, cross_validation=10)
-"""
+#Naive Bayes
+from NaiveBayes import *
+NBGaussianClassifier(features=features_selection, labels=labels_selection, kFolds=10, printScores=True)
 
+#Grid Search
+from GridSearch import *
+paramDictTree = {'criterion':('entropy', 'gini'), 'max_depth':[2,5,10,25], 'min_samples_split':[8,5,2], 'min_samples_leaf':[3,2,1], 'min_weight_fraction_leaf': [0,.25,.5],
+             'class_weight':[None, 'balanced', {0:.35, 1:.65}] }
+tree = DecisionTreeClassifier()
+print ('\n##########################################\n GridSearchCV with Decision Tree:')
+treeBestParams = gridSearch(tree, features=features_selection, labels=labels_selection, parameters=paramDictTree, cross_validation=5)
+
+paramDictSVM = {'kernel':('sigmoid', 'rbf'), 'C':[1, 10, 30, 70], 'gamma':[.05, .1, 1, 10, 30], 'class_weight':[None, 'balanced', {0:.35, 1:.65}]}
+svc = SVC()
+print ('\n##########################################\n GridSearchCV with SVM:')
+SVMBestParams = gridSearch(svc, features=features_selection, labels=labels_selection, parameters=paramDictSVM, cross_validation=10)
+
+paramDictKNN = {'n_neighbors': [5,10, 25, 50, 100], 'weights':['uniform','distance', distanceWeight], 'metric':['braycurtis', 'canberra', 'hamming'], 'p':[1,2,3,4]}
+knn = KNeighborsClassifier()
+print ('\n##########################################\n GridSearchCV with k-Nearest Neighbors:')
+kNNBestParams = gridSearch(knn, features=features_selection, labels=labels_selection, parameters=paramDictKNN, cross_validation=10)
 """
 ##############################
 # Removing rows with all NaN
@@ -97,7 +121,6 @@ print("AFTER REMOVAL: len(df_train_features)=", len(df_train_features) )
 pairs = []
 pairs.append(['AgeGroup', 'Gender'])
 pairs.append(['FamilySize', 'Gender'])
-"""
 pairs.append(['CabLetter', 'Gender'])
 pairs.append(['TicketBeginLetter', 'Gender'])
 pairs.append(['Fare', 'Gender'])
@@ -105,9 +128,9 @@ pairs.append(['Pclass', 'Gender'])
 pairs.append(['Destination', 'Gender'])
 pairs.append(['FamilySize', 'AgeGroup'])
 pairs.append(['Fare', 'Pclass'])
-"""
-plotGridOf2DsWithColor(df_train_features, pairs, ["blue", "red"], [ "o", "s"], "SVM_FeatureComb.png", "png" , 0.01, 110)
+plotGridOf2DsWithColor(df_train_features, pairs, ["blue", "red"], [ "o", "s"], "SVM_FeatureComb.png", "png" , 0.01, 110, 1)
 
+# Testing family member 
 """
 #################
 # Percentages
