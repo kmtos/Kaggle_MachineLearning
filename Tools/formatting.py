@@ -87,3 +87,95 @@ def printTrueFalsePosNeg(labels_test=None, pred=None):
       sumFalsePositve += 1
   print ("sumTruePositives= " , sumTruePositives , "\tsumTrueNegatives= " , sumTrueNegatives, "\tsumFalseNegative= " , sumFalseNegative , "\tsumFalsePositve= " , sumFalsePositve)
 
+
+#########################################################################################
+# Calculating Gini Imipurity decrease for 2 classes that are 0 and 1
+# Returns teh giniImpDecreaseas well as a List of the Imp for values of otherColumnName
+#########################################################################################
+def calcGiniImp(df, labelColumnName, otherColumnName):
+  giniImpList = []
+  giniImpListTup = []
+  sumList = []
+  countList = []
+  giiniImp = 1 
+  totalCount = 0
+  totalSum = 0
+  weightList = []
+  
+  labels = df[labelColumnName].unique()
+  if len(labels) != 2:
+    print ("This only works for two class labels!!!")
+    return -1
+  df_agg = df[[otherColumnName, labelColumnName]].groupby([otherColumnName], as_index=False).aggregate(['sum', 'mean', 'count']) 
+  countLabel = df_agg[labelColumnName, 'count']
+  sumLabel = df_agg[labelColumnName, 'sum']
+  for i in df[otherColumnName].unique():
+    countList.append((i, countLabel[i]) )
+    sumList.append(sumLabel[i] )
+  for i in range(len(countList) ):
+    totalCount += countList[i][1]
+    totalSum += sumList[i]
+  giniImpDecrease = (totalSum/totalCount * (1 - totalSum/totalCount) * 2)
+
+  for i in range(len(countList) ):
+    if countList[i][1] == 0:
+      giniImpList.append(0)
+      weightList.append(0)
+    else:
+      giniImpList.append( sumList[i]/countList[i][1] * (1 - sumList[i]/countList[i][1]) *2 )
+      giniImpListTup.append( (countList[i][0], sumList[i]/countList[i][1] * (1 - sumList[i]/countList[i][1]) *2) )
+      weightList.append(countList[i][1] / totalCount )
+  for i in  range(len(giniImpList) ):
+    giniImpDecrease -= giniImpList[i] * weightList[i]
+  print ("For", otherColumnName, " the Decrease is", giniImpDecrease, "and the full output is", giniImpListTup)
+  return giniImpDecrease, giniImpListTup
+
+
+###################################
+#    Visualization of Decison Tree
+###################################
+def visualizeDecisionTree(df):
+  from matplotlib import cm as cm
+  import matplotlib.pyplot as plt
+  from collections import defaultdict
+  
+  fig = plt.figure()
+  ax1 = fig.add_subplot(111)
+  cmap = cm.get_cmap('jet', 300) # viridis
+  cax = ax1.imshow(df.corr(), interpolation="nearest", cmap=cmap)
+  ax1.grid(True, color='grey')
+  plt.title('Titanic Correlation of Features', y=1.1, size=15)
+  labels = [column for column in df]
+  ax1.set_xticks(np.arange(len(labels))-.5)
+  ax1.set_xticklabels(labels,fontsize=6, rotation=45, ha='right')
+  ax1.set_yticks(np.arange(len(labels))-.5)
+  ax1.set_yticklabels(labels,fontsize=6, rotation=45, va='top')
+  ax1.set_xlim(len(df.columns)-.5, -.5)
+  ax1.set_ylim(len(df.columns)-.5, -.5)
+  # Add colorbar, make sure to specify tick locations to match desired ticklabels
+  fig.colorbar(cax, ticks=[1, .75, .5, .25, 0, -.25, -.5, -.75, -1])
+  ite = 0
+  for i in df.corr():
+    jte = 0
+    for j in df.corr():
+      ax1.annotate(round(df.corr()[i][j], 2), (ite+.35,jte) )
+      jte += 1
+    ite += 1
+  plt.show()
+
+def findMaxCorr(df):
+  coef = df.corr()
+  maxRel = -1
+  maxLabel = ""
+  labels = []
+  for col in coef:
+    labels.append(col)
+  ite = 0
+  for row in coef['Survived']:
+    if abs(row) > maxRel and abs(row) != 1.0:
+      maxRel = abs(row)
+      maxLabel = labels[ite]
+    ite += 1
+  print ("maxRel=", maxRel, "\tmaxLabel=", maxLabel)
+  return maxLabel
+
