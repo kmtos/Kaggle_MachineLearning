@@ -1,0 +1,67 @@
+maxRel= 0.549199184903 	maxLabel= YesMr
+YesMr= 1
+maxRel= 0.269178137879 	maxLabel= HasCabin
+  HasCabin= 1
+  maxRel= 0.125038068924 	maxLabel= AgeGroup
+    AgeGroup= 1
+    maxRel= 0.333333333333 	maxLabel= EmbarkIsC
+    AgeGroup= 2
+    maxRel= 0.229415733871 	maxLabel= Pclass
+    AgeGroup= 3
+    maxRel= 0.258546504359 	maxLabel= Fare
+    AgeGroup= 4
+    maxRel= 0.174379612221 	maxLabel= Fare
+  HasCabin= -1
+  maxRel= 0.0761851718204 	maxLabel= FamilySize
+    FamilySize= 1
+    maxRel= 0.163128412514 	maxLabel= Fare
+    FamilySize= 2
+    maxRel= 0.170139261845 	maxLabel= EmbarkIsS
+    FamilySize= 3
+    maxRel= 0.478091443734 	maxLabel= EmbarkIsS
+    FamilySize= 4
+    maxRel= -1 	maxLabel= 
+    FamilySize= 5
+    maxRel= -1 	maxLabel= 
+    FamilySize= 6
+    maxRel= -1 	maxLabel= 
+    FamilySize= 7
+    maxRel= -1 	maxLabel= 
+    FamilySize= 8
+    maxRel= -1 	maxLabel= 
+    FamilySize= 11
+    maxRel= -1 	maxLabel= 
+YesMr= -1
+maxRel= 0.410660035474 	maxLabel= Pclass
+  Pclass= 1
+  maxRel= 0.518839844968 	maxLabel= Gender
+    Pclass= 1
+    maxRel= 0.473671397134 	maxLabel= Fare
+    Pclass= -1
+    maxRel= 0.163847634335 	maxLabel= FamilySize
+  Pclass= 2
+  maxRel= 0.623828952179 	maxLabel= YesRev
+    YesRev= 1
+    maxRel= -1 	maxLabel= 
+    YesRev= -1
+    maxRel= 0.482030021032 	maxLabel= YesFancy
+  Pclass= 3
+  maxRel= 0.383641752881 	maxLabel= FamilySize
+    FamilySize= 1
+    maxRel= 0.308516026586 	maxLabel= EmbarkIsS
+    FamilySize= 2
+    maxRel= 0.359373493581 	maxLabel= AgeGroup
+    FamilySize= 3
+    maxRel= 0.389249472081 	maxLabel= Gender
+    FamilySize= 4
+    maxRel= 0.645497224368 	maxLabel= TicketBeginLetter
+    FamilySize= 5
+    maxRel= -1 	maxLabel= 
+    FamilySize= 6
+    maxRel= -1 	maxLabel= 
+    FamilySize= 7
+    maxRel= 0.418330013267 	maxLabel= Fare
+    FamilySize= 8
+    maxRel= -1 	maxLabel= 
+    FamilySize= 11
+    maxRel= -1 	maxLabel= 

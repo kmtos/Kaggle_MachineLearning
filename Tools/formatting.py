@@ -51,9 +51,9 @@ def plotGridOf2DsWithColor(features, pairs, colors, markerShapes, plotName, file
       xOffSet = .05 * math.cos(2*math.pi/ (1.0 * (1+ite) * len(labelsUnique) ) ) / xUnique
       yOffSet = .05 * math.sin(2*math.pi/ (1.0 * (1+ite) * len(labelsUnique) ) ) / yUnique
       legendLabel = features.columns[0] + '=' + str(labelsUnique[ite] )
-      plt.scatter(dfList[ite].ix[:,0] + xOffSet*offSetMulti, dfList[ite].ix[:,1] + yOffSet*offSetMulti, color = colors[ite], marker=markerShapes[ite], alpha=alphaValue, s=110, label=legendLabel)
+      plt.scatter(dfList[ite].ix[:,0] + xOffSet*offSetMulti, dfList[ite].ix[:,1] + yOffSet*offSetMulti, color = colors[ite], marker=markerShapes[ite], alpha=alphaValue, s=size, label=legendLabel)#s=110
       # The rest of the for loop is for mamking the legend. It's complicated because it's difficult to get the alpha of a scatterplot different on the legend. Had to make lines to do it.
-      globals()['line%s' % ite] = pylab.Line2D( range(1), range(1), color='white', marker=markerShapes[ite], markersize=10, markerfacecolor=colors[ite], alpha=1) 
+      globals()['line%s' % ite] = pylab.Line2D( range(1), range(1), color='white', marker=markerShapes[ite], markersize=4, markerfacecolor=colors[ite], alpha=1) 
       lineTuple.append(globals()['line%s' % ite] )
       lineNameTuple.append(legendLabel)
     plt.grid(True)
@@ -134,7 +134,7 @@ def calcGiniImp(df, labelColumnName, otherColumnName):
 ###################################
 #    Visualization of Decison Tree
 ###################################
-def visualizeDecisionTree(df):
+def visualizeDecisionTree(df, titleName):
   from matplotlib import cm as cm
   import matplotlib.pyplot as plt
   from collections import defaultdict
@@ -144,7 +144,7 @@ def visualizeDecisionTree(df):
   cmap = cm.get_cmap('jet', 300) # viridis
   cax = ax1.imshow(df.corr(), interpolation="nearest", cmap=cmap)
   ax1.grid(True, color='grey')
-  plt.title('Titanic Correlation of Features', y=1.1, size=15)
+  plt.title(titleName, y=1.1, size=15)
   labels = [column for column in df]
   ax1.set_xticks(np.arange(len(labels))-.5)
   ax1.set_xticklabels(labels,fontsize=6, rotation=45, ha='right')
@@ -163,7 +163,7 @@ def visualizeDecisionTree(df):
     ite += 1
   plt.show()
 
-def findMaxCorr(df):
+def findMaxCorr(df, predictedValue):
   coef = df.corr()
   maxRel = -1
   maxLabel = ""
@@ -171,7 +171,7 @@ def findMaxCorr(df):
   for col in coef:
     labels.append(col)
   ite = 0
-  for row in coef['Survived']:
+  for row in coef[predictedValue]:
     if abs(row) > maxRel and abs(row) != 1.0:
       maxRel = abs(row)
       maxLabel = labels[ite]
