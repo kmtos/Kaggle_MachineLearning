@@ -24,5 +24,3 @@ def gridSearch(estimator, features=None, labels=None, parameters=None, cross_val
     print('BestScore=', clf.best_score_, '\nbest Parameters=', clf.best_params_)
     return clf.best_params_
 
-
-

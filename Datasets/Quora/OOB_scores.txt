@@ -1,0 +1,60 @@
+clf1 = RandomForestClassifier(criterion='entropy', max_depth=7, min_samples_leaf=1, min_samples_split=5, class_weight=None, n_estimators=70, oob_score=True, bootstrap=True, random_state=1 )
+clf2 = RandomForestClassifier(criterion='entropy', max_depth=8, min_samples_leaf=1, min_samples_split=5, class_weight=None, n_estimators=70, oob_score=True, bootstrap=True, random_state=1 )
+clf3 = RandomForestClassifier(criterion='entropy', max_depth=9, min_samples_leaf=1, min_samples_split=5, class_weight=None, n_estimators=70, oob_score=True, bootstrap=True, random_state=1 )
+clf4 = RandomForestClassifier(criterion='gini', max_depth=10, min_samples_leaf=1, min_samples_split=5, class_weight=None, n_estimators=70, oob_score=True, bootstrap=True, random_state=1 )
+clf5 = RandomForestClassifier(criterion='gini', max_depth=11, min_samples_leaf=1, min_samples_split=5, class_weight=None, n_estimators=70, oob_score=True, bootstrap=True, random_state=1 )
+clf6 = RandomForestClassifier(criterion='gini', max_depth=12, min_samples_leaf=1, min_samples_split=5, class_weight=None, n_estimators=70, oob_score=True, bootstrap=True, random_state=1 )
+clf7 = RandomForestClassifier(criterion='gini', max_depth=13, min_samples_leaf=1, min_samples_split=5, class_weight=None, n_estimators=70, oob_score=True, bootstrap=True, random_state=1 )
+clf8 = RandomForestClassifier(criterion='gini', max_depth=14, min_samples_leaf=1, min_samples_split=5, class_weight=None, n_estimators=70, oob_score=True, bootstrap=True, random_state=1 )
+clf9 = RandomForestClassifier(criterion='gini', max_depth=15, min_samples_leaf=1, min_samples_split=5, class_weight=None, n_estimators=70, oob_score=True, bootstrap=True, random_state=1 )
+clf1= 0.712524610925 	oob_score= 0.712407285871
+clf2= 0.716027029968 	oob_score= 0.717627969408
+clf3= 0.718797304918 	oob_score= 0.720157510957
+clf4= 0.724654457669 	oob_score= 0.725694799434
+clf5= 0.728107407517 	oob_score= 0.728854252895
+clf6= 0.730501716581 	oob_score= 0.731146340739
+clf7= 0.733123583944 	oob_score= 0.7333229997
+clf8= 0.735082564087 	oob_score= 0.735242417147
+clf9= 0.73704154423 	oob_score= 0.73701012806
+
+
+clf1 = RandomForestClassifier(criterion='entropy', max_depth=24, min_samples_leaf=1, min_samples_split=5, class_weight=None, n_estimators=70, oob_score=True, bootstrap=True, random_state=1 )
+clf2 = RandomForestClassifier(criterion='entropy', max_depth=23, min_samples_leaf=1, min_samples_split=5, class_weight=None, n_estimators=70, oob_score=True, bootstrap=True, random_state=1 )
+clf3 = RandomForestClassifier(criterion='entropy', max_depth=22, min_samples_leaf=1, min_samples_split=5, class_weight=None, n_estimators=70, oob_score=True, bootstrap=True, random_state=1 )
+clf4 = RandomForestClassifier(criterion='gini', max_depth=21, min_samples_leaf=1, min_samples_split=5, class_weight=None, n_estimators=70, oob_score=True, bootstrap=True, random_state=1 )
+clf5 = RandomForestClassifier(criterion='gini', max_depth=20, min_samples_leaf=1, min_samples_split=5, class_weight=None, n_estimators=70, oob_score=True, bootstrap=True, random_state=1 )
+clf6 = RandomForestClassifier(criterion='gini', max_depth=19, min_samples_leaf=1, min_samples_split=5, class_weight=None, n_estimators=70, oob_score=True, bootstrap=True, random_state=1 )
+clf7 = RandomForestClassifier(criterion='gini', max_depth=18, min_samples_leaf=1, min_samples_split=5, class_weight=None, n_estimators=70, oob_score=True, bootstrap=True, random_state=1 )
+clf8 = RandomForestClassifier(criterion='gini', max_depth=17, min_samples_leaf=1, min_samples_split=5, class_weight=None, n_estimators=70, oob_score=True, bootstrap=True, random_state=1 )
+clf9 = RandomForestClassifier(criterion='gini', max_depth=16, min_samples_leaf=1, min_samples_split=5, class_weight=None, n_estimators=70, oob_score=True, bootstrap=True, random_state=1 )
+clf1= 0.744738951055 	oob_score= 0.741676752953
+clf2= 0.744105745352 	oob_score= 0.741877929008
+clf3= 0.744986297033 	oob_score= 0.741389829726
+clf4= 0.744056276157 	oob_score= 0.741389829726
+clf5= 0.742572200291 	oob_score= 0.740374055544
+clf6= 0.741731223967 	oob_score= 0.740463100684
+clf7= 0.741681754771 	oob_score= 0.739958511561
+clf8= 0.739613942398 	oob_score= 0.73885369224
+clf9= 0.737635174577 	oob_score= 0.737758766824
+
+
+clf1 = RandomForestClassifier(criterion='entropy', max_depth=24, min_samples_leaf=1, min_samples_split=15, class_weight=None, n_estimators=70, oob_score=True, bootstrap=True, random_state=1 )
+clf2 = RandomForestClassifier(criterion='entropy', max_depth=23, min_samples_leaf=1, min_samples_split=15, class_weight=None, n_estimators=70, oob_score=True, bootstrap=True, random_state=1 )
+clf3 = RandomForestClassifier(criterion='entropy', max_depth=22, min_samples_leaf=1, min_samples_split=15, class_weight=None, n_estimators=70, oob_score=True, bootstrap=True, random_state=1 )
+clf4 = RandomForestClassifier(criterion='entropy', max_depth=21, min_samples_leaf=1, min_samples_split=15, class_weight=None, n_estimators=70, oob_score=True, bootstrap=True, random_state=1 )
+clf5 = RandomForestClassifier(criterion='entropy', max_depth=20, min_samples_leaf=1, min_samples_split=15, class_weight=None, n_estimators=70, oob_score=True, bootstrap=True, random_state=1 )
+clf6 = RandomForestClassifier(criterion='entropy', max_depth=19, min_samples_leaf=1, min_samples_split=15, class_weight=None, n_estimators=70, oob_score=True, bootstrap=True, random_state=1 )
+clf7 = RandomForestClassifier(criterion='entropy', max_depth=18, min_samples_leaf=1, min_samples_split=15, class_weight=None, n_estimators=70, oob_score=True, bootstrap=True, random_state=1 )
+clf8 = RandomForestClassifier(criterion='entropy', max_depth=17, min_samples_leaf=1, min_samples_split=15, class_weight=None, n_estimators=70, oob_score=True, bootstrap=True, random_state=1 )
+clf9 = RandomForestClassifier(criterion='entropy', max_depth=16, min_samples_leaf=1, min_samples_split=15, class_weight=None, n_estimators=70, oob_score=True, bootstrap=True, random_state=1 )
+clf1= 0.745154492298 	oob_score= 0.742867319444
+clf2= 0.744155214548 	oob_score= 0.742481457174
+clf3= 0.743056998407 	oob_score= 0.741106204467
+clf4= 0.741859843875 	oob_score= 0.74124142116
+clf5= 0.741790587001 	oob_score= 0.740324586023
+clf6= 0.740217466584 	oob_score= 0.740252030724
+clf7= 0.739406171777 	oob_score= 0.739031782519
+clf8= 0.738436575544 	oob_score= 0.737613656226
+clf9= 0.736912924322 	oob_score= 0.737000234156
+
+
