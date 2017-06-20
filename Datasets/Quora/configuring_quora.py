@@ -88,10 +88,15 @@ try:
   print ("Finished nChars_match_")
 """  
   df_test['sequential_match_stem'] = df_test.apply(lambda x: longestSeriesOfWordMatches(x['q1_stem'], x['q2_stem']), axis=1 )
+  print ("1")
   df_test['sequential_match_stem_noStop'] = df_test.apply(lambda x: longestSeriesOfWordMatches(x['q1_stem_noStop'], x['q2_stem_noStop']), axis=1 )
+  print ("2")
   df_test['sequential_match_stem_double'] = df_test.apply(lambda x: longestSeriesOfWordMatches(x['q1_stem_double'], x['q2_stem_double']), axis=1 )
+  print ("3")
   df_test['sequential_match_stem_double_noStop'] = df_test.apply(lambda x: longestSeriesOfWordMatches(x['q1_stem_double_noStop'], x['q2_stem_double_noStop']), axis=1 )
+  print ("4")
   df_test['sequential_match_stem_triple'] = df_test.apply(lambda x: longestSeriesOfWordMatches(x['q1_stem_triple'], x['q2_stem_triple']), axis=1 )
+  print ("5")
   df_test['sequential_match_stem_triple_noStop'] = df_test.apply(lambda x: longestSeriesOfWordMatches(x['q1_stem_triple_noStop'], x['q2_stem_triple_noStop']), axis=1 )
   print ("Finisehd sequential_match_")
 
