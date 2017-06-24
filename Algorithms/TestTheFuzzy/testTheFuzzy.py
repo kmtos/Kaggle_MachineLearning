@@ -17,6 +17,11 @@ import re
 pd.set_option('display.max_columns', 100000000000)
 pd.set_option('display.max_rows', 1000000000000)
 
+#Setting the stdout file
+orig_stdout = sys.stdout
+stdOutFile = open('Answers/FuzzyTree_stdOut.txt', 'w')
+sys.stdout = stdOutFile
+
 #Readinig in the csv file
 df_ORI = pd.read_csv('train.csv',header=0)
 df_test = pd.read_csv('test.csv', header=0)
@@ -179,8 +184,19 @@ features_test = df_test_noStrings.values
 # Testing my Fuzzy Trees
 #########################
 from FuzzyTrees import *
-MakeTree(df=df_noStrings, className='Survived', nGiniSplits=10, alpha=.1, giniEndVal=.001, maxDepth=4, idColumn='PassengerId', outputDir='/home/kyletos/Kaggle/Algorithms/TestTheFuzzy/Answers/')
+MakeTree(df=df_noStrings, className='Survived', nGiniSplits=10, alpha=.1, giniEndVal=.01, maxDepth=4, idColumn='PassengerId', 
+         nodeDFIDsFileName='/home/kyletos/Kaggle/Algorithms/TestTheFuzzy/Answers/NodeDFIDs_alpha0p1_nGiniSplits10_giniEndVal0p01_maxDepth4',
+         nodeValuesFileName='/home/kyletos/Kaggle/Algorithms/TestTheFuzzy/Answers/NodeValues_alpha0p1_nGiniSplits10_giniEndVal0p01_maxDepth4',
+         nodeDecisionsFileName='/home/kyletos/Kaggle/Algorithms/TestTheFuzzy/Answers/NodeDecisions_alpha0p1_nGiniSplits10_giniEndVal0p01_maxDepth4')
+ClassifyWithTree(df_test, nodeDecisionsFileName='/home/kyletos/Kaggle/Algorithms/TestTheFuzzy/Answers/DoneTree_maxDepth4_nSplits10_alpha0.1giniEndVal0.01_nodeDecisions.csv', 
+                 nodeValuesFileName='/home/kyletos/Kaggle/Algorithms/TestTheFuzzy/Answers/NodeValues_alpha0p1_nGiniSplits10_giniEndVal0p01_maxDepth4.csv', 
+                 className='Survived', idColumn='PassengerId', outputFileName='/home/kyletos/Kaggle/Algorithms/TestTheFuzzy/Answers/Test_Answers_nGiniSplits10_alphap1_giniEndValp01_maxDepth4.csv',
+                 maxDepth=4)
 
 
 
+
+
+sys.stdout = orig_stdout
+stdOutFile.close()
  

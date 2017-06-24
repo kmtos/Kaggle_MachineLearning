@@ -1,0 +1,907 @@
+Gender map(Sex): 'male'= 1 and 'female'= -1
+Embark is split into several yes/no ( 1/-1 ) columns for every letter (EmbarkIsC): C, Q, S+NaN
+Titles Split into: Mrs.,  Mr.,  Miss.,  Rev., Master., Other
+Fare split into: 0->5, 5->15, 10->40, 40->90, >90
+Cabin is split into several yes/no ( 1/-1 ) columns for every letter it starts with: C, E, G, D, A, B, T, F
+TicketBeginLetter map(Ticket): 1 if Letter is in name, 0 if no letter in name.
+FamilySize = SibSp + Parch
+###################################
+ Making a Decision Tree
+###################################
+
+node= 1 parentNode= 0 	parentTup= (0, 0.6696570897276324, 'YesMr', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 891
+len(dfCurr)= 374 	parentTup[3]= 0.0
+######## NEW ########: nodeValues[nodeCount]= (1, 0.6578091974194687, 'FamilySize', 4.5, 0.90909090909090906) 	len(nodeDFIds[1])= 2
+len(lessThan)= 323 	len(greaterThan)= 51
+
+node= 2 parentNode= 0 	parentTup= (0, 0.6696570897276324, 'YesMr', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 891
+len(dfCurr)= 517 	parentTup[3]= 0.0
+######## NEW ########: nodeValues[nodeCount]= (2, 0.7544152562587106, 'Pclass', 1.5, 0.18181818181818182) 	len(nodeDFIds[1])= 2
+len(lessThan)= 107 	len(greaterThan)= 410
+
+node= 3 parentNode= 1 	parentTup= (1, 0.6578091974194687, 'FamilySize', 4.5, 0.90909090909090906) 	len(parentDFIDs)= 374
+len(dfCurr)= 323 	parentTup[3]= 4.5
+######## NEW ########: nodeValues[nodeCount]= (3, 0.6847090265861835, 'Pclass', 2.5, 0.18181818181818182) 	len(nodeDFIds[1])= 2
+len(lessThan)= 196 	len(greaterThan)= 127
+
+node= 4 parentNode= 1 	parentTup= (1, 0.6578091974194687, 'FamilySize', 4.5, 0.90909090909090906) 	len(parentDFIDs)= 374
+len(dfCurr)= 51 	parentTup[3]= 4.5
+######## NEW ########: nodeValues[nodeCount]= (4, 0.8570806100217865, 'Pclass', 2.5, 0.18181818181818182) 	len(nodeDFIds[1])= 2
+len(lessThan)= 6 	len(greaterThan)= 45
+
+node= 5 parentNode= 2 	parentTup= (2, 0.7544152562587106, 'Pclass', 1.5, 0.18181818181818182) 	len(parentDFIDs)= 517
+len(dfCurr)= 107 	parentTup[3]= 1.5
+######## NEW ########: nodeValues[nodeCount]= (5, 0.5757516045490373, 'AgeGroup', 0.75, 0.13636363636363635) 	len(nodeDFIds[1])= 2
+len(lessThan)= 83 	len(greaterThan)= 24
+
+node= 6 parentNode= 2 	parentTup= (2, 0.7544152562587106, 'Pclass', 1.5, 0.18181818181818182) 	len(parentDFIDs)= 517
+len(dfCurr)= 410 	parentTup[3]= 1.5
+######## NEW ########: nodeValues[nodeCount]= (6, 0.8141704457245577, 'nTicketStrings', 2.5, 0.18181818181818182) 	len(nodeDFIds[1])= 2
+len(lessThan)= 398 	len(greaterThan)= 12
+
+node= 7 parentNode= 3 	parentTup= (3, 0.6847090265861835, 'Pclass', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 323
+len(dfCurr)= 196 	parentTup[3]= 2.5
+######## NEW ########: nodeValues[nodeCount]= (7, 0.8337271750805585, 'YesRev', 0.0, 0.18181818181818182) 	len(nodeDFIds[1])= 2
+len(lessThan)= 190 	len(greaterThan)= 6
+
+node= 8 parentNode= 3 	parentTup= (3, 0.6847090265861835, 'Pclass', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 323
+len(dfCurr)= 127 	parentTup[3]= 2.5
+######## NEW ########: nodeValues[nodeCount]= (8, 0.5559546284784578, 'AgeGroup', -0.75, 0.18181818181818182) 	len(nodeDFIds[1])= 2
+len(lessThan)= 19 	len(greaterThan)= 108
+
+node= 9 parentNode= 4 	parentTup= (4, 0.8570806100217865, 'Pclass', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 51
+len(dfCurr)= 6 	parentTup[3]= 2.5
+*****************END NODE
+######## NEW ########: nodeValues[nodeCount]= (9, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[1])= 2
+
+node= 10 parentNode= 4 	parentTup= (4, 0.8570806100217865, 'Pclass', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 51
+len(dfCurr)= 45 	parentTup[3]= 2.5
+######## NEW ########: nodeValues[nodeCount]= (10, 0.8757575757575757, 'Fare', -0.25, 0.090909090909090912) 	len(nodeDFIds[1])= 2
+len(lessThan)= 1 	len(greaterThan)= 44
+
+node= 11 parentNode= 5 	parentTup= (5, 0.5757516045490373, 'AgeGroup', 0.75, 0.13636363636363635) 	len(parentDFIDs)= 107
+len(dfCurr)= 83 	parentTup[3]= 0.75
+######## NEW ########: nodeValues[nodeCount]= (11, 0.539428948671398, 'CabinE', 0.0, 0.18181818181818182) 	len(nodeDFIds[1])= 2
+len(lessThan)= 73 	len(greaterThan)= 10
+
+node= 12 parentNode= 5 	parentTup= (5, 0.5757516045490373, 'AgeGroup', 0.75, 0.13636363636363635) 	len(parentDFIDs)= 107
+len(dfCurr)= 24 	parentTup[3]= 0.75
+######## NEW ########: nodeValues[nodeCount]= (12, 0.7941176470588236, 'CabinNumbers', 7.0, 8.0) 	len(nodeDFIds[1])= 2
+len(lessThan)= 7 	len(greaterThan)= 17
+
+node= 13 parentNode= 6 	parentTup= (6, 0.8141704457245577, 'nTicketStrings', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 410
+len(dfCurr)= 398 	parentTup[3]= 2.5
+######## NEW ########: nodeValues[nodeCount]= (13, 0.8273230130501374, 'CabinE', 0.0, 0.18181818181818182) 	len(nodeDFIds[1])= 2
+len(lessThan)= 397 	len(greaterThan)= 1
+
+node= 14 parentNode= 6 	parentTup= (6, 0.8141704457245577, 'nTicketStrings', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 410
+len(dfCurr)= 12 	parentTup[3]= 2.5
+######## NEW ########: nodeValues[nodeCount]= (14, 0.6296296296296295, 'TicketNumber', 23101289.454545453, 2.2727272727272729) 	len(nodeDFIds[1])= 2
+len(lessThan)= 9 	len(greaterThan)= 3
+
+node= 15 parentNode= 7 	parentTup= (7, 0.8337271750805585, 'YesRev', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 196
+len(dfCurr)= 190 	parentTup[3]= 0.0
+######## NEW ########: nodeValues[nodeCount]= (15, 0.8628518971848226, 'YesFancy', 0.0, 0.18181818181818182) 	len(nodeDFIds[1])= 2
+len(lessThan)= 172 	len(greaterThan)= 18
+
+node= 16 parentNode= 7 	parentTup= (7, 0.8337271750805585, 'YesRev', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 196
+len(dfCurr)= 6 	parentTup[3]= 0.0
+*****************END NODE
+######## NEW ########: nodeValues[nodeCount]= (16, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[1])= 2
+
+node= 17 parentNode= 8 	parentTup= (8, 0.5559546284784578, 'AgeGroup', -0.75, 0.18181818181818182) 	len(parentDFIDs)= 127
+len(dfCurr)= 19 	parentTup[3]= -0.75
+######## NEW ########: nodeValues[nodeCount]= (17, 0.848297213622291, 'CabinG', 0.0, 0.18181818181818182) 	len(nodeDFIds[1])= 2
+len(lessThan)= 17 	len(greaterThan)= 2
+
+node= 18 parentNode= 8 	parentTup= (8, 0.5559546284784578, 'AgeGroup', -0.75, 0.18181818181818182) 	len(parentDFIDs)= 127
+len(dfCurr)= 108 	parentTup[3]= -0.75
+######## NEW ########: nodeValues[nodeCount]= (18, 0.5460673585673586, 'EmbarkIsS', 0.0, 0.18181818181818182) 	len(nodeDFIds[1])= 2
+len(lessThan)= 52 	len(greaterThan)= 56
+
+node= 19 parentNode= 9 	parentTup= (9, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(parentDFIDs)= 6
+
+node= 20 parentNode= 9 	parentTup= (9, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(parentDFIDs)= 6
+
+node= 21 parentNode= 10 	parentTup= (10, 0.8757575757575757, 'Fare', -0.25, 0.090909090909090912) 	len(parentDFIDs)= 45
+len(dfCurr)= 1 	parentTup[3]= -0.25
+*****************END NODE
+######## NEW ########: nodeValues[nodeCount]= (21, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[1])= 2
+
+node= 22 parentNode= 10 	parentTup= (10, 0.8757575757575757, 'Fare', -0.25, 0.090909090909090912) 	len(parentDFIDs)= 45
+len(dfCurr)= 44 	parentTup[3]= -0.25
+######## NEW ########: nodeValues[nodeCount]= (22, 0.8851674641148326, 'FamilySize', 6.5, 0.54545454545454541) 	len(nodeDFIds[1])= 2
+len(lessThan)= 25 	len(greaterThan)= 19
+
+node= 23 parentNode= 11 	parentTup= (11, 0.539428948671398, 'CabinE', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 83
+len(dfCurr)= 73 	parentTup[3]= 0.0
+######## NEW ########: nodeValues[nodeCount]= (23, 0.5539887187751815, 'Fare', -0.5, 0.18181818181818182) 	len(nodeDFIds[1])= 2
+len(lessThan)= 5 	len(greaterThan)= 68
+
+node= 24 parentNode= 11 	parentTup= (11, 0.539428948671398, 'CabinE', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 83
+len(dfCurr)= 10 	parentTup[3]= 0.0
+######## NEW ########: nodeValues[nodeCount]= (24, 0.85, 'CabinNumbers', 28.0, 5.0) 	len(nodeDFIds[1])= 2
+len(lessThan)= 6 	len(greaterThan)= 4
+
+node= 25 parentNode= 12 	parentTup= (12, 0.7941176470588236, 'CabinNumbers', 7.0, 8.0) 	len(parentDFIDs)= 24
+len(dfCurr)= 7 	parentTup[3]= 7.0
+*****************END NODE
+######## NEW ########: nodeValues[nodeCount]= (25, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[1])= 2
+
+node= 26 parentNode= 12 	parentTup= (12, 0.7941176470588236, 'CabinNumbers', 7.0, 8.0) 	len(parentDFIDs)= 24
+len(dfCurr)= 17 	parentTup[3]= 7.0
+######## NEW ########: nodeValues[nodeCount]= (26, 0.8123249299719888, 'CabinNumbers', 23.363636363636363, 6.3636363636363633) 	len(nodeDFIds[1])= 2
+len(lessThan)= 3 	len(greaterThan)= 14
+
+node= 27 parentNode= 13 	parentTup= (13, 0.8273230130501374, 'CabinE', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 398
+len(dfCurr)= 397 	parentTup[3]= 0.0
+######## NEW ########: nodeValues[nodeCount]= (27, 0.8304099632694123, 'Fare', 0.25, 0.13636363636363635) 	len(nodeDFIds[1])= 2
+len(lessThan)= 380 	len(greaterThan)= 17
+
+node= 28 parentNode= 13 	parentTup= (13, 0.8273230130501374, 'CabinE', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 398
+len(dfCurr)= 1 	parentTup[3]= 0.0
+*****************END NODE
+######## NEW ########: nodeValues[nodeCount]= (28, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[1])= 2
+
+node= 29 parentNode= 14 	parentTup= (14, 0.6296296296296295, 'TicketNumber', 23101289.454545453, 2.2727272727272729) 	len(parentDFIDs)= 12
+len(dfCurr)= 9 	parentTup[3]= 23101289.4545
+######## NEW ########: nodeValues[nodeCount]= (29, 0.8222222222222222, 'TicketNumber', 23101282.5, 1.8181818181818181) 	len(nodeDFIds[1])= 2
+len(lessThan)= 5 	len(greaterThan)= 4
+
+node= 30 parentNode= 14 	parentTup= (14, 0.6296296296296295, 'TicketNumber', 23101289.454545453, 2.2727272727272729) 	len(parentDFIDs)= 12
+len(dfCurr)= 3 	parentTup[3]= 23101289.4545
+*****************END NODE
+######## NEW ########: nodeValues[nodeCount]= (30, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[1])= 2
+###########################
+Writing Out the Nodes, Values, and df ID's of the nodes
+###########################
+
+
+index= 30 	currentLeaf= (30, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 3
+END NODE
+	classVal= 0 	row= 3
+		ltMaxCount= -100000000000000000000000000000000 	ltMaxClassVal= -100000000000000000000000000000000
+		ltMaxCount= 3 	ltMaxClassVal= 0
+
+
+index= 29 	currentLeaf= (29, 0.8222222222222222, 'TicketNumber', 23101282.5, 1.8181818181818181) 	len(currentDF)= 9
+	LESS THAN
+	len(ltDF)= 5 	len(gtDF)= 4
+	classVal= 0 	row= 4
+		ltMaxCount= -100000000000000000000000000000000 	ltMaxClassVal= -100000000000000000000000000000000
+		ltMaxCount= 4 	ltMaxClassVal= 0
+	classVal= 1 	row= 1
+	GREATER THAN
+	classVal= 1 	row= 4
+		gtMaxCount= -100000000000000000000000000000000 	gtMaxClassVal= -100000000000000000000000000000000
+		gtMaxCount= 4 	gtMaxClassVal= 1
+
+
+index= 28 	currentLeaf= (28, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 1
+END NODE
+	classVal= 1 	row= 1
+		ltMaxCount= -100000000000000000000000000000000 	ltMaxClassVal= -100000000000000000000000000000000
+		ltMaxCount= 1 	ltMaxClassVal= 1
+
+
+index= 27 	currentLeaf= (27, 0.8304099632694123, 'Fare', 0.25, 0.13636363636363635) 	len(currentDF)= 397
+	LESS THAN
+	len(ltDF)= 380 	len(gtDF)= 17
+	classVal= 0 	row= 347
+		ltMaxCount= -100000000000000000000000000000000 	ltMaxClassVal= -100000000000000000000000000000000
+		ltMaxCount= 347 	ltMaxClassVal= 0
+	classVal= 1 	row= 33
+	GREATER THAN
+	classVal= 0 	row= 12
+		gtMaxCount= -100000000000000000000000000000000 	gtMaxClassVal= -100000000000000000000000000000000
+		gtMaxCount= 12 	gtMaxClassVal= 0
+	classVal= 1 	row= 5
+
+
+index= 26 	currentLeaf= (26, 0.8123249299719888, 'CabinNumbers', 23.363636363636363, 6.3636363636363633) 	len(currentDF)= 17
+	LESS THAN
+	len(ltDF)= 3 	len(gtDF)= 14
+	classVal= 0 	row= 1
+		ltMaxCount= -100000000000000000000000000000000 	ltMaxClassVal= -100000000000000000000000000000000
+		ltMaxCount= 1 	ltMaxClassVal= 0
+	classVal= 1 	row= 2
+		ltMaxCount= 1 	ltMaxClassVal= 0
+		ltMaxCount= 2 	ltMaxClassVal= 1
+	GREATER THAN
+	classVal= 0 	row= 13
+		gtMaxCount= -100000000000000000000000000000000 	gtMaxClassVal= -100000000000000000000000000000000
+		gtMaxCount= 13 	gtMaxClassVal= 0
+	classVal= 1 	row= 1
+
+
+index= 25 	currentLeaf= (25, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 7
+END NODE
+	classVal= 0 	row= 7
+		ltMaxCount= -100000000000000000000000000000000 	ltMaxClassVal= -100000000000000000000000000000000
+		ltMaxCount= 7 	ltMaxClassVal= 0
+
+
+index= 24 	currentLeaf= (24, 0.85, 'CabinNumbers', 28.0, 5.0) 	len(currentDF)= 10
+	LESS THAN
+	len(ltDF)= 6 	len(gtDF)= 4
+	classVal= 1 	row= 6
+		ltMaxCount= -100000000000000000000000000000000 	ltMaxClassVal= -100000000000000000000000000000000
+		ltMaxCount= 6 	ltMaxClassVal= 1
+	GREATER THAN
+	classVal= 0 	row= 3
+		gtMaxCount= -100000000000000000000000000000000 	gtMaxClassVal= -100000000000000000000000000000000
+		gtMaxCount= 3 	gtMaxClassVal= 0
+	classVal= 1 	row= 1
+
+
+index= 23 	currentLeaf= (23, 0.5539887187751815, 'Fare', -0.5, 0.18181818181818182) 	len(currentDF)= 73
+	LESS THAN
+	len(ltDF)= 5 	len(gtDF)= 68
+	classVal= 0 	row= 5
+		ltMaxCount= -100000000000000000000000000000000 	ltMaxClassVal= -100000000000000000000000000000000
+		ltMaxCount= 5 	ltMaxClassVal= 0
+	GREATER THAN
+	classVal= 0 	row= 41
+		gtMaxCount= -100000000000000000000000000000000 	gtMaxClassVal= -100000000000000000000000000000000
+		gtMaxCount= 41 	gtMaxClassVal= 0
+	classVal= 1 	row= 27
+
+
+index= 22 	currentLeaf= (22, 0.8851674641148326, 'FamilySize', 6.5, 0.54545454545454541) 	len(currentDF)= 44
+	LESS THAN
+	len(ltDF)= 25 	len(gtDF)= 19
+	classVal= 0 	row= 25
+		ltMaxCount= -100000000000000000000000000000000 	ltMaxClassVal= -100000000000000000000000000000000
+		ltMaxCount= 25 	ltMaxClassVal= 0
+	GREATER THAN
+	classVal= 0 	row= 16
+		gtMaxCount= -100000000000000000000000000000000 	gtMaxClassVal= -100000000000000000000000000000000
+		gtMaxCount= 16 	gtMaxClassVal= 0
+	classVal= 1 	row= 3
+
+
+index= 21 	currentLeaf= (21, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 1
+END NODE
+	classVal= 1 	row= 1
+		ltMaxCount= -100000000000000000000000000000000 	ltMaxClassVal= -100000000000000000000000000000000
+		ltMaxCount= 1 	ltMaxClassVal= 1
+
+
+index= 9 	currentLeaf= (9, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 6
+END NODE
+	classVal= 1 	row= 6
+		ltMaxCount= -100000000000000000000000000000000 	ltMaxClassVal= -100000000000000000000000000000000
+		ltMaxCount= 6 	ltMaxClassVal= 1
+
+
+index= 9 	currentLeaf= (9, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 6
+END NODE
+	classVal= 1 	row= 6
+		ltMaxCount= -100000000000000000000000000000000 	ltMaxClassVal= -100000000000000000000000000000000
+		ltMaxCount= 6 	ltMaxClassVal= 1
+Node already added from brother leaf being null from hitting 'giniEndVal', i.e. leaf can't be improved anymore
+
+
+index= 18 	currentLeaf= (18, 0.5460673585673586, 'EmbarkIsS', 0.0, 0.18181818181818182) 	len(currentDF)= 108
+	LESS THAN
+	len(ltDF)= 52 	len(gtDF)= 56
+	classVal= 0 	row= 15
+		ltMaxCount= -100000000000000000000000000000000 	ltMaxClassVal= -100000000000000000000000000000000
+		ltMaxCount= 15 	ltMaxClassVal= 0
+	classVal= 1 	row= 37
+		ltMaxCount= 15 	ltMaxClassVal= 0
+		ltMaxCount= 37 	ltMaxClassVal= 1
+	GREATER THAN
+	classVal= 0 	row= 31
+		gtMaxCount= -100000000000000000000000000000000 	gtMaxClassVal= -100000000000000000000000000000000
+		gtMaxCount= 31 	gtMaxClassVal= 0
+	classVal= 1 	row= 25
+
+
+index= 17 	currentLeaf= (17, 0.848297213622291, 'CabinG', 0.0, 0.18181818181818182) 	len(currentDF)= 19
+	LESS THAN
+	len(ltDF)= 17 	len(gtDF)= 2
+	classVal= 0 	row= 1
+		ltMaxCount= -100000000000000000000000000000000 	ltMaxClassVal= -100000000000000000000000000000000
+		ltMaxCount= 1 	ltMaxClassVal= 0
+	classVal= 1 	row= 16
+		ltMaxCount= 1 	ltMaxClassVal= 0
+		ltMaxCount= 16 	ltMaxClassVal= 1
+	GREATER THAN
+	classVal= 0 	row= 1
+		gtMaxCount= -100000000000000000000000000000000 	gtMaxClassVal= -100000000000000000000000000000000
+		gtMaxCount= 1 	gtMaxClassVal= 0
+	classVal= 1 	row= 1
+
+
+index= 16 	currentLeaf= (16, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 6
+END NODE
+	classVal= 0 	row= 6
+		ltMaxCount= -100000000000000000000000000000000 	ltMaxClassVal= -100000000000000000000000000000000
+		ltMaxCount= 6 	ltMaxClassVal= 0
+
+
+index= 15 	currentLeaf= (15, 0.8628518971848226, 'YesFancy', 0.0, 0.18181818181818182) 	len(currentDF)= 190
+	LESS THAN
+	len(ltDF)= 172 	len(gtDF)= 18
+	classVal= 0 	row= 9
+		ltMaxCount= -100000000000000000000000000000000 	ltMaxClassVal= -100000000000000000000000000000000
+		ltMaxCount= 9 	ltMaxClassVal= 0
+	classVal= 1 	row= 163
+		ltMaxCount= 9 	ltMaxClassVal= 0
+		ltMaxCount= 163 	ltMaxClassVal= 1
+	GREATER THAN
+	classVal= 0 	row= 9
+		gtMaxCount= -100000000000000000000000000000000 	gtMaxClassVal= -100000000000000000000000000000000
+		gtMaxCount= 9 	gtMaxClassVal= 0
+	classVal= 1 	row= 9
+########################################################################
+ Classifying test points with Tree from Make Tree
+########################################################################
+
+	tup= (0, 0.6696570897276324, 'YesMr', 0.0, 0.181818181818)
+	dfIDList[tup[0][1]= 418
+	dfCurr.head(1)
+    PassengerId  Pclass  SibSp  Parch  Fare  Gender  EmbarkIsC  EmbarkIsS  \
+0          892       3      0      0  -0.5       1         -1         -1   
+
+   EmbarkIsQ  YesMiss  YesMrs  YesMr  YesRev  YesMaster  YesFancy  \
+0          1       -1      -1      1      -1         -1        -1   
+
+   CabinNumbers  CabinB  CabinE  CabinA  CabinC  CabinD  CabinG  CabinF  \
+0            -1      -1      -1      -1      -1      -1      -1      -1   
+
+   CabinT  TicketBeginLetter  TicketDots  TicketDashes  nTicketStrings  \
+0      -1                 -1           0             0               1   
+
+   TicketNumber  FamilySize  AgeGroup  
+0        330911           1       0.5  
+	len(lt)= 178 	len(gt)= 240
+
+	tup= (1, 0.6578091974194687, 'FamilySize', 4.5, 0.909090909091)
+	dfIDList[tup[0][1]= 178
+	dfCurr.head(1)
+    PassengerId  Pclass  SibSp  Parch  Fare  Gender  EmbarkIsC  EmbarkIsS  \
+1          893       3      1      0  -0.5      -1         -1          1   
+
+   EmbarkIsQ  YesMiss  YesMrs  YesMr  YesRev  YesMaster  YesFancy  \
+1         -1       -1       1     -1      -1         -1        -1   
+
+   CabinNumbers  CabinB  CabinE  CabinA  CabinC  CabinD  CabinG  CabinF  \
+1            -1      -1      -1      -1      -1      -1      -1      -1   
+
+   CabinT  TicketBeginLetter  TicketDots  TicketDashes  nTicketStrings  \
+1      -1                 -1           0             0               1   
+
+   TicketNumber  FamilySize  AgeGroup  
+1        363272           2       0.5  
+	len(lt)= 164 	len(gt)= 14
+
+	tup= (2, 0.7544152562587106, 'Pclass', 1.5, 0.181818181818)
+	dfIDList[tup[0][1]= 240
+	dfCurr.head(1)
+    PassengerId  Pclass  SibSp  Parch  Fare  Gender  EmbarkIsC  EmbarkIsS  \
+0          892       3      0      0  -0.5       1         -1         -1   
+
+   EmbarkIsQ  YesMiss  YesMrs  YesMr  YesRev  YesMaster  YesFancy  \
+0          1       -1      -1      1      -1         -1        -1   
+
+   CabinNumbers  CabinB  CabinE  CabinA  CabinC  CabinD  CabinG  CabinF  \
+0            -1      -1      -1      -1      -1      -1      -1      -1   
+
+   CabinT  TicketBeginLetter  TicketDots  TicketDashes  nTicketStrings  \
+0      -1                 -1           0             0               1   
+
+   TicketNumber  FamilySize  AgeGroup  
+0        330911           1       0.5  
+	len(lt)= 52 	len(gt)= 188
+
+	tup= (3, 0.6847090265861835, 'Pclass', 2.5, 0.181818181818)
+	dfIDList[tup[0][1]= 164
+	dfCurr.head(1)
+    PassengerId  Pclass  SibSp  Parch  Fare  Gender  EmbarkIsC  EmbarkIsS  \
+1          893       3      1      0  -0.5      -1         -1          1   
+
+   EmbarkIsQ  YesMiss  YesMrs  YesMr  YesRev  YesMaster  YesFancy  \
+1         -1       -1       1     -1      -1         -1        -1   
+
+   CabinNumbers  CabinB  CabinE  CabinA  CabinC  CabinD  CabinG  CabinF  \
+1            -1      -1      -1      -1      -1      -1      -1      -1   
+
+   CabinT  TicketBeginLetter  TicketDots  TicketDashes  nTicketStrings  \
+1      -1                 -1           0             0               1   
+
+   TicketNumber  FamilySize  AgeGroup  
+1        363272           2       0.5  
+	len(lt)= 85 	len(gt)= 79
+
+	tup= (4, 0.8570806100217865, 'Pclass', 2.5, 0.181818181818)
+	dfIDList[tup[0][1]= 14
+	dfCurr.head(1)
+     PassengerId  Pclass  SibSp  Parch  Fare  Gender  EmbarkIsC  EmbarkIsS  \
+24          916       1      1      3   1.0      -1          1         -1   
+
+    EmbarkIsQ  YesMiss  YesMrs  YesMr  YesRev  YesMaster  YesFancy  \
+24         -1       -1       1     -1      -1         -1        -1   
+
+    CabinNumbers  CabinB  CabinE  CabinA  CabinC  CabinD  CabinG  CabinF  \
+24            66       1      -1      -1      -1      -1      -1      -1   
+
+    CabinT  TicketBeginLetter  TicketDots  TicketDashes  nTicketStrings  \
+24      -1                  1           0             0               2   
+
+    TicketNumber  FamilySize  AgeGroup  
+24         17608           5       0.5  
+	len(lt)= 4 	len(gt)= 10
+
+	tup= (5, 0.5757516045490373, 'AgeGroup', 0.75, 0.136363636364)
+	dfIDList[tup[0][1]= 52
+	dfCurr.head(1)
+     PassengerId  Pclass  SibSp  Parch  Fare  Gender  EmbarkIsC  EmbarkIsS  \
+11          903       1      0      0   0.0       1         -1          1   
+
+    EmbarkIsQ  YesMiss  YesMrs  YesMr  YesRev  YesMaster  YesFancy  \
+11         -1       -1      -1      1      -1         -1        -1   
+
+    CabinNumbers  CabinB  CabinE  CabinA  CabinC  CabinD  CabinG  CabinF  \
+11            -1      -1      -1      -1      -1      -1      -1      -1   
+
+    CabinT  TicketBeginLetter  TicketDots  TicketDashes  nTicketStrings  \
+11      -1                 -1           0             0               1   
+
+    TicketNumber  FamilySize  AgeGroup  
+11           694           1       0.5  
+	len(lt)= 41 	len(gt)= 11
+
+	tup= (6, 0.8141704457245577, 'nTicketStrings', 2.5, 0.181818181818)
+	dfIDList[tup[0][1]= 188
+	dfCurr.head(1)
+    PassengerId  Pclass  SibSp  Parch  Fare  Gender  EmbarkIsC  EmbarkIsS  \
+0          892       3      0      0  -0.5       1         -1         -1   
+
+   EmbarkIsQ  YesMiss  YesMrs  YesMr  YesRev  YesMaster  YesFancy  \
+0          1       -1      -1      1      -1         -1        -1   
+
+   CabinNumbers  CabinB  CabinE  CabinA  CabinC  CabinD  CabinG  CabinF  \
+0            -1      -1      -1      -1      -1      -1      -1      -1   
+
+   CabinT  TicketBeginLetter  TicketDots  TicketDashes  nTicketStrings  \
+0      -1                 -1           0             0               1   
+
+   TicketNumber  FamilySize  AgeGroup  
+0        330911           1       0.5  
+	len(lt)= 186 	len(gt)= 2
+
+	tup= (7, 0.8337271750805585, 'YesRev', 0.0, 0.181818181818)
+	dfIDList[tup[0][1]= 85
+	dfCurr.head(1)
+     PassengerId  Pclass  SibSp  Parch  Fare  Gender  EmbarkIsC  EmbarkIsS  \
+12          904       1      1      0   0.5      -1         -1          1   
+
+    EmbarkIsQ  YesMiss  YesMrs  YesMr  YesRev  YesMaster  YesFancy  \
+12         -1       -1       1     -1      -1         -1        -1   
+
+    CabinNumbers  CabinB  CabinE  CabinA  CabinC  CabinD  CabinG  CabinF  \
+12            45       1      -1      -1      -1      -1      -1      -1   
+
+    CabinT  TicketBeginLetter  TicketDots  TicketDashes  nTicketStrings  \
+12      -1                 -1           0             0               1   
+
+    TicketNumber  FamilySize  AgeGroup  
+12         21228           2       0.0  
+	len(lt)= 83 	len(gt)= 2
+
+	tup= (8, 0.5559546284784578, 'AgeGroup', -0.75, 0.181818181818)
+	dfIDList[tup[0][1]= 79
+	dfCurr.head(1)
+    PassengerId  Pclass  SibSp  Parch  Fare  Gender  EmbarkIsC  EmbarkIsS  \
+1          893       3      1      0  -0.5      -1         -1          1   
+
+   EmbarkIsQ  YesMiss  YesMrs  YesMr  YesRev  YesMaster  YesFancy  \
+1         -1       -1       1     -1      -1         -1        -1   
+
+   CabinNumbers  CabinB  CabinE  CabinA  CabinC  CabinD  CabinG  CabinF  \
+1            -1      -1      -1      -1      -1      -1      -1      -1   
+
+   CabinT  TicketBeginLetter  TicketDots  TicketDashes  nTicketStrings  \
+1      -1                 -1           0             0               1   
+
+   TicketNumber  FamilySize  AgeGroup  
+1        363272           2       0.5  
+	len(lt)= 12 	len(gt)= 67
+
+	tup= (9, 1.0, 'ThisIsAnEndNode', nan, nan)
+	dfIDList[tup[0][1]= 4
+	dfCurr.head(1)
+     PassengerId  Pclass  SibSp  Parch  Fare  Gender  EmbarkIsC  EmbarkIsS  \
+24          916       1      1      3   1.0      -1          1         -1   
+
+    EmbarkIsQ  YesMiss  YesMrs  YesMr  YesRev  YesMaster  YesFancy  \
+24         -1       -1       1     -1      -1         -1        -1   
+
+    CabinNumbers  CabinB  CabinE  CabinA  CabinC  CabinD  CabinG  CabinF  \
+24            66       1      -1      -1      -1      -1      -1      -1   
+
+    CabinT  TicketBeginLetter  TicketDots  TicketDashes  nTicketStrings  \
+24      -1                  1           0             0               2   
+
+    TicketNumber  FamilySize  AgeGroup  
+24         17608           5       0.5  
+	decision= 1
+
+	tup= (10, 0.8757575757575757, 'Fare', -0.25, 0.0909090909091)
+	dfIDList[tup[0][1]= 10
+	dfCurr.head(1)
+     PassengerId  Pclass  SibSp  Parch  Fare  Gender  EmbarkIsC  EmbarkIsS  \
+55          947       3      4      1   0.0       1         -1         -1   
+
+    EmbarkIsQ  YesMiss  YesMrs  YesMr  YesRev  YesMaster  YesFancy  \
+55          1       -1      -1     -1      -1          1        -1   
+
+    CabinNumbers  CabinB  CabinE  CabinA  CabinC  CabinD  CabinG  CabinF  \
+55            -1      -1      -1      -1      -1      -1      -1      -1   
+
+    CabinT  TicketBeginLetter  TicketDots  TicketDashes  nTicketStrings  \
+55      -1                 -1           0             0               1   
+
+    TicketNumber  FamilySize  AgeGroup  
+55        382652           6      -0.5  
+	len(lt)= 1 	len(gt)= 9
+
+	tup= (11, 0.539428948671398, 'CabinE', 0.0, 0.181818181818)
+	dfIDList[tup[0][1]= 41
+	dfCurr.head(1)
+     PassengerId  Pclass  SibSp  Parch  Fare  Gender  EmbarkIsC  EmbarkIsS  \
+11          903       1      0      0   0.0       1         -1          1   
+
+    EmbarkIsQ  YesMiss  YesMrs  YesMr  YesRev  YesMaster  YesFancy  \
+11         -1       -1      -1      1      -1         -1        -1   
+
+    CabinNumbers  CabinB  CabinE  CabinA  CabinC  CabinD  CabinG  CabinF  \
+11            -1      -1      -1      -1      -1      -1      -1      -1   
+
+    CabinT  TicketBeginLetter  TicketDots  TicketDashes  nTicketStrings  \
+11      -1                 -1           0             0               1   
+
+    TicketNumber  FamilySize  AgeGroup  
+11           694           1       0.5  
+	len(lt)= 38 	len(gt)= 3
+
+	tup= (12, 0.7941176470588236, 'CabinNumbers', 7.0, 8.0)
+	dfIDList[tup[0][1]= 11
+	dfCurr.head(1)
+     PassengerId  Pclass  SibSp  Parch  Fare  Gender  EmbarkIsC  EmbarkIsS  \
+20          912       1      1      0   0.5       1          1         -1   
+
+    EmbarkIsQ  YesMiss  YesMrs  YesMr  YesRev  YesMaster  YesFancy  \
+20         -1       -1      -1      1      -1         -1        -1   
+
+    CabinNumbers  CabinB  CabinE  CabinA  CabinC  CabinD  CabinG  CabinF  \
+20            -1      -1      -1      -1      -1      -1      -1      -1   
+
+    CabinT  TicketBeginLetter  TicketDots  TicketDashes  nTicketStrings  \
+20      -1                  1           0             0               2   
+
+    TicketNumber  FamilySize  AgeGroup  
+20         17603           2       1.0  
+	len(lt)= 2 	len(gt)= 9
+
+	tup= (13, 0.8273230130501374, 'CabinE', 0.0, 0.181818181818)
+	dfIDList[tup[0][1]= 186
+	dfCurr.head(1)
+    PassengerId  Pclass  SibSp  Parch  Fare  Gender  EmbarkIsC  EmbarkIsS  \
+0          892       3      0      0  -0.5       1         -1         -1   
+
+   EmbarkIsQ  YesMiss  YesMrs  YesMr  YesRev  YesMaster  YesFancy  \
+0          1       -1      -1      1      -1         -1        -1   
+
+   CabinNumbers  CabinB  CabinE  CabinA  CabinC  CabinD  CabinG  CabinF  \
+0            -1      -1      -1      -1      -1      -1      -1      -1   
+
+   CabinT  TicketBeginLetter  TicketDots  TicketDashes  nTicketStrings  \
+0      -1                 -1           0             0               1   
+
+   TicketNumber  FamilySize  AgeGroup  
+0        330911           1       0.5  
+	len(lt)= 184 	len(gt)= 2
+
+	tup= (14, 0.6296296296296295, 'TicketNumber', 23101289.4545, 2.27272727273)
+	dfIDList[tup[0][1]= 2
+	dfCurr.head(1)
+     PassengerId  Pclass  SibSp  Parch  Fare  Gender  EmbarkIsC  EmbarkIsS  \
+45          937       3      0      0  -0.5       1         -1          1   
+
+    EmbarkIsQ  YesMiss  YesMrs  YesMr  YesRev  YesMaster  YesFancy  \
+45         -1       -1      -1      1      -1         -1        -1   
+
+    CabinNumbers  CabinB  CabinE  CabinA  CabinC  CabinD  CabinG  CabinF  \
+45            -1      -1      -1      -1      -1      -1      -1      -1   
+
+    CabinT  TicketBeginLetter  TicketDots  TicketDashes  nTicketStrings  \
+45      -1                  1           1             1               3   
+
+    TicketNumber  FamilySize  AgeGroup  
+45      23101291           1       0.0  
+	len(lt)= 1 	len(gt)= 1
+
+	tup= (15, 0.8628518971848226, 'YesFancy', 0.0, 0.181818181818)
+	dfIDList[tup[0][1]= 83
+	dfCurr.head(1)
+     PassengerId  Pclass  SibSp  Parch  Fare  Gender  EmbarkIsC  EmbarkIsS  \
+12          904       1      1      0   0.5      -1         -1          1   
+
+    EmbarkIsQ  YesMiss  YesMrs  YesMr  YesRev  YesMaster  YesFancy  \
+12         -1       -1       1     -1      -1         -1        -1   
+
+    CabinNumbers  CabinB  CabinE  CabinA  CabinC  CabinD  CabinG  CabinF  \
+12            45       1      -1      -1      -1      -1      -1      -1   
+
+    CabinT  TicketBeginLetter  TicketDots  TicketDashes  nTicketStrings  \
+12      -1                 -1           0             0               1   
+
+    TicketNumber  FamilySize  AgeGroup  
+12         21228           2       0.0  
+	Class for LT= 1 	len(ltIDs)= 78 	Class for GT= 1 	len(gtIDs)= 5
+
+	tup= (16, 1.0, 'ThisIsAnEndNode', nan, nan)
+	dfIDList[tup[0][1]= 2
+	dfCurr.head(1)
+      PassengerId  Pclass  SibSp  Parch  Fare  Gender  EmbarkIsC  EmbarkIsS  \
+149         1041       2      1      1   0.0       1         -1          1   
+
+     EmbarkIsQ  YesMiss  YesMrs  YesMr  YesRev  YesMaster  YesFancy  \
+149         -1       -1      -1     -1       1         -1        -1   
+
+     CabinNumbers  CabinB  CabinE  CabinA  CabinC  CabinD  CabinG  CabinF  \
+149            -1      -1      -1      -1      -1      -1      -1      -1   
+
+     CabinT  TicketBeginLetter  TicketDots  TicketDashes  nTicketStrings  \
+149      -1                 -1           0             0               1   
+
+     TicketNumber  FamilySize  AgeGroup  
+149        250651           3       0.5  
+	decision= 0
+
+	tup= (17, 0.848297213622291, 'CabinG', 0.0, 0.181818181818)
+	dfIDList[tup[0][1]= 12
+	dfCurr.head(1)
+     PassengerId  Pclass  SibSp  Parch  Fare  Gender  EmbarkIsC  EmbarkIsS  \
+21          913       3      0      1  -1.0       1         -1          1   
+
+    EmbarkIsQ  YesMiss  YesMrs  YesMr  YesRev  YesMaster  YesFancy  \
+21         -1       -1      -1     -1      -1          1        -1   
+
+    CabinNumbers  CabinB  CabinE  CabinA  CabinC  CabinD  CabinG  CabinF  \
+21            -1      -1      -1      -1      -1      -1      -1      -1   
+
+    CabinT  TicketBeginLetter  TicketDots  TicketDashes  nTicketStrings  \
+21      -1                  1           0             0               2   
+
+    TicketNumber  FamilySize  AgeGroup  
+21         17368           2      -1.0  
+	Class for LT= 1 	len(ltIDs)= 11 	Class for GT= 1 	len(gtIDs)= 1
+
+	tup= (18, 0.5460673585673586, 'EmbarkIsS', 0.0, 0.181818181818)
+	dfIDList[tup[0][1]= 67
+	dfCurr.head(1)
+    PassengerId  Pclass  SibSp  Parch  Fare  Gender  EmbarkIsC  EmbarkIsS  \
+1          893       3      1      0  -0.5      -1         -1          1   
+
+   EmbarkIsQ  YesMiss  YesMrs  YesMr  YesRev  YesMaster  YesFancy  \
+1         -1       -1       1     -1      -1         -1        -1   
+
+   CabinNumbers  CabinB  CabinE  CabinA  CabinC  CabinD  CabinG  CabinF  \
+1            -1      -1      -1      -1      -1      -1      -1      -1   
+
+   CabinT  TicketBeginLetter  TicketDots  TicketDashes  nTicketStrings  \
+1      -1                 -1           0             0               1   
+
+   TicketNumber  FamilySize  AgeGroup  
+1        363272           2       0.5  
+	Class for LT= 1 	len(ltIDs)= 32 	Class for GT= 1 	len(gtIDs)= 35
+
+	tup= (19, nan, '', nan, nan)
+	dfIDList[tup[0][1]= 0
+	dfCurr.head(1)
+ Empty DataFrame
+Columns: [PassengerId, Pclass, SibSp, Parch, Fare, Gender, EmbarkIsC, EmbarkIsS, EmbarkIsQ, YesMiss, YesMrs, YesMr, YesRev, YesMaster, YesFancy, CabinNumbers, CabinB, CabinE, CabinA, CabinC, CabinD, CabinG, CabinF, CabinT, TicketBeginLetter, TicketDots, TicketDashes, nTicketStrings, TicketNumber, FamilySize, AgeGroup]
+Index: []
+	df= []
+
+	tup= (20, nan, '', nan, nan)
+	dfIDList[tup[0][1]= 0
+	dfCurr.head(1)
+ Empty DataFrame
+Columns: [PassengerId, Pclass, SibSp, Parch, Fare, Gender, EmbarkIsC, EmbarkIsS, EmbarkIsQ, YesMiss, YesMrs, YesMr, YesRev, YesMaster, YesFancy, CabinNumbers, CabinB, CabinE, CabinA, CabinC, CabinD, CabinG, CabinF, CabinT, TicketBeginLetter, TicketDots, TicketDashes, nTicketStrings, TicketNumber, FamilySize, AgeGroup]
+Index: []
+	df= []
+
+	tup= (21, 1.0, 'ThisIsAnEndNode', nan, nan)
+	dfIDList[tup[0][1]= 1
+	dfCurr.head(1)
+      PassengerId  Pclass  SibSp  Parch  Fare  Gender  EmbarkIsC  EmbarkIsS  \
+214         1106       3      4      2  -0.5      -1         -1          1   
+
+     EmbarkIsQ  YesMiss  YesMrs  YesMr  YesRev  YesMaster  YesFancy  \
+214         -1        1      -1     -1      -1         -1        -1   
+
+     CabinNumbers  CabinB  CabinE  CabinA  CabinC  CabinD  CabinG  CabinF  \
+214            -1      -1      -1      -1      -1      -1      -1      -1   
+
+     CabinT  TicketBeginLetter  TicketDots  TicketDashes  nTicketStrings  \
+214      -1                 -1           0             0               1   
+
+     TicketNumber  FamilySize  AgeGroup  
+214        347091           7       0.5  
+	decision= 1
+
+	tup= (22, 0.8851674641148326, 'FamilySize', 6.5, 0.545454545455)
+	dfIDList[tup[0][1]= 9
+	dfCurr.head(1)
+     PassengerId  Pclass  SibSp  Parch  Fare  Gender  EmbarkIsC  EmbarkIsS  \
+55          947       3      4      1   0.0       1         -1         -1   
+
+    EmbarkIsQ  YesMiss  YesMrs  YesMr  YesRev  YesMaster  YesFancy  \
+55          1       -1      -1     -1      -1          1        -1   
+
+    CabinNumbers  CabinB  CabinE  CabinA  CabinC  CabinD  CabinG  CabinF  \
+55            -1      -1      -1      -1      -1      -1      -1      -1   
+
+    CabinT  TicketBeginLetter  TicketDots  TicketDashes  nTicketStrings  \
+55      -1                 -1           0             0               1   
+
+    TicketNumber  FamilySize  AgeGroup  
+55        382652           6      -0.5  
+	Class for LT= 0 	len(ltIDs)= 3 	Class for GT= 0 	len(gtIDs)= 6
+
+	tup= (23, 0.5539887187751815, 'Fare', -0.5, 0.181818181818)
+	dfIDList[tup[0][1]= 38
+	dfCurr.head(1)
+     PassengerId  Pclass  SibSp  Parch  Fare  Gender  EmbarkIsC  EmbarkIsS  \
+11          903       1      0      0   0.0       1         -1          1   
+
+    EmbarkIsQ  YesMiss  YesMrs  YesMr  YesRev  YesMaster  YesFancy  \
+11         -1       -1      -1      1      -1         -1        -1   
+
+    CabinNumbers  CabinB  CabinE  CabinA  CabinC  CabinD  CabinG  CabinF  \
+11            -1      -1      -1      -1      -1      -1      -1      -1   
+
+    CabinT  TicketBeginLetter  TicketDots  TicketDashes  nTicketStrings  \
+11      -1                 -1           0             0               1   
+
+    TicketNumber  FamilySize  AgeGroup  
+11           694           1       0.5  
+	Class for LT= 0 	len(ltIDs)= 2 	Class for GT= 0 	len(gtIDs)= 36
+
+	tup= (24, 0.85, 'CabinNumbers', 28.0, 5.0)
+	dfIDList[tup[0][1]= 3
+	dfCurr.head(1)
+      PassengerId  Pclass  SibSp  Parch  Fare  Gender  EmbarkIsC  EmbarkIsS  \
+146         1038       1      0      0   0.5       1         -1          1   
+
+     EmbarkIsQ  YesMiss  YesMrs  YesMr  YesRev  YesMaster  YesFancy  \
+146         -1       -1      -1      1      -1         -1        -1   
+
+     CabinNumbers  CabinB  CabinE  CabinA  CabinC  CabinD  CabinG  CabinF  \
+146            46      -1       1      -1      -1      -1      -1      -1   
+
+     CabinT  TicketBeginLetter  TicketDots  TicketDashes  nTicketStrings  \
+146      -1                 -1           0             0               1   
+
+     TicketNumber  FamilySize  AgeGroup  
+146         17463           1       0.5  
+	Class for LT= 1 	len(ltIDs)= 0 	Class for GT= 1 	len(gtIDs)= 3
+
+	tup= (25, 1.0, 'ThisIsAnEndNode', nan, nan)
+	dfIDList[tup[0][1]= 2
+	dfCurr.head(1)
+     PassengerId  Pclass  SibSp  Parch  Fare  Gender  EmbarkIsC  EmbarkIsS  \
+20          912       1      1      0   0.5       1          1         -1   
+
+    EmbarkIsQ  YesMiss  YesMrs  YesMr  YesRev  YesMaster  YesFancy  \
+20         -1       -1      -1      1      -1         -1        -1   
+
+    CabinNumbers  CabinB  CabinE  CabinA  CabinC  CabinD  CabinG  CabinF  \
+20            -1      -1      -1      -1      -1      -1      -1      -1   
+
+    CabinT  TicketBeginLetter  TicketDots  TicketDashes  nTicketStrings  \
+20      -1                  1           0             0               2   
+
+    TicketNumber  FamilySize  AgeGroup  
+20         17603           2       1.0  
+	decision= 0
+
+	tup= (26, 0.8123249299719888, 'CabinNumbers', 23.3636363636, 6.36363636364)
+	dfIDList[tup[0][1]= 9
+	dfCurr.head(1)
+     PassengerId  Pclass  SibSp  Parch  Fare  Gender  EmbarkIsC  EmbarkIsS  \
+81          973       1      1      0   1.0       1         -1          1   
+
+    EmbarkIsQ  YesMiss  YesMrs  YesMr  YesRev  YesMaster  YesFancy  \
+81         -1       -1      -1      1      -1         -1        -1   
+
+    CabinNumbers  CabinB  CabinE  CabinA  CabinC  CabinD  CabinG  CabinF  \
+81            57      -1      -1      -1       1      -1      -1      -1   
+
+    CabinT  TicketBeginLetter  TicketDots  TicketDashes  nTicketStrings  \
+81      -1                  1           0             0               2   
+
+    TicketNumber  FamilySize  AgeGroup  
+81         17483           2       1.0  
+	Class for LT= 1 	len(ltIDs)= 0 	Class for GT= 1 	len(gtIDs)= 9
+
+	tup= (27, 0.8304099632694123, 'Fare', 0.25, 0.136363636364)
+	dfIDList[tup[0][1]= 184
+	dfCurr.head(1)
+    PassengerId  Pclass  SibSp  Parch  Fare  Gender  EmbarkIsC  EmbarkIsS  \
+0          892       3      0      0  -0.5       1         -1         -1   
+
+   EmbarkIsQ  YesMiss  YesMrs  YesMr  YesRev  YesMaster  YesFancy  \
+0          1       -1      -1      1      -1         -1        -1   
+
+   CabinNumbers  CabinB  CabinE  CabinA  CabinC  CabinD  CabinG  CabinF  \
+0            -1      -1      -1      -1      -1      -1      -1      -1   
+
+   CabinT  TicketBeginLetter  TicketDots  TicketDashes  nTicketStrings  \
+0      -1                 -1           0             0               1   
+
+   TicketNumber  FamilySize  AgeGroup  
+0        330911           1       0.5  
+	Class for LT= 0 	len(ltIDs)= 177 	Class for GT= 0 	len(gtIDs)= 7
+
+	tup= (28, 1.0, 'ThisIsAnEndNode', nan, nan)
+	dfIDList[tup[0][1]= 2
+	dfCurr.head(1)
+      PassengerId  Pclass  SibSp  Parch  Fare  Gender  EmbarkIsC  EmbarkIsS  \
+288         1180       3      0      0  -0.5       1          1         -1   
+
+     EmbarkIsQ  YesMiss  YesMrs  YesMr  YesRev  YesMaster  YesFancy  \
+288         -1       -1      -1      1      -1         -1        -1   
+
+     CabinNumbers  CabinB  CabinE  CabinA  CabinC  CabinD  CabinG  CabinF  \
+288            46      -1       1      -1      -1      -1      -1      -1   
+
+     CabinT  TicketBeginLetter  TicketDots  TicketDashes  nTicketStrings  \
+288      -1                 -1           0             0               1   
+
+     TicketNumber  FamilySize  AgeGroup  
+288          2655           1       0.0  
+	decision= 1
+
+	tup= (29, 0.8222222222222222, 'TicketNumber', 23101282.5, 1.81818181818)
+	dfIDList[tup[0][1]= 1
+	dfCurr.head(1)
+     PassengerId  Pclass  SibSp  Parch  Fare  Gender  EmbarkIsC  EmbarkIsS  \
+97          989       3      0      0  -0.5       1         -1          1   
+
+    EmbarkIsQ  YesMiss  YesMrs  YesMr  YesRev  YesMaster  YesFancy  \
+97         -1       -1      -1      1      -1         -1        -1   
+
+    CabinNumbers  CabinB  CabinE  CabinA  CabinC  CabinD  CabinG  CabinF  \
+97            -1      -1      -1      -1      -1      -1      -1      -1   
+
+    CabinT  TicketBeginLetter  TicketDots  TicketDashes  nTicketStrings  \
+97      -1                  1           1             1               3   
+
+    TicketNumber  FamilySize  AgeGroup  
+97      23101268           1       0.0  
+	Class for LT= 0 	len(ltIDs)= 1 	Class for GT= 0 	len(gtIDs)= 0
+
+	tup= (30, 1.0, 'ThisIsAnEndNode', nan, nan)
+	dfIDList[tup[0][1]= 1
+	dfCurr.head(1)
+     PassengerId  Pclass  SibSp  Parch  Fare  Gender  EmbarkIsC  EmbarkIsS  \
+45          937       3      0      0  -0.5       1         -1          1   
+
+    EmbarkIsQ  YesMiss  YesMrs  YesMr  YesRev  YesMaster  YesFancy  \
+45         -1       -1      -1      1      -1         -1        -1   
+
+    CabinNumbers  CabinB  CabinE  CabinA  CabinC  CabinD  CabinG  CabinF  \
+45            -1      -1      -1      -1      -1      -1      -1      -1   
+
+    CabinT  TicketBeginLetter  TicketDots  TicketDashes  nTicketStrings  \
+45      -1                  1           1             1               3   
+
+    TicketNumber  FamilySize  AgeGroup  
+45      23101291           1       0.0  
+	decision= 0

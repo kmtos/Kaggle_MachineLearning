@@ -118,6 +118,8 @@ def calcGiniImp(df, labelColumnName, otherColumnName):
   giniImpDecrease = (totalSum/totalCount * (1 - totalSum/totalCount) * 2)
 
   for i in range(len(countList) ):
+    print ("countList=", countList[i])
+    print ("sumList=", sumList[i] )
     if countList[i][1] == 0:
       giniImpList.append(0)
       weightList.append(0)

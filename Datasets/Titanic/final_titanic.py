@@ -152,7 +152,7 @@ print("FamilySize = SibSp + Parch")
 ############################
 from sklearn.ensemble import ExtraTreesRegressor
 #paramDict = {"""'min_samples_split': [5,10,15,20],""" 'min_samples_leaf':[2,4,6,8,10]}
-EXTreeReg = ExtraTreesRegressor(max_depth=6, min_samples_split=15, min_samples_leaf=4, n_estimators= 1000, bootstrap=True, oob_score=True)
+EXTreeReg = ExtraTreesRegressor(max_depth=6, min_samples_split=15, min_samples_leaf=4, n_estimators= 10, bootstrap=True, oob_score=True)
 df_temp = impute(clf=EXTreeReg, df=df, colName='Age', isDiscrete=False, colsToRemovePrior=['PassengerId', 'Survived'], paramDict=None) #paramDict)
 plt.plot(EXTreeReg.feature_importances_)
 print ("Oob_Score=", EXTreeReg.oob_score_ )
@@ -200,6 +200,7 @@ features_test = df_test_noStrings.values
 giniDecGen, giniDevGenTup =  calcGiniImp(df_noStrings, 'Survived', 'Gender') 
 giniDecGen, giniDevGenTup =  calcGiniImp(df_noStrings, 'Survived', 'YesMr')
 
+"""
 ################
 # Classifying
 ################
@@ -253,7 +254,6 @@ pred = pred.astype(int)
 df_answers = pd.DataFrame({'PassengerId': np_passengerID, 'Survived': pred} )
 df_answers.to_csv("Answers/ExtTreeImpAge_RFC_maxDepth5_gini_minSamplesSplit10_minSamplesLeaf2_weightBalanced_nEstimators100.csv", sep=',', index=False)
 
-"""
 ############################################################################
 # Showing the feature importances before and after making choices on values
 ############################################################################
@@ -345,4 +345,3 @@ for tree_in_forest in clf.estimators_:
 for ite in range(iTree):
     check_call(["dot","-Tpng", 'TreeOutput/tree_' + str(ite) + '_max_depth5.dot', "-o",'TreeOutput/tree_' + str(ite) + '_max_depth5.png'])
 """
-

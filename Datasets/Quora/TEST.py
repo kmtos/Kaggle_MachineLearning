@@ -131,7 +131,7 @@ for col in df_train_noStrings:
   labels.append(col)
 
 iTree = 0
-clf = RandomForestClassifier(criterion='entropy', max_depth=3, min_samples_leaf=1, min_samples_split=5, class_weight=None, n_estimators=10, oob_score=True, bootstrap=True, random_state=1 )
+clf = RandomForestClassifier(criterion='entropy', max_depth=3, min_samples_leaf=1, min_samples_split=10 class_weight=None, n_estimators=10, oob_score=True, bootstrap=True, random_state=1 )
 for tree_in_forest in clf.estimators_:
     with open('TreeOutput/tree_' + str(iTree) + '_max_depth5.dot', 'w') as my_file:
         my_file = tree.export_graphviz(tree_in_forest, out_file=my_file, max_depth=5, impurity=True, feature_names=list(df_train_noStrings), 
@@ -182,7 +182,6 @@ pairs.append(['sequential_match_stem_double_noStop', 'diffWords'])
 plotGridOf2DsWithColor(df_train_dup, pairs, ["blue"], [ "o"], "matches_and_sequentialMatch_vs_diffwords.png", "png" , 0.01, 55, 1) #55 was 110
 plotGridOf2DsWithColor(df_train_nodup, pairs, ["red"], [ "o"], "matches_and_sequentialMatch_vs_diffwords.png", "png" , 0.01, 55, 1) #55 was 110
 #plotGridOf2DsWithColor(df_train_nodup, pairs, ["blue", "red"], [ "o", "s"], "matches_and_sequentialMatch_vs_diffwords.png", "png" , 0.01, 55, 1) #55 was 110
-"""
 labels = ["match_stem","match_stem_double", "match_stem_triple", "nChars_match_stem", "nChars_match_stem_double", "nChars_match_stem_triple", "sequential_match_stem", "sequential_match_stem_double", "sequential_match_stem_triple"]
 
 labels_noStop = ["match_stem_noStop","match_stem_double_noStop", "match_stem_triple_noStop", "nChars_match_stem_noStop", "nChars_match_stem_double_noStop", "nChars_match_stem_triple_noStop", "sequential_match_stem_noStop", "sequential_match_stem_double_noStop", "sequential_match_stem_triple_noStop"]
@@ -190,59 +189,85 @@ labels_noStop = ["match_stem_noStop","match_stem_double_noStop", "match_stem_tri
 df_train_dup = df_train_noStrings[df_train_noStrings['is_duplicate'] == 1 ]
 df_train_nodup = df_train_noStrings[df_train_noStrings['is_duplicate'] == 0 ]
 fig = plt.figure()
-for i in range(len(labels)):
+for i in range(len(labels_noStop)):
   ax = fig.add_subplot(3, 3, i+1)
-  print ("i=", labels[i])
-  if "triple" in labels[i]:
-    print ("Triple yLimSet")
-    ax.set_ylim(0,7500)
-  if "double" in labels[i]:
-    print ("DOUBLE yLim Set")
-    ax.set_ylim(0,8000)
-  df_train_dup[labels[i] ].hist(bins=100, ax=ax, alpha=0.5)
-  df_train_nodup[labels[i] ].hist(bins=100, ax=ax, alpha=0.5)
-  ax.set_title(labels[i] )
-lines, labels = ax.get_legend_handles_labels()
-ax.legend(lines, labels, loc='best')
+#  print ("i=", labels_noStop[i])
+#  if "triple" in labels_noStop[i]:
+#    print ("Triple yLimSet")
+#    ax.set_ylim(0,7500)
+#  if "double" in labels_noStop[i]:
+#    print ("DOUBLE yLim Set")
+#    ax.set_ylim(0,8000)
+#  if "single" in labels_noStop[i]:
+#    print ("Single yLim Set")
+#    ax.set_ylim(0,10000)
+  df_train_dup[labels_noStop[i] ].hist(bins=100, ax=ax, alpha=0.5, color='red')
+  df_train_nodup[labels_noStop[i] ].hist(bins=100, ax=ax, alpha=0.5, color='blue')
+  ax.set_title(labels_noStop[i], fontsize=10 )
+  ax.set_yscale('log')
+red = mpatches.Patch(color='red', label='Duplicate')
+blue = mpatches.Patch(color='blue', label='No Duplicate')
+plt.legend(handles=[red, blue])
 fig.tight_layout()
 plt.show()
+
+fig = plt.figure()
+for i in range(len(labels_noStop)):
+  ax = fig.add_subplot(3, 3, i+1)
+  print ("i=", labels_noStop[i])
+  if "triple" in labels_noStop[i]:
+    print ("Triple yLimSet")
+    ax.set_ylim(0,7500)
+  if "double" in labels_noStop[i]:
+    print ("DOUBLE yLim Set")
+    ax.set_ylim(0,8000)
+  df_train_dup[labels_noStop[i] ].hist(bins=100, ax=ax, alpha=0.5, color='red')
+  df_train_nodup[labels_noStop[i] ].hist(bins=100, ax=ax, alpha=0.5, color='blue')
+  ax.set_title(labels_noStop[i], fontsize=10 )
+  #ax.set_yscale('log')
+red = mpatches.Patch(color='red', label='Duplicate')
+blue = mpatches.Patch(color='blue', label='No Duplicate')
+plt.legend(handles=[red, blue])
+fig.tight_layout()
+plt.show()
+"""
 ###################
 # Using algorithms
 ###################
 #############  Training Random Forest ##############
-clf1 = RandomForestClassifier(criterion='entropy', max_depth=24, min_samples_leaf=1, min_samples_split=15, class_weight=None, n_estimators=70, oob_score=True, bootstrap=True, random_state=1 )
+"""
+clf1 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=10, class_weight=None, n_estimators=300, oob_score=True, bootstrap=True, random_state=1 )
 clf1.fit(features_train_1, labels_train_1)
 print ("clf1=", clf1.score(features_test_1, labels_test_1), "\toob_score=", clf1.oob_score_ )
 
-clf2 = RandomForestClassifier(criterion='entropy', max_depth=23, min_samples_leaf=1, min_samples_split=15, class_weight=None, n_estimators=70, oob_score=True, bootstrap=True, random_state=1 )
+clf2 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=10, class_weight=None, n_estimators=600, oob_score=True, bootstrap=True, random_state=1 )
 clf2.fit(features_train_1, labels_train_1)
 print ("clf2=",  clf2.score(features_test_1, labels_test_1), "\toob_score=", clf2.oob_score_ )
 
-clf3 = RandomForestClassifier(criterion='entropy', max_depth=22, min_samples_leaf=1, min_samples_split=15, class_weight=None, n_estimators=70, oob_score=True, bootstrap=True, random_state=1 )
+clf3 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=10, class_weight=None, n_estimators=900, oob_score=True, bootstrap=True, random_state=1 )
 clf3.fit(features_train_1, labels_train_1)
 print ("clf3=", clf3.score(features_test_1, labels_test_1), "\toob_score=", clf3.oob_score_ )
 
-clf4 = RandomForestClassifier(criterion='entropy', max_depth=21, min_samples_leaf=1, min_samples_split=15, class_weight=None, n_estimators=70, oob_score=True, bootstrap=True, random_state=1 )
+clf4 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=10, class_weight=None, n_estimators=1200, oob_score=True, bootstrap=True, random_state=1 )
 clf4.fit(features_train_1, labels_train_1)
 print ("clf4=", clf4.score(features_test_1, labels_test_1), "\toob_score=", clf4.oob_score_ )
 
-clf5 = RandomForestClassifier(criterion='entropy', max_depth=20, min_samples_leaf=1, min_samples_split=15, class_weight=None, n_estimators=70, oob_score=True, bootstrap=True, random_state=1 )
+clf5 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=10, class_weight=None, n_estimators=1500, oob_score=True, bootstrap=True, random_state=1 )
 clf5.fit(features_train_1, labels_train_1)
 print("clf5=", clf5.score(features_test_1, labels_test_1), "\toob_score=", clf5.oob_score_ )
 
-clf6 = RandomForestClassifier(criterion='entropy', max_depth=19, min_samples_leaf=1, min_samples_split=15, class_weight=None, n_estimators=70, oob_score=True, bootstrap=True, random_state=1 )
+clf6 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=10, class_weight=None, n_estimators=1800, oob_score=True, bootstrap=True, random_state=1 )
 clf6.fit(features_train_1, labels_train_1)
 print ("clf6=", clf6.score(features_test_1, labels_test_1) , "\toob_score=", clf6.oob_score_)
 
-clf7 = RandomForestClassifier(criterion='entropy', max_depth=18, min_samples_leaf=1, min_samples_split=15, class_weight=None, n_estimators=70, oob_score=True, bootstrap=True, random_state=1 )
+clf7 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=10, class_weight=None, n_estimators=2100, oob_score=True, bootstrap=True, random_state=1 )
 clf7.fit(features_train_1, labels_train_1)
 print("clf7=", clf7.score(features_test_1, labels_test_1) , "\toob_score=", clf7.oob_score_)
-
-clf8 = RandomForestClassifier(criterion='entropy', max_depth=17, min_samples_leaf=1, min_samples_split=15, class_weight=None, n_estimators=70, oob_score=True, bootstrap=True, random_state=1 )
+"""
+clf8 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=10, class_weight=None, n_estimators=2400, oob_score=True, bootstrap=True, random_state=1 )
 clf8.fit(features_train_1, labels_train_1)
 print ("clf8=", clf8.score(features_test_1, labels_test_1) , "\toob_score=", clf8.oob_score_)
 
-clf9 = RandomForestClassifier(criterion='entropy', max_depth=16, min_samples_leaf=1, min_samples_split=15, class_weight=None, n_estimators=70, oob_score=True, bootstrap=True, random_state=1 )
+clf9 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=10, class_weight=None, n_estimators=2700, oob_score=True, bootstrap=True, random_state=1 )
 clf9.fit(features_train_1, labels_train_1)
 print ("clf9=", clf9.score(features_test_1, labels_test_1) , "\toob_score=", clf9.oob_score_)
-
