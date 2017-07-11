@@ -79,7 +79,7 @@ def CalcBestGiniSplit(df, className, colName, splits, minSamplesSplit, idColumn,
 #    2) The node number and the DF ID's at that leaf
 #    3) The Decision that was made at each leaf
 ##################################################################
-def MakeTree(df, className, nGiniSplits, alpha, giniEndVal, maxDepth, idColumn, nodeDFIDsFileName, nodeValuesFileName, nodeDecisionsFileName, minSamplesSplit, df_weights):
+def MakeTree(df, className, nGiniSplits, alpha, giniEndVal, maxDepth, idColumn, minSamplesSplit, df_weights, nodeDFIDsFileName, nodeValuesFileName, nodeDecisionsFileName):
   print ("\n\n###################################\n Making a Decision Tree\n###################################")
   maxNodes = 0
   for i in range(1,maxDepth+1): maxNodes += 2**i
@@ -209,10 +209,11 @@ def GetNodeDecisions(df, leaf, index, className):
 # described above and the decisions of those nodes,  make decisions
 # of a set of points in a DF
 ####################################################################
-def ClassifyWithTree(df_test, nodeDecisionsFileName, nodeValuesFileName, className, idColumn, outputFileName, maxDepth):
+def ClassifyWithTree(df_test, className, idColumn, maxDepth, outputFileName, nodeDecisionsFileName, nodeValuesFileName):
   print ("\n\n########################################################################\n Classifying test points with Tree from Make Tree\n########################################################################")
   df_Answers = df_test.filter([idColumn], axis=1)
   df_Answers[className] = np.nan # Answer storage df
+  print ("df_Answers=", df_Answers.head(10) )
   with open(nodeDecisionsFileName) as nodeDecisionsFile:
     nodeDecisionsFileReader = csv.reader(nodeDecisionsFile)
     next(nodeDecisionsFileReader)
@@ -236,8 +237,7 @@ def ClassifyWithTree(df_test, nodeDecisionsFileName, nodeValuesFileName, classNa
     elif tup[2] == 'ThisIsAnEndNode' and pd.isnull(tup[3]) and pd.isnull(tup[4]) and tup[1] == 1.0: # If decision of node from MakeTree is an EndNode, then proceed
       decision = next(iteTup for iteTup in nodeDecisions if int(iteTup[0]) == tup[0]) # Get the decision of the End Node
       IDs = dfCurr[idColumn].tolist() # Get df_test elements that made it to this node following the tree structure
-      df_Answers[ df_Answers[idColumn].isin(IDs) ] = decision[1] # Give the elements the appropriate class value from decision
-      print ("\tdecision=", decision[1] )
+      df_Answers.loc[ df_Answers[idColumn].isin(IDs) , className] = decision[1] # Give the elements the appropriate class value from decision
       if tup[0] < maxNodeCount / 2: # If this EndNode isn't at the furthest depth, then add empty placeholders for future BlankNodes
         dfIDList.append( (tup[0]*2 + 1, [] ) )
         dfIDList.append( (tup[0]*2 + 2, [] ) )
@@ -249,10 +249,11 @@ def ClassifyWithTree(df_test, nodeDecisionsFileName, nodeValuesFileName, classNa
       decision = next(iteTup for iteTup in nodeDecisions if int(iteTup[0]) == tup[0]) # Get decision of Make Tree at node
       ltIDs = dfCurr[ dfCurr[tup[2]] <= tup[3] ][idColumn].tolist() # Get the df_test ID's in the daughter LT leaf of current Node
       gtIDs = dfCurr[ dfCurr[tup[2]] >  tup[3] ][idColumn].tolist() # Get the df_test ID's in the daughter GT leaf of current Node
-      df_Answers[ df_Answers[idColumn].isin(ltIDs) ] = decision[1] # Apply decision to LT group
-      df_Answers[ df_Answers[idColumn].isin(gtIDs) ] = decision[2] # Apply decision to GT group
+      df_Answers.loc[ df_Answers[idColumn].isin(ltIDs) , className] = decision[1] # Apply decision to LT group
+      df_Answers.loc[ df_Answers[idColumn].isin(gtIDs) , className] = decision[2] # Apply decision to GT group
       print ("\tClass for LT=", decision[1], "\tlen(ltIDs)=",  len(ltIDs), "\tClass for GT=", decision[1], "\tlen(gtIDs)=",  len(gtIDs) )
       del ltIDs, gtIDs, decision # Delete containers to preserve memory, in case they don't already get deleted
     del dfCurr 
   #Writing the answers out
+  print ("df_Answers=", df_Answers.head(10) )
   df_Answers.to_csv(outputFileName + ".csv", sep=',', index=False) #Write out the answers
