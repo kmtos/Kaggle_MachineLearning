@@ -18,12 +18,12 @@ from operator import itemgetter
 #        the value split at, range between splits)
 #######################################################
 def FindingBestSplit(df, className, idColumn, nGiniSplits, nodeCount, giniEndVal, minSamplesSplit, df_weights):
-  columns = [col for col in df if col != className and col != idColumn] # Get all columns but the class and ID column
-  bestGiniSplit = (-1, -1, '', -100, -1)
   for classVal, rows in df[className].value_counts().to_dict().items(): # If the number of data points in the leaf are all of the same class, then the node ends
     if len(df) == rows: 
       print ("*****************END NODE")
       return ( nodeCount, 1.0, 'ThisIsAnEndNode', np.NaN, np.NaN)
+  columns = [col for col in df if col != className and col != idColumn] # Get all columns but the class and ID column
+  bestGiniSplit = (-1, -1, '', -100, -1)
   for col in columns:
     useUnique = False
     unique = sorted(df[col].unique() )
@@ -31,7 +31,8 @@ def FindingBestSplit(df, className, idColumn, nGiniSplits, nodeCount, giniEndVal
     low =  unique[0]
     splitLength = (high - low) / (nGiniSplits+1)
     splits = []
-    if len(unique) <= nGiniSplits: #if the number of unique values is less than the desired number of splits, then just make the unique values the splits
+    if len(unique) == 1: continue
+    elif len(unique) <= nGiniSplits: #if the number of unique values is less than the desired number of splits, then just make the unique values the splits
       for i in range(len(unique)-1):
         splits.append( (unique[i] + unique[i+1])/2.0)
     else: #Find the number of splits for the current column
@@ -41,8 +42,8 @@ def FindingBestSplit(df, className, idColumn, nGiniSplits, nodeCount, giniEndVal
     if bestSplitForCol[0] > bestGiniSplit[1]: #See if this column provides the best Gini increase so far
       bestGiniSplit = (nodeCount, bestSplitForCol[0], col, bestSplitForCol[1], splitLength )
   if bestGiniSplit[1] < giniEndVal: 
+    print ("Less that Min gini improvement: bestGiniSplit[1]=", bestGiniSplit[1], "\tginiEndVal=", giniEndVal)
     bestGiniSplit = (nodeCount, np.NaN, '', np.NaN, np.NaN) # Returns BlankNode if the best possible gini increase is less than the minimum for ending
-    print ("LESS THAN giniEndVal")
   return bestGiniSplit
     
 #############################################################
@@ -79,7 +80,7 @@ def CalcBestGiniSplit(df, className, colName, splits, minSamplesSplit, idColumn,
 #    2) The node number and the DF ID's at that leaf
 #    3) The Decision that was made at each leaf
 ##################################################################
-def MakeTree(df, className, nGiniSplits, alpha, giniEndVal, maxDepth, idColumn, minSamplesSplit, df_weights, nodeDFIDsFileName, nodeValuesFileName, nodeDecisionsFileName):
+def MakeTree(df, className, nGiniSplits, giniEndVal, maxDepth, idColumn, minSamplesSplit, df_weights, nodeDFIDsFileName, nodeValuesFileName, nodeDecisionsFileName):
   print ("\n\n###################################\n Making a Decision Tree\n###################################")
   maxNodes = 0
   for i in range(1,maxDepth+1): maxNodes += 2**i
@@ -98,16 +99,21 @@ def MakeTree(df, className, nGiniSplits, alpha, giniEndVal, maxDepth, idColumn, 
         print ("\nnode=", nodeCount, "parentNode=", (nodeCount-1) // 2, "\tparentTup=", parentTup, "\tlen(parentDFIDs)=", len(parentDFIDs))
         if pd.isnull(parentTup[3]) and pd.isnull(parentTup[4]): # Make BlankNodes for leaves whose parents are End nodes or other BlankNodes
           nodeValues.append( (nodeCount, np.NaN, '' , np.NaN, np.NaN) )
-          nodeDFIds.append( (nodeCount, pd.DataFrame()) )
+          nodeDFIds.append( (nodeCount, [] ) )
         else: # Create new node with the best gini increase and the df ID's and other important  information
           if nodeCount % 2  == 1: dfCurr = df.loc[(df[idColumn].isin(parentDFIDs)) & (df[parentTup[2]] <= parentTup[3]) ] #Getting dataframe elements that are lower than the parent split
           else: dfCurr = df.loc[(df[idColumn].isin(parentDFIDs)) & (df[parentTup[2]] > parentTup[3]) ] #getting dataframe elements that are greater than or equal to the parent split
           print ("len(dfCurr)=", len(dfCurr), "\tparentTup[3]=", parentTup[3] )
-          nodeValues.append(FindingBestSplit(df=dfCurr, className=className, idColumn=idColumn, nGiniSplits=nGiniSplits, nodeCount=nodeCount, giniEndVal=giniEndVal, 
+          if len(dfCurr) < minSamplesSplit:
+            print ("Too Few to be able to split")
+            nodeValues.append( (nodeCount, np.NaN, '', np.NaN, np.NaN) )
+            nodeDFIds.append( (nodeCount, [] ) )
+          else: 
+            nodeValues.append(FindingBestSplit(df=dfCurr, className=className, idColumn=idColumn, nGiniSplits=nGiniSplits, nodeCount=nodeCount, giniEndVal=giniEndVal, 
                                              minSamplesSplit=minSamplesSplit, df_weights=df_weights) ) # get next best split node Values
-          nodeDFIds.append( (nodeCount, dfCurr[idColumn].tolist()) ) # Get next best split df ID's
-          print ("######## NEW ########:", "nodeValues[nodeCount]=", nodeValues[nodeCount], "\tlen(nodeDFIds[1])=", len(nodeDFIds[1]))
-          if not pd.isnull(nodeValues[nodeCount][3]): print ("len(lessThan)=", len(dfCurr.loc[dfCurr[nodeValues[nodeCount][2]] <= nodeValues[nodeCount][3]]), "\tlen(greaterThan)=", len(dfCurr.loc[dfCurr[nodeValues[nodeCount][2]] > nodeValues[nodeCount][3]]) ) 
+            nodeDFIds.append( (nodeCount, dfCurr[idColumn].tolist()) ) # Get next best split df ID's
+            print ("######## NEW ########:", "nodeValues[nodeCount]=", nodeValues[nodeCount], "\tlen(nodeDFIds[", nodeCount, "][1])=", len(nodeDFIds[nodeCount][1]))
+            if not pd.isnull(nodeValues[nodeCount][3]): print ("len(lessThan)=", len(dfCurr.loc[dfCurr[nodeValues[nodeCount][2]] <= nodeValues[nodeCount][3]]), "\tlen(greaterThan)=", len(dfCurr.loc[dfCurr[nodeValues[nodeCount][2]] > nodeValues[nodeCount][3]]) ) 
       nodeCount += 1
 
     #Writing out the tuples for the nodes and cuts on which columns and dataframe ID's in each of the leaves
@@ -128,19 +134,29 @@ def MakeTree(df, className, nGiniSplits, alpha, giniEndVal, maxDepth, idColumn, 
     #Getting the first non-dead leaf, i.e. leaf who's parent has a gini increase greater than the minimum for a leaf to end
     nodeDecisions = []
     minNodeNotLeaf = maxNodes
+    print ("df_weights['Weights'].sum(axis=0)=", df_weights['Weights'].sum(axis=0) )
     for ite in range(maxNodes, maxNodes - 2**maxDepth, -1):
       index = ite 
       currentLeaf = nodeValues[index]
       currentDF = df.loc[df[idColumn].isin(nodeDFIds[index][1])]
+      currentDF_weights = df_weights.loc[ df[idColumn].isin(nodeDFIds[index][1])]
+      soloNode = False
+      gt_or_lt = 0
       while pd.isnull(currentLeaf[1]) and  currentLeaf[2] == '' and pd.isnull(currentLeaf[3]) and pd.isnull(currentLeaf[4]): # Check if node is a BlankNode and if so get it's parent until non-blank
-        index = (ite-1) // 2
+        sisterNode = index-1 if index % 2 == 0 else index+1
+        gt_or_lt = 1 if index % 2 == 0 else -1
+        soloNode = False
+        if not pd.isnull(nodeValues[sisterNode][1]) and nodeValues[sisterNode][2] != '' and not pd.isnull(nodeValues[sisterNode][3]) and not pd.isnull(nodeValues[sisterNode][4]): soloNode = True
+        index = (index-1) // 2
         currentLeaf = nodeValues[index]
         currentDF = df.loc[df[idColumn].isin(nodeDFIds[index][1])]
+        currentDF_weights = df_weights.loc[ df[idColumn].isin(nodeDFIds[index][1])]
       print ("\n\nindex=", index, "\tcurrentLeaf=", currentLeaf, "\tlen(currentDF)=", len(currentDF) )
-      currentNodeDecision = (GetNodeDecisions(currentDF, currentLeaf, index, className) ) # Get the decision of the node based upon democracy
+      currentNodeDecision = (GetWeightedNodeDecisions(df=currentDF, leaf=currentLeaf, index=index, className=className, soloNodeDecision=soloNode, gt_or_lt=gt_or_lt,
+                                                      df_weights=currentDF_weights, idColumn=idColumn) ) # Get the decision of the node
       try:  # This sees if the decision of a node is already added. From a sister BlankNode
-        next(tup for tup in nodeDecisions if tup[0] == index)
-        print ("Node already added from brother leaf being null from hitting 'giniEndVal', i.e. leaf can't be improved anymore")
+        next (tup for tup in nodeDecisions if tup[0] == index)
+        print ("Decision already included from other daugther node")
       except StopIteration:  #If node is not found in nodeDecisions, then add it
         nodeDecisions.append(currentNodeDecision )
 
@@ -148,7 +164,7 @@ def MakeTree(df, className, nGiniSplits, alpha, giniEndVal, maxDepth, idColumn, 
     nodeDecisionsFileName =  nodeDecisionsFileName + ".csv"
     nodeDecisionsFile = open(nodeDecisionsFileName, 'w')
     nodeDecisionsFileCSV=csv.writer(nodeDecisionsFile)
-    nodeDecisionsFileCSV.writerow(["NodeNumber,Decision_for_group_lessthan_cut_at_node,Decision_for_group_greaterthan_cut_at_node,nCorr_LT_group,nCorr_GT_group"])
+    nodeDecisionsFileCSV.writerow(["NodeNumber,LT_className_decision,GT_className_decision,LT_WeightCorrect,GT_WeightCorrect,LT_TotalWeight,GT_TotalWeight"])
     for tup in nodeDecisions:
       nodeDecisionsFileCSV.writerow(tup)
 
@@ -167,7 +183,7 @@ def MakeTree(df, className, nGiniSplits, alpha, giniEndVal, maxDepth, idColumn, 
       nodeDFIdsFileCSV.writerow(tup)
 
 ########################################################################
-# With a fully expanded tree, get the decisions at each final
+# With a finished  tree, get the decisions at each final
 # node. Ouput will be a tuple = (Node number, the decision for the
 # group that is less than the final cut, the decision for the 
 # group greater than the last cut of the final node, number of 
@@ -204,6 +220,62 @@ def GetNodeDecisions(df, leaf, index, className):
   print ("\t", (index, ltMaxClassVal, gtMaxClassVal, ltMaxCount, gtMaxCount))
   return (index, ltMaxClassVal, gtMaxClassVal, ltMaxCount, gtMaxCount)
 
+
+#########################################################################
+# With a Finished Tree, get the decision for the LT and GT group at each 
+# node bsed upon a weighted democracy. Tuple=(node #, LT decision, GT 
+# decision, LT Weight correct, GT weight correct, LT total weight, GT
+# total Weight.)
+#########################################################################
+def GetWeightedNodeDecisions(df, leaf, index, className, soloNodeDecision, gt_or_lt, df_weights, idColumn):
+  ltMaxWeight = -100000000000000000000000000000000
+  ltMaxClassVal = -100000000000000000000000000000000
+  gtMaxWeight = -100000000000000000000000000000000
+  gtMaxClassVal = -100000000000000000000000000000000
+  ltTotalWeight = -1
+  gtTotalWeight = -1
+  if leaf[1] == 1.0 and leaf[2] == 'ThisIsAnEndNode' and pd.isnull(leaf[3]) and pd.isnull(leaf[4]): # See if this is a node where every element is the same class
+    print("This is An End Node")
+    return (index, df[className].unique()[0], np.NaN, df_weights['Weights'].sum(axis=0), np.NaN, 
+            df_weights['Weights'].sum(axis=0), np.NaN)
+  
+  if (soloNodeDecision):
+    print ("Blank Node has a non-Blank Sister, so only make decision for one part of parent node.")
+    df_IDs = df[ df[leaf[2]]> leaf[3] ][idColumn].tolist() if gt_or_lt > 0 else df[ df[leaf[2]]<=leaf[3] ][idColumn].tolist()      
+    totalWeight = df_weights[ df_weights[idColumn].isin(df_IDs) ]['Weights'].sum(axis=0)
+    for classVal, row in  df[ df[idColumn].isin(df_IDs)  ][className].value_counts().to_dict().items():
+      currWeight = df_weights[ (df_weights[idColumn].isin(df_IDs)) & (df_weights[className] == classVal) ]['Weights'].sum(axis=0)
+      print ("\tclassVal=", classVal, "\tcurrWeight=", currWeight)
+      if currWeight > ltMaxWeight:
+        ltMaxWeight = currWeight
+        ltMaxClassVal = classVal
+    if gt_or_lt > 0: return (index, np.NaN, ltMaxClassVal, np.NaN, ltMaxWeight, np.NaN, totalWeight)
+    else:            return (index, ltMaxClassVal, np.NaN, ltMaxWeight, np.NaN, totalWeight, np.NaN)
+
+  print ("\tlen(ltDF)=", len(df[ df[leaf[2]]<=leaf[3] ]), "\tlen(gtDF)=", len(df[ df[leaf[2]]>leaf[3] ]) )
+  print ("\tLESS THAN") #Getting the <= decision at node
+  df_ltIDs = df[ df[leaf[2]]<=leaf[3] ][idColumn].tolist()
+  df_gtIDs = df[ df[leaf[2]]> leaf[3] ][idColumn].tolist()
+  ltTotalWeight = df_weights[ df_weights[idColumn].isin(df_ltIDs) ]['Weights'].sum(axis=0)
+  gtTotalWeight = df_weights[ df_weights[idColumn].isin(df_gtIDs) ]['Weights'].sum(axis=0)
+  for classVal, row in  df[ df[idColumn].isin(df_ltIDs)  ][className].value_counts().to_dict().items():
+    currWeight = df_weights[ (df_weights[idColumn].isin(df_ltIDs)) & (df_weights[className] == classVal) ]['Weights'].sum(axis=0)
+    print ("\tclassVal=", classVal, "\tcurrWeight=", currWeight)
+    if currWeight > ltMaxWeight:
+      ltMaxWeight = currWeight
+      ltMaxClassVal = classVal
+  print("\tGREATER THAN") #Getting the <= decision at node
+  for classVal, row in  df[ df[idColumn].isin(df_gtIDs) ][className].value_counts().to_dict().items(): # Get the democratic decision from the elements in the GT group of end node
+    currWeight = df_weights[ (df_weights[idColumn].isin(df_gtIDs)) & (df_weights[className] == classVal) ]['Weights'].sum(axis=0)
+    print ("\tclassVal=", classVal, "\tcurrWeight=", currWeight)
+    if currWeight > gtMaxWeight:
+      gtMaxWeight = currWeight
+      gtMaxClassVal = classVal
+  print ("\t", (index, ltMaxClassVal, gtMaxClassVal, ltMaxWeight, gtMaxWeight, ltTotalWeight, gtTotalWeight) )
+  return (index, ltMaxClassVal, gtMaxClassVal, ltMaxWeight, gtMaxWeight, ltTotalWeight, gtTotalWeight)
+
+
+
 ####################################################################
 # Given a final Tree described by the nodes and their tple values
 # described above and the decisions of those nodes,  make decisions
@@ -213,7 +285,6 @@ def ClassifyWithTree(df_test, className, idColumn, maxDepth, outputFileName, nod
   print ("\n\n########################################################################\n Classifying test points with Tree from Make Tree\n########################################################################")
   df_Answers = df_test.filter([idColumn], axis=1)
   df_Answers[className] = np.nan # Answer storage df
-  print ("df_Answers=", df_Answers.head(10) )
   with open(nodeDecisionsFileName) as nodeDecisionsFile:
     nodeDecisionsFileReader = csv.reader(nodeDecisionsFile)
     next(nodeDecisionsFileReader)
@@ -227,10 +298,11 @@ def ClassifyWithTree(df_test, className, idColumn, maxDepth, outputFileName, nod
   maxNodeCount = 0
   for i in range(1,maxDepth+1): maxNodeCount += 2**i # Get the max number of nodes from maxDepth
   for ite in nodeValues: #Iterate through the nodes
-    tup = (int(ite[0]),  float(ite[1]), ite[2], float(ite[3]), float(ite[4]) ) # The File stores all info as strings. Cleaner to reassing type now instead of every instance.
+    tup = (int(ite[0]),  float(ite[1]), ite[2], float(ite[3]), float(ite[4])) # The File stores all info as strings. Cleaner to reassing type now, not every instance.
     print ("\n\ttup=", tup )
     print ("\tdfIDList[tup[0][1]=", len(dfIDList[tup[0]][1])) 
     dfCurr = df_test.loc[df_test[idColumn].isin(dfIDList[tup[0]][1])] # Get the elements of df_test at node
+
     if pd.isnull(tup[3]) and pd.isnull(tup[4]) and tup[2] == '' and pd.isnull(tup[1]): # If decision of node from MakeTree is blank, then skip
       print ("\tdf=", dfIDList[tup[0]][1])
       continue
@@ -238,6 +310,7 @@ def ClassifyWithTree(df_test, className, idColumn, maxDepth, outputFileName, nod
       decision = next(iteTup for iteTup in nodeDecisions if int(iteTup[0]) == tup[0]) # Get the decision of the End Node
       IDs = dfCurr[idColumn].tolist() # Get df_test elements that made it to this node following the tree structure
       df_Answers.loc[ df_Answers[idColumn].isin(IDs) , className] = decision[1] # Give the elements the appropriate class value from decision
+      print ("Class for End-Node=",  decision[1], "\tlen(IDs)=", IDs)
       if tup[0] < maxNodeCount / 2: # If this EndNode isn't at the furthest depth, then add empty placeholders for future BlankNodes
         dfIDList.append( (tup[0]*2 + 1, [] ) )
         dfIDList.append( (tup[0]*2 + 2, [] ) )
@@ -245,13 +318,33 @@ def ClassifyWithTree(df_test, className, idColumn, maxDepth, outputFileName, nod
       print ("\tlen(lt)=", len(dfCurr[ dfCurr[tup[2]] <= tup[3] ]), "\tlen(gt)=", len(dfCurr[ dfCurr[tup[2]] > tup[3] ]) )
       dfIDList.append( (tup[0]*2 + 1, dfCurr[ dfCurr[tup[2]] <= tup[3] ][idColumn].tolist() ) ) # Give the df_test ID's in the daughter LT leaf of current Node
       dfIDList.append( (tup[0]*2 + 2, dfCurr[ dfCurr[tup[2]] > tup[3] ][idColumn].tolist() ) )  # Give the df_test ID"s in the daughter Gt leaf of current Node
+      try:  # This sees if the decision of a node is already added. From a sister BlankNode
+        decision = next (itetup for itetup in nodeDecisions if int(itetup[0]) == tup[0])
+        print ("\tOne of this Node's Daughters is a BlankNode.")
+        if pd.isnull(float(decision[2]) ) and not pd.isnull(float(decision[1]) ):
+          ltIDs = dfCurr[ dfCurr[tup[2]] <= tup[3] ][idColumn].tolist() # Get the df_test ID's in the daughter LT leaf of current Node
+          df_Answers.loc[ df_Answers[idColumn].isin(ltIDs) , className] = decision[1] # Apply decision to LT group
+          print ("\tClass for LT=", decision[1], "\tlen(ltIDs)=",  len(ltIDs) )
+        elif not pd.isnull(float(decision[2]) ) and pd.isnull(float(decision[1]) ):
+          gtIDs = dfCurr[ dfCurr[tup[2]] > tup[3] ][idColumn].tolist() # Get the df_test ID's in the daughter LT leaf of current Node
+          df_Answers.loc[ df_Answers[idColumn].isin(gtIDs) , className] = decision[2] # Apply decision to LT group
+          print ("\tClass for GT=", decision[2], "\tlen(gtIDs)=",  len(gtIDs) )
+        else:
+          ltIDs = dfCurr[ dfCurr[tup[2]] <= tup[3] ][idColumn].tolist() # Get the df_test ID's in the daughter LT leaf of current Node
+          gtIDs = dfCurr[ dfCurr[tup[2]] > tup[3] ][idColumn].tolist() # Get the df_test ID's in the daughter LT leaf of current Node
+          df_Answers.loc[ df_Answers[idColumn].isin(ltIDs) , className] = decision[1] # Apply decision to LT group
+          df_Answers.loc[ df_Answers[idColumn].isin(gtIDs) , className] = decision[2] # Apply decision to LT group
+          print ("\tClass for LT=", decision[1], "\tlen(ltIDs)=",  len(ltIDs), "\tClass for GT=", decision[2], "\tlen(gtIDs)=",  len(gtIDs) )
+      except StopIteration:  
+        print ("Non of this node's daughters are Blank Nodes")
+        continue #If node is not found in nodeDecisions, then add it
     else: # If not an EndNode, BlankNode, or a node NOT at the max depth, then get decisions there
       decision = next(iteTup for iteTup in nodeDecisions if int(iteTup[0]) == tup[0]) # Get decision of Make Tree at node
       ltIDs = dfCurr[ dfCurr[tup[2]] <= tup[3] ][idColumn].tolist() # Get the df_test ID's in the daughter LT leaf of current Node
       gtIDs = dfCurr[ dfCurr[tup[2]] >  tup[3] ][idColumn].tolist() # Get the df_test ID's in the daughter GT leaf of current Node
       df_Answers.loc[ df_Answers[idColumn].isin(ltIDs) , className] = decision[1] # Apply decision to LT group
       df_Answers.loc[ df_Answers[idColumn].isin(gtIDs) , className] = decision[2] # Apply decision to GT group
-      print ("\tClass for LT=", decision[1], "\tlen(ltIDs)=",  len(ltIDs), "\tClass for GT=", decision[1], "\tlen(gtIDs)=",  len(gtIDs) )
+      print ("\tClass for LT=", decision[1], "\tlen(ltIDs)=",  len(ltIDs), "\tClass for GT=", decision[2], "\tlen(gtIDs)=",  len(gtIDs) )
       del ltIDs, gtIDs, decision # Delete containers to preserve memory, in case they don't already get deleted
     del dfCurr 
   #Writing the answers out
