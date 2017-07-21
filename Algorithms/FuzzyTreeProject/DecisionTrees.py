@@ -103,7 +103,7 @@ def MakeTree(df, className, nGiniSplits, giniEndVal, maxDepth, idColumn, minSamp
         else: # Create new node with the best gini increase and the df ID's and other important  information
           if nodeCount % 2  == 1: dfCurr = df.loc[(df[idColumn].isin(parentDFIDs)) & (df[parentTup[2]] <= parentTup[3]) ] #Getting dataframe elements that are lower than the parent split
           else: dfCurr = df.loc[(df[idColumn].isin(parentDFIDs)) & (df[parentTup[2]] > parentTup[3]) ] #getting dataframe elements that are greater than or equal to the parent split
-          print ("len(dfCurr)=", len(dfCurr), "\tparentTup[3]=", parentTup[3] )
+          print ("len(dfCurr)=", len(dfCurr) )
           if len(dfCurr) < minSamplesSplit:
             print ("Too Few to be able to split")
             nodeValues.append( (nodeCount, np.NaN, '', np.NaN, np.NaN) )
@@ -240,7 +240,6 @@ def GetWeightedNodeDecisions(df, leaf, index, className, soloNodeDecision, gt_or
             df_weights['Weights'].sum(axis=0), np.NaN)
   
   if (soloNodeDecision):
-    print ("Blank Node has a non-Blank Sister, so only make decision for one part of parent node.")
     df_IDs = df[ df[leaf[2]]> leaf[3] ][idColumn].tolist() if gt_or_lt > 0 else df[ df[leaf[2]]<=leaf[3] ][idColumn].tolist()      
     totalWeight = df_weights[ df_weights[idColumn].isin(df_IDs) ]['Weights'].sum(axis=0)
     for classVal, row in  df[ df[idColumn].isin(df_IDs)  ][className].value_counts().to_dict().items():
@@ -249,8 +248,12 @@ def GetWeightedNodeDecisions(df, leaf, index, className, soloNodeDecision, gt_or
       if currWeight > ltMaxWeight:
         ltMaxWeight = currWeight
         ltMaxClassVal = classVal
-    if gt_or_lt > 0: return (index, np.NaN, ltMaxClassVal, np.NaN, ltMaxWeight, np.NaN, totalWeight)
-    else:            return (index, ltMaxClassVal, np.NaN, ltMaxWeight, np.NaN, totalWeight, np.NaN)
+    if gt_or_lt > 0: 
+      print ("Blank Node has a non-Blank Sister, so only make decision for one part of parent node. GT Node Decision."
+      return (index, np.NaN, ltMaxClassVal, np.NaN, ltMaxWeight, np.NaN, totalWeight)
+    else:            
+      print ("Blank Node has a non-Blank Sister, so only make decision for one part of parent node. LT Node Decision."
+      return (index, ltMaxClassVal, np.NaN, ltMaxWeight, np.NaN, totalWeight, np.NaN)
 
   print ("\tlen(ltDF)=", len(df[ df[leaf[2]]<=leaf[3] ]), "\tlen(gtDF)=", len(df[ df[leaf[2]]>leaf[3] ]) )
   print ("\tLESS THAN") #Getting the <= decision at node

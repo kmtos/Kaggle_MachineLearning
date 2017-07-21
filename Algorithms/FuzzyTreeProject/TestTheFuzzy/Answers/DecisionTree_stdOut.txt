@@ -17,19 +17,19 @@ giniEndVal= 1.122334455667789e-05
  Making a Decision Tree
 ###################################
 
-node= 1 parentNode= 0 	parentTup= (0, 0.66965708972763249, 'YesMr', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 891
+node= 1 parentNode= 0 	parentTup= (0, 0.66965708972763238, 'YesMr', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 891
 len(dfCurr)= 374 	parentTup[3]= 0.0
 ######## NEW ########: nodeValues[nodeCount]= (1, 0.65780919741946875, 'FamilySize', 4.5, 0.90909090909090906) 	len(nodeDFIds[ 1 ][1])= 374
 len(lessThan)= 323 	len(greaterThan)= 51
 
-node= 2 parentNode= 0 	parentTup= (0, 0.66965708972763249, 'YesMr', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 891
+node= 2 parentNode= 0 	parentTup= (0, 0.66965708972763238, 'YesMr', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 891
 len(dfCurr)= 517 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (2, 0.75441525625871064, 'Pclass', 1.5, 0.18181818181818182) 	len(nodeDFIds[ 2 ][1])= 517
+######## NEW ########: nodeValues[nodeCount]= (2, 0.75441525625871053, 'Pclass', 1.5, 0.18181818181818182) 	len(nodeDFIds[ 2 ][1])= 517
 len(lessThan)= 107 	len(greaterThan)= 410
 
 node= 3 parentNode= 1 	parentTup= (1, 0.65780919741946875, 'FamilySize', 4.5, 0.90909090909090906) 	len(parentDFIDs)= 374
 len(dfCurr)= 323 	parentTup[3]= 4.5
-######## NEW ########: nodeValues[nodeCount]= (3, 0.68470902658618371, 'Pclass', 2.5, 0.18181818181818182) 	len(nodeDFIds[ 3 ][1])= 323
+######## NEW ########: nodeValues[nodeCount]= (3, 0.6847090265861836, 'Pclass', 2.5, 0.18181818181818182) 	len(nodeDFIds[ 3 ][1])= 323
 len(lessThan)= 196 	len(greaterThan)= 127
 
 node= 4 parentNode= 1 	parentTup= (1, 0.65780919741946875, 'FamilySize', 4.5, 0.90909090909090906) 	len(parentDFIDs)= 374
@@ -37,22 +37,22 @@ len(dfCurr)= 51 	parentTup[3]= 4.5
 ######## NEW ########: nodeValues[nodeCount]= (4, 0.85708061002178648, 'Pclass', 2.5, 0.18181818181818182) 	len(nodeDFIds[ 4 ][1])= 51
 len(lessThan)= 6 	len(greaterThan)= 45
 
-node= 5 parentNode= 2 	parentTup= (2, 0.75441525625871064, 'Pclass', 1.5, 0.18181818181818182) 	len(parentDFIDs)= 517
+node= 5 parentNode= 2 	parentTup= (2, 0.75441525625871053, 'Pclass', 1.5, 0.18181818181818182) 	len(parentDFIDs)= 517
 len(dfCurr)= 107 	parentTup[3]= 1.5
-######## NEW ########: nodeValues[nodeCount]= (5, 0.57575160454903729, 'AgeGroup', 0.75, 0.13636363636363635) 	len(nodeDFIds[ 5 ][1])= 107
+######## NEW ########: nodeValues[nodeCount]= (5, 0.57575160454903695, 'AgeGroup', 0.75, 0.13636363636363635) 	len(nodeDFIds[ 5 ][1])= 107
 len(lessThan)= 83 	len(greaterThan)= 24
 
-node= 6 parentNode= 2 	parentTup= (2, 0.75441525625871064, 'Pclass', 1.5, 0.18181818181818182) 	len(parentDFIDs)= 517
+node= 6 parentNode= 2 	parentTup= (2, 0.75441525625871053, 'Pclass', 1.5, 0.18181818181818182) 	len(parentDFIDs)= 517
 len(dfCurr)= 410 	parentTup[3]= 1.5
 ######## NEW ########: nodeValues[nodeCount]= (6, 0.81417044572455766, 'nTicketStrings', 2.5, 0.18181818181818182) 	len(nodeDFIds[ 6 ][1])= 410
 len(lessThan)= 398 	len(greaterThan)= 12
 
-node= 7 parentNode= 3 	parentTup= (3, 0.68470902658618371, 'Pclass', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 323
+node= 7 parentNode= 3 	parentTup= (3, 0.6847090265861836, 'Pclass', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 323
 len(dfCurr)= 196 	parentTup[3]= 2.5
 ######## NEW ########: nodeValues[nodeCount]= (7, 0.83372717508055871, 'YesRev', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 7 ][1])= 196
 len(lessThan)= 190 	len(greaterThan)= 6
 
-node= 8 parentNode= 3 	parentTup= (3, 0.68470902658618371, 'Pclass', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 323
+node= 8 parentNode= 3 	parentTup= (3, 0.6847090265861836, 'Pclass', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 323
 len(dfCurr)= 127 	parentTup[3]= 2.5
 ######## NEW ########: nodeValues[nodeCount]= (8, 0.55595462847845778, 'AgeGroup', -0.75, 0.18181818181818182) 	len(nodeDFIds[ 8 ][1])= 127
 len(lessThan)= 19 	len(greaterThan)= 108
@@ -67,12 +67,12 @@ len(dfCurr)= 45 	parentTup[3]= 2.5
 ######## NEW ########: nodeValues[nodeCount]= (10, 0.85777777777777775, 'FamilySize', 6.5, 0.54545454545454541) 	len(nodeDFIds[ 10 ][1])= 45
 len(lessThan)= 25 	len(greaterThan)= 20
 
-node= 11 parentNode= 5 	parentTup= (5, 0.57575160454903729, 'AgeGroup', 0.75, 0.13636363636363635) 	len(parentDFIDs)= 107
+node= 11 parentNode= 5 	parentTup= (5, 0.57575160454903695, 'AgeGroup', 0.75, 0.13636363636363635) 	len(parentDFIDs)= 107
 len(dfCurr)= 83 	parentTup[3]= 0.75
-######## NEW ########: nodeValues[nodeCount]= (11, 0.53942894867139801, 'CabinE', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 11 ][1])= 83
+######## NEW ########: nodeValues[nodeCount]= (11, 0.53942894867139779, 'CabinE', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 11 ][1])= 83
 len(lessThan)= 73 	len(greaterThan)= 10
 
-node= 12 parentNode= 5 	parentTup= (5, 0.57575160454903729, 'AgeGroup', 0.75, 0.13636363636363635) 	len(parentDFIDs)= 107
+node= 12 parentNode= 5 	parentTup= (5, 0.57575160454903695, 'AgeGroup', 0.75, 0.13636363636363635) 	len(parentDFIDs)= 107
 len(dfCurr)= 24 	parentTup[3]= 0.75
 ######## NEW ########: nodeValues[nodeCount]= (12, 0.79411764705882359, 'CabinNumbers', 7.0, 8.0) 	len(nodeDFIds[ 12 ][1])= 24
 len(lessThan)= 7 	len(greaterThan)= 17
@@ -84,12 +84,12 @@ len(lessThan)= 381 	len(greaterThan)= 17
 
 node= 14 parentNode= 6 	parentTup= (6, 0.81417044572455766, 'nTicketStrings', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 410
 len(dfCurr)= 12 	parentTup[3]= 2.5
-######## NEW ########: nodeValues[nodeCount]= (14, 0.580952380952381, 'AgeGroup', 0.25, 0.090909090909090912) 	len(nodeDFIds[ 14 ][1])= 12
+######## NEW ########: nodeValues[nodeCount]= (14, 0.580952380952381, 'TicketNumber', 23101280.363636363, 2.2727272727272729) 	len(nodeDFIds[ 14 ][1])= 12
 len(lessThan)= 5 	len(greaterThan)= 7
 
 node= 15 parentNode= 7 	parentTup= (7, 0.83372717508055871, 'YesRev', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 196
 len(dfCurr)= 190 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (15, 0.86285189718482247, 'YesFancy', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 15 ][1])= 190
+######## NEW ########: nodeValues[nodeCount]= (15, 0.86285189718482269, 'YesFancy', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 15 ][1])= 190
 len(lessThan)= 172 	len(greaterThan)= 18
 
 node= 16 parentNode= 7 	parentTup= (7, 0.83372717508055871, 'YesRev', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 196
@@ -104,7 +104,7 @@ len(lessThan)= 12 	len(greaterThan)= 7
 
 node= 18 parentNode= 8 	parentTup= (8, 0.55595462847845778, 'AgeGroup', -0.75, 0.18181818181818182) 	len(parentDFIDs)= 127
 len(dfCurr)= 108 	parentTup[3]= -0.75
-######## NEW ########: nodeValues[nodeCount]= (18, 0.54606735856735833, 'EmbarkIsS', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 18 ][1])= 108
+######## NEW ########: nodeValues[nodeCount]= (18, 0.54606735856735855, 'EmbarkIsS', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 18 ][1])= 108
 len(lessThan)= 52 	len(greaterThan)= 56
 
 node= 19 parentNode= 9 	parentTup= (9, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(parentDFIDs)= 6
@@ -118,17 +118,17 @@ len(dfCurr)= 25 	parentTup[3]= 6.5
 
 node= 22 parentNode= 10 	parentTup= (10, 0.85777777777777775, 'FamilySize', 6.5, 0.54545454545454541) 	len(parentDFIDs)= 45
 len(dfCurr)= 20 	parentTup[3]= 6.5
-######## NEW ########: nodeValues[nodeCount]= (22, 0.74545454545454548, 'Fare', 0.25, 0.090909090909090912) 	len(nodeDFIds[ 22 ][1])= 20
+######## NEW ########: nodeValues[nodeCount]= (22, 0.74545454545454548, 'TicketBeginLetter', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 22 ][1])= 20
 len(lessThan)= 11 	len(greaterThan)= 9
 
-node= 23 parentNode= 11 	parentTup= (11, 0.53942894867139801, 'CabinE', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 83
+node= 23 parentNode= 11 	parentTup= (11, 0.53942894867139779, 'CabinE', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 83
 len(dfCurr)= 73 	parentTup[3]= 0.0
 ######## NEW ########: nodeValues[nodeCount]= (23, 0.5539887187751813, 'Fare', -0.5, 0.18181818181818182) 	len(nodeDFIds[ 23 ][1])= 73
 len(lessThan)= 5 	len(greaterThan)= 68
 
-node= 24 parentNode= 11 	parentTup= (11, 0.53942894867139801, 'CabinE', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 83
+node= 24 parentNode= 11 	parentTup= (11, 0.53942894867139779, 'CabinE', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 83
 len(dfCurr)= 10 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (24, 0.60000000000000009, 'nTicketStrings', 1.5, 0.090909090909090912) 	len(nodeDFIds[ 24 ][1])= 10
+######## NEW ########: nodeValues[nodeCount]= (24, 0.60000000000000009, 'TicketBeginLetter', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 24 ][1])= 10
 len(lessThan)= 5 	len(greaterThan)= 5
 
 node= 25 parentNode= 12 	parentTup= (12, 0.79411764705882359, 'CabinNumbers', 7.0, 8.0) 	len(parentDFIDs)= 24
@@ -148,16 +148,16 @@ len(lessThan)= 375 	len(greaterThan)= 6
 
 node= 28 parentNode= 13 	parentTup= (13, 0.82665682899599124, 'Fare', 0.25, 0.13636363636363635) 	len(parentDFIDs)= 398
 len(dfCurr)= 17 	parentTup[3]= 0.25
-######## NEW ########: nodeValues[nodeCount]= (28, 0.83193277310924363, 'nTicketStrings', 1.5, 0.090909090909090912) 	len(nodeDFIds[ 28 ][1])= 17
+######## NEW ########: nodeValues[nodeCount]= (28, 0.83193277310924363, 'TicketBeginLetter', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 28 ][1])= 17
 len(lessThan)= 7 	len(greaterThan)= 10
 
-node= 29 parentNode= 14 	parentTup= (14, 0.580952380952381, 'AgeGroup', 0.25, 0.090909090909090912) 	len(parentDFIDs)= 12
-len(dfCurr)= 5 	parentTup[3]= 0.25
+node= 29 parentNode= 14 	parentTup= (14, 0.580952380952381, 'TicketNumber', 23101280.363636363, 2.2727272727272729) 	len(parentDFIDs)= 12
+len(dfCurr)= 5 	parentTup[3]= 23101280.3636
 Less that Min gini improvement: bestGiniSplit[1]= -1 	giniEndVal= 1.122334455667789e-05
 ######## NEW ########: nodeValues[nodeCount]= (29, nan, '', nan, nan) 	len(nodeDFIds[ 29 ][1])= 5
 
-node= 30 parentNode= 14 	parentTup= (14, 0.580952380952381, 'AgeGroup', 0.25, 0.090909090909090912) 	len(parentDFIDs)= 12
-len(dfCurr)= 7 	parentTup[3]= 0.25
+node= 30 parentNode= 14 	parentTup= (14, 0.580952380952381, 'TicketNumber', 23101280.363636363, 2.2727272727272729) 	len(parentDFIDs)= 12
+len(dfCurr)= 7 	parentTup[3]= 23101280.3636
 Less that Min gini improvement: bestGiniSplit[1]= -1 	giniEndVal= 1.122334455667789e-05
 ######## NEW ########: nodeValues[nodeCount]= (30, nan, '', nan, nan) 	len(nodeDFIds[ 30 ][1])= 7
 
@@ -168,7 +168,7 @@ Writing Out the Nodes, Values, and df ID's of the nodes
 df_weights['Weights'].sum(axis=0)= 1.0
 
 
-index= 14 	currentLeaf= (14, 0.580952380952381, 'AgeGroup', 0.25, 0.090909090909090912) 	len(currentDF)= 12
+index= 14 	currentLeaf= (14, 0.580952380952381, 'TicketNumber', 23101280.363636363, 2.2727272727272729) 	len(currentDF)= 12
 	len(ltDF)= 5 	len(gtDF)= 7
 	LESS THAN
 	classVal= 0 	currWeight= 0.00448933782267
@@ -179,7 +179,7 @@ index= 14 	currentLeaf= (14, 0.580952380952381, 'AgeGroup', 0.25, 0.090909090909
 	 (14, 0, 1, 0.0044893378226720003, 0.0044893378226720003, 0.0056116722783400002, 0.0078563411896759999)
 
 
-index= 14 	currentLeaf= (14, 0.580952380952381, 'AgeGroup', 0.25, 0.090909090909090912) 	len(currentDF)= 12
+index= 14 	currentLeaf= (14, 0.580952380952381, 'TicketNumber', 23101280.363636363, 2.2727272727272729) 	len(currentDF)= 12
 	len(ltDF)= 5 	len(gtDF)= 7
 	LESS THAN
 	classVal= 0 	currWeight= 0.00448933782267
@@ -191,7 +191,7 @@ index= 14 	currentLeaf= (14, 0.580952380952381, 'AgeGroup', 0.25, 0.090909090909
 Decision already included from other daugther node
 
 
-index= 28 	currentLeaf= (28, 0.83193277310924363, 'nTicketStrings', 1.5, 0.090909090909090912) 	len(currentDF)= 17
+index= 28 	currentLeaf= (28, 0.83193277310924363, 'TicketBeginLetter', 0.0, 0.18181818181818182) 	len(currentDF)= 17
 	len(ltDF)= 7 	len(gtDF)= 10
 	LESS THAN
 	classVal= 0 	currWeight= 0.00224466891134
@@ -226,7 +226,7 @@ index= 25 	currentLeaf= (25, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 
 This is An End Node
 
 
-index= 24 	currentLeaf= (24, 0.60000000000000009, 'nTicketStrings', 1.5, 0.090909090909090912) 	len(currentDF)= 10
+index= 24 	currentLeaf= (24, 0.60000000000000009, 'TicketBeginLetter', 0.0, 0.18181818181818182) 	len(currentDF)= 10
 	len(ltDF)= 5 	len(gtDF)= 5
 	LESS THAN
 	classVal= 0 	currWeight= 0.00224466891134
@@ -247,7 +247,7 @@ index= 23 	currentLeaf= (23, 0.5539887187751813, 'Fare', -0.5, 0.181818181818181
 	 (23, 0, 0, 0.0056116722783400002, 0.046015712682388001, 0.0056116722783400002, 0.076318742985424029)
 
 
-index= 22 	currentLeaf= (22, 0.74545454545454548, 'Fare', 0.25, 0.090909090909090912) 	len(currentDF)= 20
+index= 22 	currentLeaf= (22, 0.74545454545454548, 'TicketBeginLetter', 0.0, 0.18181818181818182) 	len(currentDF)= 20
 	len(ltDF)= 11 	len(gtDF)= 9
 	LESS THAN
 	classVal= 0 	currWeight= 0.00785634118968
@@ -270,7 +270,7 @@ This is An End Node
 Decision already included from other daugther node
 
 
-index= 18 	currentLeaf= (18, 0.54606735856735833, 'EmbarkIsS', 0.0, 0.18181818181818182) 	len(currentDF)= 108
+index= 18 	currentLeaf= (18, 0.54606735856735855, 'EmbarkIsS', 0.0, 0.18181818181818182) 	len(currentDF)= 108
 	len(ltDF)= 52 	len(gtDF)= 56
 	LESS THAN
 	classVal= 0 	currWeight= 0.016835016835
@@ -295,7 +295,7 @@ index= 16 	currentLeaf= (16, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 
 This is An End Node
 
 
-index= 15 	currentLeaf= (15, 0.86285189718482247, 'YesFancy', 0.0, 0.18181818181818182) 	len(currentDF)= 190
+index= 15 	currentLeaf= (15, 0.86285189718482269, 'YesFancy', 0.0, 0.18181818181818182) 	len(currentDF)= 190
 	len(ltDF)= 172 	len(gtDF)= 18
 	LESS THAN
 	classVal= 0 	currWeight= 0.010101010101
@@ -364,17 +364,16 @@ totalCorrWeight= 0.6464646464646701 	float(decisionTup[3])= 0.00673400673401
 decisionTup= ('15', '1', '0', '0.182940516274', '0.010101010101', '0.193041526375', '0.020202020202')
 totalCorrWeight= 0.6531986531986801 	float(decisionTup[3])= 0.182940516274 	float(decisionTup[4])= 0.010101010101
 	totalCorrWeight= 0.84624017957368
-totalCorrWeight= 0.84624017957368 	otherSum= 1.0000000000006901 	sumDFWeights= 1.0 	error= 0.153759820426
-error= 0.1537598204264793 	alpha= 0.18723635016427354 	CorrectFactor= 0.8292477203871728 	IncorrectFactor= 1.2059122689334663
+totalCorrWeight= 0.84624017957368 	sumWeights= 1.0000000000006901 	error= 0.15375982042690395
+error= 0.15375982042690395 	alpha= 0.18723635016399734 	CorrectFactor= 0.8292477203874018 	IncorrectFactor= 1.2059122689331332
 BEFORE: df_weights['Weights'].unique()= [ 0.00112233]
-After: df_weights['Weights'].unique()= [ 0.00112233  0.00135344  0.00093069]
-	len('Weights' == 0.00112233445567 )= 654
-	len('Weights' == 0.00135343688994 )= 67
-	len('Weights' == 0.000930693288875 )= 170
+After: df_weights['Weights'].unique()= [ 0.00093069  0.00135344]
+	len('Weights' == 0.000930693288875 )= 754
+	len('Weights' == 0.00135343688994 )= 137
 
 
 ###############################################################
-FINAL SCORE FOR TREE # 5 is 0.1537598204264793 
+FINAL SCORE FOR TREE # 5 is 0.15375982042690395 
 ###############################################################
 #############################################
 #############################################
@@ -387,147 +386,147 @@ FINAL SCORE FOR TREE # 5 is 0.1537598204264793
  Making a Decision Tree
 ###################################
 
-node= 1 parentNode= 0 	parentTup= (0, 0.67213580924207883, 'YesMr', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 891
+node= 1 parentNode= 0 	parentTup= (0, 0.63391075778827255, 'YesMr', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 891
 len(dfCurr)= 374 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (1, 0.67968480225580974, 'FamilySize', 4.5, 0.90909090909090906) 	len(nodeDFIds[ 1 ][1])= 374
-len(lessThan)= 323 	len(greaterThan)= 51
+######## NEW ########: nodeValues[nodeCount]= (1, 0.63997594175264161, 'Pclass', 2.5, 0.18181818181818182) 	len(nodeDFIds[ 1 ][1])= 374
+len(lessThan)= 202 	len(greaterThan)= 172
 
-node= 2 parentNode= 0 	parentTup= (0, 0.67213580924207883, 'YesMr', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 891
+node= 2 parentNode= 0 	parentTup= (0, 0.63391075778827255, 'YesMr', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 891
 len(dfCurr)= 517 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (2, 0.74995965758034377, 'Pclass', 1.5, 0.18181818181818182) 	len(nodeDFIds[ 2 ][1])= 517
+######## NEW ########: nodeValues[nodeCount]= (2, 0.70504954779549878, 'Pclass', 1.5, 0.18181818181818182) 	len(nodeDFIds[ 2 ][1])= 517
 len(lessThan)= 107 	len(greaterThan)= 410
 
-node= 3 parentNode= 1 	parentTup= (1, 0.67968480225580974, 'FamilySize', 4.5, 0.90909090909090906) 	len(parentDFIDs)= 374
-len(dfCurr)= 323 	parentTup[3]= 4.5
-######## NEW ########: nodeValues[nodeCount]= (3, 0.70539091485401029, 'Pclass', 2.5, 0.18181818181818182) 	len(nodeDFIds[ 3 ][1])= 323
-len(lessThan)= 196 	len(greaterThan)= 127
+node= 3 parentNode= 1 	parentTup= (1, 0.63997594175264161, 'Pclass', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 374
+len(dfCurr)= 202 	parentTup[3]= 2.5
+######## NEW ########: nodeValues[nodeCount]= (3, 0.81255227706292033, 'YesRev', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 3 ][1])= 202
+len(lessThan)= 196 	len(greaterThan)= 6
 
-node= 4 parentNode= 1 	parentTup= (1, 0.67968480225580974, 'FamilySize', 4.5, 0.90909090909090906) 	len(parentDFIDs)= 374
-len(dfCurr)= 51 	parentTup[3]= 4.5
-######## NEW ########: nodeValues[nodeCount]= (4, 0.83736535809471402, 'Pclass', 2.5, 0.18181818181818182) 	len(nodeDFIds[ 4 ][1])= 51
-len(lessThan)= 6 	len(greaterThan)= 45
+node= 4 parentNode= 1 	parentTup= (1, 0.63997594175264161, 'Pclass', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 374
+len(dfCurr)= 172 	parentTup[3]= 2.5
+######## NEW ########: nodeValues[nodeCount]= (4, 0.58982030031425381, 'FamilySize', 4.5, 0.90909090909090906) 	len(nodeDFIds[ 4 ][1])= 172
+len(lessThan)= 127 	len(greaterThan)= 45
 
-node= 5 parentNode= 2 	parentTup= (2, 0.74995965758034377, 'Pclass', 1.5, 0.18181818181818182) 	len(parentDFIDs)= 517
+node= 5 parentNode= 2 	parentTup= (2, 0.70504954779549878, 'Pclass', 1.5, 0.18181818181818182) 	len(parentDFIDs)= 517
 len(dfCurr)= 107 	parentTup[3]= 1.5
-######## NEW ########: nodeValues[nodeCount]= (5, 0.55556485645091169, 'AgeGroup', 0.75, 0.13636363636363635) 	len(nodeDFIds[ 5 ][1])= 107
+######## NEW ########: nodeValues[nodeCount]= (5, 0.54544473462397025, 'AgeGroup', 0.75, 0.13636363636363635) 	len(nodeDFIds[ 5 ][1])= 107
 len(lessThan)= 83 	len(greaterThan)= 24
 
-node= 6 parentNode= 2 	parentTup= (2, 0.74995965758034377, 'Pclass', 1.5, 0.18181818181818182) 	len(parentDFIDs)= 517
+node= 6 parentNode= 2 	parentTup= (2, 0.70504954779549878, 'Pclass', 1.5, 0.18181818181818182) 	len(parentDFIDs)= 517
 len(dfCurr)= 410 	parentTup[3]= 1.5
-######## NEW ########: nodeValues[nodeCount]= (6, 0.81250408287188491, 'nTicketStrings', 2.5, 0.18181818181818182) 	len(nodeDFIds[ 6 ][1])= 410
+######## NEW ########: nodeValues[nodeCount]= (6, 0.76368583108603338, 'nTicketStrings', 2.5, 0.18181818181818182) 	len(nodeDFIds[ 6 ][1])= 410
 len(lessThan)= 398 	len(greaterThan)= 12
 
-node= 7 parentNode= 3 	parentTup= (3, 0.70539091485401029, 'Pclass', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 323
-len(dfCurr)= 196 	parentTup[3]= 2.5
-######## NEW ########: nodeValues[nodeCount]= (7, 0.84598353601131826, 'YesRev', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 7 ][1])= 196
-len(lessThan)= 190 	len(greaterThan)= 6
+node= 7 parentNode= 3 	parentTup= (3, 0.81255227706292033, 'YesRev', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 202
+len(dfCurr)= 196 	parentTup[3]= 0.0
+######## NEW ########: nodeValues[nodeCount]= (7, 0.82877383577735275, 'YesFancy', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 7 ][1])= 196
+len(lessThan)= 178 	len(greaterThan)= 18
 
-node= 8 parentNode= 3 	parentTup= (3, 0.70539091485401029, 'Pclass', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 323
-len(dfCurr)= 127 	parentTup[3]= 2.5
-######## NEW ########: nodeValues[nodeCount]= (8, 0.56869513256847892, 'YesMaster', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 8 ][1])= 127
-len(lessThan)= 117 	len(greaterThan)= 10
-
-node= 9 parentNode= 4 	parentTup= (4, 0.83736535809471402, 'Pclass', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 51
-len(dfCurr)= 6 	parentTup[3]= 2.5
-*****************END NODE
-######## NEW ########: nodeValues[nodeCount]= (9, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[ 9 ][1])= 6
-
-node= 10 parentNode= 4 	parentTup= (4, 0.83736535809471402, 'Pclass', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 51
-len(dfCurr)= 45 	parentTup[3]= 2.5
-######## NEW ########: nodeValues[nodeCount]= (10, 0.84010925479537424, 'FamilySize', 6.5, 0.54545454545454541) 	len(nodeDFIds[ 10 ][1])= 45
-len(lessThan)= 25 	len(greaterThan)= 20
-
-node= 11 parentNode= 5 	parentTup= (5, 0.55556485645091169, 'AgeGroup', 0.75, 0.13636363636363635) 	len(parentDFIDs)= 107
-len(dfCurr)= 83 	parentTup[3]= 0.75
-######## NEW ########: nodeValues[nodeCount]= (11, 0.53105956977319513, 'Fare', -0.5, 0.18181818181818182) 	len(nodeDFIds[ 11 ][1])= 83
-len(lessThan)= 5 	len(greaterThan)= 78
-
-node= 12 parentNode= 5 	parentTup= (5, 0.55556485645091169, 'AgeGroup', 0.75, 0.13636363636363635) 	len(parentDFIDs)= 107
-len(dfCurr)= 24 	parentTup[3]= 0.75
-######## NEW ########: nodeValues[nodeCount]= (12, 0.7750476450961028, 'CabinNumbers', 7.0, 8.0) 	len(nodeDFIds[ 12 ][1])= 24
-len(lessThan)= 7 	len(greaterThan)= 17
-
-node= 13 parentNode= 6 	parentTup= (6, 0.81250408287188491, 'nTicketStrings', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 410
-len(dfCurr)= 398 	parentTup[3]= 2.5
-######## NEW ########: nodeValues[nodeCount]= (13, 0.82492480442312177, 'Fare', 0.25, 0.13636363636363635) 	len(nodeDFIds[ 13 ][1])= 398
-len(lessThan)= 381 	len(greaterThan)= 17
-
-node= 14 parentNode= 6 	parentTup= (6, 0.81250408287188491, 'nTicketStrings', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 410
-len(dfCurr)= 12 	parentTup[3]= 2.5
-######## NEW ########: nodeValues[nodeCount]= (14, 0.59490306418153671, 'TicketNumber', 23101280.363636363, 2.2727272727272729) 	len(nodeDFIds[ 14 ][1])= 12
-len(lessThan)= 5 	len(greaterThan)= 7
-
-node= 15 parentNode= 7 	parentTup= (7, 0.84598353601131826, 'YesRev', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 196
-len(dfCurr)= 190 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (15, 0.86389692320924116, 'YesFancy', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 15 ][1])= 190
-len(lessThan)= 172 	len(greaterThan)= 18
-
-node= 16 parentNode= 7 	parentTup= (7, 0.84598353601131826, 'YesRev', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 196
+node= 8 parentNode= 3 	parentTup= (3, 0.81255227706292033, 'YesRev', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 202
 len(dfCurr)= 6 	parentTup[3]= 0.0
 *****************END NODE
-######## NEW ########: nodeValues[nodeCount]= (16, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[ 16 ][1])= 6
+######## NEW ########: nodeValues[nodeCount]= (8, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[ 8 ][1])= 6
 
-node= 17 parentNode= 8 	parentTup= (8, 0.56869513256847892, 'YesMaster', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 127
+node= 9 parentNode= 4 	parentTup= (4, 0.58982030031425381, 'FamilySize', 4.5, 0.90909090909090906) 	len(parentDFIDs)= 172
+len(dfCurr)= 127 	parentTup[3]= 4.5
+######## NEW ########: nodeValues[nodeCount]= (9, 0.54949225204524366, 'Gender', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 9 ][1])= 127
+len(lessThan)= 117 	len(greaterThan)= 10
+
+node= 10 parentNode= 4 	parentTup= (4, 0.58982030031425381, 'FamilySize', 4.5, 0.90909090909090906) 	len(parentDFIDs)= 172
+len(dfCurr)= 45 	parentTup[3]= 4.5
+######## NEW ########: nodeValues[nodeCount]= (10, 0.81775913307576364, 'FamilySize', 6.5, 0.54545454545454541) 	len(nodeDFIds[ 10 ][1])= 45
+len(lessThan)= 25 	len(greaterThan)= 20
+
+node= 11 parentNode= 5 	parentTup= (5, 0.54544473462397025, 'AgeGroup', 0.75, 0.13636363636363635) 	len(parentDFIDs)= 107
+len(dfCurr)= 83 	parentTup[3]= 0.75
+######## NEW ########: nodeValues[nodeCount]= (11, 0.52591864255249066, 'Fare', -0.5, 0.18181818181818182) 	len(nodeDFIds[ 11 ][1])= 83
+len(lessThan)= 5 	len(greaterThan)= 78
+
+node= 12 parentNode= 5 	parentTup= (5, 0.54544473462397025, 'AgeGroup', 0.75, 0.13636363636363635) 	len(parentDFIDs)= 107
+len(dfCurr)= 24 	parentTup[3]= 0.75
+######## NEW ########: nodeValues[nodeCount]= (12, 0.73771117810976805, 'CabinNumbers', 7.0, 8.0) 	len(nodeDFIds[ 12 ][1])= 24
+len(lessThan)= 7 	len(greaterThan)= 17
+
+node= 13 parentNode= 6 	parentTup= (6, 0.76368583108603338, 'nTicketStrings', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 410
+len(dfCurr)= 398 	parentTup[3]= 2.5
+######## NEW ########: nodeValues[nodeCount]= (13, 0.77458401922457742, 'CabinNumbers', 6.0, 6.7272727272727275) 	len(nodeDFIds[ 13 ][1])= 398
+len(lessThan)= 392 	len(greaterThan)= 6
+
+node= 14 parentNode= 6 	parentTup= (6, 0.76368583108603338, 'nTicketStrings', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 410
+len(dfCurr)= 12 	parentTup[3]= 2.5
+######## NEW ########: nodeValues[nodeCount]= (14, 0.58045293805190257, 'AgeGroup', 0.25, 0.090909090909090912) 	len(nodeDFIds[ 14 ][1])= 12
+len(lessThan)= 5 	len(greaterThan)= 7
+
+node= 15 parentNode= 7 	parentTup= (7, 0.82877383577735275, 'YesFancy', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 196
+len(dfCurr)= 178 	parentTup[3]= 0.0
+######## NEW ########: nodeValues[nodeCount]= (15, 0.87009851647748571, 'TicketNumber', 45576.090909090912, 22786.545454545456) 	len(nodeDFIds[ 15 ][1])= 178
+len(lessThan)= 111 	len(greaterThan)= 67
+
+node= 16 parentNode= 7 	parentTup= (7, 0.82877383577735275, 'YesFancy', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 196
+len(dfCurr)= 18 	parentTup[3]= 0.0
+######## NEW ########: nodeValues[nodeCount]= (16, 0.67805996036188354, 'CabinNumbers', 8.545454545454545, 9.545454545454545) 	len(nodeDFIds[ 16 ][1])= 18
+len(lessThan)= 7 	len(greaterThan)= 11
+
+node= 17 parentNode= 8 	parentTup= (8, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(parentDFIDs)= 6
+
+node= 18 parentNode= 8 	parentTup= (8, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(parentDFIDs)= 6
+
+node= 19 parentNode= 9 	parentTup= (9, 0.54949225204524366, 'Gender', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 127
 len(dfCurr)= 117 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (17, 0.54984110007400067, 'AgeGroup', 0.25, 0.18181818181818182) 	len(nodeDFIds[ 17 ][1])= 117
+######## NEW ########: nodeValues[nodeCount]= (19, 0.52684601674273257, 'AgeGroup', 0.25, 0.18181818181818182) 	len(nodeDFIds[ 19 ][1])= 117
 len(lessThan)= 98 	len(greaterThan)= 19
 
-node= 18 parentNode= 8 	parentTup= (8, 0.56869513256847892, 'YesMaster', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 127
+node= 20 parentNode= 9 	parentTup= (9, 0.54949225204524366, 'Gender', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 127
 len(dfCurr)= 10 	parentTup[3]= 0.0
 *****************END NODE
-######## NEW ########: nodeValues[nodeCount]= (18, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[ 18 ][1])= 10
+######## NEW ########: nodeValues[nodeCount]= (20, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[ 20 ][1])= 10
 
-node= 19 parentNode= 9 	parentTup= (9, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(parentDFIDs)= 6
-
-node= 20 parentNode= 9 	parentTup= (9, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(parentDFIDs)= 6
-
-node= 21 parentNode= 10 	parentTup= (10, 0.84010925479537424, 'FamilySize', 6.5, 0.54545454545454541) 	len(parentDFIDs)= 45
+node= 21 parentNode= 10 	parentTup= (10, 0.81775913307576364, 'FamilySize', 6.5, 0.54545454545454541) 	len(parentDFIDs)= 45
 len(dfCurr)= 25 	parentTup[3]= 6.5
 *****************END NODE
 ######## NEW ########: nodeValues[nodeCount]= (21, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[ 21 ][1])= 25
 
-node= 22 parentNode= 10 	parentTup= (10, 0.84010925479537424, 'FamilySize', 6.5, 0.54545454545454541) 	len(parentDFIDs)= 45
+node= 22 parentNode= 10 	parentTup= (10, 0.81775913307576364, 'FamilySize', 6.5, 0.54545454545454541) 	len(parentDFIDs)= 45
 len(dfCurr)= 20 	parentTup[3]= 6.5
-######## NEW ########: nodeValues[nodeCount]= (22, 0.72426768050178136, 'TicketNumber', 174710.0, 281739.72727272729) 	len(nodeDFIds[ 22 ][1])= 20
-len(lessThan)= 9 	len(greaterThan)= 11
+######## NEW ########: nodeValues[nodeCount]= (22, 0.70876501330375308, 'FamilySize', 7.5, 0.36363636363636365) 	len(nodeDFIds[ 22 ][1])= 20
+len(lessThan)= 11 	len(greaterThan)= 9
 
-node= 23 parentNode= 11 	parentTup= (11, 0.53105956977319513, 'Fare', -0.5, 0.18181818181818182) 	len(parentDFIDs)= 83
+node= 23 parentNode= 11 	parentTup= (11, 0.52591864255249066, 'Fare', -0.5, 0.18181818181818182) 	len(parentDFIDs)= 83
 len(dfCurr)= 5 	parentTup[3]= -0.5
 *****************END NODE
 ######## NEW ########: nodeValues[nodeCount]= (23, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[ 23 ][1])= 5
 
-node= 24 parentNode= 11 	parentTup= (11, 0.53105956977319513, 'Fare', -0.5, 0.18181818181818182) 	len(parentDFIDs)= 83
+node= 24 parentNode= 11 	parentTup= (11, 0.52591864255249066, 'Fare', -0.5, 0.18181818181818182) 	len(parentDFIDs)= 83
 len(dfCurr)= 78 	parentTup[3]= -0.5
-######## NEW ########: nodeValues[nodeCount]= (24, 0.51326187437847604, 'TicketNumber', 25377.727272727272, 9825.363636363636) 	len(nodeDFIds[ 24 ][1])= 78
-len(lessThan)= 45 	len(greaterThan)= 33
+######## NEW ########: nodeValues[nodeCount]= (24, 0.51324278101971732, 'CabinNumbers', 53.18181818181818, 13.545454545454545) 	len(nodeDFIds[ 24 ][1])= 78
+len(lessThan)= 50 	len(greaterThan)= 28
 
-node= 25 parentNode= 12 	parentTup= (12, 0.7750476450961028, 'CabinNumbers', 7.0, 8.0) 	len(parentDFIDs)= 24
+node= 25 parentNode= 12 	parentTup= (12, 0.73771117810976805, 'CabinNumbers', 7.0, 8.0) 	len(parentDFIDs)= 24
 len(dfCurr)= 7 	parentTup[3]= 7.0
 *****************END NODE
 ######## NEW ########: nodeValues[nodeCount]= (25, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[ 25 ][1])= 7
 
-node= 26 parentNode= 12 	parentTup= (12, 0.7750476450961028, 'CabinNumbers', 7.0, 8.0) 	len(parentDFIDs)= 24
+node= 26 parentNode= 12 	parentTup= (12, 0.73771117810976805, 'CabinNumbers', 7.0, 8.0) 	len(parentDFIDs)= 24
 len(dfCurr)= 17 	parentTup[3]= 7.0
-######## NEW ########: nodeValues[nodeCount]= (26, 0.73425683794171703, 'CabinNumbers', 42.454545454545453, 6.3636363636363633) 	len(nodeDFIds[ 26 ][1])= 17
+######## NEW ########: nodeValues[nodeCount]= (26, 0.70727197921776974, 'CabinNumbers', 42.454545454545453, 6.3636363636363633) 	len(nodeDFIds[ 26 ][1])= 17
 len(lessThan)= 10 	len(greaterThan)= 7
 
-node= 27 parentNode= 13 	parentTup= (13, 0.82492480442312177, 'Fare', 0.25, 0.13636363636363635) 	len(parentDFIDs)= 398
-len(dfCurr)= 381 	parentTup[3]= 0.25
-######## NEW ########: nodeValues[nodeCount]= (27, 0.83891010429415913, 'CabinNumbers', 6.0, 6.7272727272727275) 	len(nodeDFIds[ 27 ][1])= 381
-len(lessThan)= 375 	len(greaterThan)= 6
+node= 27 parentNode= 13 	parentTup= (13, 0.77458401922457742, 'CabinNumbers', 6.0, 6.7272727272727275) 	len(parentDFIDs)= 398
+len(dfCurr)= 392 	parentTup[3]= 6.0
+######## NEW ########: nodeValues[nodeCount]= (27, 0.78117246429850218, 'Fare', 0.25, 0.13636363636363635) 	len(nodeDFIds[ 27 ][1])= 392
+len(lessThan)= 375 	len(greaterThan)= 17
 
-node= 28 parentNode= 13 	parentTup= (13, 0.82492480442312177, 'Fare', 0.25, 0.13636363636363635) 	len(parentDFIDs)= 398
-len(dfCurr)= 17 	parentTup[3]= 0.25
-######## NEW ########: nodeValues[nodeCount]= (28, 0.8131667735022361, 'TicketNumber', 1862.0, 1207.090909090909) 	len(nodeDFIds[ 28 ][1])= 17
-len(lessThan)= 7 	len(greaterThan)= 10
+node= 28 parentNode= 13 	parentTup= (13, 0.77458401922457742, 'CabinNumbers', 6.0, 6.7272727272727275) 	len(parentDFIDs)= 398
+len(dfCurr)= 6 	parentTup[3]= 6.0
+Less that Min gini improvement: bestGiniSplit[1]= -1 	giniEndVal= 1.122334455667789e-05
+######## NEW ########: nodeValues[nodeCount]= (28, nan, '', nan, nan) 	len(nodeDFIds[ 28 ][1])= 6
 
-node= 29 parentNode= 14 	parentTup= (14, 0.59490306418153671, 'TicketNumber', 23101280.363636363, 2.2727272727272729) 	len(parentDFIDs)= 12
-len(dfCurr)= 5 	parentTup[3]= 23101280.3636
+node= 29 parentNode= 14 	parentTup= (14, 0.58045293805190257, 'AgeGroup', 0.25, 0.090909090909090912) 	len(parentDFIDs)= 12
+len(dfCurr)= 5 	parentTup[3]= 0.25
 Less that Min gini improvement: bestGiniSplit[1]= -1 	giniEndVal= 1.122334455667789e-05
 ######## NEW ########: nodeValues[nodeCount]= (29, nan, '', nan, nan) 	len(nodeDFIds[ 29 ][1])= 5
 
-node= 30 parentNode= 14 	parentTup= (14, 0.59490306418153671, 'TicketNumber', 23101280.363636363, 2.2727272727272729) 	len(parentDFIDs)= 12
-len(dfCurr)= 7 	parentTup[3]= 23101280.3636
+node= 30 parentNode= 14 	parentTup= (14, 0.58045293805190257, 'AgeGroup', 0.25, 0.090909090909090912) 	len(parentDFIDs)= 12
+len(dfCurr)= 7 	parentTup[3]= 0.25
 Less that Min gini improvement: bestGiniSplit[1]= -1 	giniEndVal= 1.122334455667789e-05
 ######## NEW ########: nodeValues[nodeCount]= (30, nan, '', nan, nan) 	len(nodeDFIds[ 30 ][1])= 7
 
@@ -538,208 +537,206 @@ Writing Out the Nodes, Values, and df ID's of the nodes
 df_weights['Weights'].sum(axis=0)= 1.0
 
 
-index= 14 	currentLeaf= (14, 0.59490306418153671, 'TicketNumber', 23101280.363636363, 2.2727272727272729) 	len(currentDF)= 12
+index= 14 	currentLeaf= (14, 0.58045293805190257, 'AgeGroup', 0.25, 0.090909090909090912) 	len(currentDF)= 12
 	len(ltDF)= 5 	len(gtDF)= 7
 	LESS THAN
-	classVal= 0 	currWeight= 0.00480254033353
-	classVal= 1 	currWeight= 0.000946880336297
+	classVal= 0 	currWeight= 0.00467277600867
+	classVal= 1 	currWeight= 0.00104906614231
 	GREATER THAN
-	classVal= 0 	currWeight= 0.00389580759329
-	classVal= 1 	currWeight= 0.00398249562365
-	 (14, 0, 1, 0.0048025403335276717, 0.0039824956236452734, 0.005749420669825118, 0.0078783032169359359)
+	classVal= 0 	currWeight= 0.00410022130579
+	classVal= 1 	currWeight= 0.00467277600867
+	 (14, 0, 1, 0.0046727760086702911, 0.0046727760086702911, 0.0057218421509798254, 0.0087729973144632014)
 
 
-index= 14 	currentLeaf= (14, 0.59490306418153671, 'TicketNumber', 23101280.363636363, 2.2727272727272729) 	len(currentDF)= 12
+index= 14 	currentLeaf= (14, 0.58045293805190257, 'AgeGroup', 0.25, 0.090909090909090912) 	len(currentDF)= 12
 	len(ltDF)= 5 	len(gtDF)= 7
 	LESS THAN
-	classVal= 0 	currWeight= 0.00480254033353
-	classVal= 1 	currWeight= 0.000946880336297
+	classVal= 0 	currWeight= 0.00467277600867
+	classVal= 1 	currWeight= 0.00104906614231
 	GREATER THAN
-	classVal= 0 	currWeight= 0.00389580759329
-	classVal= 1 	currWeight= 0.00398249562365
-	 (14, 0, 1, 0.0048025403335276717, 0.0039824956236452734, 0.005749420669825118, 0.0078783032169359359)
+	classVal= 0 	currWeight= 0.00410022130579
+	classVal= 1 	currWeight= 0.00467277600867
+	 (14, 0, 1, 0.0046727760086702911, 0.0046727760086702911, 0.0057218421509798254, 0.0087729973144632014)
 Decision already included from other daugther node
 
 
-index= 28 	currentLeaf= (28, 0.8131667735022361, 'TicketNumber', 1862.0, 1207.090909090909) 	len(currentDF)= 17
-	len(ltDF)= 7 	len(gtDF)= 10
+index= 13 	currentLeaf= (13, 0.77458401922457742, 'CabinNumbers', 6.0, 6.7272727272727275) 	len(currentDF)= 398
+Blank Node has a non-Blank Sister, so only make decision for one part of parent node.
+	classVal= 0 	currWeight= 0.00419626456924
+	classVal= 1 	currWeight= 0.00305115516348
+
+
+index= 27 	currentLeaf= (27, 0.78117246429850218, 'Fare', 0.25, 0.13636363636363635) 	len(currentDF)= 392
+	len(ltDF)= 375 	len(gtDF)= 17
 	LESS THAN
-	classVal= 0 	currWeight= 0.00228370922951
-	classVal= 1 	currWeight= 0.00570927307376
+	classVal= 0 	currWeight= 0.359829686812
+	classVal= 1 	currWeight= 0.0488184826157
 	GREATER THAN
-	classVal= 0 	currWeight= 0.00946880336297
-	 (28, 1, 0, 0.0057092730737646818, 0.0094688033629744574, 0.0079929823032705537, 0.0094688033629744574)
+	classVal= 0 	currWeight= 0.0135418165866
+	classVal= 1 	currWeight= 0.00524533071155
+	 (27, 0, 0, 0.35982968681217026, 0.013541816586578718, 0.40864816942790422, 0.018787147298126389)
 
 
-index= 27 	currentLeaf= (27, 0.83891010429415913, 'CabinNumbers', 6.0, 6.7272727272727275) 	len(currentDF)= 381
-	len(ltDF)= 375 	len(gtDF)= 6
-	LESS THAN
-	classVal= 0 	currWeight= 0.39165613286
-	classVal= 1 	currWeight= 0.0365393476721
-	GREATER THAN
-	classVal= 0 	currWeight= 0.00378752134519
-	classVal= 1 	currWeight= 0.00275395297854
-	 (27, 0, 0, 0.39165613286025724, 0.0037875213451897833, 0.42819548053235124, 0.0065414743237275069)
-
-
-index= 26 	currentLeaf= (26, 0.73425683794171703, 'CabinNumbers', 42.454545454545453, 6.3636363636363633) 	len(currentDF)= 17
+index= 26 	currentLeaf= (26, 0.70727197921776974, 'CabinNumbers', 42.454545454545453, 6.3636363636363633) 	len(currentDF)= 17
 	len(ltDF)= 10 	len(gtDF)= 7
 	LESS THAN
-	classVal= 0 	currWeight= 0.00799298230327
-	classVal= 1 	currWeight= 0.00342556384426
+	classVal= 0 	currWeight= 0.00734346299617
+	classVal= 1 	currWeight= 0.00457673274523
 	GREATER THAN
-	classVal= 0 	currWeight= 0.00662816235408
-	 (26, 0, 0, 0.0079929823032705537, 0.0066281623540821195, 0.011418546147529365, 0.0066281623540821195)
+	classVal= 0 	currWeight= 0.00734346299617
+	 (26, 0, 0, 0.0073434629961667405, 0.0073434629961667405, 0.011920195741391804, 0.0073434629961667405)
 
 
 index= 25 	currentLeaf= (25, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 7
 This is An End Node
 
 
-index= 24 	currentLeaf= (24, 0.51326187437847604, 'TicketNumber', 25377.727272727272, 9825.363636363636) 	len(currentDF)= 78
-	len(ltDF)= 45 	len(gtDF)= 33
+index= 24 	currentLeaf= (24, 0.51324278101971732, 'CabinNumbers', 53.18181818181818, 13.545454545454545) 	len(currentDF)= 78
+	len(ltDF)= 50 	len(gtDF)= 28
 	LESS THAN
-	classVal= 0 	currWeight= 0.02145643783
-	classVal= 1 	currWeight= 0.0294798308923
+	classVal= 0 	currWeight= 0.0267031649972
+	classVal= 1 	currWeight= 0.0348038594675
 	GREATER THAN
-	classVal= 0 	currWeight= 0.021026341677
-	classVal= 1 	currWeight= 0.0149116195074
-	 (24, 1, 0, 0.029479830892266322, 0.021026341676999297, 0.050936268722237034, 0.035937961184440856)
+	classVal= 0 	currWeight= 0.0208852795827
+	classVal= 1 	currWeight= 0.0137301982357
+	 (24, 1, 0, 0.034803859467517122, 0.020885279582745456, 0.061507024464687636, 0.034615477818420649)
 
 
 index= 23 	currentLeaf= (23, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 5
 This is An End Node
 
 
-index= 22 	currentLeaf= (22, 0.72426768050178136, 'TicketNumber', 174710.0, 281739.72727272729) 	len(currentDF)= 20
-	len(ltDF)= 9 	len(gtDF)= 11
+index= 22 	currentLeaf= (22, 0.70876501330375308, 'FamilySize', 7.5, 0.36363636363636365) 	len(currentDF)= 20
+	len(ltDF)= 11 	len(gtDF)= 9
 	LESS THAN
-	classVal= 0 	currWeight= 0.00852192302668
+	classVal= 0 	currWeight= 0.00734346299617
+	classVal= 1 	currWeight= 0.00610231032697
 	GREATER THAN
-	classVal= 0 	currWeight= 0.00799298230327
-	classVal= 1 	currWeight= 0.00456741845901
-	 (22, 0, 0, 0.008521923026677012, 0.0079929823032705537, 0.008521923026677012, 0.012560400762282303)
+	classVal= 0 	currWeight= 0.00944159528079
+	 (22, 0, 0, 0.0073434629961667405, 0.0094415952807858083, 0.01344577332313349, 0.0094415952807858083)
 
 
 index= 21 	currentLeaf= (21, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 25
 This is An End Node
 
 
-index= 9 	currentLeaf= (9, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 6
+index= 20 	currentLeaf= (20, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 10
 This is An End Node
 
 
-index= 9 	currentLeaf= (9, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 6
+index= 19 	currentLeaf= (19, 0.52684601674273257, 'AgeGroup', 0.25, 0.18181818181818182) 	len(currentDF)= 117
+	len(ltDF)= 98 	len(gtDF)= 19
+	LESS THAN
+	classVal= 0 	currWeight= 0.0444375412752
+	classVal= 1 	currWeight= 0.073619306733
+	GREATER THAN
+	classVal= 0 	currWeight= 0.014018328026
+	classVal= 1 	currWeight= 0.0106790430722
+	 (19, 1, 0, 0.073619306732969902, 0.014018328026010871, 0.11805684800816328, 0.024697371098202685)
+
+
+index= 8 	currentLeaf= (8, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 6
+This is An End Node
+
+
+index= 8 	currentLeaf= (8, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 6
 This is An End Node
 Decision already included from other daugther node
 
 
-index= 18 	currentLeaf= (18, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 10
-This is An End Node
-
-
-index= 17 	currentLeaf= (17, 0.54984110007400067, 'AgeGroup', 0.25, 0.18181818181818182) 	len(currentDF)= 117
-	len(ltDF)= 98 	len(gtDF)= 19
+index= 16 	currentLeaf= (16, 0.67805996036188354, 'CabinNumbers', 8.545454545454545, 9.545454545454545) 	len(currentDF)= 18
+	len(ltDF)= 7 	len(gtDF)= 11
 	LESS THAN
-	classVal= 0 	currWeight= 0.0368173320051
-	classVal= 1 	currWeight= 0.075027179856
+	classVal= 0 	currWeight= 0.00629439685386
+	classVal= 1 	currWeight= 0.00152557758174
 	GREATER THAN
-	classVal= 0 	currWeight= 0.0119474868709
-	classVal= 1 	currWeight= 0.00963883542488
-	 (17, 1, 0, 0.075027179855968726, 0.01194748687093582, 0.11184451186105365, 0.021586322295817858)
+	classVal= 0 	currWeight= 0.00314719842693
+	classVal= 1 	currWeight= 0.0122046206539
+	 (16, 0, 1, 0.0062943968538572061, 0.012204620653933502, 0.0078199744355988941, 0.015351819080862104)
 
 
-index= 16 	currentLeaf= (16, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 6
-This is An End Node
-
-
-index= 15 	currentLeaf= (15, 0.86389692320924116, 'YesFancy', 0.0, 0.18181818181818182) 	len(currentDF)= 190
-	len(ltDF)= 172 	len(gtDF)= 18
+index= 15 	currentLeaf= (15, 0.87009851647748571, 'TicketNumber', 45576.090909090912, 22786.545454545456) 	len(currentDF)= 178
+	len(ltDF)= 111 	len(gtDF)= 67
 	LESS THAN
-	classVal= 0 	currWeight= 0.0102766915328
-	classVal= 1 	currWeight= 0.186122302205
+	classVal= 0 	currWeight= 0.00457673274523
+	classVal= 1 	currWeight= 0.113299143369
 	GREATER THAN
-	classVal= 0 	currWeight= 0.00852192302668
-	classVal= 1 	currWeight= 0.0123927884034
-	 (15, 1, 1, 0.18612230220472867, 0.012392788403419761, 0.19639899373750511, 0.020914711430096773)
+	classVal= 0 	currWeight= 0.00915346549045
+	classVal= 1 	currWeight= 0.0639930346809
+	 (15, 1, 1, 0.1132991433694297, 0.063993034680881605, 0.11787587611465479, 0.073146500171331744)
 
 ##############
  Getting Tree Error
  ###################
 
-decisionTup= ('14', '0', '1', '0.00480254033353', '0.00398249562365', '0.00574942066983', '0.00787830321694')
-totalCorrWeight= 0 	float(decisionTup[3])= 0.00480254033353 	float(decisionTup[4])= 0.00398249562365
-	totalCorrWeight= 0.008785035957179999
+decisionTup= ('14', '0', '1', '0.00467277600867', '0.00467277600867', '0.00572184215098', '0.00877299731446')
+totalCorrWeight= 0 	float(decisionTup[3])= 0.00467277600867 	float(decisionTup[4])= 0.00467277600867
+	totalCorrWeight= 0.00934555201734
 
-decisionTup= ('28', '1', '0', '0.00570927307376', '0.00946880336297', '0.00799298230327', '0.00946880336297')
-totalCorrWeight= 0.008785035957179999 	float(decisionTup[3])= 0.00570927307376 	float(decisionTup[4])= 0.00946880336297
-	totalCorrWeight= 0.023963112393909997
+decisionTup= ('13', 'nan', '0', 'nan', '0.00419626456924', 'nan', '0.00724741973272')
+totalCorrWeight= 0.00934555201734 	float(decisionTup[4])= 0.00419626456924
+	totalCorrWeight= 0.013541816586579998
 
-decisionTup= ('27', '0', '0', '0.39165613286', '0.00378752134519', '0.428195480532', '0.00654147432373')
-totalCorrWeight= 0.023963112393909997 	float(decisionTup[3])= 0.39165613286 	float(decisionTup[4])= 0.00378752134519
-	totalCorrWeight= 0.41940676659910003
+decisionTup= ('27', '0', '0', '0.359829686812', '0.0135418165866', '0.408648169428', '0.0187871472981')
+totalCorrWeight= 0.013541816586579998 	float(decisionTup[3])= 0.359829686812 	float(decisionTup[4])= 0.0135418165866
+	totalCorrWeight= 0.38691331998517997
 
-decisionTup= ('26', '0', '0', '0.00799298230327', '0.00662816235408', '0.0114185461475', '0.00662816235408')
-totalCorrWeight= 0.41940676659910003 	float(decisionTup[3])= 0.00799298230327 	float(decisionTup[4])= 0.00662816235408
-	totalCorrWeight= 0.43402791125645
+decisionTup= ('26', '0', '0', '0.00734346299617', '0.00734346299617', '0.0119201957414', '0.00734346299617')
+totalCorrWeight= 0.38691331998517997 	float(decisionTup[3])= 0.00734346299617 	float(decisionTup[4])= 0.00734346299617
+	totalCorrWeight= 0.40160024597752
 
-decisionTup= ('25', '0', 'nan', '0.00662816235408', 'nan', '0.00662816235408', 'nan')
-totalCorrWeight= 0.43402791125645 	float(decisionTup[3])= 0.00662816235408
-	totalCorrWeight= 0.44065607361053
+decisionTup= ('25', '0', 'nan', '0.00734346299617', 'nan', '0.00734346299617', 'nan')
+totalCorrWeight= 0.40160024597752 	float(decisionTup[3])= 0.00734346299617
+	totalCorrWeight= 0.40894370897369
 
-decisionTup= ('24', '1', '0', '0.0294798308923', '0.021026341677', '0.0509362687222', '0.0359379611844')
-totalCorrWeight= 0.44065607361053 	float(decisionTup[3])= 0.0294798308923 	float(decisionTup[4])= 0.021026341677
-	totalCorrWeight= 0.49116224617983
+decisionTup= ('24', '1', '0', '0.0348038594675', '0.0208852795827', '0.0615070244647', '0.0346154778184')
+totalCorrWeight= 0.40894370897369 	float(decisionTup[3])= 0.0348038594675 	float(decisionTup[4])= 0.0208852795827
+	totalCorrWeight= 0.46463284802389
 
-decisionTup= ('23', '0', 'nan', '0.00570927307376', 'nan', '0.00570927307376', 'nan')
-totalCorrWeight= 0.49116224617983 	float(decisionTup[3])= 0.00570927307376
-	totalCorrWeight= 0.49687151925359
+decisionTup= ('23', '0', 'nan', '0.00524533071155', 'nan', '0.00524533071155', 'nan')
+totalCorrWeight= 0.46463284802389 	float(decisionTup[3])= 0.00524533071155
+	totalCorrWeight= 0.46987817873543997
 
-decisionTup= ('22', '0', '0', '0.00852192302668', '0.00799298230327', '0.00852192302668', '0.0125604007623')
-totalCorrWeight= 0.49687151925359 	float(decisionTup[3])= 0.00852192302668 	float(decisionTup[4])= 0.00799298230327
-	totalCorrWeight= 0.51338642458354
+decisionTup= ('22', '0', '0', '0.00734346299617', '0.00944159528079', '0.0134457733231', '0.00944159528079')
+totalCorrWeight= 0.46987817873543997 	float(decisionTup[3])= 0.00734346299617 	float(decisionTup[4])= 0.00944159528079
+	totalCorrWeight= 0.48666323701239994
 
-decisionTup= ('21', '0', 'nan', '0.0236720084074', 'nan', '0.0236720084074', 'nan')
-totalCorrWeight= 0.51338642458354 	float(decisionTup[3])= 0.0236720084074
-	totalCorrWeight= 0.53705843299094
+decisionTup= ('21', '0', 'nan', '0.0262266535577', 'nan', '0.0262266535577', 'nan')
+totalCorrWeight= 0.48666323701239994 	float(decisionTup[3])= 0.0262266535577
+	totalCorrWeight= 0.5128898905700999
 
-decisionTup= ('9', '1', 'nan', '0.00568128201778', 'nan', '0.00568128201778', 'nan')
-totalCorrWeight= 0.53705843299094 	float(decisionTup[3])= 0.00568128201778
-	totalCorrWeight= 0.54273971500872
+decisionTup= ('20', '1', 'nan', '0.0104906614231', 'nan', '0.0104906614231', 'nan')
+totalCorrWeight= 0.5128898905700999 	float(decisionTup[3])= 0.0104906614231
+	totalCorrWeight= 0.5233805519931999
 
-decisionTup= ('18', '1', 'nan', '0.0100537261983', 'nan', '0.0100537261983', 'nan')
-totalCorrWeight= 0.54273971500872 	float(decisionTup[3])= 0.0100537261983
-	totalCorrWeight= 0.55279344120702
+decisionTup= ('19', '1', '0', '0.073619306733', '0.014018328026', '0.118056848008', '0.0246973710982')
+totalCorrWeight= 0.5233805519931999 	float(decisionTup[3])= 0.073619306733 	float(decisionTup[4])= 0.014018328026
+	totalCorrWeight= 0.6110181867521999
 
-decisionTup= ('17', '1', '0', '0.075027179856', '0.0119474868709', '0.111844511861', '0.0215863222958')
-totalCorrWeight= 0.55279344120702 	float(decisionTup[3])= 0.075027179856 	float(decisionTup[4])= 0.0119474868709
-	totalCorrWeight= 0.63976810793392
+decisionTup= ('8', '0', 'nan', '0.00629439685386', 'nan', '0.00629439685386', 'nan')
+totalCorrWeight= 0.6110181867521999 	float(decisionTup[3])= 0.00629439685386
+	totalCorrWeight= 0.6173125836060599
 
-decisionTup= ('16', '0', 'nan', '0.00568128201778', 'nan', '0.00568128201778', 'nan')
-totalCorrWeight= 0.63976810793392 	float(decisionTup[3])= 0.00568128201778
-	totalCorrWeight= 0.6454493899517
+decisionTup= ('16', '0', '1', '0.00629439685386', '0.0122046206539', '0.0078199744356', '0.0153518190809')
+totalCorrWeight= 0.6173125836060599 	float(decisionTup[3])= 0.00629439685386 	float(decisionTup[4])= 0.0122046206539
+	totalCorrWeight= 0.6358116011138198
 
-decisionTup= ('15', '1', '1', '0.186122302205', '0.0123927884034', '0.196398993738', '0.0209147114301')
-totalCorrWeight= 0.6454493899517 	float(decisionTup[3])= 0.186122302205 	float(decisionTup[4])= 0.0123927884034
-	totalCorrWeight= 0.8439644805601
-totalCorrWeight= 0.8439644805601 	otherSum= 0.9999999999999 	sumDFWeights= 1.0 	error= 0.15603551944
-error= 0.15603551943990002 	alpha= 0.1857671608932434 	CorrectFactor= 0.8304669376521457 	IncorrectFactor= 1.2041418564201358
-BEFORE: df_weights['Weights'].unique()= [ 0.00114185  0.00137698  0.00094688]
-After: df_weights['Weights'].unique()= [ 0.00114185  0.00137698  0.00078635  0.00094688  0.00165808  0.00137495
-  0.00114018  0.00094827  0.00114353]
-	len('Weights' == 0.00114185461475 )= 628
-	len('Weights' == 0.00137697648927 )= 37
-	len('Weights' == 0.000786352813208 )= 105
-	len('Weights' == 0.000946880336297 )= 56
-	len('Weights' == 0.00165807502604 )= 21
-	len('Weights' == 0.00137495493557 )= 6
-	len('Weights' == 0.00114017824596 )= 9
-	len('Weights' == 0.000948272505158 )= 20
-	len('Weights' == 0.00114353344826 )= 9
+decisionTup= ('15', '1', '1', '0.113299143369', '0.0639930346809', '0.117875876115', '0.0731465001713')
+totalCorrWeight= 0.6358116011138198 	float(decisionTup[3])= 0.113299143369 	float(decisionTup[4])= 0.0639930346809
+	totalCorrWeight= 0.8131037791637199
+totalCorrWeight= 0.8131037791637199 	sumWeights= 1.0000000000002 	error= 0.18689622083644275
+error= 0.18689622083644275 	alpha= 0.1677201784968804 	CorrectFactor= 0.845590415964069 	IncorrectFactor= 1.1826056458550167
+WEIGHT NOT CHANGED.
+BEFORE: df_weights['Weights'].unique()= [ 0.00104907  0.00152558]
+After: df_weights['Weights'].unique()= [ 0.00088708  0.00129001  0.00124063  0.00180416]
+	len('Weights' == 0.000887080275649 )= 698
+	len('Weights' == 0.00129001378193 )= 53
+	len('Weights' == 0.00124063154277 )= 56
+	len('Weights' == 0.00180415666136 )= 84
 
 
 ###############################################################
-FINAL SCORE FOR TREE # 4 is 0.15603551943990002 
+FINAL SCORE FOR TREE # 4 is 0.18689622083644275 
 ###############################################################
 #############################################
 #############################################
@@ -752,143 +749,143 @@ FINAL SCORE FOR TREE # 4 is 0.15603551943990002
  Making a Decision Tree
 ###################################
 
-node= 1 parentNode= 0 	parentTup= (0, 0.67143792767185428, 'YesMr', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 891
+node= 1 parentNode= 0 	parentTup= (0, 0.60147374983426805, 'YesMr', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 891
 len(dfCurr)= 374 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (1, 0.67861494535073363, 'FamilySize', 4.5, 0.90909090909090906) 	len(nodeDFIds[ 1 ][1])= 374
-len(lessThan)= 323 	len(greaterThan)= 51
+######## NEW ########: nodeValues[nodeCount]= (1, 0.6172993725395497, 'Pclass', 2.5, 0.18181818181818182) 	len(nodeDFIds[ 1 ][1])= 374
+len(lessThan)= 202 	len(greaterThan)= 172
 
-node= 2 parentNode= 0 	parentTup= (0, 0.67143792767185428, 'YesMr', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 891
+node= 2 parentNode= 0 	parentTup= (0, 0.60147374983426805, 'YesMr', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 891
 len(dfCurr)= 517 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (2, 0.74887850617907037, 'Pclass', 1.5, 0.18181818181818182) 	len(nodeDFIds[ 2 ][1])= 517
-len(lessThan)= 107 	len(greaterThan)= 410
+######## NEW ########: nodeValues[nodeCount]= (2, 0.6598539256130258, 'CabinNumbers', 12.545454545454545, 13.545454545454545) 	len(nodeDFIds[ 2 ][1])= 517
+len(lessThan)= 437 	len(greaterThan)= 80
 
-node= 3 parentNode= 1 	parentTup= (1, 0.67861494535073363, 'FamilySize', 4.5, 0.90909090909090906) 	len(parentDFIDs)= 374
-len(dfCurr)= 323 	parentTup[3]= 4.5
-######## NEW ########: nodeValues[nodeCount]= (3, 0.7050586882177432, 'Fare', -0.25, 0.18181818181818182) 	len(nodeDFIds[ 3 ][1])= 323
-len(lessThan)= 125 	len(greaterThan)= 198
+node= 3 parentNode= 1 	parentTup= (1, 0.6172993725395497, 'Pclass', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 374
+len(dfCurr)= 202 	parentTup[3]= 2.5
+######## NEW ########: nodeValues[nodeCount]= (3, 0.77295391065176611, 'YesRev', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 3 ][1])= 202
+len(lessThan)= 196 	len(greaterThan)= 6
 
-node= 4 parentNode= 1 	parentTup= (1, 0.67861494535073363, 'FamilySize', 4.5, 0.90909090909090906) 	len(parentDFIDs)= 374
-len(dfCurr)= 51 	parentTup[3]= 4.5
-######## NEW ########: nodeValues[nodeCount]= (4, 0.78907849335168545, 'Pclass', 2.5, 0.18181818181818182) 	len(nodeDFIds[ 4 ][1])= 51
-len(lessThan)= 6 	len(greaterThan)= 45
+node= 4 parentNode= 1 	parentTup= (1, 0.6172993725395497, 'Pclass', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 374
+len(dfCurr)= 172 	parentTup[3]= 2.5
+######## NEW ########: nodeValues[nodeCount]= (4, 0.55743556603502831, 'FamilySize', 4.5, 0.90909090909090906) 	len(nodeDFIds[ 4 ][1])= 172
+len(lessThan)= 127 	len(greaterThan)= 45
 
-node= 5 parentNode= 2 	parentTup= (2, 0.74887850617907037, 'Pclass', 1.5, 0.18181818181818182) 	len(parentDFIDs)= 517
-len(dfCurr)= 107 	parentTup[3]= 1.5
-######## NEW ########: nodeValues[nodeCount]= (5, 0.54833680688126041, 'AgeGroup', 0.75, 0.13636363636363635) 	len(nodeDFIds[ 5 ][1])= 107
-len(lessThan)= 83 	len(greaterThan)= 24
+node= 5 parentNode= 2 	parentTup= (2, 0.6598539256130258, 'CabinNumbers', 12.545454545454545, 13.545454545454545) 	len(parentDFIDs)= 517
+len(dfCurr)= 437 	parentTup[3]= 12.5454545455
+######## NEW ########: nodeValues[nodeCount]= (5, 0.703761897333394, 'CabinNumbers', 7.5, 1.1818181818181819) 	len(nodeDFIds[ 5 ][1])= 437
+len(lessThan)= 432 	len(greaterThan)= 5
 
-node= 6 parentNode= 2 	parentTup= (2, 0.74887850617907037, 'Pclass', 1.5, 0.18181818181818182) 	len(parentDFIDs)= 517
-len(dfCurr)= 410 	parentTup[3]= 1.5
-######## NEW ########: nodeValues[nodeCount]= (6, 0.81306486235119135, 'CabinNumbers', 6.0, 6.7272727272727275) 	len(nodeDFIds[ 6 ][1])= 410
-len(lessThan)= 404 	len(greaterThan)= 6
+node= 6 parentNode= 2 	parentTup= (2, 0.6598539256130258, 'CabinNumbers', 12.545454545454545, 13.545454545454545) 	len(parentDFIDs)= 517
+len(dfCurr)= 80 	parentTup[3]= 12.5454545455
+######## NEW ########: nodeValues[nodeCount]= (6, 0.54679430931898776, 'TicketNumber', 35461.0, 34766.0) 	len(nodeDFIds[ 6 ][1])= 80
+len(lessThan)= 47 	len(greaterThan)= 33
 
-node= 7 parentNode= 3 	parentTup= (3, 0.7050586882177432, 'Fare', -0.25, 0.18181818181818182) 	len(parentDFIDs)= 323
-len(dfCurr)= 125 	parentTup[3]= -0.25
-######## NEW ########: nodeValues[nodeCount]= (7, 0.56713387186504616, 'Gender', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 7 ][1])= 125
-len(lessThan)= 113 	len(greaterThan)= 12
+node= 7 parentNode= 3 	parentTup= (3, 0.77295391065176611, 'YesRev', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 202
+len(dfCurr)= 196 	parentTup[3]= 0.0
+######## NEW ########: nodeValues[nodeCount]= (7, 0.78827177428193751, 'YesFancy', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 7 ][1])= 196
+len(lessThan)= 178 	len(greaterThan)= 18
 
-node= 8 parentNode= 3 	parentTup= (3, 0.7050586882177432, 'Fare', -0.25, 0.18181818181818182) 	len(parentDFIDs)= 323
-len(dfCurr)= 198 	parentTup[3]= -0.25
-######## NEW ########: nodeValues[nodeCount]= (8, 0.81134007487774928, 'YesFancy', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 8 ][1])= 198
-len(lessThan)= 183 	len(greaterThan)= 15
-
-node= 9 parentNode= 4 	parentTup= (4, 0.78907849335168545, 'Pclass', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 51
-len(dfCurr)= 6 	parentTup[3]= 2.5
+node= 8 parentNode= 3 	parentTup= (3, 0.77295391065176611, 'YesRev', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 202
+len(dfCurr)= 6 	parentTup[3]= 0.0
 *****************END NODE
-######## NEW ########: nodeValues[nodeCount]= (9, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[ 9 ][1])= 6
+######## NEW ########: nodeValues[nodeCount]= (8, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[ 8 ][1])= 6
 
-node= 10 parentNode= 4 	parentTup= (4, 0.78907849335168545, 'Pclass', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 51
-len(dfCurr)= 45 	parentTup[3]= 2.5
-######## NEW ########: nodeValues[nodeCount]= (10, 0.79980843143566727, 'FamilySize', 6.5, 0.54545454545454541) 	len(nodeDFIds[ 10 ][1])= 45
+node= 9 parentNode= 4 	parentTup= (4, 0.55743556603502831, 'FamilySize', 4.5, 0.90909090909090906) 	len(parentDFIDs)= 172
+len(dfCurr)= 127 	parentTup[3]= 4.5
+######## NEW ########: nodeValues[nodeCount]= (9, 0.53259562501901903, 'YesMaster', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 9 ][1])= 127
+len(lessThan)= 117 	len(greaterThan)= 10
+
+node= 10 parentNode= 4 	parentTup= (4, 0.55743556603502831, 'FamilySize', 4.5, 0.90909090909090906) 	len(parentDFIDs)= 172
+len(dfCurr)= 45 	parentTup[3]= 4.5
+######## NEW ########: nodeValues[nodeCount]= (10, 0.78047897868369021, 'FamilySize', 6.5, 0.54545454545454541) 	len(nodeDFIds[ 10 ][1])= 45
 len(lessThan)= 25 	len(greaterThan)= 20
 
-node= 11 parentNode= 5 	parentTup= (5, 0.54833680688126041, 'AgeGroup', 0.75, 0.13636363636363635) 	len(parentDFIDs)= 107
-len(dfCurr)= 83 	parentTup[3]= 0.75
-######## NEW ########: nodeValues[nodeCount]= (11, 0.53063543172307792, 'Fare', -0.5, 0.18181818181818182) 	len(nodeDFIds[ 11 ][1])= 83
-len(lessThan)= 5 	len(greaterThan)= 78
+node= 11 parentNode= 5 	parentTup= (5, 0.703761897333394, 'CabinNumbers', 7.5, 1.1818181818181819) 	len(parentDFIDs)= 437
+len(dfCurr)= 432 	parentTup[3]= 7.5
+######## NEW ########: nodeValues[nodeCount]= (11, 0.70736053000700949, 'TicketDashes', 1.5, 0.36363636363636365) 	len(nodeDFIds[ 11 ][1])= 432
+len(lessThan)= 392 	len(greaterThan)= 40
 
-node= 12 parentNode= 5 	parentTup= (5, 0.54833680688126041, 'AgeGroup', 0.75, 0.13636363636363635) 	len(parentDFIDs)= 107
-len(dfCurr)= 24 	parentTup[3]= 0.75
-######## NEW ########: nodeValues[nodeCount]= (12, 0.75635611986224227, 'CabinNumbers', 7.0, 8.0) 	len(nodeDFIds[ 12 ][1])= 24
-len(lessThan)= 7 	len(greaterThan)= 17
-
-node= 13 parentNode= 6 	parentTup= (6, 0.81306486235119135, 'CabinNumbers', 6.0, 6.7272727272727275) 	len(parentDFIDs)= 410
-len(dfCurr)= 404 	parentTup[3]= 6.0
-######## NEW ########: nodeValues[nodeCount]= (13, 0.82227293527183898, 'Fare', 0.25, 0.13636363636363635) 	len(nodeDFIds[ 13 ][1])= 404
-len(lessThan)= 387 	len(greaterThan)= 17
-
-node= 14 parentNode= 6 	parentTup= (6, 0.81306486235119135, 'CabinNumbers', 6.0, 6.7272727272727275) 	len(parentDFIDs)= 410
-len(dfCurr)= 6 	parentTup[3]= 6.0
+node= 12 parentNode= 5 	parentTup= (5, 0.703761897333394, 'CabinNumbers', 7.5, 1.1818181818181819) 	len(parentDFIDs)= 437
+len(dfCurr)= 5 	parentTup[3]= 7.5
 Less that Min gini improvement: bestGiniSplit[1]= -1 	giniEndVal= 1.122334455667789e-05
-######## NEW ########: nodeValues[nodeCount]= (14, nan, '', nan, nan) 	len(nodeDFIds[ 14 ][1])= 6
+######## NEW ########: nodeValues[nodeCount]= (12, nan, '', nan, nan) 	len(nodeDFIds[ 12 ][1])= 5
 
-node= 15 parentNode= 7 	parentTup= (7, 0.56713387186504616, 'Gender', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 125
-len(dfCurr)= 113 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (15, 0.60389549914167484, 'Pclass', 2.5, 0.090909090909090912) 	len(nodeDFIds[ 15 ][1])= 113
-len(lessThan)= 30 	len(greaterThan)= 83
+node= 13 parentNode= 6 	parentTup= (6, 0.54679430931898776, 'TicketNumber', 35461.0, 34766.0) 	len(parentDFIDs)= 80
+len(dfCurr)= 47 	parentTup[3]= 35461.0
+######## NEW ########: nodeValues[nodeCount]= (13, 0.53696492504540405, 'AgeGroup', 0.75, 0.13636363636363635) 	len(nodeDFIds[ 13 ][1])= 47
+len(lessThan)= 37 	len(greaterThan)= 10
 
-node= 16 parentNode= 7 	parentTup= (7, 0.56713387186504616, 'Gender', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 125
-len(dfCurr)= 12 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (16, 1.0, 'AgeGroup', -0.25, 0.18181818181818182) 	len(nodeDFIds[ 16 ][1])= 12
-len(lessThan)= 5 	len(greaterThan)= 7
+node= 14 parentNode= 6 	parentTup= (6, 0.54679430931898776, 'TicketNumber', 35461.0, 34766.0) 	len(parentDFIDs)= 80
+len(dfCurr)= 33 	parentTup[3]= 35461.0
+######## NEW ########: nodeValues[nodeCount]= (14, 0.63005987403434349, 'EmbarkIsC', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 14 ][1])= 33
+len(lessThan)= 28 	len(greaterThan)= 5
 
-node= 17 parentNode= 8 	parentTup= (8, 0.81134007487774928, 'YesFancy', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 198
-len(dfCurr)= 183 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (17, 0.84629842239089026, 'Pclass', 2.5, 0.18181818181818182) 	len(nodeDFIds[ 17 ][1])= 183
-len(lessThan)= 143 	len(greaterThan)= 40
+node= 15 parentNode= 7 	parentTup= (7, 0.78827177428193751, 'YesFancy', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 196
+len(dfCurr)= 178 	parentTup[3]= 0.0
+######## NEW ########: nodeValues[nodeCount]= (15, 0.82975463751570855, 'TicketNumber', 45576.090909090912, 22786.545454545456) 	len(nodeDFIds[ 15 ][1])= 178
+len(lessThan)= 111 	len(greaterThan)= 67
 
-node= 18 parentNode= 8 	parentTup= (8, 0.81134007487774928, 'YesFancy', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 198
-len(dfCurr)= 15 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (18, 0.56024758989822898, 'TicketNumber', 25383.18181818182, 9824.0909090909099) 	len(nodeDFIds[ 18 ][1])= 15
-len(lessThan)= 10 	len(greaterThan)= 5
+node= 16 parentNode= 7 	parentTup= (7, 0.78827177428193751, 'YesFancy', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 196
+len(dfCurr)= 18 	parentTup[3]= 0.0
+######## NEW ########: nodeValues[nodeCount]= (16, 0.61425846749883473, 'CabinNumbers', 8.545454545454545, 9.545454545454545) 	len(nodeDFIds[ 16 ][1])= 18
+len(lessThan)= 7 	len(greaterThan)= 11
 
-node= 19 parentNode= 9 	parentTup= (9, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(parentDFIDs)= 6
+node= 17 parentNode= 8 	parentTup= (8, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(parentDFIDs)= 6
 
-node= 20 parentNode= 9 	parentTup= (9, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(parentDFIDs)= 6
+node= 18 parentNode= 8 	parentTup= (8, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(parentDFIDs)= 6
 
-node= 21 parentNode= 10 	parentTup= (10, 0.79980843143566727, 'FamilySize', 6.5, 0.54545454545454541) 	len(parentDFIDs)= 45
+node= 19 parentNode= 9 	parentTup= (9, 0.53259562501901903, 'YesMaster', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 127
+len(dfCurr)= 117 	parentTup[3]= 0.0
+######## NEW ########: nodeValues[nodeCount]= (19, 0.51300589843369726, 'Fare', -0.25, 0.045454545454545456) 	len(nodeDFIds[ 19 ][1])= 117
+len(lessThan)= 83 	len(greaterThan)= 34
+
+node= 20 parentNode= 9 	parentTup= (9, 0.53259562501901903, 'YesMaster', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 127
+len(dfCurr)= 10 	parentTup[3]= 0.0
+*****************END NODE
+######## NEW ########: nodeValues[nodeCount]= (20, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[ 20 ][1])= 10
+
+node= 21 parentNode= 10 	parentTup= (10, 0.78047897868369021, 'FamilySize', 6.5, 0.54545454545454541) 	len(parentDFIDs)= 45
 len(dfCurr)= 25 	parentTup[3]= 6.5
 *****************END NODE
 ######## NEW ########: nodeValues[nodeCount]= (21, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[ 21 ][1])= 25
 
-node= 22 parentNode= 10 	parentTup= (10, 0.79980843143566727, 'FamilySize', 6.5, 0.54545454545454541) 	len(parentDFIDs)= 45
+node= 22 parentNode= 10 	parentTup= (10, 0.78047897868369021, 'FamilySize', 6.5, 0.54545454545454541) 	len(parentDFIDs)= 45
 len(dfCurr)= 20 	parentTup[3]= 6.5
-######## NEW ########: nodeValues[nodeCount]= (22, 0.70882820182087403, 'FamilySize', 7.5, 0.36363636363636365) 	len(nodeDFIds[ 22 ][1])= 20
+######## NEW ########: nodeValues[nodeCount]= (22, 0.68821329657171171, 'TicketBeginLetter', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 22 ][1])= 20
 len(lessThan)= 11 	len(greaterThan)= 9
 
-node= 23 parentNode= 11 	parentTup= (11, 0.53063543172307792, 'Fare', -0.5, 0.18181818181818182) 	len(parentDFIDs)= 83
-len(dfCurr)= 5 	parentTup[3]= -0.5
-*****************END NODE
-######## NEW ########: nodeValues[nodeCount]= (23, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[ 23 ][1])= 5
+node= 23 parentNode= 11 	parentTup= (11, 0.70736053000700949, 'TicketDashes', 1.5, 0.36363636363636365) 	len(parentDFIDs)= 432
+len(dfCurr)= 392 	parentTup[3]= 1.5
+######## NEW ########: nodeValues[nodeCount]= (23, 0.69273438585838398, 'AgeGroup', 0.75, 0.13636363636363635) 	len(nodeDFIds[ 23 ][1])= 392
+len(lessThan)= 370 	len(greaterThan)= 22
 
-node= 24 parentNode= 11 	parentTup= (11, 0.53063543172307792, 'Fare', -0.5, 0.18181818181818182) 	len(parentDFIDs)= 83
-len(dfCurr)= 78 	parentTup[3]= -0.5
-######## NEW ########: nodeValues[nodeCount]= (24, 0.5275150021391366, 'TicketBeginLetter', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 24 ][1])= 78
-len(lessThan)= 52 	len(greaterThan)= 26
+node= 24 parentNode= 11 	parentTup= (11, 0.70736053000700949, 'TicketDashes', 1.5, 0.36363636363636365) 	len(parentDFIDs)= 432
+len(dfCurr)= 40 	parentTup[3]= 1.5
+######## NEW ########: nodeValues[nodeCount]= (24, 0.91270712915706431, 'AgeGroup', 0.25, 0.13636363636363635) 	len(nodeDFIds[ 24 ][1])= 40
+len(lessThan)= 24 	len(greaterThan)= 16
 
-node= 25 parentNode= 12 	parentTup= (12, 0.75635611986224227, 'CabinNumbers', 7.0, 8.0) 	len(parentDFIDs)= 24
-len(dfCurr)= 7 	parentTup[3]= 7.0
-*****************END NODE
-######## NEW ########: nodeValues[nodeCount]= (25, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[ 25 ][1])= 7
+node= 25 parentNode= 12 	parentTup= (12, nan, '', nan, nan) 	len(parentDFIDs)= 5
 
-node= 26 parentNode= 12 	parentTup= (12, 0.75635611986224227, 'CabinNumbers', 7.0, 8.0) 	len(parentDFIDs)= 24
-len(dfCurr)= 17 	parentTup[3]= 7.0
-######## NEW ########: nodeValues[nodeCount]= (26, 0.71685788451200327, 'CabinNumbers', 29.727272727272727, 6.3636363636363633) 	len(nodeDFIds[ 26 ][1])= 17
-len(lessThan)= 5 	len(greaterThan)= 12
+node= 26 parentNode= 12 	parentTup= (12, nan, '', nan, nan) 	len(parentDFIDs)= 5
 
-node= 27 parentNode= 13 	parentTup= (13, 0.82227293527183898, 'Fare', 0.25, 0.13636363636363635) 	len(parentDFIDs)= 404
-len(dfCurr)= 387 	parentTup[3]= 0.25
-######## NEW ########: nodeValues[nodeCount]= (27, 0.83545814424455322, 'nTicketStrings', 2.5, 0.18181818181818182) 	len(nodeDFIds[ 27 ][1])= 387
-len(lessThan)= 375 	len(greaterThan)= 12
+node= 27 parentNode= 13 	parentTup= (13, 0.53696492504540405, 'AgeGroup', 0.75, 0.13636363636363635) 	len(parentDFIDs)= 47
+len(dfCurr)= 37 	parentTup[3]= 0.75
+######## NEW ########: nodeValues[nodeCount]= (27, 0.56303137936273906, 'TicketBeginLetter', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 27 ][1])= 37
+len(lessThan)= 19 	len(greaterThan)= 18
 
-node= 28 parentNode= 13 	parentTup= (13, 0.82227293527183898, 'Fare', 0.25, 0.13636363636363635) 	len(parentDFIDs)= 404
-len(dfCurr)= 17 	parentTup[3]= 0.25
-######## NEW ########: nodeValues[nodeCount]= (28, 0.79425222404775031, 'TicketBeginLetter', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 28 ][1])= 17
-len(lessThan)= 7 	len(greaterThan)= 10
+node= 28 parentNode= 13 	parentTup= (13, 0.53696492504540405, 'AgeGroup', 0.75, 0.13636363636363635) 	len(parentDFIDs)= 47
+len(dfCurr)= 10 	parentTup[3]= 0.75
+######## NEW ########: nodeValues[nodeCount]= (28, 0.55309273733921238, 'CabinNumbers', 39.5, 5.7272727272727275) 	len(nodeDFIds[ 28 ][1])= 10
+len(lessThan)= 5 	len(greaterThan)= 5
 
-node= 29 parentNode= 14 	parentTup= (14, nan, '', nan, nan) 	len(parentDFIDs)= 6
+node= 29 parentNode= 14 	parentTup= (14, 0.63005987403434349, 'EmbarkIsC', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 33
+len(dfCurr)= 28 	parentTup[3]= 0.0
+######## NEW ########: nodeValues[nodeCount]= (29, 0.67136151417076784, 'CabinNumbers', 107.27272727272727, 10.363636363636363) 	len(nodeDFIds[ 29 ][1])= 28
+len(lessThan)= 23 	len(greaterThan)= 5
 
-node= 30 parentNode= 14 	parentTup= (14, nan, '', nan, nan) 	len(parentDFIDs)= 6
+node= 30 parentNode= 14 	parentTup= (14, 0.63005987403434349, 'EmbarkIsC', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 33
+len(dfCurr)= 5 	parentTup[3]= 0.0
+Less that Min gini improvement: bestGiniSplit[1]= -1 	giniEndVal= 1.122334455667789e-05
+######## NEW ########: nodeValues[nodeCount]= (30, nan, '', nan, nan) 	len(nodeDFIds[ 30 ][1])= 5
 
 
 ###########################
@@ -897,228 +894,214 @@ Writing Out the Nodes, Values, and df ID's of the nodes
 df_weights['Weights'].sum(axis=0)= 1.0
 
 
-index= 6 	currentLeaf= (6, 0.81306486235119135, 'CabinNumbers', 6.0, 6.7272727272727275) 	len(currentDF)= 410
+index= 14 	currentLeaf= (14, 0.63005987403434349, 'EmbarkIsC', 0.0, 0.18181818181818182) 	len(currentDF)= 33
 Blank Node has a non-Blank Sister, so only make decision for one part of parent node.
-	classVal= 0 	currWeight= 0.00318938220353
-	classVal= 1 	currWeight= 0.00336250782812
+	classVal= 0 	currWeight= 0.00292901975404
+	classVal= 1 	currWeight= 0.00340551154145
 
 
-index= 6 	currentLeaf= (6, 0.81306486235119135, 'CabinNumbers', 6.0, 6.7272727272727275) 	len(currentDF)= 410
+index= 29 	currentLeaf= (29, 0.67136151417076784, 'CabinNumbers', 107.27272727272727, 10.363636363636363) 	len(currentDF)= 28
+	len(ltDF)= 23 	len(gtDF)= 5
+	LESS THAN
+	classVal= 0 	currWeight= 0.0209395670725
+	classVal= 1 	currWeight= 0.0073768999607
+	GREATER THAN
+	classVal= 0 	currWeight= 0.00488169959006
+	 (29, 0, 0, 0.020939567072452845, 0.0048816995900595513, 0.028316467033153141, 0.0048816995900595513)
+
+
+index= 28 	currentLeaf= (28, 0.55309273733921238, 'CabinNumbers', 39.5, 5.7272727272727275) 	len(currentDF)= 10
+	len(ltDF)= 5 	len(gtDF)= 5
+	LESS THAN
+	classVal= 0 	currWeight= 0.00390535967205
+	classVal= 1 	currWeight= 0.00198569420963
+	GREATER THAN
+	classVal= 0 	currWeight= 0.00390535967205
+	classVal= 1 	currWeight= 0.00198569420963
+	 (28, 0, 0, 0.0039053596720476408, 0.0039053596720476408, 0.0058910538816738141, 0.0058910538816738141)
+
+
+index= 27 	currentLeaf= (27, 0.56303137936273906, 'TicketBeginLetter', 0.0, 0.18181818181818182) 	len(currentDF)= 37
+	len(ltDF)= 19 	len(gtDF)= 18
+	LESS THAN
+	classVal= 0 	currWeight= 0.00746889565173
+	classVal= 1 	currWeight= 0.0208435322889
+	GREATER THAN
+	classVal= 0 	currWeight= 0.011161879715
+	classVal= 1 	currWeight= 0.0107163827549
+	 (27, 1, 0, 0.020843532288895211, 0.011161879715016703, 0.028312427940626557, 0.021878262469960243)
+
+
+index= 5 	currentLeaf= (5, 0.703761897333394, 'CabinNumbers', 7.5, 1.1818181818181819) 	len(currentDF)= 437
 Blank Node has a non-Blank Sister, so only make decision for one part of parent node.
-	classVal= 0 	currWeight= 0.00318938220353
-	classVal= 1 	currWeight= 0.00336250782812
+	classVal= 0 	currWeight= 0.0013654661613
+	classVal= 1 	currWeight= 0.00535819137747
+
+
+index= 5 	currentLeaf= (5, 0.703761897333394, 'CabinNumbers', 7.5, 1.1818181818181819) 	len(currentDF)= 437
+Blank Node has a non-Blank Sister, so only make decision for one part of parent node.
+	classVal= 0 	currWeight= 0.0013654661613
+	classVal= 1 	currWeight= 0.00535819137747
 Decision already included from other daugther node
 
 
-index= 28 	currentLeaf= (28, 0.79425222404775031, 'TicketBeginLetter', 0.0, 0.18181818181818182) 	len(currentDF)= 17
-	len(ltDF)= 7 	len(gtDF)= 10
+index= 24 	currentLeaf= (24, 0.91270712915706431, 'AgeGroup', 0.25, 0.13636363636363635) 	len(currentDF)= 40
+	len(ltDF)= 24 	len(gtDF)= 16
 	LESS THAN
-	classVal= 0 	currWeight= 0.00231563410605
-	classVal= 1 	currWeight= 0.00578908526514
+	classVal= 0 	currWeight= 0.0234321580323
 	GREATER THAN
-	classVal= 0 	currWeight= 0.00797345550883
-	 (28, 1, 0, 0.0057890852651368936, 0.0079734555088279771, 0.0081047193711916501, 0.0079734555088279771)
+	classVal= 0 	currWeight= 0.0146450987702
+	classVal= 1 	currWeight= 0.00198569420963
+	 (24, 0, 0, 0.023432158032285846, 0.014645098770178657, 0.023432158032285846, 0.016630792979804826)
 
 
-index= 27 	currentLeaf= (27, 0.83545814424455322, 'nTicketStrings', 2.5, 0.18181818181818182) 	len(currentDF)= 387
-	len(ltDF)= 375 	len(gtDF)= 12
+index= 23 	currentLeaf= (23, 0.69273438585838398, 'AgeGroup', 0.75, 0.13636363636363635) 	len(currentDF)= 392
+	len(ltDF)= 370 	len(gtDF)= 22
 	LESS THAN
-	classVal= 0 	currWeight= 0.397131249188
-	classVal= 1 	currWeight= 0.0370501456969
+	classVal= 0 	currWeight= 0.324543827992
+	classVal= 1 	currWeight= 0.082617058543
 	GREATER THAN
-	classVal= 0 	currWeight= 0.00962636075226
-	classVal= 1 	currWeight= 0.00431368258689
-	 (27, 0, 0, 0.39713124918839099, 0.0096263607522579613, 0.43418139488526714, 0.01394004333914378)
+	classVal= 0 	currWeight= 0.0214794781963
+	 (23, 0, 0, 0.32454382799175524, 0.02147947819626202, 0.40716088653472626, 0.02147947819626202)
 
 
-index= 26 	currentLeaf= (26, 0.71685788451200327, 'CabinNumbers', 29.727272727272727, 6.3636363636363633) 	len(currentDF)= 17
-	len(ltDF)= 5 	len(gtDF)= 12
-	LESS THAN
-	classVal= 0 	currWeight= 0.00347345115908
-	classVal= 1 	currWeight= 0.00231563410605
-	GREATER THAN
-	classVal= 0 	currWeight= 0.0102126870683
-	classVal= 1 	currWeight= 0.00115781705303
-	 (26, 0, 0, 0.0034734511590821361, 0.010212687068289098, 0.0057890852651368936, 0.011370504121316478)
-
-
-index= 25 	currentLeaf= (25, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 7
-This is An End Node
-
-
-index= 24 	currentLeaf= (24, 0.5275150021391366, 'TicketBeginLetter', 0.0, 0.18181818181818182) 	len(currentDF)= 78
-	len(ltDF)= 52 	len(gtDF)= 26
-	LESS THAN
-	classVal= 0 	currWeight= 0.0227040710113
-	classVal= 1 	currWeight= 0.0372770586954
-	GREATER THAN
-	classVal= 0 	currWeight= 0.016758100219
-	classVal= 1 	currWeight= 0.0108215975545
-	 (24, 1, 0, 0.037277058695407511, 0.016758100218999677, 0.059981129706756106, 0.027579697773523593)
-
-
-index= 23 	currentLeaf= (23, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 5
-This is An End Node
-
-
-index= 22 	currentLeaf= (22, 0.70882820182087403, 'FamilySize', 7.5, 0.36363636363636365) 	len(currentDF)= 20
+index= 22 	currentLeaf= (22, 0.68821329657171171, 'TicketBeginLetter', 0.0, 0.18181818181818182) 	len(currentDF)= 20
 	len(ltDF)= 11 	len(gtDF)= 9
 	LESS THAN
-	classVal= 0 	currWeight= 0.00673070147672
-	classVal= 1 	currWeight= 0.00557670390251
+	classVal= 0 	currWeight= 0.00683437942608
+	classVal= 1 	currWeight= 0.0079427768385
 	GREATER THAN
-	classVal= 0 	currWeight= 0.00864105436664
-	 (22, 0, 0, 0.0067307014767235543, 0.0086410543666351324, 0.012307405379232667, 0.0086410543666351324)
+	classVal= 0 	currWeight= 0.00878705926211
+	 (22, 1, 0, 0.0079427768385046931, 0.0087870592621071917, 0.014777156264588066, 0.0087870592621071917)
 
 
 index= 21 	currentLeaf= (21, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 25
 This is An End Node
 
 
-index= 9 	currentLeaf= (9, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 6
+index= 20 	currentLeaf= (20, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 10
 This is An End Node
 
 
-index= 9 	currentLeaf= (9, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 6
+index= 19 	currentLeaf= (19, 0.51300589843369726, 'Fare', -0.25, 0.045454545454545456) 	len(currentDF)= 117
+	len(ltDF)= 83 	len(gtDF)= 34
+	LESS THAN
+	classVal= 0 	currWeight= 0.0557389294292
+	classVal= 1 	currWeight= 0.0541483828967
+	GREATER THAN
+	classVal= 0 	currWeight= 0.0151475563116
+	classVal= 1 	currWeight= 0.028267144936
+	 (19, 0, 1, 0.055738929429248317, 0.028267144935970448, 0.10988731232597711, 0.043414701247556545)
+
+
+index= 8 	currentLeaf= (8, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 6
+This is An End Node
+
+
+index= 8 	currentLeaf= (8, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 6
 This is An End Node
 Decision already included from other daugther node
 
 
-index= 18 	currentLeaf= (18, 0.56024758989822898, 'TicketNumber', 25383.18181818182, 9824.0909090909099) 	len(currentDF)= 15
-	len(ltDF)= 10 	len(gtDF)= 5
+index= 16 	currentLeaf= (16, 0.61425846749883473, 'CabinNumbers', 8.545454545454545, 9.545454545454545) 	len(currentDF)= 18
+	len(ltDF)= 7 	len(gtDF)= 11
 	LESS THAN
-	classVal= 0 	currWeight= 0.00346835174882
-	classVal= 1 	currWeight= 0.00811663548931
+	classVal= 0 	currWeight= 0.00585803950807
+	classVal= 1 	currWeight= 0.00198569420963
 	GREATER THAN
-	classVal= 0 	currWeight= 0.00346835174882
-	classVal= 1 	currWeight= 0.00231903871123
-	 (18, 1, 0, 0.0081166354893095326, 0.00346835174882245, 0.011584987238131983, 0.0057873904600537441)
+	classVal= 0 	currWeight= 0.00409639848389
+	classVal= 1 	currWeight= 0.0113585386546
+	 (16, 0, 1, 0.0058580395080714614, 0.011358538654574216, 0.0078437337176976343, 0.015454937138459959)
 
 
-index= 17 	currentLeaf= (17, 0.84629842239089026, 'Pclass', 2.5, 0.18181818181818182) 	len(currentDF)= 183
-	len(ltDF)= 143 	len(gtDF)= 40
+index= 15 	currentLeaf= (15, 0.82975463751570855, 'TicketNumber', 45576.090909090912, 22786.545454545456) 	len(currentDF)= 178
+	len(ltDF)= 111 	len(gtDF)= 67
 	LESS THAN
-	classVal= 0 	currWeight= 0.00854159341993
-	classVal= 1 	currWeight= 0.156305302159
+	classVal= 0 	currWeight= 0.00595708262888
+	classVal= 1 	currWeight= 0.105444711145
 	GREATER THAN
-	classVal= 0 	currWeight= 0.0104697853003
-	classVal= 1 	currWeight= 0.0347896143777
-	 (17, 1, 1, 0.15630530215869615, 0.034789614377669337, 0.16484689557862603, 0.045259399678003305)
-
-
-index= 16 	currentLeaf= (16, 1.0, 'AgeGroup', -0.25, 0.18181818181818182) 	len(currentDF)= 12
-	len(ltDF)= 5 	len(gtDF)= 7
-	LESS THAN
-	classVal= 1 	currWeight= 0.00451138248806
-	GREATER THAN
-	classVal= 0 	currWeight= 0.00665773395235
-	 (16, 1, 0, 0.0045113824880648511, 0.0066577339523536411, 0.0045113824880648511, 0.0066577339523536411)
-
-
-index= 15 	currentLeaf= (15, 0.60389549914167484, 'Pclass', 2.5, 0.090909090909090912) 	len(currentDF)= 113
-	len(ltDF)= 30 	len(gtDF)= 83
-	LESS THAN
-	classVal= 0 	currWeight= 0.00347345115908
-	classVal= 1 	currWeight= 0.0312610604317
-	GREATER THAN
-	classVal= 0 	currWeight= 0.0369229270878
-	classVal= 1 	currWeight= 0.0581676173319
-	 (15, 1, 1, 0.031261060431739228, 0.058167617331943131, 0.034734511590821367, 0.095090544419768538)
+	classVal= 0 	currWeight= 0.0119141652578
+	classVal= 1 	currWeight= 0.0595567349987
+	 (15, 1, 1, 0.10544471114528632, 0.059556734998726518, 0.11140179377416484, 0.07147090025648356)
 
 ##############
  Getting Tree Error
  ###################
 
-decisionTup= ('6', 'nan', '1', 'nan', '0.00336250782812', 'nan', '0.00655189003165')
-totalCorrWeight= 0 	float(decisionTup[4])= 0.00336250782812
-	totalCorrWeight= 0.00336250782812
+decisionTup= ('14', 'nan', '1', 'nan', '0.00340551154145', 'nan', '0.00633453129548')
+totalCorrWeight= 0 	float(decisionTup[4])= 0.00340551154145
+	totalCorrWeight= 0.00340551154145
 
-decisionTup= ('28', '1', '0', '0.00578908526514', '0.00797345550883', '0.00810471937119', '0.00797345550883')
-totalCorrWeight= 0.00336250782812 	float(decisionTup[3])= 0.00578908526514 	float(decisionTup[4])= 0.00797345550883
-	totalCorrWeight= 0.01712504860209
+decisionTup= ('29', '0', '0', '0.0209395670725', '0.00488169959006', '0.0283164670332', '0.00488169959006')
+totalCorrWeight= 0.00340551154145 	float(decisionTup[3])= 0.0209395670725 	float(decisionTup[4])= 0.00488169959006
+	totalCorrWeight= 0.029226778204009998
 
-decisionTup= ('27', '0', '0', '0.397131249188', '0.00962636075226', '0.434181394885', '0.0139400433391')
-totalCorrWeight= 0.01712504860209 	float(decisionTup[3])= 0.397131249188 	float(decisionTup[4])= 0.00962636075226
-	totalCorrWeight= 0.42388265854235
+decisionTup= ('28', '0', '0', '0.00390535967205', '0.00390535967205', '0.00589105388167', '0.00589105388167')
+totalCorrWeight= 0.029226778204009998 	float(decisionTup[3])= 0.00390535967205 	float(decisionTup[4])= 0.00390535967205
+	totalCorrWeight= 0.03703749754811
 
-decisionTup= ('26', '0', '0', '0.00347345115908', '0.0102126870683', '0.00578908526514', '0.0113705041213')
-totalCorrWeight= 0.42388265854235 	float(decisionTup[3])= 0.00347345115908 	float(decisionTup[4])= 0.0102126870683
-	totalCorrWeight= 0.43756879676973004
+decisionTup= ('27', '1', '0', '0.0208435322889', '0.011161879715', '0.0283124279406', '0.02187826247')
+totalCorrWeight= 0.03703749754811 	float(decisionTup[3])= 0.0208435322889 	float(decisionTup[4])= 0.011161879715
+	totalCorrWeight= 0.06904290955201
 
-decisionTup= ('25', '0', 'nan', '0.00558141885618', 'nan', '0.00558141885618', 'nan')
-totalCorrWeight= 0.43756879676973004 	float(decisionTup[3])= 0.00558141885618
-	totalCorrWeight= 0.44315021562591006
+decisionTup= ('5', 'nan', '1', 'nan', '0.00535819137747', 'nan', '0.00672365753877')
+totalCorrWeight= 0.06904290955201 	float(decisionTup[4])= 0.00535819137747
+	totalCorrWeight= 0.07440110092948
 
-decisionTup= ('24', '1', '0', '0.0372770586954', '0.016758100219', '0.0599811297068', '0.0275796977735')
-totalCorrWeight= 0.44315021562591006 	float(decisionTup[3])= 0.0372770586954 	float(decisionTup[4])= 0.016758100219
-	totalCorrWeight= 0.4971853745403101
+decisionTup= ('24', '0', '0', '0.0234321580323', '0.0146450987702', '0.0234321580323', '0.0166307929798')
+totalCorrWeight= 0.07440110092948 	float(decisionTup[3])= 0.0234321580323 	float(decisionTup[4])= 0.0146450987702
+	totalCorrWeight= 0.11247835773198
 
-decisionTup= ('23', '0', 'nan', '0.00480764391195', 'nan', '0.00480764391195', 'nan')
-totalCorrWeight= 0.4971853745403101 	float(decisionTup[3])= 0.00480764391195
-	totalCorrWeight= 0.5019930184522601
+decisionTup= ('23', '0', '0', '0.324543827992', '0.0214794781963', '0.407160886535', '0.0214794781963')
+totalCorrWeight= 0.11247835773198 	float(decisionTup[3])= 0.324543827992 	float(decisionTup[4])= 0.0214794781963
+	totalCorrWeight= 0.45850166392028
 
-decisionTup= ('22', '0', '0', '0.00673070147672', '0.00864105436664', '0.0123074053792', '0.00864105436664')
-totalCorrWeight= 0.5019930184522601 	float(decisionTup[3])= 0.00673070147672 	float(decisionTup[4])= 0.00864105436664
-	totalCorrWeight= 0.5173647742956201
+decisionTup= ('22', '1', '0', '0.0079427768385', '0.00878705926211', '0.0147771562646', '0.00878705926211')
+totalCorrWeight= 0.45850166392028 	float(decisionTup[3])= 0.0079427768385 	float(decisionTup[4])= 0.00878705926211
+	totalCorrWeight= 0.47523150002089004
 
-decisionTup= ('21', '0', 'nan', '0.0199336387721', 'nan', '0.0199336387721', 'nan')
-totalCorrWeight= 0.5173647742956201 	float(decisionTup[3])= 0.0199336387721
-	totalCorrWeight= 0.5372984130677201
+decisionTup= ('21', '0', 'nan', '0.0244084979503', 'nan', '0.0244084979503', 'nan')
+totalCorrWeight= 0.47523150002089004 	float(decisionTup[3])= 0.0244084979503
+	totalCorrWeight= 0.49963999797119
 
-decisionTup= ('9', '1', 'nan', '0.0047840733053', 'nan', '0.0047840733053', 'nan')
-totalCorrWeight= 0.5372984130677201 	float(decisionTup[3])= 0.0047840733053
-	totalCorrWeight= 0.54208248637302
+decisionTup= ('20', '1', 'nan', '0.00976339918012', 'nan', '0.00976339918012', 'nan')
+totalCorrWeight= 0.49963999797119 	float(decisionTup[3])= 0.00976339918012
+	totalCorrWeight= 0.50940339715131
 
-decisionTup= ('18', '1', '0', '0.00811663548931', '0.00346835174882', '0.0115849872381', '0.00578739046005')
-totalCorrWeight= 0.54208248637302 	float(decisionTup[3])= 0.00811663548931 	float(decisionTup[4])= 0.00346835174882
-	totalCorrWeight= 0.55366747361115
+decisionTup= ('19', '0', '1', '0.0557389294292', '0.028267144936', '0.109887312326', '0.0434147012476')
+totalCorrWeight= 0.50940339715131 	float(decisionTup[3])= 0.0557389294292 	float(decisionTup[4])= 0.028267144936
+	totalCorrWeight= 0.59340947151651
 
-decisionTup= ('17', '1', '1', '0.156305302159', '0.0347896143777', '0.164846895579', '0.045259399678')
-totalCorrWeight= 0.55366747361115 	float(decisionTup[3])= 0.156305302159 	float(decisionTup[4])= 0.0347896143777
-	totalCorrWeight= 0.74476239014785
+decisionTup= ('8', '0', 'nan', '0.00585803950807', 'nan', '0.00585803950807', 'nan')
+totalCorrWeight= 0.59340947151651 	float(decisionTup[3])= 0.00585803950807
+	totalCorrWeight= 0.59926751102458
 
-decisionTup= ('16', '1', '0', '0.00451138248806', '0.00665773395235', '0.00451138248806', '0.00665773395235')
-totalCorrWeight= 0.74476239014785 	float(decisionTup[3])= 0.00451138248806 	float(decisionTup[4])= 0.00665773395235
-	totalCorrWeight= 0.7559315065882599
+decisionTup= ('16', '0', '1', '0.00585803950807', '0.0113585386546', '0.0078437337177', '0.0154549371385')
+totalCorrWeight= 0.59926751102458 	float(decisionTup[3])= 0.00585803950807 	float(decisionTup[4])= 0.0113585386546
+	totalCorrWeight= 0.61648408918725
 
-decisionTup= ('15', '1', '1', '0.0312610604317', '0.0581676173319', '0.0347345115908', '0.0950905444198')
-totalCorrWeight= 0.7559315065882599 	float(decisionTup[3])= 0.0312610604317 	float(decisionTup[4])= 0.0581676173319
-	totalCorrWeight= 0.8453601843518599
-totalCorrWeight= 0.8453601843518599 	otherSum= 1.00000000000004 	sumDFWeights= 1.0 	error= 0.154639815648
-error= 0.15463981564814033 	alpha= 0.186665663621844 	CorrectFactor= 0.829721095963226 	IncorrectFactor= 1.2052242673655258
-BEFORE: df_weights['Weights'].unique()= [ 0.00115782  0.00139623  0.00079735  0.00096012  0.00168125  0.00139418
-  0.00115612  0.00096153  0.00115952]
-After: df_weights['Weights'].unique()= [ 0.00115782  0.00115848  0.00066157  0.00096067  0.00115716  0.00096098
-  0.00139497  0.00168125  0.00139418  0.00096012  0.00115612  0.00079663
-  0.00079735  0.00139623  0.0007978   0.00168277  0.00139543  0.00115678
-  0.00096153  0.00095925  0.00115886  0.00115952  0.00139748]
-	len('Weights' == 0.00115781705303 )= 562
-	len('Weights' == 0.00115847799221 )= 20
-	len('Weights' == 0.00066157442434 )= 63
-	len('Weights' == 0.000960665234163 )= 51
-	len('Weights' == 0.00115715649092 )= 27
-	len('Weights' == 0.0009609802074 )= 16
-	len('Weights' == 0.00139497184017 )= 11
-	len('Weights' == 0.00168125391406 )= 10
-	len('Weights' == 0.00139417597563 )= 5
-	len('Weights' == 0.000960117151848 )= 4
-	len('Weights' == 0.00115611724961 )= 3
-	len('Weights' == 0.000796629455485 )= 25
-	len('Weights' == 0.000797345550883 )= 26
-	len('Weights' == 0.00139622578943 )= 12
-	len('Weights' == 0.000797800715124 )= 7
-	len('Weights' == 0.00168276520414 )= 5
-	len('Weights' == 0.00139542920948 )= 15
-	len('Weights' == 0.00115677721846 )= 1
-	len('Weights' == 0.000961528782389 )= 9
-	len('Weights' == 0.000959254871406 )= 6
-	len('Weights' == 0.00115885782231 )= 4
-	len('Weights' == 0.00115951935562 )= 7
-	len('Weights' == 0.00139748086587 )= 2
+decisionTup= ('15', '1', '1', '0.105444711145', '0.0595567349987', '0.111401793774', '0.0714709002565')
+totalCorrWeight= 0.61648408918725 	float(decisionTup[3])= 0.105444711145 	float(decisionTup[4])= 0.0595567349987
+	totalCorrWeight= 0.78148553533095
+totalCorrWeight= 0.78148553533095 	sumWeights= 1.00000000000035 	error= 0.21851446466932345
+error= 0.21851446466932345 	alpha= 0.15209030667780024 	CorrectFactor= 0.8589107118657668 	IncorrectFactor= 1.1642653726226702
+WEIGHT NOT CHANGED.
+WEIGHT NOT CHANGED.
+BEFORE: df_weights['Weights'].unique()= [ 0.00097634  0.00141982  0.00136547  0.00198569]
+After: df_weights['Weights'].unique()= [ 0.00083859  0.00165304  0.00117281  0.00231188  0.00113672  0.00170553
+  0.00158976  0.0012195 ]
+	len('Weights' == 0.000838588814003 )= 647
+	len('Weights' == 0.00165304415489 )= 26
+	len('Weights' == 0.00117281351263 )= 38
+	len('Weights' == 0.00231187500889 )= 54
+	len('Weights' == 0.00113671875845 )= 51
+	len('Weights' == 0.00170553402714 )= 30
+	len('Weights' == 0.00158976496908 )= 18
+	len('Weights' == 0.00121949631519 )= 27
 
 
 ###############################################################
-FINAL SCORE FOR TREE # 3 is 0.15463981564814033 
+FINAL SCORE FOR TREE # 3 is 0.21851446466932345 
 ###############################################################
 #############################################
 #############################################
@@ -1131,155 +1114,143 @@ FINAL SCORE FOR TREE # 3 is 0.15463981564814033
  Making a Decision Tree
 ###################################
 
-node= 1 parentNode= 0 	parentTup= (0, 0.66080938523633181, 'YesMr', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 891
+node= 1 parentNode= 0 	parentTup= (0, 0.57421810999908873, 'YesMr', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 891
 len(dfCurr)= 374 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (1, 0.67700197283759467, 'Pclass', 2.5, 0.18181818181818182) 	len(nodeDFIds[ 1 ][1])= 374
+######## NEW ########: nodeValues[nodeCount]= (1, 0.59353483631554727, 'Pclass', 2.5, 0.18181818181818182) 	len(nodeDFIds[ 1 ][1])= 374
 len(lessThan)= 202 	len(greaterThan)= 172
 
-node= 2 parentNode= 0 	parentTup= (0, 0.66080938523633181, 'YesMr', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 891
+node= 2 parentNode= 0 	parentTup= (0, 0.57421810999908873, 'YesMr', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 891
 len(dfCurr)= 517 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (2, 0.74791472084943955, 'Pclass', 1.5, 0.18181818181818182) 	len(nodeDFIds[ 2 ][1])= 517
-len(lessThan)= 107 	len(greaterThan)= 410
+######## NEW ########: nodeValues[nodeCount]= (2, 0.61303324554621597, 'CabinNumbers', 12.545454545454545, 13.545454545454545) 	len(nodeDFIds[ 2 ][1])= 517
+len(lessThan)= 437 	len(greaterThan)= 80
 
-node= 3 parentNode= 1 	parentTup= (1, 0.67700197283759467, 'Pclass', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 374
+node= 3 parentNode= 1 	parentTup= (1, 0.59353483631554727, 'Pclass', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 374
 len(dfCurr)= 202 	parentTup[3]= 2.5
-######## NEW ########: nodeValues[nodeCount]= (3, 0.84266039947753768, 'Gender', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 3 ][1])= 202
-len(lessThan)= 170 	len(greaterThan)= 32
+######## NEW ########: nodeValues[nodeCount]= (3, 0.73048217583137931, 'YesRev', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 3 ][1])= 202
+len(lessThan)= 196 	len(greaterThan)= 6
 
-node= 4 parentNode= 1 	parentTup= (1, 0.67700197283759467, 'Pclass', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 374
+node= 4 parentNode= 1 	parentTup= (1, 0.59353483631554727, 'Pclass', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 374
 len(dfCurr)= 172 	parentTup[3]= 2.5
-######## NEW ########: nodeValues[nodeCount]= (4, 0.56085337156596715, 'FamilySize', 4.5, 0.90909090909090906) 	len(nodeDFIds[ 4 ][1])= 172
+######## NEW ########: nodeValues[nodeCount]= (4, 0.56346682741386034, 'FamilySize', 4.5, 0.90909090909090906) 	len(nodeDFIds[ 4 ][1])= 172
 len(lessThan)= 127 	len(greaterThan)= 45
 
-node= 5 parentNode= 2 	parentTup= (2, 0.74791472084943955, 'Pclass', 1.5, 0.18181818181818182) 	len(parentDFIDs)= 517
-len(dfCurr)= 107 	parentTup[3]= 1.5
-######## NEW ########: nodeValues[nodeCount]= (5, 0.54136307344611601, 'AgeGroup', 0.75, 0.13636363636363635) 	len(nodeDFIds[ 5 ][1])= 107
-len(lessThan)= 83 	len(greaterThan)= 24
+node= 5 parentNode= 2 	parentTup= (2, 0.61303324554621597, 'CabinNumbers', 12.545454545454545, 13.545454545454545) 	len(parentDFIDs)= 517
+len(dfCurr)= 437 	parentTup[3]= 12.5454545455
+######## NEW ########: nodeValues[nodeCount]= (5, 0.64549288341777811, 'CabinNumbers', 7.5, 1.1818181818181819) 	len(nodeDFIds[ 5 ][1])= 437
+len(lessThan)= 432 	len(greaterThan)= 5
 
-node= 6 parentNode= 2 	parentTup= (2, 0.74791472084943955, 'Pclass', 1.5, 0.18181818181818182) 	len(parentDFIDs)= 517
-len(dfCurr)= 410 	parentTup[3]= 1.5
-######## NEW ########: nodeValues[nodeCount]= (6, 0.81189959763323405, 'Fare', 0.25, 0.13636363636363635) 	len(nodeDFIds[ 6 ][1])= 410
-len(lessThan)= 393 	len(greaterThan)= 17
+node= 6 parentNode= 2 	parentTup= (2, 0.61303324554621597, 'CabinNumbers', 12.545454545454545, 13.545454545454545) 	len(parentDFIDs)= 517
+len(dfCurr)= 80 	parentTup[3]= 12.5454545455
+######## NEW ########: nodeValues[nodeCount]= (6, 0.53609746642351164, 'TicketNumber', 35461.0, 34766.0) 	len(nodeDFIds[ 6 ][1])= 80
+len(lessThan)= 47 	len(greaterThan)= 33
 
-node= 7 parentNode= 3 	parentTup= (3, 0.84266039947753768, 'Gender', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 202
-len(dfCurr)= 170 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (7, 0.90079099910470961, 'TicketNumber', 227868.45454545456, 22786.545454545456) 	len(nodeDFIds[ 7 ][1])= 170
-len(lessThan)= 138 	len(greaterThan)= 32
+node= 7 parentNode= 3 	parentTup= (3, 0.73048217583137931, 'YesRev', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 202
+len(dfCurr)= 196 	parentTup[3]= 0.0
+######## NEW ########: nodeValues[nodeCount]= (7, 0.744555623654924, 'YesFancy', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 7 ][1])= 196
+len(lessThan)= 178 	len(greaterThan)= 18
 
-node= 8 parentNode= 3 	parentTup= (3, 0.84266039947753768, 'Gender', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 202
-len(dfCurr)= 32 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (8, 0.75040608820068178, 'YesMaster', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 8 ][1])= 32
-len(lessThan)= 20 	len(greaterThan)= 12
+node= 8 parentNode= 3 	parentTup= (3, 0.73048217583137931, 'YesRev', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 202
+len(dfCurr)= 6 	parentTup[3]= 0.0
+*****************END NODE
+######## NEW ########: nodeValues[nodeCount]= (8, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[ 8 ][1])= 6
 
-node= 9 parentNode= 4 	parentTup= (4, 0.56085337156596715, 'FamilySize', 4.5, 0.90909090909090906) 	len(parentDFIDs)= 172
+node= 9 parentNode= 4 	parentTup= (4, 0.56346682741386034, 'FamilySize', 4.5, 0.90909090909090906) 	len(parentDFIDs)= 172
 len(dfCurr)= 127 	parentTup[3]= 4.5
-######## NEW ########: nodeValues[nodeCount]= (9, 0.53454873127330316, 'Gender', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 9 ][1])= 127
+######## NEW ########: nodeValues[nodeCount]= (9, 0.53566190909303268, 'YesMaster', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 9 ][1])= 127
 len(lessThan)= 117 	len(greaterThan)= 10
 
-node= 10 parentNode= 4 	parentTup= (4, 0.56085337156596715, 'FamilySize', 4.5, 0.90909090909090906) 	len(parentDFIDs)= 172
+node= 10 parentNode= 4 	parentTup= (4, 0.56346682741386034, 'FamilySize', 4.5, 0.90909090909090906) 	len(parentDFIDs)= 172
 len(dfCurr)= 45 	parentTup[3]= 4.5
-######## NEW ########: nodeValues[nodeCount]= (10, 0.7789912218449182, 'FamilySize', 6.5, 0.54545454545454541) 	len(nodeDFIds[ 10 ][1])= 45
+######## NEW ########: nodeValues[nodeCount]= (10, 0.78113117707223667, 'FamilySize', 6.5, 0.54545454545454541) 	len(nodeDFIds[ 10 ][1])= 45
 len(lessThan)= 25 	len(greaterThan)= 20
 
-node= 11 parentNode= 5 	parentTup= (5, 0.54136307344611601, 'AgeGroup', 0.75, 0.13636363636363635) 	len(parentDFIDs)= 107
-len(dfCurr)= 83 	parentTup[3]= 0.75
-######## NEW ########: nodeValues[nodeCount]= (11, 0.5338306832846843, 'Fare', -0.5, 0.18181818181818182) 	len(nodeDFIds[ 11 ][1])= 83
-len(lessThan)= 5 	len(greaterThan)= 78
+node= 11 parentNode= 5 	parentTup= (5, 0.64549288341777811, 'CabinNumbers', 7.5, 1.1818181818181819) 	len(parentDFIDs)= 437
+len(dfCurr)= 432 	parentTup[3]= 7.5
+######## NEW ########: nodeValues[nodeCount]= (11, 0.65066755757678674, 'TicketDashes', 1.5, 0.36363636363636365) 	len(nodeDFIds[ 11 ][1])= 432
+len(lessThan)= 392 	len(greaterThan)= 40
 
-node= 12 parentNode= 5 	parentTup= (5, 0.54136307344611601, 'AgeGroup', 0.75, 0.13636363636363635) 	len(parentDFIDs)= 107
-len(dfCurr)= 24 	parentTup[3]= 0.75
-######## NEW ########: nodeValues[nodeCount]= (12, 0.72088380866711277, 'CabinNumbers', 7.0, 8.0) 	len(nodeDFIds[ 12 ][1])= 24
-len(lessThan)= 7 	len(greaterThan)= 17
+node= 12 parentNode= 5 	parentTup= (5, 0.64549288341777811, 'CabinNumbers', 7.5, 1.1818181818181819) 	len(parentDFIDs)= 437
+len(dfCurr)= 5 	parentTup[3]= 7.5
+Less that Min gini improvement: bestGiniSplit[1]= -1 	giniEndVal= 1.122334455667789e-05
+######## NEW ########: nodeValues[nodeCount]= (12, nan, '', nan, nan) 	len(nodeDFIds[ 12 ][1])= 5
 
-node= 13 parentNode= 6 	parentTup= (6, 0.81189959763323405, 'Fare', 0.25, 0.13636363636363635) 	len(parentDFIDs)= 410
-len(dfCurr)= 393 	parentTup[3]= 0.25
-######## NEW ########: nodeValues[nodeCount]= (13, 0.82648266886649491, 'nTicketStrings', 2.5, 0.18181818181818182) 	len(nodeDFIds[ 13 ][1])= 393
-len(lessThan)= 381 	len(greaterThan)= 12
+node= 13 parentNode= 6 	parentTup= (6, 0.53609746642351164, 'TicketNumber', 35461.0, 34766.0) 	len(parentDFIDs)= 80
+len(dfCurr)= 47 	parentTup[3]= 35461.0
+######## NEW ########: nodeValues[nodeCount]= (13, 0.5333197252908034, 'CabinNumbers', 87.090909090909093, 9.7272727272727266) 	len(nodeDFIds[ 13 ][1])= 47
+len(lessThan)= 39 	len(greaterThan)= 8
 
-node= 14 parentNode= 6 	parentTup= (6, 0.81189959763323405, 'Fare', 0.25, 0.13636363636363635) 	len(parentDFIDs)= 410
-len(dfCurr)= 17 	parentTup[3]= 0.25
-######## NEW ########: nodeValues[nodeCount]= (14, 0.77527550697136038, 'nTicketStrings', 1.5, 0.090909090909090912) 	len(nodeDFIds[ 14 ][1])= 17
-len(lessThan)= 7 	len(greaterThan)= 10
+node= 14 parentNode= 6 	parentTup= (6, 0.53609746642351164, 'TicketNumber', 35461.0, 34766.0) 	len(parentDFIDs)= 80
+len(dfCurr)= 33 	parentTup[3]= 35461.0
+######## NEW ########: nodeValues[nodeCount]= (14, 0.58867632901407785, 'CabinNumbers', 62.727272727272727, 12.181818181818182) 	len(nodeDFIds[ 14 ][1])= 33
+len(lessThan)= 15 	len(greaterThan)= 18
 
-node= 15 parentNode= 7 	parentTup= (7, 0.90079099910470961, 'TicketNumber', 227868.45454545456, 22786.545454545456) 	len(parentDFIDs)= 170
-len(dfCurr)= 138 	parentTup[3]= 227868.454545
-######## NEW ########: nodeValues[nodeCount]= (15, 0.93189010343176581, 'CabinC', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 15 ][1])= 138
-len(lessThan)= 111 	len(greaterThan)= 27
+node= 15 parentNode= 7 	parentTup= (7, 0.744555623654924, 'YesFancy', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 196
+len(dfCurr)= 178 	parentTup[3]= 0.0
+######## NEW ########: nodeValues[nodeCount]= (15, 0.78644350677550778, 'TicketNumber', 45576.090909090912, 22786.545454545456) 	len(nodeDFIds[ 15 ][1])= 178
+len(lessThan)= 111 	len(greaterThan)= 67
 
-node= 16 parentNode= 7 	parentTup= (7, 0.90079099910470961, 'TicketNumber', 227868.45454545456, 22786.545454545456) 	len(parentDFIDs)= 170
-len(dfCurr)= 32 	parentTup[3]= 227868.454545
-######## NEW ########: nodeValues[nodeCount]= (16, 0.79347826086956519, 'TicketNumber', 236501.63636363635, 2021.909090909091) 	len(nodeDFIds[ 16 ][1])= 32
-len(lessThan)= 9 	len(greaterThan)= 23
+node= 16 parentNode= 7 	parentTup= (7, 0.744555623654924, 'YesFancy', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 196
+len(dfCurr)= 18 	parentTup[3]= 0.0
+######## NEW ########: nodeValues[nodeCount]= (16, 0.56498234830962335, 'EmbarkIsC', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 16 ][1])= 18
+len(lessThan)= 11 	len(greaterThan)= 7
 
-node= 17 parentNode= 8 	parentTup= (8, 0.75040608820068178, 'YesMaster', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 32
-len(dfCurr)= 20 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (17, 0.69241946339586891, 'CabinNumbers', 9.5, 9.545454545454545) 	len(nodeDFIds[ 17 ][1])= 20
-len(lessThan)= 13 	len(greaterThan)= 7
+node= 17 parentNode= 8 	parentTup= (8, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(parentDFIDs)= 6
 
-node= 18 parentNode= 8 	parentTup= (8, 0.75040608820068178, 'YesMaster', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 32
-len(dfCurr)= 12 	parentTup[3]= 0.0
-*****************END NODE
-######## NEW ########: nodeValues[nodeCount]= (18, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[ 18 ][1])= 12
+node= 18 parentNode= 8 	parentTup= (8, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(parentDFIDs)= 6
 
-node= 19 parentNode= 9 	parentTup= (9, 0.53454873127330316, 'Gender', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 127
+node= 19 parentNode= 9 	parentTup= (9, 0.53566190909303268, 'YesMaster', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 127
 len(dfCurr)= 117 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (19, 0.51985256034581129, 'TicketDots', 0.5, 0.090909090909090912) 	len(nodeDFIds[ 19 ][1])= 117
+######## NEW ########: nodeValues[nodeCount]= (19, 0.52016356557647492, 'TicketDots', 0.5, 0.090909090909090912) 	len(nodeDFIds[ 19 ][1])= 117
 len(lessThan)= 107 	len(greaterThan)= 10
 
-node= 20 parentNode= 9 	parentTup= (9, 0.53454873127330316, 'Gender', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 127
+node= 20 parentNode= 9 	parentTup= (9, 0.53566190909303268, 'YesMaster', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 127
 len(dfCurr)= 10 	parentTup[3]= 0.0
 *****************END NODE
 ######## NEW ########: nodeValues[nodeCount]= (20, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[ 20 ][1])= 10
 
-node= 21 parentNode= 10 	parentTup= (10, 0.7789912218449182, 'FamilySize', 6.5, 0.54545454545454541) 	len(parentDFIDs)= 45
+node= 21 parentNode= 10 	parentTup= (10, 0.78113117707223667, 'FamilySize', 6.5, 0.54545454545454541) 	len(parentDFIDs)= 45
 len(dfCurr)= 25 	parentTup[3]= 6.5
 *****************END NODE
 ######## NEW ########: nodeValues[nodeCount]= (21, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[ 21 ][1])= 25
 
-node= 22 parentNode= 10 	parentTup= (10, 0.7789912218449182, 'FamilySize', 6.5, 0.54545454545454541) 	len(parentDFIDs)= 45
+node= 22 parentNode= 10 	parentTup= (10, 0.78113117707223667, 'FamilySize', 6.5, 0.54545454545454541) 	len(parentDFIDs)= 45
 len(dfCurr)= 20 	parentTup[3]= 6.5
-######## NEW ########: nodeValues[nodeCount]= (22, 0.68683171835360302, 'nTicketStrings', 1.5, 0.090909090909090912) 	len(nodeDFIds[ 22 ][1])= 20
+######## NEW ########: nodeValues[nodeCount]= (22, 0.67097304829861826, 'nTicketStrings', 1.5, 0.090909090909090912) 	len(nodeDFIds[ 22 ][1])= 20
 len(lessThan)= 11 	len(greaterThan)= 9
 
-node= 23 parentNode= 11 	parentTup= (11, 0.5338306832846843, 'Fare', -0.5, 0.18181818181818182) 	len(parentDFIDs)= 83
-len(dfCurr)= 5 	parentTup[3]= -0.5
-*****************END NODE
-######## NEW ########: nodeValues[nodeCount]= (23, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[ 23 ][1])= 5
+node= 23 parentNode= 11 	parentTup= (11, 0.65066755757678674, 'TicketDashes', 1.5, 0.36363636363636365) 	len(parentDFIDs)= 432
+len(dfCurr)= 392 	parentTup[3]= 1.5
+######## NEW ########: nodeValues[nodeCount]= (23, 0.63643352933045361, 'AgeGroup', 0.75, 0.13636363636363635) 	len(nodeDFIds[ 23 ][1])= 392
+len(lessThan)= 370 	len(greaterThan)= 22
 
-node= 24 parentNode= 11 	parentTup= (11, 0.5338306832846843, 'Fare', -0.5, 0.18181818181818182) 	len(parentDFIDs)= 83
-len(dfCurr)= 78 	parentTup[3]= -0.5
-######## NEW ########: nodeValues[nodeCount]= (24, 0.52600244876098867, 'CabinNumbers', 53.18181818181818, 13.545454545454545) 	len(nodeDFIds[ 24 ][1])= 78
-len(lessThan)= 50 	len(greaterThan)= 28
+node= 24 parentNode= 11 	parentTup= (11, 0.65066755757678674, 'TicketDashes', 1.5, 0.36363636363636365) 	len(parentDFIDs)= 432
+len(dfCurr)= 40 	parentTup[3]= 1.5
+######## NEW ########: nodeValues[nodeCount]= (24, 0.88845697733440998, 'AgeGroup', 0.25, 0.13636363636363635) 	len(nodeDFIds[ 24 ][1])= 40
+len(lessThan)= 24 	len(greaterThan)= 16
 
-node= 25 parentNode= 12 	parentTup= (12, 0.72088380866711277, 'CabinNumbers', 7.0, 8.0) 	len(parentDFIDs)= 24
-len(dfCurr)= 7 	parentTup[3]= 7.0
-*****************END NODE
-######## NEW ########: nodeValues[nodeCount]= (25, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[ 25 ][1])= 7
+node= 25 parentNode= 12 	parentTup= (12, nan, '', nan, nan) 	len(parentDFIDs)= 5
 
-node= 26 parentNode= 12 	parentTup= (12, 0.72088380866711277, 'CabinNumbers', 7.0, 8.0) 	len(parentDFIDs)= 24
-len(dfCurr)= 17 	parentTup[3]= 7.0
-######## NEW ########: nodeValues[nodeCount]= (26, 0.68551300402350202, 'CabinNumbers', 42.454545454545453, 6.3636363636363633) 	len(nodeDFIds[ 26 ][1])= 17
-len(lessThan)= 10 	len(greaterThan)= 7
+node= 26 parentNode= 12 	parentTup= (12, nan, '', nan, nan) 	len(parentDFIDs)= 5
 
-node= 27 parentNode= 13 	parentTup= (13, 0.82648266886649491, 'nTicketStrings', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 393
-len(dfCurr)= 381 	parentTup[3]= 2.5
-######## NEW ########: nodeValues[nodeCount]= (27, 0.83891149360612571, 'CabinNumbers', 6.0, 6.7272727272727275) 	len(nodeDFIds[ 27 ][1])= 381
-len(lessThan)= 375 	len(greaterThan)= 6
+node= 27 parentNode= 13 	parentTup= (13, 0.5333197252908034, 'CabinNumbers', 87.090909090909093, 9.7272727272727266) 	len(parentDFIDs)= 47
+len(dfCurr)= 39 	parentTup[3]= 87.0909090909
+######## NEW ########: nodeValues[nodeCount]= (27, 0.57131937872499405, 'CabinNumbers', 25.09090909090909, 6.0909090909090908) 	len(nodeDFIds[ 27 ][1])= 39
+len(lessThan)= 8 	len(greaterThan)= 31
 
-node= 28 parentNode= 13 	parentTup= (13, 0.82648266886649491, 'nTicketStrings', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 393
-len(dfCurr)= 12 	parentTup[3]= 2.5
-######## NEW ########: nodeValues[nodeCount]= (28, 0.56069300237965536, 'TicketNumber', 23101280.363636363, 2.2727272727272729) 	len(nodeDFIds[ 28 ][1])= 12
-len(lessThan)= 5 	len(greaterThan)= 7
-
-node= 29 parentNode= 14 	parentTup= (14, 0.77527550697136038, 'nTicketStrings', 1.5, 0.090909090909090912) 	len(parentDFIDs)= 17
-len(dfCurr)= 7 	parentTup[3]= 1.5
+node= 28 parentNode= 13 	parentTup= (13, 0.5333197252908034, 'CabinNumbers', 87.090909090909093, 9.7272727272727266) 	len(parentDFIDs)= 47
+len(dfCurr)= 8 	parentTup[3]= 87.0909090909
 Less that Min gini improvement: bestGiniSplit[1]= -1 	giniEndVal= 1.122334455667789e-05
-######## NEW ########: nodeValues[nodeCount]= (29, nan, '', nan, nan) 	len(nodeDFIds[ 29 ][1])= 7
+######## NEW ########: nodeValues[nodeCount]= (28, nan, '', nan, nan) 	len(nodeDFIds[ 28 ][1])= 8
 
-node= 30 parentNode= 14 	parentTup= (14, 0.77527550697136038, 'nTicketStrings', 1.5, 0.090909090909090912) 	len(parentDFIDs)= 17
-len(dfCurr)= 10 	parentTup[3]= 1.5
-*****************END NODE
-######## NEW ########: nodeValues[nodeCount]= (30, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[ 30 ][1])= 10
+node= 29 parentNode= 14 	parentTup= (14, 0.58867632901407785, 'CabinNumbers', 62.727272727272727, 12.181818181818182) 	len(parentDFIDs)= 33
+len(dfCurr)= 15 	parentTup[3]= 62.7272727273
+######## NEW ########: nodeValues[nodeCount]= (29, 0.55705203332453779, 'CabinNumbers', 36.909090909090907, 3.8181818181818183) 	len(nodeDFIds[ 29 ][1])= 15
+len(lessThan)= 10 	len(greaterThan)= 5
+
+node= 30 parentNode= 14 	parentTup= (14, 0.58867632901407785, 'CabinNumbers', 62.727272727272727, 12.181818181818182) 	len(parentDFIDs)= 33
+len(dfCurr)= 18 	parentTup[3]= 62.7272727273
+######## NEW ########: nodeValues[nodeCount]= (30, 0.72263712061965324, 'CabinNumbers', 93.909090909090907, 7.7272727272727275) 	len(nodeDFIds[ 30 ][1])= 18
+len(lessThan)= 8 	len(greaterThan)= 10
 
 
 ###########################
@@ -1288,79 +1259,85 @@ Writing Out the Nodes, Values, and df ID's of the nodes
 df_weights['Weights'].sum(axis=0)= 1.0
 
 
-index= 30 	currentLeaf= (30, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 10
-This is An End Node
-
-
-index= 14 	currentLeaf= (14, 0.77527550697136038, 'nTicketStrings', 1.5, 0.090909090909090912) 	len(currentDF)= 17
-	len(ltDF)= 7 	len(gtDF)= 10
+index= 30 	currentLeaf= (30, 0.72263712061965324, 'CabinNumbers', 93.909090909090907, 7.7272727272727275) 	len(currentDF)= 18
+	len(ltDF)= 8 	len(gtDF)= 10
 	LESS THAN
-	classVal= 0 	currWeight= 0.00236039644986
-	classVal= 1 	currWeight= 0.00590099112465
+	classVal= 0 	currWeight= 0.00798127445827
 	GREATER THAN
-	classVal= 0 	currWeight= 0.00674362982669
-	 (14, 1, 0, 0.0059009911246484794, 0.0067436298266920162, 0.0082613875745078703, 0.0067436298266920162)
+	classVal= 0 	currWeight= 0.00756976511501
+	classVal= 1 	currWeight= 0.0043401648664
+	 (30, 0, 0, 0.0079812744582739986, 0.0075697651150139931, 0.0079812744582739986, 0.011909929981412964)
 
 
-index= 28 	currentLeaf= (28, 0.56069300237965536, 'TicketNumber', 23101280.363636363, 2.2727272727272729) 	len(currentDF)= 12
-	len(ltDF)= 5 	len(gtDF)= 7
+index= 29 	currentLeaf= (29, 0.55705203332453779, 'CabinNumbers', 36.909090909090907, 3.8181818181818183) 	len(currentDF)= 15
+	len(ltDF)= 10 	len(gtDF)= 5
 	LESS THAN
-	classVal= 0 	currWeight= 0.00411857803432
-	classVal= 1 	currWeight= 0.00117952489383
+	classVal= 0 	currWeight= 0.00901406942303
+	classVal= 1 	currWeight= 0.00381507922483
 	GREATER THAN
-	classVal= 0 	currWeight= 0.00402301295086
-	classVal= 1 	currWeight= 0.00411992839219
-	 (28, 0, 1, 0.0041185780343235157, 0.0041199283921896663, 0.0052981029281576175, 0.0081429413430482191)
+	classVal= 0 	currWeight= 0.00307895743431
+	classVal= 1 	currWeight= 0.00428345799455
+	 (29, 0, 1, 0.0090140694230337187, 0.0042834579945493761, 0.012829148647864604, 0.0073624154288573973)
 
 
-index= 27 	currentLeaf= (27, 0.83891149360612571, 'CabinNumbers', 6.0, 6.7272727272727275) 	len(currentDF)= 381
-	len(ltDF)= 375 	len(gtDF)= 6
+index= 13 	currentLeaf= (13, 0.5333197252908034, 'CabinNumbers', 87.090909090909093, 9.7272727272727266) 	len(currentDF)= 47
+Blank Node has a non-Blank Sister, so only make decision for one part of parent node.
+	classVal= 0 	currWeight= 0.0027178813573
+	classVal= 1 	currWeight= 0.00986783117819
+
+
+index= 27 	currentLeaf= (27, 0.57131937872499405, 'CabinNumbers', 25.09090909090909, 6.0909090909090908) 	len(currentDF)= 39
+	len(ltDF)= 8 	len(gtDF)= 31
 	LESS THAN
-	classVal= 0 	currWeight= 0.404807991151
-	classVal= 1 	currWeight= 0.0377663431978
+	classVal= 0 	currWeight= 0.00126703652944
+	classVal= 1 	currWeight= 0.0100447168124
 	GREATER THAN
-	classVal= 0 	currWeight= 0.00391822570587
-	classVal= 1 	currWeight= 0.00284387466101
-	 (27, 0, 0, 0.40480799115088573, 0.0039182257058675129, 0.44257433434863602, 0.0067621003668731743)
+	classVal= 0 	currWeight= 0.0230144305026
+	classVal= 1 	currWeight= 0.0179027808573
+	 (27, 1, 0, 0.010044716812419046, 0.023014430502585562, 0.011311753341858341, 0.040917211359852969)
 
 
-index= 26 	currentLeaf= (26, 0.68551300402350202, 'CabinNumbers', 42.454545454545453, 6.3636363636363633) 	len(currentDF)= 17
-	len(ltDF)= 10 	len(gtDF)= 7
+index= 5 	currentLeaf= (5, 0.64549288341777811, 'CabinNumbers', 7.5, 1.1818181818181819) 	len(currentDF)= 437
+Blank Node has a non-Blank Sister, so only make decision for one part of parent node.
+	classVal= 0 	currWeight= 0.00171748557411
+	classVal= 1 	currWeight= 0.00497194613783
+
+
+index= 5 	currentLeaf= (5, 0.64549288341777811, 'CabinNumbers', 7.5, 1.1818181818181819) 	len(currentDF)= 437
+Blank Node has a non-Blank Sister, so only make decision for one part of parent node.
+	classVal= 0 	currWeight= 0.00171748557411
+	classVal= 1 	currWeight= 0.00497194613783
+Decision already included from other daugther node
+
+
+index= 24 	currentLeaf= (24, 0.88845697733440998, 'AgeGroup', 0.25, 0.13636363636363635) 	len(currentDF)= 40
+	len(ltDF)= 24 	len(gtDF)= 16
 	LESS THAN
-	classVal= 0 	currWeight= 0.00745753613336
-	classVal= 1 	currWeight= 0.00378279999085
+	classVal= 0 	currWeight= 0.0217430508584
 	GREATER THAN
-	classVal= 0 	currWeight= 0.00472054087868
-	 (26, 0, 0, 0.0074575361333591725, 0.0047205408786844113, 0.011240336124205552, 0.0047205408786844113)
+	classVal= 0 	currWeight= 0.0135894067865
+	classVal= 1 	currWeight= 0.00249760942914
+	 (24, 0, 0, 0.021743050858424727, 0.013589406786515452, 0.021743050858424727, 0.016087016215651971)
 
 
-index= 25 	currentLeaf= (25, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 7
-This is An End Node
-
-
-index= 24 	currentLeaf= (24, 0.52600244876098867, 'CabinNumbers', 53.18181818181818, 13.545454545454545) 	len(currentDF)= 78
-	len(ltDF)= 50 	len(gtDF)= 28
+index= 23 	currentLeaf= (23, 0.63643352933045361, 'AgeGroup', 0.75, 0.13636363636363635) 	len(currentDF)= 392
+	len(ltDF)= 370 	len(gtDF)= 22
 	LESS THAN
-	classVal= 0 	currWeight= 0.0211789937665
-	classVal= 1 	currWeight= 0.0373180394047
+	classVal= 0 	currWeight= 0.301149085291
+	classVal= 1 	currWeight= 0.10391587155
 	GREATER THAN
-	classVal= 0 	currWeight= 0.0161372891229
-	classVal= 1 	currWeight= 0.0139741721138
-	 (24, 1, 0, 0.037318039404731482, 0.016137289122863347, 0.058497033171266699, 0.030111461236635596)
+	classVal= 0 	currWeight= 0.0199311299536
+	 (23, 0, 0, 0.30114908529080953, 0.019931129953556004, 0.40506495684048521, 0.019931129953556004)
 
 
-index= 23 	currentLeaf= (23, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 5
-This is An End Node
-
-
-index= 22 	currentLeaf= (22, 0.68683171835360302, 'nTicketStrings', 1.5, 0.090909090909090912) 	len(currentDF)= 20
+index= 22 	currentLeaf= (22, 0.67097304829861826, 'nTicketStrings', 1.5, 0.090909090909090912) 	len(currentDF)= 20
 	len(ltDF)= 11 	len(gtDF)= 9
 	LESS THAN
-	classVal= 0 	currWeight= 0.00686080923976
-	classVal= 1 	currWeight= 0.00568450432604
+	classVal= 0 	currWeight= 0.00859629363581
+	classVal= 1 	currWeight= 0.00737022174905
 	GREATER THAN
-	classVal= 0 	currWeight= 0.00730825824467
-	 (22, 0, 0, 0.0068608092397590371, 0.0073082582446708112, 0.012545313565801408, 0.0073082582446708112)
+	classVal= 0 	currWeight= 0.00815364407191
+	 (22, 0, 0, 0.0085962936358141354, 0.0081536440719092718, 0.01596651538486395, 0.0081536440719092718)
 
 
 index= 21 	currentLeaf= (21, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 25
@@ -1371,180 +1348,135 @@ index= 20 	currentLeaf= (20, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 
 This is An End Node
 
 
-index= 19 	currentLeaf= (19, 0.51985256034581129, 'TicketDots', 0.5, 0.090909090909090912) 	len(currentDF)= 117
+index= 19 	currentLeaf= (19, 0.52016356557647492, 'TicketDots', 0.5, 0.090909090909090912) 	len(currentDF)= 117
 	len(ltDF)= 107 	len(gtDF)= 10
 	LESS THAN
-	classVal= 0 	currWeight= 0.0501662766253
-	classVal= 1 	currWeight= 0.0707529964637
+	classVal= 0 	currWeight= 0.0613645319733
+	classVal= 1 	currWeight= 0.0894482654862
 	GREATER THAN
-	classVal= 0 	currWeight= 0.00805670578947
-	classVal= 1 	currWeight= 0.00354261582119
-	 (19, 1, 0, 0.070752996463730011, 0.0080567057894714838, 0.12091927308899558, 0.011599321610659344)
+	classVal= 0 	currWeight= 0.0094090777184
+	classVal= 1 	currWeight= 0.00488916692652
+	 (19, 1, 0, 0.089448265486242212, 0.0094090777184026239, 0.1508127974595859, 0.014298244644922711)
 
 
-index= 18 	currentLeaf= (18, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 12
+index= 8 	currentLeaf= (8, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 6
 This is An End Node
 
 
-index= 17 	currentLeaf= (17, 0.69241946339586891, 'CabinNumbers', 9.5, 9.545454545454545) 	len(currentDF)= 20
-	len(ltDF)= 13 	len(gtDF)= 7
+index= 8 	currentLeaf= (8, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 6
+This is An End Node
+Decision already included from other daugther node
+
+
+index= 16 	currentLeaf= (16, 0.56498234830962335, 'EmbarkIsC', 0.0, 0.18181818181818182) 	len(currentDF)= 18
+	len(ltDF)= 11 	len(gtDF)= 7
 	LESS THAN
-	classVal= 0 	currWeight= 0.010390423452
-	classVal= 1 	currWeight= 0.00118193343386
+	classVal= 0 	currWeight= 0.00877629853205
+	classVal= 1 	currWeight= 0.00645001881622
 	GREATER THAN
-	classVal= 0 	currWeight= 0.00333472886583
-	classVal= 1 	currWeight= 0.00497029515849
-	 (17, 0, 1, 0.010390423452012767, 0.0049702951584892595, 0.011572356885875268, 0.0083050240243218304)
+	classVal= 0 	currWeight= 0.00181192090487
+	classVal= 1 	currWeight= 0.00658734897847
+	 (16, 0, 1, 0.0087762985320540762, 0.0065873489784718433, 0.015226317348273698, 0.0083992698833405717)
 
 
-index= 16 	currentLeaf= (16, 0.79347826086956519, 'TicketNumber', 236501.63636363635, 2021.909090909091) 	len(currentDF)= 32
-	len(ltDF)= 9 	len(gtDF)= 23
+index= 15 	currentLeaf= (15, 0.78644350677550778, 'TicketNumber', 45576.090909090912, 22786.545454545456) 	len(currentDF)= 178
+	len(ltDF)= 111 	len(gtDF)= 67
 	LESS THAN
-	classVal= 1 	currWeight= 0.0106217840244
+	classVal= 0 	currWeight= 0.00749282828741
+	classVal= 1 	currWeight= 0.0978437288629
 	GREATER THAN
-	classVal= 0 	currWeight= 0.00472079289972
-	classVal= 1 	currWeight= 0.0224237662737
-	 (16, 1, 1, 0.010621784024367264, 0.022423766273664224, 0.010621784024367264, 0.027144559173383011)
-
-
-index= 15 	currentLeaf= (15, 0.93189010343176581, 'CabinC', 0.0, 0.18181818181818182) 	len(currentDF)= 138
-	len(ltDF)= 111 	len(gtDF)= 27
-	LESS THAN
-	classVal= 0 	currWeight= 0.00236039644986
-	classVal= 1 	currWeight= 0.126867767807
-	GREATER THAN
-	classVal= 0 	currWeight= 0.00354059467479
-	classVal= 1 	currWeight= 0.0273130869138
-	 (15, 1, 1, 0.12686776780706538, 0.027313086913791713, 0.12922816425692479, 0.030853681588580803)
+	classVal= 0 	currWeight= 0.0149856565748
+	classVal= 1 	currWeight= 0.0552635875985
+	 (15, 1, 1, 0.097843728862911261, 0.055263587598496179, 0.10533655715032082, 0.070249244173315281)
 
 ##############
  Getting Tree Error
  ###################
 
-decisionTup= ('30', '0', 'nan', '0.00674362982669', 'nan', '0.00674362982669', 'nan')
-totalCorrWeight= 0 	float(decisionTup[3])= 0.00674362982669
-	totalCorrWeight= 0.00674362982669
+decisionTup= ('30', '0', '0', '0.00798127445827', '0.00756976511501', '0.00798127445827', '0.0119099299814')
+totalCorrWeight= 0 	float(decisionTup[3])= 0.00798127445827 	float(decisionTup[4])= 0.00756976511501
+	totalCorrWeight= 0.015551039573279999
 
-decisionTup= ('14', '1', '0', '0.00590099112465', '0.00674362982669', '0.00826138757451', '0.00674362982669')
-totalCorrWeight= 0.00674362982669 	float(decisionTup[3])= 0.00590099112465 	float(decisionTup[4])= 0.00674362982669
-	totalCorrWeight= 0.01938825077803
+decisionTup= ('29', '0', '1', '0.00901406942303', '0.00428345799455', '0.0128291486479', '0.00736241542886')
+totalCorrWeight= 0.015551039573279999 	float(decisionTup[3])= 0.00901406942303 	float(decisionTup[4])= 0.00428345799455
+	totalCorrWeight= 0.028848566990859997
 
-decisionTup= ('28', '0', '1', '0.00411857803432', '0.00411992839219', '0.00529810292816', '0.00814294134305')
-totalCorrWeight= 0.01938825077803 	float(decisionTup[3])= 0.00411857803432 	float(decisionTup[4])= 0.00411992839219
-	totalCorrWeight= 0.02762675720454
+decisionTup= ('13', 'nan', '1', 'nan', '0.00986783117819', 'nan', '0.0125857125355')
+totalCorrWeight= 0.028848566990859997 	float(decisionTup[4])= 0.00986783117819
+	totalCorrWeight= 0.038716398169049995
 
-decisionTup= ('27', '0', '0', '0.404807991151', '0.00391822570587', '0.442574334349', '0.00676210036687')
-totalCorrWeight= 0.02762675720454 	float(decisionTup[3])= 0.404807991151 	float(decisionTup[4])= 0.00391822570587
-	totalCorrWeight= 0.43635297406141005
+decisionTup= ('27', '1', '0', '0.0100447168124', '0.0230144305026', '0.0113117533419', '0.0409172113599')
+totalCorrWeight= 0.038716398169049995 	float(decisionTup[3])= 0.0100447168124 	float(decisionTup[4])= 0.0230144305026
+	totalCorrWeight= 0.07177554548404999
 
-decisionTup= ('26', '0', '0', '0.00745753613336', '0.00472054087868', '0.0112403361242', '0.00472054087868')
-totalCorrWeight= 0.43635297406141005 	float(decisionTup[3])= 0.00745753613336 	float(decisionTup[4])= 0.00472054087868
-	totalCorrWeight= 0.44853105107345004
+decisionTup= ('5', 'nan', '1', 'nan', '0.00497194613783', 'nan', '0.00668943171193')
+totalCorrWeight= 0.07177554548404999 	float(decisionTup[4])= 0.00497194613783
+	totalCorrWeight= 0.07674749162187999
 
-decisionTup= ('25', '0', 'nan', '0.00472054087868', 'nan', '0.00472054087868', 'nan')
-totalCorrWeight= 0.44853105107345004 	float(decisionTup[3])= 0.00472054087868
-	totalCorrWeight= 0.45325159195213005
+decisionTup= ('24', '0', '0', '0.0217430508584', '0.0135894067865', '0.0217430508584', '0.0160870162157')
+totalCorrWeight= 0.07674749162187999 	float(decisionTup[3])= 0.0217430508584 	float(decisionTup[4])= 0.0135894067865
+	totalCorrWeight= 0.11207994926678
 
-decisionTup= ('24', '1', '0', '0.0373180394047', '0.0161372891229', '0.0584970331713', '0.0301114612366')
-totalCorrWeight= 0.45325159195213005 	float(decisionTup[3])= 0.0373180394047 	float(decisionTup[4])= 0.0161372891229
-	totalCorrWeight= 0.5067069204797301
+decisionTup= ('23', '0', '0', '0.301149085291', '0.0199311299536', '0.40506495684', '0.0199311299536')
+totalCorrWeight= 0.11207994926678 	float(decisionTup[3])= 0.301149085291 	float(decisionTup[4])= 0.0199311299536
+	totalCorrWeight= 0.43316016451138
 
-decisionTup= ('23', '0', 'nan', '0.00406611297258', 'nan', '0.00406611297258', 'nan')
-totalCorrWeight= 0.5067069204797301 	float(decisionTup[3])= 0.00406611297258
-	totalCorrWeight= 0.5107730334523101
+decisionTup= ('22', '0', '0', '0.00859629363581', '0.00815364407191', '0.0159665153849', '0.00815364407191')
+totalCorrWeight= 0.43316016451138 	float(decisionTup[3])= 0.00859629363581 	float(decisionTup[4])= 0.00815364407191
+	totalCorrWeight= 0.4499101022191
 
-decisionTup= ('22', '0', '0', '0.00686080923976', '0.00730825824467', '0.0125453135658', '0.00730825824467')
-totalCorrWeight= 0.5107730334523101 	float(decisionTup[3])= 0.00686080923976 	float(decisionTup[4])= 0.00730825824467
-	totalCorrWeight= 0.5249421009367401
+decisionTup= ('21', '0', 'nan', '0.0226490113109', 'nan', '0.0226490113109', 'nan')
+totalCorrWeight= 0.4499101022191 	float(decisionTup[3])= 0.0226490113109
+	totalCorrWeight= 0.47255911353
 
-decisionTup= ('21', '0', 'nan', '0.0168590745667', 'nan', '0.0168590745667', 'nan')
-totalCorrWeight= 0.5249421009367401 	float(decisionTup[3])= 0.0168590745667
-	totalCorrWeight= 0.5418011755034401
+decisionTup= ('20', '1', 'nan', '0.00905960452434', 'nan', '0.00905960452434', 'nan')
+totalCorrWeight= 0.47255911353 	float(decisionTup[3])= 0.00905960452434
+	totalCorrWeight= 0.48161871805434003
 
-decisionTup= ('20', '1', 'nan', '0.00774228862057', 'nan', '0.00774228862057', 'nan')
-totalCorrWeight= 0.5418011755034401 	float(decisionTup[3])= 0.00774228862057
-	totalCorrWeight= 0.5495434641240101
+decisionTup= ('19', '1', '0', '0.0894482654862', '0.0094090777184', '0.15081279746', '0.0142982446449')
+totalCorrWeight= 0.48161871805434003 	float(decisionTup[3])= 0.0894482654862 	float(decisionTup[4])= 0.0094090777184
+	totalCorrWeight= 0.58047606125894
 
-decisionTup= ('19', '1', '0', '0.0707529964637', '0.00805670578947', '0.120919273089', '0.0115993216107')
-totalCorrWeight= 0.5495434641240101 	float(decisionTup[3])= 0.0707529964637 	float(decisionTup[4])= 0.00805670578947
-	totalCorrWeight= 0.6283531663771801
+decisionTup= ('8', '0', 'nan', '0.00543576271461', 'nan', '0.00543576271461', 'nan')
+totalCorrWeight= 0.58047606125894 	float(decisionTup[3])= 0.00543576271461
+	totalCorrWeight= 0.58591182397355
 
-decisionTup= ('18', '1', 'nan', '0.0141623786992', 'nan', '0.0141623786992', 'nan')
-totalCorrWeight= 0.6283531663771801 	float(decisionTup[3])= 0.0141623786992
-	totalCorrWeight= 0.6425155450763801
+decisionTup= ('16', '0', '1', '0.00877629853205', '0.00658734897847', '0.0152263173483', '0.00839926988334')
+totalCorrWeight= 0.58591182397355 	float(decisionTup[3])= 0.00877629853205 	float(decisionTup[4])= 0.00658734897847
+	totalCorrWeight= 0.60127547148407
 
-decisionTup= ('17', '0', '1', '0.010390423452', '0.00497029515849', '0.0115723568859', '0.00830502402432')
-totalCorrWeight= 0.6425155450763801 	float(decisionTup[3])= 0.010390423452 	float(decisionTup[4])= 0.00497029515849
-	totalCorrWeight= 0.6578762636868701
-
-decisionTup= ('16', '1', '1', '0.0106217840244', '0.0224237662737', '0.0106217840244', '0.0271445591734')
-totalCorrWeight= 0.6578762636868701 	float(decisionTup[3])= 0.0106217840244 	float(decisionTup[4])= 0.0224237662737
-	totalCorrWeight= 0.6909218139849701
-
-decisionTup= ('15', '1', '1', '0.126867767807', '0.0273130869138', '0.129228164257', '0.0308536815886')
-totalCorrWeight= 0.6909218139849701 	float(decisionTup[3])= 0.126867767807 	float(decisionTup[4])= 0.0273130869138
-	totalCorrWeight= 0.8451026687057701
-totalCorrWeight= 0.8451026687057701 	otherSum= 1.00674362982727 	sumDFWeights= 1.0 	error= 0.154897331294
-error= 0.1548973312942299 	alpha= 0.1864992760279517 	CorrectFactor= 0.8298591627459663 	IncorrectFactor= 1.205023749681868
-BEFORE: df_weights['Weights'].unique()= [ 0.0011802   0.00118087  0.00067436  0.00097924  0.00117952  0.00097956
-  0.00142194  0.00171375  0.00142113  0.00097868  0.00117847  0.00081203
-  0.00081276  0.00142322  0.00081322  0.00171529  0.0014224   0.00117914
-  0.00098012  0.0009778   0.00118126  0.00118193  0.00142449]
-After: df_weights['Weights'].unique()= [ 0.0011802   0.0009794   0.00142298  0.00055963  0.00118087  0.00097924
-  0.00117952  0.00097956  0.00171347  0.00171375  0.00142113  0.00097868
-  0.00117847  0.00081203  0.00081276  0.00142322  0.00067387  0.00067448
-  0.00067486  0.00046441  0.00081289  0.00142194  0.00171529  0.0014224
-  0.00142089  0.00098012  0.00081336  0.00067436  0.00142217  0.00171501
-  0.00097884  0.00142008  0.0009778   0.00118126  0.00118193  0.00206511
-  0.00118213  0.00117827  0.00098084  0.00098028  0.00206697  0.00081216
-  0.00142449]
-	len('Weights' == 0.00118019822493 )= 501
-	len('Weights' == 0.000979398310814 )= 54
-	len('Weights' == 0.00142297873351 )= 3
-	len('Weights' == 0.000559626300185 )= 45
-	len('Weights' == 0.0011808719404 )= 17
-	len('Weights' == 0.000979235364643 )= 51
-	len('Weights' == 0.00117952489383 )= 21
-	len('Weights' == 0.000979556426467 )= 8
-	len('Weights' == 0.00171346825382 )= 4
-	len('Weights' == 0.00171375337739 )= 8
-	len('Weights' == 0.00142112608151 )= 5
-	len('Weights' == 0.000978676687628 )= 3
-	len('Weights' == 0.00117846556348 )= 1
-	len('Weights' == 0.000812028693852 )= 8
-	len('Weights' == 0.000812758631726 )= 15
-	len('Weights' == 0.00142321551922 )= 7
-	len('Weights' == 0.000673869452006 )= 17
-	len('Weights' == 0.000674475197639 )= 11
-	len('Weights' == 0.000674860221411 )= 7
-	len('Weights' == 0.000464411012922 )= 10
-	len('Weights' == 0.00081289387593 )= 8
-	len('Weights' == 0.0014219373305 )= 7
-	len('Weights' == 0.00171529388145 )= 3
-	len('Weights' == 0.00142240354099 )= 15
-	len('Weights' == 0.00142088964343 )= 1
-	len('Weights' == 0.00098011560568 )= 7
-	len('Weights' == 0.000813357915924 )= 2
-	len('Weights' == 0.000674362982669 )= 8
-	len('Weights' == 0.00142216689037 )= 7
-	len('Weights' == 0.00171500850157 )= 5
-	len('Weights' == 0.000978839540835 )= 6
-	len('Weights' == 0.00142007899217 )= 2
-	len('Weights' == 0.000977797738882 )= 5
-	len('Weights' == 0.00118125911279 )= 3
-	len('Weights' == 0.00118193343386 )= 4
-	len('Weights' == 0.00206511352086 )= 2
-	len('Weights' == 0.00118213010928 )= 1
-	len('Weights' == 0.00117826949774 )= 1
-	len('Weights' == 0.000980838289847 )= 3
-	len('Weights' == 0.000980278698325 )= 1
-	len('Weights' == 0.00206696986483 )= 2
-	len('Weights' == 0.000812163816594 )= 1
-	len('Weights' == 0.0014244948569 )= 1
+decisionTup= ('15', '1', '1', '0.0978437288629', '0.0552635875985', '0.10533655715', '0.0702492441733')
+totalCorrWeight= 0.60127547148407 	float(decisionTup[3])= 0.0978437288629 	float(decisionTup[4])= 0.0552635875985
+	totalCorrWeight= 0.7543827879454701
+totalCorrWeight= 0.7543827879454701 	sumWeights= 0.9999999999998599 	error= 0.24561721205442422
+error= 0.24561721205442422 	alpha= 0.14039810035099323 	CorrectFactor= 0.8690122124606512 	IncorrectFactor= 1.1507318144223202
+WEIGHT NOT CHANGED.
+WEIGHT NOT CHANGED.
+BEFORE: df_weights['Weights'].unique()= [ 0.00090596  0.00178585  0.00126704  0.00249761  0.00122804  0.00184256
+  0.00171749  0.00131747]
+After: df_weights['Weights'].unique()= [ 0.00078729  0.00205503  0.00155192  0.00145802  0.00287408  0.00141315
+  0.00106718  0.00217045  0.00212029  0.00149252  0.00104252  0.00110107
+  0.00197637  0.00151605  0.0016012   0.0011449 ]
+	len('Weights' == 0.000787290697172 )= 634
+	len('Weights' == 0.00205503275996 )= 12
+	len('Weights' == 0.00155192421295 )= 14
+	len('Weights' == 0.00145801924446 )= 15
+	len('Weights' == 0.00287407863011 )= 48
+	len('Weights' == 0.00141314693898 )= 6
+	len('Weights' == 0.0010671834502 )= 45
+	len('Weights' == 0.00217045309588 )= 6
+	len('Weights' == 0.00212028716149 )= 18
+	len('Weights' == 0.00149251593862 )= 8
+	len('Weights' == 0.00104251751522 )= 13
+	len('Weights' == 0.00110107021772 )= 23
+	len('Weights' == 0.00197636529093 )= 10
+	len('Weights' == 0.00151605440845 )= 12
+	len('Weights' == 0.00160120317712 )= 12
+	len('Weights' == 0.00114489734201 )= 15
 
 
 ###############################################################
-FINAL SCORE FOR TREE # 2 is 0.1548973312942299 
+FINAL SCORE FOR TREE # 2 is 0.24561721205442422 
 ###############################################################
 #############################################
 #############################################
@@ -1557,155 +1489,143 @@ FINAL SCORE FOR TREE # 2 is 0.1548973312942299
  Making a Decision Tree
 ###################################
 
-node= 1 parentNode= 0 	parentTup= (0, 0.65600727782104118, 'YesMr', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 891
+node= 1 parentNode= 0 	parentTup= (0, 0.54469735112747208, 'YesMr', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 891
 len(dfCurr)= 374 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (1, 0.66336740215075707, 'Pclass', 2.5, 0.18181818181818182) 	len(nodeDFIds[ 1 ][1])= 374
+######## NEW ########: nodeValues[nodeCount]= (1, 0.57634786856888165, 'Pclass', 2.5, 0.18181818181818182) 	len(nodeDFIds[ 1 ][1])= 374
 len(lessThan)= 202 	len(greaterThan)= 172
 
-node= 2 parentNode= 0 	parentTup= (0, 0.65600727782104118, 'YesMr', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 891
+node= 2 parentNode= 0 	parentTup= (0, 0.54469735112747208, 'YesMr', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 891
 len(dfCurr)= 517 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (2, 0.74844001384774828, 'Pclass', 1.5, 0.18181818181818182) 	len(nodeDFIds[ 2 ][1])= 517
-len(lessThan)= 107 	len(greaterThan)= 410
+######## NEW ########: nodeValues[nodeCount]= (2, 0.57237754527898654, 'CabinNumbers', 12.545454545454545, 13.545454545454545) 	len(nodeDFIds[ 2 ][1])= 517
+len(lessThan)= 437 	len(greaterThan)= 80
 
-node= 3 parentNode= 1 	parentTup= (1, 0.66336740215075707, 'Pclass', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 374
+node= 3 parentNode= 1 	parentTup= (1, 0.57634786856888165, 'Pclass', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 374
 len(dfCurr)= 202 	parentTup[3]= 2.5
-######## NEW ########: nodeValues[nodeCount]= (3, 0.82625730972568756, 'Gender', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 3 ][1])= 202
-len(lessThan)= 170 	len(greaterThan)= 32
+######## NEW ########: nodeValues[nodeCount]= (3, 0.69314014643193822, 'YesRev', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 3 ][1])= 202
+len(lessThan)= 196 	len(greaterThan)= 6
 
-node= 4 parentNode= 1 	parentTup= (1, 0.66336740215075707, 'Pclass', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 374
+node= 4 parentNode= 1 	parentTup= (1, 0.57634786856888165, 'Pclass', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 374
 len(dfCurr)= 172 	parentTup[3]= 2.5
-######## NEW ########: nodeValues[nodeCount]= (4, 0.55325162121387972, 'FamilySize', 4.5, 0.90909090909090906) 	len(nodeDFIds[ 4 ][1])= 172
+######## NEW ########: nodeValues[nodeCount]= (4, 0.53863865545504119, 'FamilySize', 4.5, 0.90909090909090906) 	len(nodeDFIds[ 4 ][1])= 172
 len(lessThan)= 127 	len(greaterThan)= 45
 
-node= 5 parentNode= 2 	parentTup= (2, 0.74844001384774828, 'Pclass', 1.5, 0.18181818181818182) 	len(parentDFIDs)= 517
-len(dfCurr)= 107 	parentTup[3]= 1.5
-######## NEW ########: nodeValues[nodeCount]= (5, 0.54406630744179807, 'AgeGroup', 0.75, 0.13636363636363635) 	len(nodeDFIds[ 5 ][1])= 107
-len(lessThan)= 83 	len(greaterThan)= 24
+node= 5 parentNode= 2 	parentTup= (2, 0.57237754527898654, 'CabinNumbers', 12.545454545454545, 13.545454545454545) 	len(parentDFIDs)= 517
+len(dfCurr)= 437 	parentTup[3]= 12.5454545455
+######## NEW ########: nodeValues[nodeCount]= (5, 0.59425653377026111, 'CabinNumbers', 5.5, 1.1818181818181819) 	len(nodeDFIds[ 5 ][1])= 437
+len(lessThan)= 429 	len(greaterThan)= 8
 
-node= 6 parentNode= 2 	parentTup= (2, 0.74844001384774828, 'Pclass', 1.5, 0.18181818181818182) 	len(parentDFIDs)= 517
-len(dfCurr)= 410 	parentTup[3]= 1.5
-######## NEW ########: nodeValues[nodeCount]= (6, 0.81306838885983757, 'Fare', 0.25, 0.13636363636363635) 	len(nodeDFIds[ 6 ][1])= 410
-len(lessThan)= 393 	len(greaterThan)= 17
+node= 6 parentNode= 2 	parentTup= (2, 0.57237754527898654, 'CabinNumbers', 12.545454545454545, 13.545454545454545) 	len(parentDFIDs)= 517
+len(dfCurr)= 80 	parentTup[3]= 12.5454545455
+######## NEW ########: nodeValues[nodeCount]= (6, 0.53244760774394151, 'EmbarkIsC', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 6 ][1])= 80
+len(lessThan)= 56 	len(greaterThan)= 24
 
-node= 7 parentNode= 3 	parentTup= (3, 0.82625730972568756, 'Gender', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 202
-len(dfCurr)= 170 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (7, 0.88373855982085059, 'TicketNumber', 227868.45454545456, 22786.545454545456) 	len(nodeDFIds[ 7 ][1])= 170
-len(lessThan)= 138 	len(greaterThan)= 32
+node= 7 parentNode= 3 	parentTup= (3, 0.69314014643193822, 'YesRev', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 202
+len(dfCurr)= 196 	parentTup[3]= 0.0
+######## NEW ########: nodeValues[nodeCount]= (7, 0.70027017961164018, 'YesFancy', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 7 ][1])= 196
+len(lessThan)= 178 	len(greaterThan)= 18
 
-node= 8 parentNode= 3 	parentTup= (3, 0.82625730972568756, 'Gender', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 202
-len(dfCurr)= 32 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (8, 0.75351206648370905, 'YesMaster', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 8 ][1])= 32
-len(lessThan)= 20 	len(greaterThan)= 12
+node= 8 parentNode= 3 	parentTup= (3, 0.69314014643193822, 'YesRev', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 202
+len(dfCurr)= 6 	parentTup[3]= 0.0
+*****************END NODE
+######## NEW ########: nodeValues[nodeCount]= (8, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[ 8 ][1])= 6
 
-node= 9 parentNode= 4 	parentTup= (4, 0.55325162121387972, 'FamilySize', 4.5, 0.90909090909090906) 	len(parentDFIDs)= 172
+node= 9 parentNode= 4 	parentTup= (4, 0.53863865545504119, 'FamilySize', 4.5, 0.90909090909090906) 	len(parentDFIDs)= 172
 len(dfCurr)= 127 	parentTup[3]= 4.5
-######## NEW ########: nodeValues[nodeCount]= (9, 0.5322794770041781, 'Gender', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 9 ][1])= 127
+######## NEW ########: nodeValues[nodeCount]= (9, 0.52353098361030526, 'YesMaster', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 9 ][1])= 127
 len(lessThan)= 117 	len(greaterThan)= 10
 
-node= 10 parentNode= 4 	parentTup= (4, 0.55325162121387972, 'FamilySize', 4.5, 0.90909090909090906) 	len(parentDFIDs)= 172
+node= 10 parentNode= 4 	parentTup= (4, 0.53863865545504119, 'FamilySize', 4.5, 0.90909090909090906) 	len(parentDFIDs)= 172
 len(dfCurr)= 45 	parentTup[3]= 4.5
-######## NEW ########: nodeValues[nodeCount]= (10, 0.7577874470034397, 'FamilySize', 6.5, 0.54545454545454541) 	len(nodeDFIds[ 10 ][1])= 45
+######## NEW ########: nodeValues[nodeCount]= (10, 0.74911620883691088, 'FamilySize', 6.5, 0.54545454545454541) 	len(nodeDFIds[ 10 ][1])= 45
 len(lessThan)= 25 	len(greaterThan)= 20
 
-node= 11 parentNode= 5 	parentTup= (5, 0.54406630744179807, 'AgeGroup', 0.75, 0.13636363636363635) 	len(parentDFIDs)= 107
-len(dfCurr)= 83 	parentTup[3]= 0.75
-######## NEW ########: nodeValues[nodeCount]= (11, 0.54179059771232196, 'Fare', -0.5, 0.18181818181818182) 	len(nodeDFIds[ 11 ][1])= 83
-len(lessThan)= 5 	len(greaterThan)= 78
+node= 11 parentNode= 5 	parentTup= (5, 0.59425653377026111, 'CabinNumbers', 5.5, 1.1818181818181819) 	len(parentDFIDs)= 437
+len(dfCurr)= 429 	parentTup[3]= 5.5
+######## NEW ########: nodeValues[nodeCount]= (11, 0.60229905494685376, 'TicketDashes', 1.5, 0.36363636363636365) 	len(nodeDFIds[ 11 ][1])= 429
+len(lessThan)= 389 	len(greaterThan)= 40
 
-node= 12 parentNode= 5 	parentTup= (5, 0.54406630744179807, 'AgeGroup', 0.75, 0.13636363636363635) 	len(parentDFIDs)= 107
-len(dfCurr)= 24 	parentTup[3]= 0.75
-######## NEW ########: nodeValues[nodeCount]= (12, 0.70236025335865548, 'CabinNumbers', 7.0, 8.0) 	len(nodeDFIds[ 12 ][1])= 24
-len(lessThan)= 7 	len(greaterThan)= 17
+node= 12 parentNode= 5 	parentTup= (5, 0.59425653377026111, 'CabinNumbers', 5.5, 1.1818181818181819) 	len(parentDFIDs)= 437
+len(dfCurr)= 8 	parentTup[3]= 5.5
+Less that Min gini improvement: bestGiniSplit[1]= -1 	giniEndVal= 1.122334455667789e-05
+######## NEW ########: nodeValues[nodeCount]= (12, nan, '', nan, nan) 	len(nodeDFIds[ 12 ][1])= 8
 
-node= 13 parentNode= 6 	parentTup= (6, 0.81306838885983757, 'Fare', 0.25, 0.13636363636363635) 	len(parentDFIDs)= 410
-len(dfCurr)= 393 	parentTup[3]= 0.25
-######## NEW ########: nodeValues[nodeCount]= (13, 0.82671974151932059, 'CabinNumbers', 6.0, 6.7272727272727275) 	len(nodeDFIds[ 13 ][1])= 393
-len(lessThan)= 387 	len(greaterThan)= 6
+node= 13 parentNode= 6 	parentTup= (6, 0.53244760774394151, 'EmbarkIsC', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 80
+len(dfCurr)= 56 	parentTup[3]= 0.0
+######## NEW ########: nodeValues[nodeCount]= (13, 0.55123144033943094, 'CabinNumbers', 24.363636363636363, 10.363636363636363) 	len(nodeDFIds[ 13 ][1])= 56
+len(lessThan)= 10 	len(greaterThan)= 46
 
-node= 14 parentNode= 6 	parentTup= (6, 0.81306838885983757, 'Fare', 0.25, 0.13636363636363635) 	len(parentDFIDs)= 410
-len(dfCurr)= 17 	parentTup[3]= 0.25
-######## NEW ########: nodeValues[nodeCount]= (14, 0.73871639778784237, 'TicketNumber', 1862.0, 1207.090909090909) 	len(nodeDFIds[ 14 ][1])= 17
-len(lessThan)= 7 	len(greaterThan)= 10
+node= 14 parentNode= 6 	parentTup= (6, 0.53244760774394151, 'EmbarkIsC', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 80
+len(dfCurr)= 24 	parentTup[3]= 0.0
+######## NEW ########: nodeValues[nodeCount]= (14, 0.6119793327994052, 'CabinNumbers', 62.18181818181818, 10.727272727272727) 	len(nodeDFIds[ 14 ][1])= 24
+len(lessThan)= 12 	len(greaterThan)= 12
 
-node= 15 parentNode= 7 	parentTup= (7, 0.88373855982085059, 'TicketNumber', 227868.45454545456, 22786.545454545456) 	len(parentDFIDs)= 170
-len(dfCurr)= 138 	parentTup[3]= 227868.454545
-######## NEW ########: nodeValues[nodeCount]= (15, 0.9243355221701528, 'CabinC', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 15 ][1])= 138
-len(lessThan)= 111 	len(greaterThan)= 27
+node= 15 parentNode= 7 	parentTup= (7, 0.70027017961164018, 'YesFancy', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 196
+len(dfCurr)= 178 	parentTup[3]= 0.0
+######## NEW ########: nodeValues[nodeCount]= (15, 0.74179542851119873, 'TicketNumber', 45576.090909090912, 22786.545454545456) 	len(nodeDFIds[ 15 ][1])= 178
+len(lessThan)= 111 	len(greaterThan)= 67
 
-node= 16 parentNode= 7 	parentTup= (7, 0.88373855982085059, 'TicketNumber', 227868.45454545456, 22786.545454545456) 	len(parentDFIDs)= 170
-len(dfCurr)= 32 	parentTup[3]= 227868.454545
-######## NEW ########: nodeValues[nodeCount]= (16, 0.75046320130458333, 'TicketNumber', 236501.63636363635, 2021.909090909091) 	len(nodeDFIds[ 16 ][1])= 32
-len(lessThan)= 9 	len(greaterThan)= 23
+node= 16 parentNode= 7 	parentTup= (7, 0.70027017961164018, 'YesFancy', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 196
+len(dfCurr)= 18 	parentTup[3]= 0.0
+######## NEW ########: nodeValues[nodeCount]= (16, 0.56482868465643388, 'CabinNumbers', 8.545454545454545, 9.545454545454545) 	len(nodeDFIds[ 16 ][1])= 18
+len(lessThan)= 7 	len(greaterThan)= 11
 
-node= 17 parentNode= 8 	parentTup= (8, 0.75351206648370905, 'YesMaster', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 32
-len(dfCurr)= 20 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (17, 0.68586640504840235, 'CabinNumbers', 9.5, 9.545454545454545) 	len(nodeDFIds[ 17 ][1])= 20
-len(lessThan)= 13 	len(greaterThan)= 7
+node= 17 parentNode= 8 	parentTup= (8, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(parentDFIDs)= 6
 
-node= 18 parentNode= 8 	parentTup= (8, 0.75351206648370905, 'YesMaster', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 32
-len(dfCurr)= 12 	parentTup[3]= 0.0
-*****************END NODE
-######## NEW ########: nodeValues[nodeCount]= (18, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[ 18 ][1])= 12
+node= 18 parentNode= 8 	parentTup= (8, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(parentDFIDs)= 6
 
-node= 19 parentNode= 9 	parentTup= (9, 0.5322794770041781, 'Gender', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 127
+node= 19 parentNode= 9 	parentTup= (9, 0.52353098361030526, 'YesMaster', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 127
 len(dfCurr)= 117 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (19, 0.51871659906791701, 'EmbarkIsQ', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 19 ][1])= 117
-len(lessThan)= 85 	len(greaterThan)= 32
+######## NEW ########: nodeValues[nodeCount]= (19, 0.5151498654957396, 'TicketNumber', 2102220.9090909092, 2099906.9090909092) 	len(nodeDFIds[ 19 ][1])= 117
+len(lessThan)= 109 	len(greaterThan)= 8
 
-node= 20 parentNode= 9 	parentTup= (9, 0.5322794770041781, 'Gender', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 127
+node= 20 parentNode= 9 	parentTup= (9, 0.52353098361030526, 'YesMaster', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 127
 len(dfCurr)= 10 	parentTup[3]= 0.0
 *****************END NODE
 ######## NEW ########: nodeValues[nodeCount]= (20, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[ 20 ][1])= 10
 
-node= 21 parentNode= 10 	parentTup= (10, 0.7577874470034397, 'FamilySize', 6.5, 0.54545454545454541) 	len(parentDFIDs)= 45
+node= 21 parentNode= 10 	parentTup= (10, 0.74911620883691088, 'FamilySize', 6.5, 0.54545454545454541) 	len(parentDFIDs)= 45
 len(dfCurr)= 25 	parentTup[3]= 6.5
 *****************END NODE
 ######## NEW ########: nodeValues[nodeCount]= (21, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[ 21 ][1])= 25
 
-node= 22 parentNode= 10 	parentTup= (10, 0.7577874470034397, 'FamilySize', 6.5, 0.54545454545454541) 	len(parentDFIDs)= 45
+node= 22 parentNode= 10 	parentTup= (10, 0.74911620883691088, 'FamilySize', 6.5, 0.54545454545454541) 	len(parentDFIDs)= 45
 len(dfCurr)= 20 	parentTup[3]= 6.5
-######## NEW ########: nodeValues[nodeCount]= (22, 0.66590743407369613, 'TicketNumber', 174710.0, 281739.72727272729) 	len(nodeDFIds[ 22 ][1])= 20
+######## NEW ########: nodeValues[nodeCount]= (22, 0.65517777780409292, 'TicketNumber', 174710.0, 281739.72727272729) 	len(nodeDFIds[ 22 ][1])= 20
 len(lessThan)= 9 	len(greaterThan)= 11
 
-node= 23 parentNode= 11 	parentTup= (11, 0.54179059771232196, 'Fare', -0.5, 0.18181818181818182) 	len(parentDFIDs)= 83
-len(dfCurr)= 5 	parentTup[3]= -0.5
-*****************END NODE
-######## NEW ########: nodeValues[nodeCount]= (23, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[ 23 ][1])= 5
+node= 23 parentNode= 11 	parentTup= (11, 0.60229905494685376, 'TicketDashes', 1.5, 0.36363636363636365) 	len(parentDFIDs)= 429
+len(dfCurr)= 389 	parentTup[3]= 1.5
+######## NEW ########: nodeValues[nodeCount]= (23, 0.58953464080564866, 'AgeGroup', 0.75, 0.13636363636363635) 	len(nodeDFIds[ 23 ][1])= 389
+len(lessThan)= 368 	len(greaterThan)= 21
 
-node= 24 parentNode= 11 	parentTup= (11, 0.54179059771232196, 'Fare', -0.5, 0.18181818181818182) 	len(parentDFIDs)= 83
-len(dfCurr)= 78 	parentTup[3]= -0.5
-######## NEW ########: nodeValues[nodeCount]= (24, 0.53461173544498397, 'Fare', 0.25, 0.090909090909090912) 	len(nodeDFIds[ 24 ][1])= 78
-len(lessThan)= 34 	len(greaterThan)= 44
+node= 24 parentNode= 11 	parentTup= (11, 0.60229905494685376, 'TicketDashes', 1.5, 0.36363636363636365) 	len(parentDFIDs)= 429
+len(dfCurr)= 40 	parentTup[3]= 1.5
+######## NEW ########: nodeValues[nodeCount]= (24, 0.86232121296895003, 'AgeGroup', 0.25, 0.13636363636363635) 	len(nodeDFIds[ 24 ][1])= 40
+len(lessThan)= 24 	len(greaterThan)= 16
 
-node= 25 parentNode= 12 	parentTup= (12, 0.70236025335865548, 'CabinNumbers', 7.0, 8.0) 	len(parentDFIDs)= 24
-len(dfCurr)= 7 	parentTup[3]= 7.0
-*****************END NODE
-######## NEW ########: nodeValues[nodeCount]= (25, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[ 25 ][1])= 7
+node= 25 parentNode= 12 	parentTup= (12, nan, '', nan, nan) 	len(parentDFIDs)= 8
 
-node= 26 parentNode= 12 	parentTup= (12, 0.70236025335865548, 'CabinNumbers', 7.0, 8.0) 	len(parentDFIDs)= 24
-len(dfCurr)= 17 	parentTup[3]= 7.0
-######## NEW ########: nodeValues[nodeCount]= (26, 0.66884939244720187, 'CabinNumbers', 42.454545454545453, 6.3636363636363633) 	len(nodeDFIds[ 26 ][1])= 17
-len(lessThan)= 10 	len(greaterThan)= 7
+node= 26 parentNode= 12 	parentTup= (12, nan, '', nan, nan) 	len(parentDFIDs)= 8
 
-node= 27 parentNode= 13 	parentTup= (13, 0.82671974151932059, 'CabinNumbers', 6.0, 6.7272727272727275) 	len(parentDFIDs)= 393
-len(dfCurr)= 387 	parentTup[3]= 6.0
-######## NEW ########: nodeValues[nodeCount]= (27, 0.83521163634324846, 'nTicketStrings', 2.5, 0.18181818181818182) 	len(nodeDFIds[ 27 ][1])= 387
-len(lessThan)= 375 	len(greaterThan)= 12
+node= 27 parentNode= 13 	parentTup= (13, 0.55123144033943094, 'CabinNumbers', 24.363636363636363, 10.363636363636363) 	len(parentDFIDs)= 56
+len(dfCurr)= 10 	parentTup[3]= 24.3636363636
+######## NEW ########: nodeValues[nodeCount]= (27, 0.58831040057542161, 'CabinNumbers', 19.5, 0.90909090909090906) 	len(nodeDFIds[ 27 ][1])= 10
+len(lessThan)= 5 	len(greaterThan)= 5
 
-node= 28 parentNode= 13 	parentTup= (13, 0.82671974151932059, 'CabinNumbers', 6.0, 6.7272727272727275) 	len(parentDFIDs)= 393
-len(dfCurr)= 6 	parentTup[3]= 6.0
-Less that Min gini improvement: bestGiniSplit[1]= -1 	giniEndVal= 1.122334455667789e-05
-######## NEW ########: nodeValues[nodeCount]= (28, nan, '', nan, nan) 	len(nodeDFIds[ 28 ][1])= 6
+node= 28 parentNode= 13 	parentTup= (13, 0.55123144033943094, 'CabinNumbers', 24.363636363636363, 10.363636363636363) 	len(parentDFIDs)= 56
+len(dfCurr)= 46 	parentTup[3]= 24.3636363636
+######## NEW ########: nodeValues[nodeCount]= (28, 0.58660518450796451, 'AgeGroup', 0.75, 0.13636363636363635) 	len(nodeDFIds[ 28 ][1])= 46
+len(lessThan)= 37 	len(greaterThan)= 9
 
-node= 29 parentNode= 14 	parentTup= (14, 0.73871639778784237, 'TicketNumber', 1862.0, 1207.090909090909) 	len(parentDFIDs)= 17
-len(dfCurr)= 7 	parentTup[3]= 1862.0
-Less that Min gini improvement: bestGiniSplit[1]= -1 	giniEndVal= 1.122334455667789e-05
-######## NEW ########: nodeValues[nodeCount]= (29, nan, '', nan, nan) 	len(nodeDFIds[ 29 ][1])= 7
+node= 29 parentNode= 14 	parentTup= (14, 0.6119793327994052, 'CabinNumbers', 62.18181818181818, 10.727272727272727) 	len(parentDFIDs)= 24
+len(dfCurr)= 12 	parentTup[3]= 62.1818181818
+######## NEW ########: nodeValues[nodeCount]= (29, 0.73110068453724175, 'Parch', 0.5, 0.18181818181818182) 	len(nodeDFIds[ 29 ][1])= 12
+len(lessThan)= 7 	len(greaterThan)= 5
 
-node= 30 parentNode= 14 	parentTup= (14, 0.73871639778784237, 'TicketNumber', 1862.0, 1207.090909090909) 	len(parentDFIDs)= 17
-len(dfCurr)= 10 	parentTup[3]= 1862.0
-*****************END NODE
-######## NEW ########: nodeValues[nodeCount]= (30, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[ 30 ][1])= 10
+node= 30 parentNode= 14 	parentTup= (14, 0.6119793327994052, 'CabinNumbers', 62.18181818181818, 10.727272727272727) 	len(parentDFIDs)= 24
+len(dfCurr)= 12 	parentTup[3]= 62.1818181818
+######## NEW ########: nodeValues[nodeCount]= (30, 0.60188858573924842, 'CabinNumbers', 87.63636363636364, 7.5454545454545459) 	len(nodeDFIds[ 30 ][1])= 12
+len(lessThan)= 7 	len(greaterThan)= 5
 
 
 ###########################
@@ -1714,74 +1634,90 @@ Writing Out the Nodes, Values, and df ID's of the nodes
 df_weights['Weights'].sum(axis=0)= 1.0
 
 
-index= 30 	currentLeaf= (30, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 10
-This is An End Node
-
-
-index= 14 	currentLeaf= (14, 0.73871639778784237, 'TicketNumber', 1862.0, 1207.090909090909) 	len(currentDF)= 17
-	len(ltDF)= 7 	len(gtDF)= 10
+index= 30 	currentLeaf= (30, 0.60188858573924842, 'CabinNumbers', 87.63636363636364, 7.5454545454545459) 	len(currentDF)= 12
+	len(ltDF)= 7 	len(gtDF)= 5
 	LESS THAN
-	classVal= 0 	currWeight= 0.00240771180736
-	classVal= 1 	currWeight= 0.0060192795184
+	classVal= 0 	currWeight= 0.00563151571118
+	classVal= 1 	currWeight= 0.00225993439326
 	GREATER THAN
-	classVal= 0 	currWeight= 0.00473720369876
-	 (14, 1, 0, 0.0060192795184005731, 0.0047372036987551784, 0.008426991325760802, 0.0047372036987551784)
+	classVal= 0 	currWeight= 0.00224865096476
+	classVal= 1 	currWeight= 0.00628000105483
+	 (30, 0, 1, 0.0056315157111805694, 0.0062800010548255212, 0.0078914501044368111, 0.0085286520195818668)
 
 
-index= 13 	currentLeaf= (13, 0.82671974151932059, 'CabinNumbers', 6.0, 6.7272727272727275) 	len(currentDF)= 393
+index= 29 	currentLeaf= (29, 0.73110068453724175, 'Parch', 0.5, 0.18181818181818182) 	len(currentDF)= 12
+	len(ltDF)= 7 	len(gtDF)= 5
+	LESS THAN
+	classVal= 0 	currWeight= 0.000839143563353
+	classVal= 1 	currWeight= 0.0103396608311
+	GREATER THAN
+	classVal= 0 	currWeight= 0.00281575785559
+	classVal= 1 	currWeight= 0.00612674477595
+	 (29, 1, 1, 0.010339660831066945, 0.0061267447759540189, 0.011178804394420424, 0.0089425026315443027)
+
+
+index= 28 	currentLeaf= (28, 0.58660518450796451, 'AgeGroup', 0.75, 0.13636363636363635) 	len(currentDF)= 46
+	len(ltDF)= 37 	len(gtDF)= 9
+	LESS THAN
+	classVal= 0 	currWeight= 0.0286346573378
+	classVal= 1 	currWeight= 0.0192735590013
+	GREATER THAN
+	classVal= 0 	currWeight= 0.0078243287427
+	 (28, 0, 0, 0.028634657337782747, 0.007824328742700842, 0.047908216339102042, 0.007824328742700842)
+
+
+index= 27 	currentLeaf= (27, 0.58831040057542161, 'CabinNumbers', 19.5, 0.90909090909090906) 	len(currentDF)= 10
+	len(ltDF)= 5 	len(gtDF)= 5
+	LESS THAN
+	classVal= 0 	currWeight= 0.0031863222848
+	classVal= 1 	currWeight= 0.00428367543321
+	GREATER THAN
+	classVal= 0 	currWeight= 0.0015540479122
+	classVal= 1 	currWeight= 0.0058086488802
+	 (27, 1, 1, 0.0042836754332135759, 0.0058086488802022457, 0.0074699977180129416, 0.0073626967924030132)
+
+
+index= 5 	currentLeaf= (5, 0.59425653377026111, 'CabinNumbers', 5.5, 1.1818181818181819) 	len(currentDF)= 437
 Blank Node has a non-Blank Sister, so only make decision for one part of parent node.
-	classVal= 0 	currWeight= 0.00331675500245
-	classVal= 1 	currWeight= 0.00349563120762
+	classVal= 0 	currWeight= 0.00411926640489
+	classVal= 1 	currWeight= 0.0067956346356
 
 
-index= 27 	currentLeaf= (27, 0.83521163634324846, 'nTicketStrings', 2.5, 0.18181818181818182) 	len(currentDF)= 387
-	len(ltDF)= 375 	len(gtDF)= 12
+index= 5 	currentLeaf= (5, 0.59425653377026111, 'CabinNumbers', 5.5, 1.1818181818181819) 	len(currentDF)= 437
+Blank Node has a non-Blank Sister, so only make decision for one part of parent node.
+	classVal= 0 	currWeight= 0.00411926640489
+	classVal= 1 	currWeight= 0.0067956346356
+Decision already included from other daugther node
+
+
+index= 24 	currentLeaf= (24, 0.86232121296895003, 'AgeGroup', 0.25, 0.13636363636363635) 	len(currentDF)= 40
+	len(ltDF)= 24 	len(gtDF)= 16
 	LESS THAN
-	classVal= 0 	currWeight= 0.412922574962
-	classVal= 1 	currWeight= 0.0385233889178
+	classVal= 0 	currWeight= 0.0201394455205
 	GREATER THAN
-	classVal= 0 	currWeight= 0.00914614035621
-	classVal= 1 	currWeight= 0.00469066421478
-	 (27, 0, 0, 0.41292257496227947, 0.0091461403562116059, 0.4514459638800431, 0.013836804570989828)
+	classVal= 0 	currWeight= 0.0125871534503
+	classVal= 1 	currWeight= 0.00306337238798
+	 (24, 0, 0, 0.020139445520483475, 0.012587153450302174, 0.020139445520483475, 0.015650525838279181)
 
 
-index= 26 	currentLeaf= (26, 0.66884939244720187, 'CabinNumbers', 42.454545454545453, 6.3636363636363633) 	len(currentDF)= 17
-	len(ltDF)= 10 	len(gtDF)= 7
+index= 23 	currentLeaf= (23, 0.58953464080564866, 'AgeGroup', 0.75, 0.13636363636363635) 	len(currentDF)= 389
+	len(ltDF)= 368 	len(gtDF)= 21
 	LESS THAN
-	classVal= 0 	currWeight= 0.00760702627017
-	classVal= 1 	currWeight= 0.00385862815689
+	classVal= 0 	currWeight= 0.277764984451
+	classVal= 1 	currWeight= 0.125264698613
 	GREATER THAN
-	classVal= 0 	currWeight= 0.00399591007486
-	 (26, 0, 0, 0.0076070262701734021, 0.0039959100748565455, 0.011465654427060162, 0.0039959100748565455)
+	classVal= 0 	currWeight= 0.0176220148304
+	 (23, 0, 0, 0.27776498445067527, 0.017622014830423045, 0.40302968306354525, 0.017622014830423045)
 
 
-index= 25 	currentLeaf= (25, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 7
-This is An End Node
-
-
-index= 24 	currentLeaf= (24, 0.53461173544498397, 'Fare', 0.25, 0.090909090909090912) 	len(currentDF)= 78
-	len(ltDF)= 34 	len(gtDF)= 44
-	LESS THAN
-	classVal= 0 	currWeight= 0.0127265309302
-	classVal= 1 	currWeight= 0.0282125140677
-	GREATER THAN
-	classVal= 0 	currWeight= 0.0225371269087
-	classVal= 1 	currWeight= 0.0270303444437
-	 (24, 1, 1, 0.028212514067721711, 0.027030344443739057, 0.040939044997922266, 0.049567471352430961)
-
-
-index= 23 	currentLeaf= (23, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 5
-This is An End Node
-
-
-index= 22 	currentLeaf= (22, 0.66590743407369613, 'TicketNumber', 174710.0, 281739.72727272729) 	len(currentDF)= 20
+index= 22 	currentLeaf= (22, 0.65517777780409292, 'TicketNumber', 174710.0, 281739.72727272729) 	len(currentDF)= 20
 	len(ltDF)= 9 	len(gtDF)= 11
 	LESS THAN
-	classVal= 0 	currWeight= 0.00618639759723
+	classVal= 0 	currWeight= 0.00755229207018
 	GREATER THAN
-	classVal= 0 	currWeight= 0.00699833767993
-	classVal= 1 	currWeight= 0.00579845313088
-	 (22, 0, 0, 0.006186397597233024, 0.0069983376799257688, 0.006186397597233024, 0.012796790810804622)
+	classVal= 0 	currWeight= 0.00796229510218
+	classVal= 1 	currWeight= 0.00903973757302
+	 (22, 0, 1, 0.007552292070181303, 0.0090397375730249703, 0.007552292070181303, 0.017002032675208271)
 
 
 index= 21 	currentLeaf= (21, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 25
@@ -1792,204 +1728,152 @@ index= 20 	currentLeaf= (20, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 
 This is An End Node
 
 
-index= 19 	currentLeaf= (19, 0.51871659906791701, 'EmbarkIsQ', 0.0, 0.18181818181818182) 	len(currentDF)= 117
-	len(ltDF)= 85 	len(gtDF)= 32
+index= 19 	currentLeaf= (19, 0.5151498654957396, 'TicketNumber', 2102220.9090909092, 2099906.9090909092) 	len(currentDF)= 117
+	len(ltDF)= 109 	len(gtDF)= 8
 	LESS THAN
-	classVal= 0 	currWeight= 0.046876465198
-	classVal= 1 	currWeight= 0.052553034429
+	classVal= 0 	currWeight= 0.0816328911728
+	classVal= 1 	currWeight= 0.0783529575545
 	GREATER THAN
-	classVal= 0 	currWeight= 0.0111153742123
-	classVal= 1 	currWeight= 0.0239727513548
-	 (19, 1, 1, 0.052553034428976804, 0.023972751354798347, 0.099429499627020176, 0.035088125567118975)
+	classVal= 0 	currWeight= 0.00234717872145
+	classVal= 1 	currWeight= 0.0104949404727
+	 (19, 0, 1, 0.081632891172807809, 0.010494940472672527, 0.1599858487273155, 0.012842119194118415)
 
 
-index= 18 	currentLeaf= (18, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 12
+index= 8 	currentLeaf= (8, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 6
 This is An End Node
 
 
-index= 17 	currentLeaf= (17, 0.68586640504840235, 'CabinNumbers', 9.5, 9.545454545454545) 	len(currentDF)= 20
-	len(ltDF)= 13 	len(gtDF)= 7
+index= 8 	currentLeaf= (8, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 6
+This is An End Node
+Decision already included from other daugther node
+
+
+index= 16 	currentLeaf= (16, 0.56482868465643388, 'CabinNumbers', 8.545454545454545, 9.545454545454545) 	len(currentDF)= 18
+	len(ltDF)= 7 	len(gtDF)= 11
 	LESS THAN
-	classVal= 0 	currWeight= 0.0105987048194
-	classVal= 1 	currWeight= 0.00120562589577
+	classVal= 0 	currWeight= 0.00557893472516
+	classVal= 1 	currWeight= 0.00306337238798
 	GREATER THAN
-	classVal= 0 	currWeight= 0.00409897892203
-	classVal= 1 	currWeight= 0.00420732560298
-	 (17, 0, 1, 0.010598704819427278, 0.0042073256029832437, 0.011804330715193257, 0.0083063045250182307)
+	classVal= 0 	currWeight= 0.00477244992579
+	classVal= 1 	currWeight= 0.0109492314628
+	 (16, 0, 1, 0.0055789347251599467, 0.010949231462807322, 0.0086423071131369565, 0.015721681388597652)
 
 
-index= 16 	currentLeaf= (16, 0.75046320130458333, 'TicketNumber', 236501.63636363635, 2021.909090909091) 	len(currentDF)= 32
-	len(ltDF)= 9 	len(gtDF)= 23
+index= 15 	currentLeaf= (15, 0.74179542851119873, 'TicketNumber', 45576.090909090912, 22786.545454545456) 	len(currentDF)= 178
+	len(ltDF)= 111 	len(gtDF)= 67
 	LESS THAN
-	classVal= 1 	currWeight= 0.0108347031331
+	classVal= 0 	currWeight= 0.00919011716393
+	classVal= 1 	currWeight= 0.0906275048422
 	GREATER THAN
-	classVal= 0 	currWeight= 0.00580269982052
-	classVal= 1 	currWeight= 0.0189815861936
-	 (16, 1, 1, 0.010834703133121033, 0.018981586193600599, 0.010834703133121033, 0.024784286014117661)
-
-
-index= 15 	currentLeaf= (15, 0.9243355221701528, 'CabinC', 0.0, 0.18181818181818182) 	len(currentDF)= 138
-	len(ltDF)= 111 	len(gtDF)= 27
-	LESS THAN
-	classVal= 0 	currWeight= 0.00240771180736
-	classVal= 1 	currWeight= 0.129410897284
-	GREATER THAN
-	classVal= 0 	currWeight= 0.00435202486539
-	classVal= 1 	currWeight= 0.0231203673433
-	 (15, 1, 1, 0.12941089728409966, 0.023120367343301064, 0.13181860909145987, 0.02747239220868886)
+	classVal= 0 	currWeight= 0.0183802343279
+	classVal= 1 	currWeight= 0.0511877573646
+	 (15, 1, 1, 0.090627504842175632, 0.051187757364562152, 0.099817622006106652, 0.069567991692424211)
 
 ##############
  Getting Tree Error
  ###################
 
-decisionTup= ('30', '0', 'nan', '0.00473720369876', 'nan', '0.00473720369876', 'nan')
-totalCorrWeight= 0 	float(decisionTup[3])= 0.00473720369876
-	totalCorrWeight= 0.00473720369876
+decisionTup= ('30', '0', '1', '0.00563151571118', '0.00628000105483', '0.00789145010444', '0.00852865201958')
+totalCorrWeight= 0 	float(decisionTup[3])= 0.00563151571118 	float(decisionTup[4])= 0.00628000105483
+	totalCorrWeight= 0.011911516766009999
 
-decisionTup= ('14', '1', '0', '0.0060192795184', '0.00473720369876', '0.00842699132576', '0.00473720369876')
-totalCorrWeight= 0.00473720369876 	float(decisionTup[3])= 0.0060192795184 	float(decisionTup[4])= 0.00473720369876
-	totalCorrWeight= 0.01549368691592
+decisionTup= ('29', '1', '1', '0.0103396608311', '0.00612674477595', '0.0111788043944', '0.00894250263154')
+totalCorrWeight= 0.011911516766009999 	float(decisionTup[3])= 0.0103396608311 	float(decisionTup[4])= 0.00612674477595
+	totalCorrWeight= 0.02837792237306
 
-decisionTup= ('13', 'nan', '1', 'nan', '0.00349563120762', 'nan', '0.00681238621007')
-totalCorrWeight= 0.01549368691592 	float(decisionTup[4])= 0.00349563120762
-	totalCorrWeight= 0.01898931812354
+decisionTup= ('28', '0', '0', '0.0286346573378', '0.0078243287427', '0.0479082163391', '0.0078243287427')
+totalCorrWeight= 0.02837792237306 	float(decisionTup[3])= 0.0286346573378 	float(decisionTup[4])= 0.0078243287427
+	totalCorrWeight= 0.06483690845356
 
-decisionTup= ('27', '0', '0', '0.412922574962', '0.00914614035621', '0.45144596388', '0.013836804571')
-totalCorrWeight= 0.01898931812354 	float(decisionTup[3])= 0.412922574962 	float(decisionTup[4])= 0.00914614035621
-	totalCorrWeight= 0.44105803344175
+decisionTup= ('27', '1', '1', '0.00428367543321', '0.0058086488802', '0.00746999771801', '0.0073626967924')
+totalCorrWeight= 0.06483690845356 	float(decisionTup[3])= 0.00428367543321 	float(decisionTup[4])= 0.0058086488802
+	totalCorrWeight= 0.07492923276697
 
-decisionTup= ('26', '0', '0', '0.00760702627017', '0.00399591007486', '0.0114656544271', '0.00399591007486')
-totalCorrWeight= 0.44105803344175 	float(decisionTup[3])= 0.00760702627017 	float(decisionTup[4])= 0.00399591007486
-	totalCorrWeight= 0.45266096978678
+decisionTup= ('5', 'nan', '1', 'nan', '0.0067956346356', 'nan', '0.0109149010405')
+totalCorrWeight= 0.07492923276697 	float(decisionTup[4])= 0.0067956346356
+	totalCorrWeight= 0.08172486740257
 
-decisionTup= ('25', '0', 'nan', '0.00399591007486', 'nan', '0.00399591007486', 'nan')
-totalCorrWeight= 0.45266096978678 	float(decisionTup[3])= 0.00399591007486
-	totalCorrWeight= 0.45665687986164
+decisionTup= ('24', '0', '0', '0.0201394455205', '0.0125871534503', '0.0201394455205', '0.0156505258383')
+totalCorrWeight= 0.08172486740257 	float(decisionTup[3])= 0.0201394455205 	float(decisionTup[4])= 0.0125871534503
+	totalCorrWeight= 0.11445146637337
 
-decisionTup= ('24', '1', '1', '0.0282125140677', '0.0270303444437', '0.0409390449979', '0.0495674713524')
-totalCorrWeight= 0.45665687986164 	float(decisionTup[3])= 0.0282125140677 	float(decisionTup[4])= 0.0270303444437
-	totalCorrWeight= 0.51189973837304
+decisionTup= ('23', '0', '0', '0.277764984451', '0.0176220148304', '0.403029683064', '0.0176220148304')
+totalCorrWeight= 0.11445146637337 	float(decisionTup[3])= 0.277764984451 	float(decisionTup[4])= 0.0176220148304
+	totalCorrWeight= 0.40983846565477
 
-decisionTup= ('23', '0', 'nan', '0.00344194070345', 'nan', '0.00344194070345', 'nan')
-totalCorrWeight= 0.51189973837304 	float(decisionTup[3])= 0.00344194070345
-	totalCorrWeight= 0.5153416790764901
+decisionTup= ('22', '0', '1', '0.00755229207018', '0.00903973757302', '0.00755229207018', '0.0170020326752')
+totalCorrWeight= 0.40983846565477 	float(decisionTup[3])= 0.00755229207018 	float(decisionTup[4])= 0.00903973757302
+	totalCorrWeight= 0.42643049529797
 
-decisionTup= ('22', '0', '0', '0.00618639759723', '0.00699833767993', '0.00618639759723', '0.0127967908108')
-totalCorrWeight= 0.5153416790764901 	float(decisionTup[3])= 0.00618639759723 	float(decisionTup[4])= 0.00699833767993
-	totalCorrWeight= 0.5285264143536501
+decisionTup= ('21', '0', 'nan', '0.0209785890838', 'nan', '0.0209785890838', 'nan')
+totalCorrWeight= 0.42643049529797 	float(decisionTup[3])= 0.0209785890838
+	totalCorrWeight= 0.44740908438177
 
-decisionTup= ('21', '0', 'nan', '0.0142711074102', 'nan', '0.0142711074102', 'nan')
-totalCorrWeight= 0.5285264143536501 	float(decisionTup[3])= 0.0142711074102
-	totalCorrWeight= 0.5427975217638501
+decisionTup= ('20', '1', 'nan', '0.00839143563353', 'nan', '0.00839143563353', 'nan')
+totalCorrWeight= 0.44740908438177 	float(decisionTup[3])= 0.00839143563353
+	totalCorrWeight= 0.4558005200153
 
-decisionTup= ('20', '1', 'nan', '0.00655380175629', 'nan', '0.00655380175629', 'nan')
-totalCorrWeight= 0.5427975217638501 	float(decisionTup[3])= 0.00655380175629
-	totalCorrWeight= 0.54935132352014
+decisionTup= ('19', '0', '1', '0.0816328911728', '0.0104949404727', '0.159985848727', '0.0128421191941')
+totalCorrWeight= 0.4558005200153 	float(decisionTup[3])= 0.0816328911728 	float(decisionTup[4])= 0.0104949404727
+	totalCorrWeight= 0.5479283516608
 
-decisionTup= ('19', '1', '1', '0.052553034429', '0.0239727513548', '0.099429499627', '0.0350881255671')
-totalCorrWeight= 0.54935132352014 	float(decisionTup[3])= 0.052553034429 	float(decisionTup[4])= 0.0239727513548
-	totalCorrWeight= 0.62587710930394
+decisionTup= ('8', '0', 'nan', '0.00503486138012', 'nan', '0.00503486138012', 'nan')
+totalCorrWeight= 0.5479283516608 	float(decisionTup[3])= 0.00503486138012
+	totalCorrWeight= 0.55296321304092
 
-decisionTup= ('18', '1', 'nan', '0.0119883702275', 'nan', '0.0119883702275', 'nan')
-totalCorrWeight= 0.62587710930394 	float(decisionTup[3])= 0.0119883702275
-	totalCorrWeight= 0.63786547953144
+decisionTup= ('16', '0', '1', '0.00557893472516', '0.0109492314628', '0.00864230711314', '0.0157216813886')
+totalCorrWeight= 0.55296321304092 	float(decisionTup[3])= 0.00557893472516 	float(decisionTup[4])= 0.0109492314628
+	totalCorrWeight= 0.56949137922888
 
-decisionTup= ('17', '0', '1', '0.0105987048194', '0.00420732560298', '0.0118043307152', '0.00830630452502')
-totalCorrWeight= 0.63786547953144 	float(decisionTup[3])= 0.0105987048194 	float(decisionTup[4])= 0.00420732560298
-	totalCorrWeight= 0.6526715099538201
-
-decisionTup= ('16', '1', '1', '0.0108347031331', '0.0189815861936', '0.0108347031331', '0.0247842860141')
-totalCorrWeight= 0.6526715099538201 	float(decisionTup[3])= 0.0108347031331 	float(decisionTup[4])= 0.0189815861936
-	totalCorrWeight= 0.6824877992805201
-
-decisionTup= ('15', '1', '1', '0.129410897284', '0.0231203673433', '0.131818609091', '0.0274723922087')
-totalCorrWeight= 0.6824877992805201 	float(decisionTup[3])= 0.129410897284 	float(decisionTup[4])= 0.0231203673433
-	totalCorrWeight= 0.8350190639078201
-totalCorrWeight= 0.8350190639078201 	otherSum= 1.0047372036981597 	sumDFWeights= 1.0 	error= 0.164980936092
-error= 0.1649809360921798 	alpha= 0.1801925350591956 	CorrectFactor= 0.8351094080923086 	IncorrectFactor= 1.1974478916293867
-BEFORE: df_weights['Weights'].unique()= [ 0.00120386  0.00099903  0.0014515   0.00057084  0.00120454  0.00099886
-  0.00120317  0.00099919  0.00174782  0.00174811  0.00144961  0.00099829
-  0.00120209  0.00082831  0.00082905  0.00145174  0.00068738  0.000688
-  0.00068839  0.00047372  0.00082919  0.00145044  0.00174968  0.00145092
-  0.00144937  0.00099976  0.00082966  0.00068788  0.00145067  0.00174939
-  0.00099846  0.00144855  0.0009974   0.00120494  0.00120563  0.00210651
-  0.00120583  0.00120189  0.0010005   0.00099993  0.0021084   0.00082844
-  0.00145305]
-After: df_weights['Weights'].unique()= [ 0.00120386  0.0008343   0.0014515   0.00047672  0.00120454  0.00099886
-  0.00120317  0.00099919  0.00145962  0.00083416  0.00174811  0.00173584
-  0.00119541  0.00120209  0.00099185  0.00099275  0.00145174  0.00068738
-  0.00082384  0.00082831  0.00057488  0.00033038  0.00099291  0.00145044
-  0.00144238  0.00146117  0.00145092  0.00121038  0.0008231   0.00083491
-  0.00069286  0.00082919  0.00068788  0.00173711  0.00146093  0.00099846
-  0.00173456  0.00121237  0.00082905  0.0017374   0.00174939  0.0009974
-  0.000688    0.00120494  0.00120563  0.00100535  0.00175917  0.00144073
-  0.001007    0.00082966  0.0014392   0.00100593  0.00083553  0.00144285
-  0.00099903  0.00119736  0.00176075  0.00099202  0.00121059  0.00057455
-  0.00145305  0.00210651]
-	len('Weights' == 0.00120385590368 )= 500
-	len('Weights' == 0.000834300063726 )= 53
-	len('Weights' == 0.00145150307208 )= 3
-	len('Weights' == 0.000476717442486 )= 45
-	len('Weights' == 0.00120454312412 )= 15
-	len('Weights' == 0.000998864639783 )= 24
-	len('Weights' == 0.00120316907532 )= 20
-	len('Weights' == 0.000999192137457 )= 8
-	len('Weights' == 0.00145961725435 )= 4
-	len('Weights' == 0.000834161258094 )= 27
-	len('Weights' == 0.00174810644284 )= 8
-	len('Weights' == 0.00173583636907 )= 4
-	len('Weights' == 0.00119540596014 )= 3
-	len('Weights' == 0.00120208851014 )= 1
-	len('Weights' == 0.000991853543367 )= 4
-	len('Weights' == 0.000992745126967 )= 8
-	len('Weights' == 0.00145174460428 )= 3
-	len('Weights' == 0.000687377510804 )= 10
-	len('Weights' == 0.000823838639885 )= 4
-	len('Weights' == 0.000828306225516 )= 4
-	len('Weights' == 0.000574879412709 )= 7
-	len('Weights' == 0.000330376244723 )= 10
-	len('Weights' == 0.000992910321183 )= 7
-	len('Weights' == 0.00145044079361 )= 7
-	len('Weights' == 0.00144237762435 )= 1
-	len('Weights' == 0.00146117241453 )= 3
-	len('Weights' == 0.00145091634953 )= 9
-	len('Weights' == 0.00121038428081 )= 1
-	len('Weights' == 0.000823098751065 )= 7
-	len('Weights' == 0.000834911091073 )= 7
-	len('Weights' == 0.000692858619005 )= 1
-	len('Weights' == 0.000829188750612 )= 1
-	len('Weights' == 0.000687880934542 )= 8
-	len('Weights' == 0.00173710766646 )= 7
-	len('Weights' == 0.0014609293138 )= 4
-	len('Weights' == 0.000998460881485 )= 6
-	len('Weights' == 0.00173455740038 )= 2
-	len('Weights' == 0.00121236557718 )= 4
-	len('Weights' == 0.000829050795368 )= 7
-	len('Weights' == 0.00173739672367 )= 6
-	len('Weights' == 0.00174938672662 )= 1
-	len('Weights' == 0.000997398196077 )= 5
-	len('Weights' == 0.000687995398918 )= 4
-	len('Weights' == 0.00120493805758 )= 1
-	len('Weights' == 0.00120562589577 )= 4
-	len('Weights' == 0.00100535139115 )= 1
-	len('Weights' == 0.00175916613601 )= 1
-	len('Weights' == 0.00144073227251 )= 1
-	len('Weights' == 0.00100699706607 )= 1
-	len('Weights' == 0.000829662092525 )= 1
-	len('Weights' == 0.00143919886726 )= 1
-	len('Weights' == 0.0010059252954 )= 1
-	len('Weights' == 0.000835526709295 )= 3
-	len('Weights' == 0.00144285053659 )= 2
-	len('Weights' == 0.000999030852295 )= 1
-	len('Weights' == 0.00119736273827 )= 1
-	len('Weights' == 0.00176074746189 )= 2
-	len('Weights' == 0.000992018589222 )= 1
-	len('Weights' == 0.00121058569049 )= 1
-	len('Weights' == 0.000574551430361 )= 3
-	len('Weights' == 0.00145304958694 )= 1
-	len('Weights' == 0.00210650978059 )= 1
+decisionTup= ('15', '1', '1', '0.0906275048422', '0.0511877573646', '0.0998176220061', '0.0695679916924')
+totalCorrWeight= 0.56949137922888 	float(decisionTup[3])= 0.0906275048422 	float(decisionTup[4])= 0.0511877573646
+	totalCorrWeight= 0.7113066414356801
+totalCorrWeight= 0.7113066414356801 	sumWeights= 1.00000000000004 	error= 0.2886933585643483
+error= 0.2886933585643483 	alpha= 0.12423901972042928 	CorrectFactor= 0.8831687209120735 	IncorrectFactor= 1.1322864774550343
+WEIGHT NOT CHANGED.
+BEFORE: df_weights['Weights'].unique()= [ 0.00083914  0.00219038  0.00165414  0.00155405  0.00306337  0.00150622
+  0.00113747  0.0023134   0.00225993  0.00159082  0.00111118  0.00117359
+  0.00210653  0.00161591  0.00170666  0.0012203 ]
+After: df_weights['Weights'].unique()= [ 0.00074111  0.00193448  0.00187296  0.00095015  0.00137249  0.00346862
+  0.00133025  0.00128794  0.00261944  0.0019959   0.00140496  0.00098136
+  0.00103648  0.00186042  0.00182967  0.0023852   0.00150727  0.00107773
+  0.00270547  0.00142712  0.00248014  0.00193243  0.00180126  0.00125817
+  0.00132884  0.00138173  0.00100458  0.00170547  0.00255889  0.00204313
+  0.00146088  0.00175963]
+	len('Weights' == 0.000741105347508 )= 614
+	len('Weights' == 0.00193447702759 )= 6
+	len('Weights' == 0.0018729577367 )= 12
+	len('Weights' == 0.000950150909429 )= 20
+	len('Weights' == 0.00137248650685 )= 14
+	len('Weights' == 0.00346861513032 )= 43
+	len('Weights' == 0.00133024657481 )= 3
+	len('Weights' == 0.00128794272482 )= 39
+	len('Weights' == 0.00261943649319 )= 4
+	len('Weights' == 0.00199590336744 )= 17
+	len('Weights' == 0.00140495949886 )= 5
+	len('Weights' == 0.000981359627619 )= 12
+	len('Weights' == 0.00103647741459 )= 18
+	len('Weights' == 0.00186042447981 )= 3
+	len('Weights' == 0.00182966784709 )= 3
+	len('Weights' == 0.00238519937463 )= 7
+	len('Weights' == 0.00150727074672 )= 6
+	len('Weights' == 0.00107773347959 )= 12
+	len('Weights' == 0.00270547467357 )= 5
+	len('Weights' == 0.00142711711601 )= 9
+	len('Weights' == 0.00248014012206 )= 6
+	len('Weights' == 0.00193243062617 )= 6
+	len('Weights' == 0.00180126017177 )= 3
+	len('Weights' == 0.00125817435509 )= 1
+	len('Weights' == 0.00132883936323 )= 5
+	len('Weights' == 0.00138173263652 )= 3
+	len('Weights' == 0.0010045785687 )= 6
+	len('Weights' == 0.00170547277397 )= 3
+	len('Weights' == 0.00255889315342 )= 1
+	len('Weights' == 0.00204312638476 )= 2
+	len('Weights' == 0.00146088266669 )= 2
+	len('Weights' == 0.0017596274363 )= 1
 
 
 ###############################################################
-FINAL SCORE FOR TREE # 1 is 0.1649809360921798 
+FINAL SCORE FOR TREE # 1 is 0.2886933585643483 
 ###############################################################
