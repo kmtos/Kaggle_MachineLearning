@@ -34,10 +34,8 @@ def GetBoostingTreesErrorsAndWeights(df, nEstimators, rateOfChange, df_weights, 
       print ("#############################################\n#############################################\n  STARTING ESTIMATOR", currEst, "\n#############################################\n#############################################")
       MakeTree(df=dfCurr, df_weights=dfCurr_weights, **paramDict) # Make the Tree for currEst
       treeError.append( (currEst, GetTreeError(df=dfCurr, className=paramDict['className'], df_weights=dfCurr_weights, #Getting error for MakeTree currEst
-                                               idColumn=paramDict['idColumn'], nodeDecisionsFileName=paramDict['nodeDecisionsFileName'] ) 
-      dfCurr_weights = AlterWeights(df=dfCurr, df_weights=dfCurr_weights, error=treeError[nEstimators-currEst][1], rateOfChange=rateOfChange, idColumn=paramDict['idColumn'],  # Altering weights based
-                                    className=paramDict['className'], nodeDecisionsFileName=paramDict['nodeDecisionsFileName'], nodeDFIDsFileName=paramDict['nodeDFIDsFileName'], #on if correctly ID'd
-                                    nodeValuesFileName=paramDict['nodeValuesFileName']) 
+                                               idColumn=paramDict['idColumn'], nodeDecisionsFileName=paramDict['nodeDecisionsFileName'] ) ) )
+      dfCurr_weights = AlterWeights(df=dfCurr, df_weights=dfCurr_weights, error=treeError[nEstimators-currEst][1], rateOfChange=rateOfChange, idColumn=paramDict['idColumn'],  className=paramDict['className'], nodeDecisionsFileName=paramDict['nodeDecisionsFileName'], nodeDFIDsFileName=paramDict['nodeDFIDsFileName'],  nodeValuesFileName=paramDict['nodeValuesFileName']) 
 
       print ("BEFORE: df_weights['Weights'].unique()=", df_weights['Weights'].unique() )
       IDs = dfCurr_weights[paramDict['idColumn']].tolist()  # Getting list of IDs of data points included from rowRandomness
@@ -150,22 +148,22 @@ def AlterWeights(df, df_weights, error, idColumn, rateOfChange, className, nodeD
 # the probability of point based on correctness. Should work 
 # With >= 2 different classes, but haven't tested yet.
 #############################################################
-def CalssifyWithBoost(df_test, nEstimators, idColumn, className, treeErrorFileName, nodeValuesFileName, nodeDecisionsFileName, nodeDFIDsFileName, boostAnswersFileName):
+def CalssifyWithBoost(df_test, nEstimators, maxDepth, idColumn, className, uniqueClasses, treeErrorFileName, nodeValuesFileName, nodeDecisionsFileName, nodeDFIDsFileName, boostAnswersFileName):
   print ("\n\n########################################################################\n Classifying Boosted Tree\n######################################################################")
   df_Answers = df_test.filter([idColumn], axis=1)
   df_Answers[className + "_total"] = 0.0 # Total sum of the alphas over the nEstimator trees
-  for classVal in df[className].unique(): 
-    df_Answers[className + "_" + classVal] = 0.0 # Create new column for sum of alpha's for each unique className value
+  for classVal in uniqueClasses: 
+    df_Answers[className + "_" + str(classVal)] = 0.0 # Create new column for sum of alpha's for each unique className value
   with open(treeErrorFileName + ".csv") as treeErrorFile: 
     treeErrorFileReader = csv.reader(treeErrorFile)
     next(treeErrorFileReader)
     treeError = [tuple(line) for line in treeErrorFileReader]
+  currEst = 1
   while currEst <= nEstimators: # Loop over the nEstimators number of trees in boost
+    print ("currEst=", currEst)
     nodeValuesFileName =  nodeValuesFileName[:-1] + str(currEst)
     nodeDecisionsFileName =  nodeDecisionsFileName[:-1] + str(currEst)
     nodeDFIDsFileName = nodeDFIDsFileName[:-1] + str(currEst)
-    currErrorTup = next(iteTup for iteTup in nodeDecisions if int(iteTup[0]) == currEst)
-    alpha = math.log1p((1 - error) / error) # exponent factor for weight of decision 
     with open(nodeDecisionsFileName + ".csv") as nodeDecisionsFile:
       nodeDecisionsFileReader = csv.reader(nodeDecisionsFile)
       next(nodeDecisionsFileReader)
@@ -178,7 +176,10 @@ def CalssifyWithBoost(df_test, nEstimators, idColumn, className, treeErrorFileNa
       nodeDFIDsFileReader = csv.reader(nodeDFIDsFile)
       next(nodeDFIDsFileReader)
 
-
+    print 
+    currErrorTup = next(iteTup for iteTup in treeError if int(iteTup[0]) == currEst)
+    alpha = math.log1p((1 - float(currErrorTup[1]) ) / float(currErrorTup[1]) ) # exponent factor for weight of decision 
+    df_Answers[className + "_total"] += alpha
     dfIDList = [ (0, df_test[idColumn].tolist()) ] # List of node population of df_test based on the MakeTree nodeDecisions
     maxNodeCount = 0
     for i in range(1,maxDepth+1): maxNodeCount += 2**i # Get the max number of nodes based upon maxDepth
@@ -186,14 +187,16 @@ def CalssifyWithBoost(df_test, nEstimators, idColumn, className, treeErrorFileNa
       nodeValueTup = (int(ite[0]),  float(ite[1]), ite[2], float(ite[3]), float(ite[4]) ) # The File stores all info as strings. Cleaner to reassing type now instead of every instance.
       print ("\n\tnodeValueTup=", nodeValueTup )
       dfCurr = df_test.loc[df_test[idColumn].isin(dfIDList[nodeValueTup[0]][1])] #Get the population of df_test at current node
+
       if pd.isnull(nodeValueTup[3]) and pd.isnull(nodeValueTup[4]) and nodeValueTup[2] == '' and pd.isnull(nodeValueTup[1]): # Check if node is a BlankNode
         print ("\tdf=", dfIDList[nodeValueTup[0]][1])
-        continue
+        if nodeValueTup[0] < maxNodeCount / 2: # If node is not at the maxDepth, then make blank placeholders for daughters in the iteration
+          dfIDList.append( (nodeValueTup[0]*2 + 1, [] ) )
+          dfIDList.append( (nodeValueTup[0]*2 + 2, [] ) )
       elif nodeValueTup[2] == 'ThisIsAnEndNode' and pd.isnull(nodeValueTup[3]) and pd.isnull(nodeValueTup[4]) and nodeValueTup[1] == 1.0: #Check if node is an EndNode
         decision = next(iteTup for iteTup in nodeDecisions if int(iteTup[0]) == nodeValueTup[0]) # Get decision of the EndNode
         IDs = dfCurr[idColumn].tolist() #Get the elements of df_test at this node
-        df_Answers[ df_Answers[idColumn].isin(IDs) ][className + "_" + decision[1]] += alpha #Apply the decision from the MakeTree to all df_test elements at present node
-        df_answers[className + "_total"] += alpha
+        df_Answers.loc[ df_Answers[idColumn].isin(IDs), className + "_" + str(decision[1])] += alpha #Apply the decision from the MakeTree to all df_test elements at present node
         print ("\tdecision=", decision[1], "\talpha=", alpha ) 
         if nodeValueTup[0] < maxNodeCount / 2: # If node is not at the maxDepth, then make blank placeholders for daughters in the iteration
           dfIDList.append( (nodeValueTup[0]*2 + 1, [] ) )
@@ -202,17 +205,38 @@ def CalssifyWithBoost(df_test, nEstimators, idColumn, className, treeErrorFileNa
         print ("\tlen(lt)=", len(dfCurr[ dfCurr[nodeValueTup[2]] <= nodeValueTup[3] ]), "\tlen(gt)=", len(dfCurr[ dfCurr[nodeValueTup[2]] > nodeValueTup[3] ]) )
         dfIDList.append( (nodeValueTup[0]*2 + 1, dfCurr[ dfCurr[nodeValueTup[2]] <= nodeValueTup[3] ][idColumn].tolist() ) ) # Add the LT group of df_test elements as daughter of node
         dfIDList.append( (nodeValueTup[0]*2 + 2, dfCurr[ dfCurr[nodeValueTup[2]] > nodeValueTup[3] ][idColumn].tolist() ) )  # ADd the GT group of df_test elements as daughter of node
-      else: # If node is not a BlankNode, EndNode, and is at the maxDepth of tree, then proceed
+        print ("\tnodeValueTup[0]*2 + 1=", nodeValueTup[0]*2 + 1, "\n\tltDFIiDs=", len(dfCurr[ dfCurr[nodeValueTup[2]] <= nodeValueTup[3] ][idColumn].tolist()) )
+        print ("\tgtDFIDs=", len(dfCurr[ dfCurr[nodeValueTup[2]] > nodeValueTup[3] ][idColumn].tolist()) )
+        try:  # This sees if the decision of a node is already added. From a sister BlankNode
+          decision = next (itetup for itetup in nodeDecisions if int(itetup[0]) == nodeValueTup[0])
+          print ("\tOne of this Node's Daughters is a BlankNode.")
+          if pd.isnull(float(decision[2]) ) and not pd.isnull(float(decision[1]) ):
+            ltIDs = dfCurr[ dfCurr[nodeValueTup[2]] <= nodeValueTup[3] ][idColumn].tolist() # Get the df_test ID's in the daughter LT leaf of current Node
+            df_Answers.loc[ df_Answers[idColumn].isin(ltIDs) , className + "_" + str(decision[1])] += alpha # Apply decision to LT group
+            print ("\tClass for LT=", decision[1], "\tlen(ltIDs)=",  len(ltIDs) )
+          elif not pd.isnull(float(decision[2]) ) and pd.isnull(float(decision[1]) ):
+            gtIDs = dfCurr[ dfCurr[nodeValueTup[2]] > nodeValueTup[3] ][idColumn].tolist() # Get the df_test ID's in the daughter LT leaf of current Node
+            df_Answers.loc[ df_Answers[idColumn].isin(gtIDs) , className + "_" + str(decision[2])] += alpha # Apply decision to LT group
+            print ("\tClass for GT=", decision[2], "\tlen(gtIDs)=",  len(gtIDs) )
+          else:
+            ltIDs = dfCurr[ dfCurr[nodeValueTup[2]] <= nodeValueTup[3] ][idColumn].tolist() # Get the df_test ID's in the daughter LT leaf of current Node
+            gtIDs = dfCurr[ dfCurr[nodeValueTup[2]] > nodeValueTup[3] ][idColumn].tolist() # Get the df_test ID's in the daughter LT leaf of current Node
+            df_Answers.loc[ df_Answers[idColumn].isin(ltIDs) , className + "_" + str(decision[1])] += alpha # Apply decision to LT group
+            df_Answers.loc[ df_Answers[idColumn].isin(gtIDs) , className + "_" + str(decision[2])] += alpha # Apply decision to LT group
+            print ("\tClass for LT=", decision[1], "\tlen(ltIDs)=",  len(ltIDs), "\tClass for GT=", decision[2], "\tlen(gtIDs)=",  len(gtIDs) )
+        except StopIteration:  
+          print ("Non of this node's daughters are Blank Nodes")
+      else: # If node is not a BlankNode, EndNode, and is at the maxDepth of tree, theni proceed
         decision = next(iteTup for iteTup in nodeDecisions if int(iteTup[0]) == nodeValueTup[0]) # Get decision of node for the LT and GT groups
         ltIDs = dfCurr[ dfCurr[nodeValueTup[2]] <= nodeValueTup[3] ][idColumn].tolist() # Get the df_test ID's that are LT of cut of final node
         gtIDs = dfCurr[ dfCurr[nodeValueTup[2]] >  nodeValueTup[3] ][idColumn].tolist() # Get the df_test ID's that are GT of cur of final node
-        df_Answers[ df_Answers[idColumn].isin(ltIDs) ][className + "_" + decision[1]] += alpha # Apply the decisions of LT group from nodeDecisions to LT group of df_test elements
-        df_Answers[ df_Answers[idColumn].isin(gtIDs) ][className + "_" + decision[2]] += alpha # Apply the decisions of GT group from nodeDecisions to GT group of df_test elements
-        df_Answers[className + "_total"] += alpha
+        df_Answers.loc[ df_Answers[idColumn].isin(ltIDs), className + "_" + decision[1]] += alpha # Apply the decisions of LT group from nodeDecisions to LT group of df_test elements
+        df_Answers.loc[ df_Answers[idColumn].isin(gtIDs), className + "_" + decision[2]] += alpha # Apply the decisions of GT group from nodeDecisions to GT group of df_test elements
         print ("\tClass for LT=", decision[1], "\tlen(ltIDs)=",  len(ltIDs), "\tClass for GT=", decision[1], "\tlen(gtIDs)=",  len(gtIDs) )
         del ltIDs, gtIDs, decision # Delete holders to preserve memory, if not already deleted by python
       del dfCurr 
-     
+
+    currEst += 1     
     nodeDecisionsFile.close()
     del nodeDecisionsFileReader
     nodeValuesFile.close()
@@ -220,11 +244,20 @@ def CalssifyWithBoost(df_test, nEstimators, idColumn, className, treeErrorFileNa
 
   df_Answers[className] = -1
   df_Answers[className + "_probability"] = -1
-  for classVal in df[className].unique():
-    df_Answers[className + "_" + classVal] = df_Answers[className + "_" + classVal] / df_Answers[className + "_total"] # Normalizing sums to total, to make a probability
-    df_Answers[df_Answers[className + "_" + classVal] > df_Answers[className]] = classVal # if current classVal prob is greater, reassign answer to the classVal
-    df_Answers[df_Answers[className] == classVal][className + "_probability"] = df_Answers[className + "_" + classVal] # If current classVal prob got changed, reassign probab
-  df_Answers.to_csv(boostAnswersFileName + ".csv", sep=',', index=False) #Write out the answers
+  print (df_Answers )
+  for classVal in uniqueClasses:
+    df_Answers[className + "_" + str(classVal)] = df_Answers[className + "_" + str(classVal)] / df_Answers[className + "_total"] # Normalizing sums to total, to make a probability
+    print ("\n\n\n\n", df_Answers.head(10) )
+    df_Answers.loc[ df_Answers[className + "_" + str(classVal)] > df_Answers[className], className] = classVal # if current classVal prob is greater, reassign answer to the classVal
+    df_Answers.loc[ df_Answers[className] == classVal, className + "_probability"] = df_Answers[className + "_" + str(classVal)] # If current classVal prob got changed, reassign probab
+  df_Answers.to_csv(boostAnswersFileName + "_Prob_Frac_ExtraInfo.csv", sep=',', index=False) #Write out the answers with all answer information
+  df_Answers[[idColumn, className]].to_csv(boostAnswersFileName + ".csv", sep=',', index=False) #Write out the answers
+
+
+
+
+
+
 
 
 

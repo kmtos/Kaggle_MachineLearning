@@ -6,1874 +6,1647 @@ Cabin is split into several yes/no ( 1/-1 ) columns for every letter it starts w
 TicketBeginLetter map(Ticket): 1 if Letter is in name, 0 if no letter in name.
 FamilySize = SibSp + Parch
 giniEndVal= 1.122334455667789e-05
-#############################################
-#############################################
-  STARTING ESTIMATOR 5 
-#############################################
-#############################################
-
-
-###################################
- Making a Decision Tree
-###################################
-
-node= 1 parentNode= 0 	parentTup= (0, 0.66965708972763238, 'YesMr', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 891
-len(dfCurr)= 374 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (1, 0.65780919741946875, 'FamilySize', 4.5, 0.90909090909090906) 	len(nodeDFIds[ 1 ][1])= 374
-len(lessThan)= 323 	len(greaterThan)= 51
-
-node= 2 parentNode= 0 	parentTup= (0, 0.66965708972763238, 'YesMr', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 891
-len(dfCurr)= 517 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (2, 0.75441525625871053, 'Pclass', 1.5, 0.18181818181818182) 	len(nodeDFIds[ 2 ][1])= 517
-len(lessThan)= 107 	len(greaterThan)= 410
-
-node= 3 parentNode= 1 	parentTup= (1, 0.65780919741946875, 'FamilySize', 4.5, 0.90909090909090906) 	len(parentDFIDs)= 374
-len(dfCurr)= 323 	parentTup[3]= 4.5
-######## NEW ########: nodeValues[nodeCount]= (3, 0.6847090265861836, 'Pclass', 2.5, 0.18181818181818182) 	len(nodeDFIds[ 3 ][1])= 323
-len(lessThan)= 196 	len(greaterThan)= 127
-
-node= 4 parentNode= 1 	parentTup= (1, 0.65780919741946875, 'FamilySize', 4.5, 0.90909090909090906) 	len(parentDFIDs)= 374
-len(dfCurr)= 51 	parentTup[3]= 4.5
-######## NEW ########: nodeValues[nodeCount]= (4, 0.85708061002178648, 'Pclass', 2.5, 0.18181818181818182) 	len(nodeDFIds[ 4 ][1])= 51
-len(lessThan)= 6 	len(greaterThan)= 45
-
-node= 5 parentNode= 2 	parentTup= (2, 0.75441525625871053, 'Pclass', 1.5, 0.18181818181818182) 	len(parentDFIDs)= 517
-len(dfCurr)= 107 	parentTup[3]= 1.5
-######## NEW ########: nodeValues[nodeCount]= (5, 0.57575160454903695, 'AgeGroup', 0.75, 0.13636363636363635) 	len(nodeDFIds[ 5 ][1])= 107
-len(lessThan)= 83 	len(greaterThan)= 24
-
-node= 6 parentNode= 2 	parentTup= (2, 0.75441525625871053, 'Pclass', 1.5, 0.18181818181818182) 	len(parentDFIDs)= 517
-len(dfCurr)= 410 	parentTup[3]= 1.5
-######## NEW ########: nodeValues[nodeCount]= (6, 0.81417044572455766, 'nTicketStrings', 2.5, 0.18181818181818182) 	len(nodeDFIds[ 6 ][1])= 410
-len(lessThan)= 398 	len(greaterThan)= 12
-
-node= 7 parentNode= 3 	parentTup= (3, 0.6847090265861836, 'Pclass', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 323
-len(dfCurr)= 196 	parentTup[3]= 2.5
-######## NEW ########: nodeValues[nodeCount]= (7, 0.83372717508055871, 'YesRev', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 7 ][1])= 196
-len(lessThan)= 190 	len(greaterThan)= 6
-
-node= 8 parentNode= 3 	parentTup= (3, 0.6847090265861836, 'Pclass', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 323
-len(dfCurr)= 127 	parentTup[3]= 2.5
-######## NEW ########: nodeValues[nodeCount]= (8, 0.55595462847845778, 'AgeGroup', -0.75, 0.18181818181818182) 	len(nodeDFIds[ 8 ][1])= 127
-len(lessThan)= 19 	len(greaterThan)= 108
-
-node= 9 parentNode= 4 	parentTup= (4, 0.85708061002178648, 'Pclass', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 51
-len(dfCurr)= 6 	parentTup[3]= 2.5
-*****************END NODE
-######## NEW ########: nodeValues[nodeCount]= (9, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[ 9 ][1])= 6
-
-node= 10 parentNode= 4 	parentTup= (4, 0.85708061002178648, 'Pclass', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 51
-len(dfCurr)= 45 	parentTup[3]= 2.5
-######## NEW ########: nodeValues[nodeCount]= (10, 0.85777777777777775, 'FamilySize', 6.5, 0.54545454545454541) 	len(nodeDFIds[ 10 ][1])= 45
-len(lessThan)= 25 	len(greaterThan)= 20
-
-node= 11 parentNode= 5 	parentTup= (5, 0.57575160454903695, 'AgeGroup', 0.75, 0.13636363636363635) 	len(parentDFIDs)= 107
-len(dfCurr)= 83 	parentTup[3]= 0.75
-######## NEW ########: nodeValues[nodeCount]= (11, 0.53942894867139779, 'CabinE', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 11 ][1])= 83
-len(lessThan)= 73 	len(greaterThan)= 10
-
-node= 12 parentNode= 5 	parentTup= (5, 0.57575160454903695, 'AgeGroup', 0.75, 0.13636363636363635) 	len(parentDFIDs)= 107
-len(dfCurr)= 24 	parentTup[3]= 0.75
-######## NEW ########: nodeValues[nodeCount]= (12, 0.79411764705882359, 'CabinNumbers', 7.0, 8.0) 	len(nodeDFIds[ 12 ][1])= 24
-len(lessThan)= 7 	len(greaterThan)= 17
-
-node= 13 parentNode= 6 	parentTup= (6, 0.81417044572455766, 'nTicketStrings', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 410
-len(dfCurr)= 398 	parentTup[3]= 2.5
-######## NEW ########: nodeValues[nodeCount]= (13, 0.82665682899599124, 'Fare', 0.25, 0.13636363636363635) 	len(nodeDFIds[ 13 ][1])= 398
-len(lessThan)= 381 	len(greaterThan)= 17
-
-node= 14 parentNode= 6 	parentTup= (6, 0.81417044572455766, 'nTicketStrings', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 410
-len(dfCurr)= 12 	parentTup[3]= 2.5
-######## NEW ########: nodeValues[nodeCount]= (14, 0.580952380952381, 'TicketNumber', 23101280.363636363, 2.2727272727272729) 	len(nodeDFIds[ 14 ][1])= 12
-len(lessThan)= 5 	len(greaterThan)= 7
-
-node= 15 parentNode= 7 	parentTup= (7, 0.83372717508055871, 'YesRev', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 196
-len(dfCurr)= 190 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (15, 0.86285189718482269, 'YesFancy', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 15 ][1])= 190
-len(lessThan)= 172 	len(greaterThan)= 18
-
-node= 16 parentNode= 7 	parentTup= (7, 0.83372717508055871, 'YesRev', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 196
-len(dfCurr)= 6 	parentTup[3]= 0.0
-*****************END NODE
-######## NEW ########: nodeValues[nodeCount]= (16, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[ 16 ][1])= 6
-
-node= 17 parentNode= 8 	parentTup= (8, 0.55595462847845778, 'AgeGroup', -0.75, 0.18181818181818182) 	len(parentDFIDs)= 127
-len(dfCurr)= 19 	parentTup[3]= -0.75
-######## NEW ########: nodeValues[nodeCount]= (17, 0.82456140350877205, 'Gender', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 17 ][1])= 19
-len(lessThan)= 12 	len(greaterThan)= 7
-
-node= 18 parentNode= 8 	parentTup= (8, 0.55595462847845778, 'AgeGroup', -0.75, 0.18181818181818182) 	len(parentDFIDs)= 127
-len(dfCurr)= 108 	parentTup[3]= -0.75
-######## NEW ########: nodeValues[nodeCount]= (18, 0.54606735856735855, 'EmbarkIsS', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 18 ][1])= 108
-len(lessThan)= 52 	len(greaterThan)= 56
-
-node= 19 parentNode= 9 	parentTup= (9, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(parentDFIDs)= 6
-
-node= 20 parentNode= 9 	parentTup= (9, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(parentDFIDs)= 6
-
-node= 21 parentNode= 10 	parentTup= (10, 0.85777777777777775, 'FamilySize', 6.5, 0.54545454545454541) 	len(parentDFIDs)= 45
-len(dfCurr)= 25 	parentTup[3]= 6.5
-*****************END NODE
-######## NEW ########: nodeValues[nodeCount]= (21, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[ 21 ][1])= 25
-
-node= 22 parentNode= 10 	parentTup= (10, 0.85777777777777775, 'FamilySize', 6.5, 0.54545454545454541) 	len(parentDFIDs)= 45
-len(dfCurr)= 20 	parentTup[3]= 6.5
-######## NEW ########: nodeValues[nodeCount]= (22, 0.74545454545454548, 'TicketBeginLetter', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 22 ][1])= 20
-len(lessThan)= 11 	len(greaterThan)= 9
-
-node= 23 parentNode= 11 	parentTup= (11, 0.53942894867139779, 'CabinE', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 83
-len(dfCurr)= 73 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (23, 0.5539887187751813, 'Fare', -0.5, 0.18181818181818182) 	len(nodeDFIds[ 23 ][1])= 73
-len(lessThan)= 5 	len(greaterThan)= 68
-
-node= 24 parentNode= 11 	parentTup= (11, 0.53942894867139779, 'CabinE', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 83
-len(dfCurr)= 10 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (24, 0.60000000000000009, 'TicketBeginLetter', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 24 ][1])= 10
-len(lessThan)= 5 	len(greaterThan)= 5
-
-node= 25 parentNode= 12 	parentTup= (12, 0.79411764705882359, 'CabinNumbers', 7.0, 8.0) 	len(parentDFIDs)= 24
-len(dfCurr)= 7 	parentTup[3]= 7.0
-*****************END NODE
-######## NEW ########: nodeValues[nodeCount]= (25, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[ 25 ][1])= 7
-
-node= 26 parentNode= 12 	parentTup= (12, 0.79411764705882359, 'CabinNumbers', 7.0, 8.0) 	len(parentDFIDs)= 24
-len(dfCurr)= 17 	parentTup[3]= 7.0
-######## NEW ########: nodeValues[nodeCount]= (26, 0.75294117647058811, 'CabinNumbers', 42.454545454545453, 6.3636363636363633) 	len(nodeDFIds[ 26 ][1])= 17
-len(lessThan)= 10 	len(greaterThan)= 7
-
-node= 27 parentNode= 13 	parentTup= (13, 0.82665682899599124, 'Fare', 0.25, 0.13636363636363635) 	len(parentDFIDs)= 398
-len(dfCurr)= 381 	parentTup[3]= 0.25
-######## NEW ########: nodeValues[nodeCount]= (27, 0.83935608048993893, 'CabinNumbers', 6.0, 6.7272727272727275) 	len(nodeDFIds[ 27 ][1])= 381
-len(lessThan)= 375 	len(greaterThan)= 6
-
-node= 28 parentNode= 13 	parentTup= (13, 0.82665682899599124, 'Fare', 0.25, 0.13636363636363635) 	len(parentDFIDs)= 398
-len(dfCurr)= 17 	parentTup[3]= 0.25
-######## NEW ########: nodeValues[nodeCount]= (28, 0.83193277310924363, 'TicketBeginLetter', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 28 ][1])= 17
-len(lessThan)= 7 	len(greaterThan)= 10
-
-node= 29 parentNode= 14 	parentTup= (14, 0.580952380952381, 'TicketNumber', 23101280.363636363, 2.2727272727272729) 	len(parentDFIDs)= 12
-len(dfCurr)= 5 	parentTup[3]= 23101280.3636
-Less that Min gini improvement: bestGiniSplit[1]= -1 	giniEndVal= 1.122334455667789e-05
-######## NEW ########: nodeValues[nodeCount]= (29, nan, '', nan, nan) 	len(nodeDFIds[ 29 ][1])= 5
-
-node= 30 parentNode= 14 	parentTup= (14, 0.580952380952381, 'TicketNumber', 23101280.363636363, 2.2727272727272729) 	len(parentDFIDs)= 12
-len(dfCurr)= 7 	parentTup[3]= 23101280.3636
-Less that Min gini improvement: bestGiniSplit[1]= -1 	giniEndVal= 1.122334455667789e-05
-######## NEW ########: nodeValues[nodeCount]= (30, nan, '', nan, nan) 	len(nodeDFIds[ 30 ][1])= 7
-
-
-###########################
-Writing Out the Nodes, Values, and df ID's of the nodes
-###########################
-df_weights['Weights'].sum(axis=0)= 1.0
-
-
-index= 14 	currentLeaf= (14, 0.580952380952381, 'TicketNumber', 23101280.363636363, 2.2727272727272729) 	len(currentDF)= 12
-	len(ltDF)= 5 	len(gtDF)= 7
-	LESS THAN
-	classVal= 0 	currWeight= 0.00448933782267
-	classVal= 1 	currWeight= 0.00112233445567
-	GREATER THAN
-	classVal= 0 	currWeight= 0.003367003367
-	classVal= 1 	currWeight= 0.00448933782267
-	 (14, 0, 1, 0.0044893378226720003, 0.0044893378226720003, 0.0056116722783400002, 0.0078563411896759999)
-
-
-index= 14 	currentLeaf= (14, 0.580952380952381, 'TicketNumber', 23101280.363636363, 2.2727272727272729) 	len(currentDF)= 12
-	len(ltDF)= 5 	len(gtDF)= 7
-	LESS THAN
-	classVal= 0 	currWeight= 0.00448933782267
-	classVal= 1 	currWeight= 0.00112233445567
-	GREATER THAN
-	classVal= 0 	currWeight= 0.003367003367
-	classVal= 1 	currWeight= 0.00448933782267
-	 (14, 0, 1, 0.0044893378226720003, 0.0044893378226720003, 0.0056116722783400002, 0.0078563411896759999)
-Decision already included from other daugther node
-
-
-index= 28 	currentLeaf= (28, 0.83193277310924363, 'TicketBeginLetter', 0.0, 0.18181818181818182) 	len(currentDF)= 17
-	len(ltDF)= 7 	len(gtDF)= 10
-	LESS THAN
-	classVal= 0 	currWeight= 0.00224466891134
-	classVal= 1 	currWeight= 0.00561167227834
-	GREATER THAN
-	classVal= 0 	currWeight= 0.0112233445567
-	 (28, 1, 0, 0.0056116722783400002, 0.011223344556680002, 0.0078563411896759999, 0.011223344556680002)
-
-
-index= 27 	currentLeaf= (27, 0.83935608048993893, 'CabinNumbers', 6.0, 6.7272727272727275) 	len(currentDF)= 381
-	len(ltDF)= 375 	len(gtDF)= 6
-	LESS THAN
-	classVal= 0 	currWeight= 0.384960718294
-	classVal= 1 	currWeight= 0.0359147025814
-	GREATER THAN
-	classVal= 0 	currWeight= 0.00448933782267
-	classVal= 1 	currWeight= 0.00224466891134
-	 (27, 0, 0, 0.38496071829412415, 0.0044893378226720003, 0.42087542087550012, 0.0067340067340080001)
-
-
-index= 26 	currentLeaf= (26, 0.75294117647058811, 'CabinNumbers', 42.454545454545453, 6.3636363636363633) 	len(currentDF)= 17
-	len(ltDF)= 10 	len(gtDF)= 7
-	LESS THAN
-	classVal= 0 	currWeight= 0.00785634118968
-	classVal= 1 	currWeight= 0.003367003367
-	GREATER THAN
-	classVal= 0 	currWeight= 0.00785634118968
-	 (26, 0, 0, 0.0078563411896759999, 0.0078563411896759999, 0.011223344556680002, 0.0078563411896759999)
-
-
-index= 25 	currentLeaf= (25, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 7
-This is An End Node
-
-
-index= 24 	currentLeaf= (24, 0.60000000000000009, 'TicketBeginLetter', 0.0, 0.18181818181818182) 	len(currentDF)= 10
-	len(ltDF)= 5 	len(gtDF)= 5
-	LESS THAN
-	classVal= 0 	currWeight= 0.00224466891134
-	classVal= 1 	currWeight= 0.003367003367
-	GREATER THAN
-	classVal= 0 	currWeight= 0.00112233445567
-	classVal= 1 	currWeight= 0.00448933782267
-	 (24, 1, 1, 0.0033670033670040005, 0.0044893378226720003, 0.0056116722783400002, 0.0056116722783400002)
-
-
-index= 23 	currentLeaf= (23, 0.5539887187751813, 'Fare', -0.5, 0.18181818181818182) 	len(currentDF)= 73
-	len(ltDF)= 5 	len(gtDF)= 68
-	LESS THAN
-	classVal= 0 	currWeight= 0.00561167227834
-	GREATER THAN
-	classVal= 0 	currWeight= 0.0460157126824
-	classVal= 1 	currWeight= 0.030303030303
-	 (23, 0, 0, 0.0056116722783400002, 0.046015712682388001, 0.0056116722783400002, 0.076318742985424029)
-
-
-index= 22 	currentLeaf= (22, 0.74545454545454548, 'TicketBeginLetter', 0.0, 0.18181818181818182) 	len(currentDF)= 20
-	len(ltDF)= 11 	len(gtDF)= 9
-	LESS THAN
-	classVal= 0 	currWeight= 0.00785634118968
-	classVal= 1 	currWeight= 0.00448933782267
-	GREATER THAN
-	classVal= 0 	currWeight= 0.010101010101
-	 (22, 0, 0, 0.0078563411896759999, 0.010101010101012001, 0.012345679012348003, 0.010101010101012001)
-
-
-index= 21 	currentLeaf= (21, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 25
-This is An End Node
-
-
-index= 9 	currentLeaf= (9, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 6
-This is An End Node
-
-
-index= 9 	currentLeaf= (9, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 6
-This is An End Node
-Decision already included from other daugther node
-
-
-index= 18 	currentLeaf= (18, 0.54606735856735855, 'EmbarkIsS', 0.0, 0.18181818181818182) 	len(currentDF)= 108
-	len(ltDF)= 52 	len(gtDF)= 56
-	LESS THAN
-	classVal= 0 	currWeight= 0.016835016835
-	classVal= 1 	currWeight= 0.0415263748597
-	GREATER THAN
-	classVal= 0 	currWeight= 0.0347923681257
-	classVal= 1 	currWeight= 0.0280583613917
-	 (18, 1, 0, 0.041526374859715998, 0.034792368125707997, 0.058361391694735996, 0.062850729517407999)
-
-
-index= 17 	currentLeaf= (17, 0.82456140350877205, 'Gender', 0.0, 0.18181818181818182) 	len(currentDF)= 19
-	len(ltDF)= 12 	len(gtDF)= 7
-	LESS THAN
-	classVal= 0 	currWeight= 0.00224466891134
-	classVal= 1 	currWeight= 0.0112233445567
-	GREATER THAN
-	classVal= 1 	currWeight= 0.00785634118968
-	 (17, 1, 1, 0.011223344556680002, 0.0078563411896759999, 0.013468013468016004, 0.0078563411896759999)
-
-
-index= 16 	currentLeaf= (16, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 6
-This is An End Node
-
-
-index= 15 	currentLeaf= (15, 0.86285189718482269, 'YesFancy', 0.0, 0.18181818181818182) 	len(currentDF)= 190
-	len(ltDF)= 172 	len(gtDF)= 18
-	LESS THAN
-	classVal= 0 	currWeight= 0.010101010101
-	classVal= 1 	currWeight= 0.182940516274
-	GREATER THAN
-	classVal= 0 	currWeight= 0.010101010101
-	classVal= 1 	currWeight= 0.010101010101
-	 (15, 1, 0, 0.18294051627388405, 0.010101010101012001, 0.19304152637489608, 0.020202020202023999)
-
-##############
- Getting Tree Error
- ###################
-
-decisionTup= ('14', '0', '1', '0.00448933782267', '0.00448933782267', '0.00561167227834', '0.00785634118968')
-totalCorrWeight= 0 	float(decisionTup[3])= 0.00448933782267 	float(decisionTup[4])= 0.00448933782267
-	totalCorrWeight= 0.00897867564534
-
-decisionTup= ('28', '1', '0', '0.00561167227834', '0.0112233445567', '0.00785634118968', '0.0112233445567')
-totalCorrWeight= 0.00897867564534 	float(decisionTup[3])= 0.00561167227834 	float(decisionTup[4])= 0.0112233445567
-	totalCorrWeight= 0.02581369248038
-
-decisionTup= ('27', '0', '0', '0.384960718294', '0.00448933782267', '0.420875420876', '0.00673400673401')
-totalCorrWeight= 0.02581369248038 	float(decisionTup[3])= 0.384960718294 	float(decisionTup[4])= 0.00448933782267
-	totalCorrWeight= 0.41526374859705006
-
-decisionTup= ('26', '0', '0', '0.00785634118968', '0.00785634118968', '0.0112233445567', '0.00785634118968')
-totalCorrWeight= 0.41526374859705006 	float(decisionTup[3])= 0.00785634118968 	float(decisionTup[4])= 0.00785634118968
-	totalCorrWeight= 0.4309764309764101
-
-decisionTup= ('25', '0', 'nan', '0.00785634118968', 'nan', '0.00785634118968', 'nan')
-totalCorrWeight= 0.4309764309764101 	float(decisionTup[3])= 0.00785634118968
-	totalCorrWeight= 0.43883277216609007
-
-decisionTup= ('24', '1', '1', '0.003367003367', '0.00448933782267', '0.00561167227834', '0.00561167227834')
-totalCorrWeight= 0.43883277216609007 	float(decisionTup[3])= 0.003367003367 	float(decisionTup[4])= 0.00448933782267
-	totalCorrWeight= 0.44668911335576006
-
-decisionTup= ('23', '0', '0', '0.00561167227834', '0.0460157126824', '0.00561167227834', '0.0763187429854')
-totalCorrWeight= 0.44668911335576006 	float(decisionTup[3])= 0.00561167227834 	float(decisionTup[4])= 0.0460157126824
-	totalCorrWeight= 0.49831649831650005
-
-decisionTup= ('22', '0', '0', '0.00785634118968', '0.010101010101', '0.0123456790123', '0.010101010101')
-totalCorrWeight= 0.49831649831650005 	float(decisionTup[3])= 0.00785634118968 	float(decisionTup[4])= 0.010101010101
-	totalCorrWeight= 0.51627384960718
-
-decisionTup= ('21', '0', 'nan', '0.0280583613917', 'nan', '0.0280583613917', 'nan')
-totalCorrWeight= 0.51627384960718 	float(decisionTup[3])= 0.0280583613917
-	totalCorrWeight= 0.5443322109988801
-
-decisionTup= ('9', '1', 'nan', '0.00673400673401', 'nan', '0.00673400673401', 'nan')
-totalCorrWeight= 0.5443322109988801 	float(decisionTup[3])= 0.00673400673401
-	totalCorrWeight= 0.5510662177328901
-
-decisionTup= ('18', '1', '0', '0.0415263748597', '0.0347923681257', '0.0583613916947', '0.0628507295174')
-totalCorrWeight= 0.5510662177328901 	float(decisionTup[3])= 0.0415263748597 	float(decisionTup[4])= 0.0347923681257
-	totalCorrWeight= 0.6273849607182901
-
-decisionTup= ('17', '1', '1', '0.0112233445567', '0.00785634118968', '0.013468013468', '0.00785634118968')
-totalCorrWeight= 0.6273849607182901 	float(decisionTup[3])= 0.0112233445567 	float(decisionTup[4])= 0.00785634118968
-	totalCorrWeight= 0.6464646464646701
-
-decisionTup= ('16', '0', 'nan', '0.00673400673401', 'nan', '0.00673400673401', 'nan')
-totalCorrWeight= 0.6464646464646701 	float(decisionTup[3])= 0.00673400673401
-	totalCorrWeight= 0.6531986531986801
-
-decisionTup= ('15', '1', '0', '0.182940516274', '0.010101010101', '0.193041526375', '0.020202020202')
-totalCorrWeight= 0.6531986531986801 	float(decisionTup[3])= 0.182940516274 	float(decisionTup[4])= 0.010101010101
-	totalCorrWeight= 0.84624017957368
-totalCorrWeight= 0.84624017957368 	sumWeights= 1.0000000000006901 	error= 0.15375982042690395
-error= 0.15375982042690395 	alpha= 0.18723635016399734 	CorrectFactor= 0.8292477203874018 	IncorrectFactor= 1.2059122689331332
-BEFORE: df_weights['Weights'].unique()= [ 0.00112233]
-After: df_weights['Weights'].unique()= [ 0.00093069  0.00135344]
-	len('Weights' == 0.000930693288875 )= 754
-	len('Weights' == 0.00135343688994 )= 137
-
-
-###############################################################
-FINAL SCORE FOR TREE # 5 is 0.15375982042690395 
-###############################################################
-#############################################
-#############################################
-  STARTING ESTIMATOR 4 
-#############################################
-#############################################
-
-
-###################################
- Making a Decision Tree
-###################################
-
-node= 1 parentNode= 0 	parentTup= (0, 0.63391075778827255, 'YesMr', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 891
-len(dfCurr)= 374 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (1, 0.63997594175264161, 'Pclass', 2.5, 0.18181818181818182) 	len(nodeDFIds[ 1 ][1])= 374
-len(lessThan)= 202 	len(greaterThan)= 172
-
-node= 2 parentNode= 0 	parentTup= (0, 0.63391075778827255, 'YesMr', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 891
-len(dfCurr)= 517 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (2, 0.70504954779549878, 'Pclass', 1.5, 0.18181818181818182) 	len(nodeDFIds[ 2 ][1])= 517
-len(lessThan)= 107 	len(greaterThan)= 410
-
-node= 3 parentNode= 1 	parentTup= (1, 0.63997594175264161, 'Pclass', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 374
-len(dfCurr)= 202 	parentTup[3]= 2.5
-######## NEW ########: nodeValues[nodeCount]= (3, 0.81255227706292033, 'YesRev', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 3 ][1])= 202
-len(lessThan)= 196 	len(greaterThan)= 6
-
-node= 4 parentNode= 1 	parentTup= (1, 0.63997594175264161, 'Pclass', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 374
-len(dfCurr)= 172 	parentTup[3]= 2.5
-######## NEW ########: nodeValues[nodeCount]= (4, 0.58982030031425381, 'FamilySize', 4.5, 0.90909090909090906) 	len(nodeDFIds[ 4 ][1])= 172
-len(lessThan)= 127 	len(greaterThan)= 45
-
-node= 5 parentNode= 2 	parentTup= (2, 0.70504954779549878, 'Pclass', 1.5, 0.18181818181818182) 	len(parentDFIDs)= 517
-len(dfCurr)= 107 	parentTup[3]= 1.5
-######## NEW ########: nodeValues[nodeCount]= (5, 0.54544473462397025, 'AgeGroup', 0.75, 0.13636363636363635) 	len(nodeDFIds[ 5 ][1])= 107
-len(lessThan)= 83 	len(greaterThan)= 24
-
-node= 6 parentNode= 2 	parentTup= (2, 0.70504954779549878, 'Pclass', 1.5, 0.18181818181818182) 	len(parentDFIDs)= 517
-len(dfCurr)= 410 	parentTup[3]= 1.5
-######## NEW ########: nodeValues[nodeCount]= (6, 0.76368583108603338, 'nTicketStrings', 2.5, 0.18181818181818182) 	len(nodeDFIds[ 6 ][1])= 410
-len(lessThan)= 398 	len(greaterThan)= 12
-
-node= 7 parentNode= 3 	parentTup= (3, 0.81255227706292033, 'YesRev', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 202
-len(dfCurr)= 196 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (7, 0.82877383577735275, 'YesFancy', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 7 ][1])= 196
-len(lessThan)= 178 	len(greaterThan)= 18
-
-node= 8 parentNode= 3 	parentTup= (3, 0.81255227706292033, 'YesRev', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 202
-len(dfCurr)= 6 	parentTup[3]= 0.0
-*****************END NODE
-######## NEW ########: nodeValues[nodeCount]= (8, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[ 8 ][1])= 6
-
-node= 9 parentNode= 4 	parentTup= (4, 0.58982030031425381, 'FamilySize', 4.5, 0.90909090909090906) 	len(parentDFIDs)= 172
-len(dfCurr)= 127 	parentTup[3]= 4.5
-######## NEW ########: nodeValues[nodeCount]= (9, 0.54949225204524366, 'Gender', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 9 ][1])= 127
-len(lessThan)= 117 	len(greaterThan)= 10
-
-node= 10 parentNode= 4 	parentTup= (4, 0.58982030031425381, 'FamilySize', 4.5, 0.90909090909090906) 	len(parentDFIDs)= 172
-len(dfCurr)= 45 	parentTup[3]= 4.5
-######## NEW ########: nodeValues[nodeCount]= (10, 0.81775913307576364, 'FamilySize', 6.5, 0.54545454545454541) 	len(nodeDFIds[ 10 ][1])= 45
-len(lessThan)= 25 	len(greaterThan)= 20
-
-node= 11 parentNode= 5 	parentTup= (5, 0.54544473462397025, 'AgeGroup', 0.75, 0.13636363636363635) 	len(parentDFIDs)= 107
-len(dfCurr)= 83 	parentTup[3]= 0.75
-######## NEW ########: nodeValues[nodeCount]= (11, 0.52591864255249066, 'Fare', -0.5, 0.18181818181818182) 	len(nodeDFIds[ 11 ][1])= 83
-len(lessThan)= 5 	len(greaterThan)= 78
-
-node= 12 parentNode= 5 	parentTup= (5, 0.54544473462397025, 'AgeGroup', 0.75, 0.13636363636363635) 	len(parentDFIDs)= 107
-len(dfCurr)= 24 	parentTup[3]= 0.75
-######## NEW ########: nodeValues[nodeCount]= (12, 0.73771117810976805, 'CabinNumbers', 7.0, 8.0) 	len(nodeDFIds[ 12 ][1])= 24
-len(lessThan)= 7 	len(greaterThan)= 17
-
-node= 13 parentNode= 6 	parentTup= (6, 0.76368583108603338, 'nTicketStrings', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 410
-len(dfCurr)= 398 	parentTup[3]= 2.5
-######## NEW ########: nodeValues[nodeCount]= (13, 0.77458401922457742, 'CabinNumbers', 6.0, 6.7272727272727275) 	len(nodeDFIds[ 13 ][1])= 398
-len(lessThan)= 392 	len(greaterThan)= 6
-
-node= 14 parentNode= 6 	parentTup= (6, 0.76368583108603338, 'nTicketStrings', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 410
-len(dfCurr)= 12 	parentTup[3]= 2.5
-######## NEW ########: nodeValues[nodeCount]= (14, 0.58045293805190257, 'AgeGroup', 0.25, 0.090909090909090912) 	len(nodeDFIds[ 14 ][1])= 12
-len(lessThan)= 5 	len(greaterThan)= 7
-
-node= 15 parentNode= 7 	parentTup= (7, 0.82877383577735275, 'YesFancy', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 196
-len(dfCurr)= 178 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (15, 0.87009851647748571, 'TicketNumber', 45576.090909090912, 22786.545454545456) 	len(nodeDFIds[ 15 ][1])= 178
-len(lessThan)= 111 	len(greaterThan)= 67
-
-node= 16 parentNode= 7 	parentTup= (7, 0.82877383577735275, 'YesFancy', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 196
-len(dfCurr)= 18 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (16, 0.67805996036188354, 'CabinNumbers', 8.545454545454545, 9.545454545454545) 	len(nodeDFIds[ 16 ][1])= 18
-len(lessThan)= 7 	len(greaterThan)= 11
-
-node= 17 parentNode= 8 	parentTup= (8, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(parentDFIDs)= 6
-
-node= 18 parentNode= 8 	parentTup= (8, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(parentDFIDs)= 6
-
-node= 19 parentNode= 9 	parentTup= (9, 0.54949225204524366, 'Gender', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 127
-len(dfCurr)= 117 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (19, 0.52684601674273257, 'AgeGroup', 0.25, 0.18181818181818182) 	len(nodeDFIds[ 19 ][1])= 117
-len(lessThan)= 98 	len(greaterThan)= 19
-
-node= 20 parentNode= 9 	parentTup= (9, 0.54949225204524366, 'Gender', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 127
-len(dfCurr)= 10 	parentTup[3]= 0.0
-*****************END NODE
-######## NEW ########: nodeValues[nodeCount]= (20, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[ 20 ][1])= 10
-
-node= 21 parentNode= 10 	parentTup= (10, 0.81775913307576364, 'FamilySize', 6.5, 0.54545454545454541) 	len(parentDFIDs)= 45
-len(dfCurr)= 25 	parentTup[3]= 6.5
-*****************END NODE
-######## NEW ########: nodeValues[nodeCount]= (21, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[ 21 ][1])= 25
-
-node= 22 parentNode= 10 	parentTup= (10, 0.81775913307576364, 'FamilySize', 6.5, 0.54545454545454541) 	len(parentDFIDs)= 45
-len(dfCurr)= 20 	parentTup[3]= 6.5
-######## NEW ########: nodeValues[nodeCount]= (22, 0.70876501330375308, 'FamilySize', 7.5, 0.36363636363636365) 	len(nodeDFIds[ 22 ][1])= 20
-len(lessThan)= 11 	len(greaterThan)= 9
-
-node= 23 parentNode= 11 	parentTup= (11, 0.52591864255249066, 'Fare', -0.5, 0.18181818181818182) 	len(parentDFIDs)= 83
-len(dfCurr)= 5 	parentTup[3]= -0.5
-*****************END NODE
-######## NEW ########: nodeValues[nodeCount]= (23, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[ 23 ][1])= 5
-
-node= 24 parentNode= 11 	parentTup= (11, 0.52591864255249066, 'Fare', -0.5, 0.18181818181818182) 	len(parentDFIDs)= 83
-len(dfCurr)= 78 	parentTup[3]= -0.5
-######## NEW ########: nodeValues[nodeCount]= (24, 0.51324278101971732, 'CabinNumbers', 53.18181818181818, 13.545454545454545) 	len(nodeDFIds[ 24 ][1])= 78
-len(lessThan)= 50 	len(greaterThan)= 28
-
-node= 25 parentNode= 12 	parentTup= (12, 0.73771117810976805, 'CabinNumbers', 7.0, 8.0) 	len(parentDFIDs)= 24
-len(dfCurr)= 7 	parentTup[3]= 7.0
-*****************END NODE
-######## NEW ########: nodeValues[nodeCount]= (25, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[ 25 ][1])= 7
-
-node= 26 parentNode= 12 	parentTup= (12, 0.73771117810976805, 'CabinNumbers', 7.0, 8.0) 	len(parentDFIDs)= 24
-len(dfCurr)= 17 	parentTup[3]= 7.0
-######## NEW ########: nodeValues[nodeCount]= (26, 0.70727197921776974, 'CabinNumbers', 42.454545454545453, 6.3636363636363633) 	len(nodeDFIds[ 26 ][1])= 17
-len(lessThan)= 10 	len(greaterThan)= 7
-
-node= 27 parentNode= 13 	parentTup= (13, 0.77458401922457742, 'CabinNumbers', 6.0, 6.7272727272727275) 	len(parentDFIDs)= 398
-len(dfCurr)= 392 	parentTup[3]= 6.0
-######## NEW ########: nodeValues[nodeCount]= (27, 0.78117246429850218, 'Fare', 0.25, 0.13636363636363635) 	len(nodeDFIds[ 27 ][1])= 392
-len(lessThan)= 375 	len(greaterThan)= 17
-
-node= 28 parentNode= 13 	parentTup= (13, 0.77458401922457742, 'CabinNumbers', 6.0, 6.7272727272727275) 	len(parentDFIDs)= 398
-len(dfCurr)= 6 	parentTup[3]= 6.0
-Less that Min gini improvement: bestGiniSplit[1]= -1 	giniEndVal= 1.122334455667789e-05
-######## NEW ########: nodeValues[nodeCount]= (28, nan, '', nan, nan) 	len(nodeDFIds[ 28 ][1])= 6
-
-node= 29 parentNode= 14 	parentTup= (14, 0.58045293805190257, 'AgeGroup', 0.25, 0.090909090909090912) 	len(parentDFIDs)= 12
-len(dfCurr)= 5 	parentTup[3]= 0.25
-Less that Min gini improvement: bestGiniSplit[1]= -1 	giniEndVal= 1.122334455667789e-05
-######## NEW ########: nodeValues[nodeCount]= (29, nan, '', nan, nan) 	len(nodeDFIds[ 29 ][1])= 5
-
-node= 30 parentNode= 14 	parentTup= (14, 0.58045293805190257, 'AgeGroup', 0.25, 0.090909090909090912) 	len(parentDFIDs)= 12
-len(dfCurr)= 7 	parentTup[3]= 0.25
-Less that Min gini improvement: bestGiniSplit[1]= -1 	giniEndVal= 1.122334455667789e-05
-######## NEW ########: nodeValues[nodeCount]= (30, nan, '', nan, nan) 	len(nodeDFIds[ 30 ][1])= 7
-
-
-###########################
-Writing Out the Nodes, Values, and df ID's of the nodes
-###########################
-df_weights['Weights'].sum(axis=0)= 1.0
-
-
-index= 14 	currentLeaf= (14, 0.58045293805190257, 'AgeGroup', 0.25, 0.090909090909090912) 	len(currentDF)= 12
-	len(ltDF)= 5 	len(gtDF)= 7
-	LESS THAN
-	classVal= 0 	currWeight= 0.00467277600867
-	classVal= 1 	currWeight= 0.00104906614231
-	GREATER THAN
-	classVal= 0 	currWeight= 0.00410022130579
-	classVal= 1 	currWeight= 0.00467277600867
-	 (14, 0, 1, 0.0046727760086702911, 0.0046727760086702911, 0.0057218421509798254, 0.0087729973144632014)
-
-
-index= 14 	currentLeaf= (14, 0.58045293805190257, 'AgeGroup', 0.25, 0.090909090909090912) 	len(currentDF)= 12
-	len(ltDF)= 5 	len(gtDF)= 7
-	LESS THAN
-	classVal= 0 	currWeight= 0.00467277600867
-	classVal= 1 	currWeight= 0.00104906614231
-	GREATER THAN
-	classVal= 0 	currWeight= 0.00410022130579
-	classVal= 1 	currWeight= 0.00467277600867
-	 (14, 0, 1, 0.0046727760086702911, 0.0046727760086702911, 0.0057218421509798254, 0.0087729973144632014)
-Decision already included from other daugther node
-
-
-index= 13 	currentLeaf= (13, 0.77458401922457742, 'CabinNumbers', 6.0, 6.7272727272727275) 	len(currentDF)= 398
-Blank Node has a non-Blank Sister, so only make decision for one part of parent node.
-	classVal= 0 	currWeight= 0.00419626456924
-	classVal= 1 	currWeight= 0.00305115516348
-
-
-index= 27 	currentLeaf= (27, 0.78117246429850218, 'Fare', 0.25, 0.13636363636363635) 	len(currentDF)= 392
-	len(ltDF)= 375 	len(gtDF)= 17
-	LESS THAN
-	classVal= 0 	currWeight= 0.359829686812
-	classVal= 1 	currWeight= 0.0488184826157
-	GREATER THAN
-	classVal= 0 	currWeight= 0.0135418165866
-	classVal= 1 	currWeight= 0.00524533071155
-	 (27, 0, 0, 0.35982968681217026, 0.013541816586578718, 0.40864816942790422, 0.018787147298126389)
-
-
-index= 26 	currentLeaf= (26, 0.70727197921776974, 'CabinNumbers', 42.454545454545453, 6.3636363636363633) 	len(currentDF)= 17
-	len(ltDF)= 10 	len(gtDF)= 7
-	LESS THAN
-	classVal= 0 	currWeight= 0.00734346299617
-	classVal= 1 	currWeight= 0.00457673274523
-	GREATER THAN
-	classVal= 0 	currWeight= 0.00734346299617
-	 (26, 0, 0, 0.0073434629961667405, 0.0073434629961667405, 0.011920195741391804, 0.0073434629961667405)
-
-
-index= 25 	currentLeaf= (25, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 7
-This is An End Node
-
-
-index= 24 	currentLeaf= (24, 0.51324278101971732, 'CabinNumbers', 53.18181818181818, 13.545454545454545) 	len(currentDF)= 78
-	len(ltDF)= 50 	len(gtDF)= 28
-	LESS THAN
-	classVal= 0 	currWeight= 0.0267031649972
-	classVal= 1 	currWeight= 0.0348038594675
-	GREATER THAN
-	classVal= 0 	currWeight= 0.0208852795827
-	classVal= 1 	currWeight= 0.0137301982357
-	 (24, 1, 0, 0.034803859467517122, 0.020885279582745456, 0.061507024464687636, 0.034615477818420649)
-
-
-index= 23 	currentLeaf= (23, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 5
-This is An End Node
-
-
-index= 22 	currentLeaf= (22, 0.70876501330375308, 'FamilySize', 7.5, 0.36363636363636365) 	len(currentDF)= 20
-	len(ltDF)= 11 	len(gtDF)= 9
-	LESS THAN
-	classVal= 0 	currWeight= 0.00734346299617
-	classVal= 1 	currWeight= 0.00610231032697
-	GREATER THAN
-	classVal= 0 	currWeight= 0.00944159528079
-	 (22, 0, 0, 0.0073434629961667405, 0.0094415952807858083, 0.01344577332313349, 0.0094415952807858083)
-
-
-index= 21 	currentLeaf= (21, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 25
-This is An End Node
-
-
-index= 20 	currentLeaf= (20, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 10
-This is An End Node
-
-
-index= 19 	currentLeaf= (19, 0.52684601674273257, 'AgeGroup', 0.25, 0.18181818181818182) 	len(currentDF)= 117
-	len(ltDF)= 98 	len(gtDF)= 19
-	LESS THAN
-	classVal= 0 	currWeight= 0.0444375412752
-	classVal= 1 	currWeight= 0.073619306733
-	GREATER THAN
-	classVal= 0 	currWeight= 0.014018328026
-	classVal= 1 	currWeight= 0.0106790430722
-	 (19, 1, 0, 0.073619306732969902, 0.014018328026010871, 0.11805684800816328, 0.024697371098202685)
-
-
-index= 8 	currentLeaf= (8, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 6
-This is An End Node
-
-
-index= 8 	currentLeaf= (8, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 6
-This is An End Node
-Decision already included from other daugther node
-
-
-index= 16 	currentLeaf= (16, 0.67805996036188354, 'CabinNumbers', 8.545454545454545, 9.545454545454545) 	len(currentDF)= 18
-	len(ltDF)= 7 	len(gtDF)= 11
-	LESS THAN
-	classVal= 0 	currWeight= 0.00629439685386
-	classVal= 1 	currWeight= 0.00152557758174
-	GREATER THAN
-	classVal= 0 	currWeight= 0.00314719842693
-	classVal= 1 	currWeight= 0.0122046206539
-	 (16, 0, 1, 0.0062943968538572061, 0.012204620653933502, 0.0078199744355988941, 0.015351819080862104)
-
-
-index= 15 	currentLeaf= (15, 0.87009851647748571, 'TicketNumber', 45576.090909090912, 22786.545454545456) 	len(currentDF)= 178
-	len(ltDF)= 111 	len(gtDF)= 67
-	LESS THAN
-	classVal= 0 	currWeight= 0.00457673274523
-	classVal= 1 	currWeight= 0.113299143369
-	GREATER THAN
-	classVal= 0 	currWeight= 0.00915346549045
-	classVal= 1 	currWeight= 0.0639930346809
-	 (15, 1, 1, 0.1132991433694297, 0.063993034680881605, 0.11787587611465479, 0.073146500171331744)
-
-##############
- Getting Tree Error
- ###################
-
-decisionTup= ('14', '0', '1', '0.00467277600867', '0.00467277600867', '0.00572184215098', '0.00877299731446')
-totalCorrWeight= 0 	float(decisionTup[3])= 0.00467277600867 	float(decisionTup[4])= 0.00467277600867
-	totalCorrWeight= 0.00934555201734
-
-decisionTup= ('13', 'nan', '0', 'nan', '0.00419626456924', 'nan', '0.00724741973272')
-totalCorrWeight= 0.00934555201734 	float(decisionTup[4])= 0.00419626456924
-	totalCorrWeight= 0.013541816586579998
-
-decisionTup= ('27', '0', '0', '0.359829686812', '0.0135418165866', '0.408648169428', '0.0187871472981')
-totalCorrWeight= 0.013541816586579998 	float(decisionTup[3])= 0.359829686812 	float(decisionTup[4])= 0.0135418165866
-	totalCorrWeight= 0.38691331998517997
-
-decisionTup= ('26', '0', '0', '0.00734346299617', '0.00734346299617', '0.0119201957414', '0.00734346299617')
-totalCorrWeight= 0.38691331998517997 	float(decisionTup[3])= 0.00734346299617 	float(decisionTup[4])= 0.00734346299617
-	totalCorrWeight= 0.40160024597752
-
-decisionTup= ('25', '0', 'nan', '0.00734346299617', 'nan', '0.00734346299617', 'nan')
-totalCorrWeight= 0.40160024597752 	float(decisionTup[3])= 0.00734346299617
-	totalCorrWeight= 0.40894370897369
-
-decisionTup= ('24', '1', '0', '0.0348038594675', '0.0208852795827', '0.0615070244647', '0.0346154778184')
-totalCorrWeight= 0.40894370897369 	float(decisionTup[3])= 0.0348038594675 	float(decisionTup[4])= 0.0208852795827
-	totalCorrWeight= 0.46463284802389
-
-decisionTup= ('23', '0', 'nan', '0.00524533071155', 'nan', '0.00524533071155', 'nan')
-totalCorrWeight= 0.46463284802389 	float(decisionTup[3])= 0.00524533071155
-	totalCorrWeight= 0.46987817873543997
-
-decisionTup= ('22', '0', '0', '0.00734346299617', '0.00944159528079', '0.0134457733231', '0.00944159528079')
-totalCorrWeight= 0.46987817873543997 	float(decisionTup[3])= 0.00734346299617 	float(decisionTup[4])= 0.00944159528079
-	totalCorrWeight= 0.48666323701239994
-
-decisionTup= ('21', '0', 'nan', '0.0262266535577', 'nan', '0.0262266535577', 'nan')
-totalCorrWeight= 0.48666323701239994 	float(decisionTup[3])= 0.0262266535577
-	totalCorrWeight= 0.5128898905700999
-
-decisionTup= ('20', '1', 'nan', '0.0104906614231', 'nan', '0.0104906614231', 'nan')
-totalCorrWeight= 0.5128898905700999 	float(decisionTup[3])= 0.0104906614231
-	totalCorrWeight= 0.5233805519931999
-
-decisionTup= ('19', '1', '0', '0.073619306733', '0.014018328026', '0.118056848008', '0.0246973710982')
-totalCorrWeight= 0.5233805519931999 	float(decisionTup[3])= 0.073619306733 	float(decisionTup[4])= 0.014018328026
-	totalCorrWeight= 0.6110181867521999
-
-decisionTup= ('8', '0', 'nan', '0.00629439685386', 'nan', '0.00629439685386', 'nan')
-totalCorrWeight= 0.6110181867521999 	float(decisionTup[3])= 0.00629439685386
-	totalCorrWeight= 0.6173125836060599
-
-decisionTup= ('16', '0', '1', '0.00629439685386', '0.0122046206539', '0.0078199744356', '0.0153518190809')
-totalCorrWeight= 0.6173125836060599 	float(decisionTup[3])= 0.00629439685386 	float(decisionTup[4])= 0.0122046206539
-	totalCorrWeight= 0.6358116011138198
-
-decisionTup= ('15', '1', '1', '0.113299143369', '0.0639930346809', '0.117875876115', '0.0731465001713')
-totalCorrWeight= 0.6358116011138198 	float(decisionTup[3])= 0.113299143369 	float(decisionTup[4])= 0.0639930346809
-	totalCorrWeight= 0.8131037791637199
-totalCorrWeight= 0.8131037791637199 	sumWeights= 1.0000000000002 	error= 0.18689622083644275
-error= 0.18689622083644275 	alpha= 0.1677201784968804 	CorrectFactor= 0.845590415964069 	IncorrectFactor= 1.1826056458550167
-WEIGHT NOT CHANGED.
-BEFORE: df_weights['Weights'].unique()= [ 0.00104907  0.00152558]
-After: df_weights['Weights'].unique()= [ 0.00088708  0.00129001  0.00124063  0.00180416]
-	len('Weights' == 0.000887080275649 )= 698
-	len('Weights' == 0.00129001378193 )= 53
-	len('Weights' == 0.00124063154277 )= 56
-	len('Weights' == 0.00180415666136 )= 84
-
-
-###############################################################
-FINAL SCORE FOR TREE # 4 is 0.18689622083644275 
-###############################################################
-#############################################
-#############################################
-  STARTING ESTIMATOR 3 
-#############################################
-#############################################
-
-
-###################################
- Making a Decision Tree
-###################################
-
-node= 1 parentNode= 0 	parentTup= (0, 0.60147374983426805, 'YesMr', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 891
-len(dfCurr)= 374 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (1, 0.6172993725395497, 'Pclass', 2.5, 0.18181818181818182) 	len(nodeDFIds[ 1 ][1])= 374
-len(lessThan)= 202 	len(greaterThan)= 172
-
-node= 2 parentNode= 0 	parentTup= (0, 0.60147374983426805, 'YesMr', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 891
-len(dfCurr)= 517 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (2, 0.6598539256130258, 'CabinNumbers', 12.545454545454545, 13.545454545454545) 	len(nodeDFIds[ 2 ][1])= 517
-len(lessThan)= 437 	len(greaterThan)= 80
-
-node= 3 parentNode= 1 	parentTup= (1, 0.6172993725395497, 'Pclass', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 374
-len(dfCurr)= 202 	parentTup[3]= 2.5
-######## NEW ########: nodeValues[nodeCount]= (3, 0.77295391065176611, 'YesRev', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 3 ][1])= 202
-len(lessThan)= 196 	len(greaterThan)= 6
-
-node= 4 parentNode= 1 	parentTup= (1, 0.6172993725395497, 'Pclass', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 374
-len(dfCurr)= 172 	parentTup[3]= 2.5
-######## NEW ########: nodeValues[nodeCount]= (4, 0.55743556603502831, 'FamilySize', 4.5, 0.90909090909090906) 	len(nodeDFIds[ 4 ][1])= 172
-len(lessThan)= 127 	len(greaterThan)= 45
-
-node= 5 parentNode= 2 	parentTup= (2, 0.6598539256130258, 'CabinNumbers', 12.545454545454545, 13.545454545454545) 	len(parentDFIDs)= 517
-len(dfCurr)= 437 	parentTup[3]= 12.5454545455
-######## NEW ########: nodeValues[nodeCount]= (5, 0.703761897333394, 'CabinNumbers', 7.5, 1.1818181818181819) 	len(nodeDFIds[ 5 ][1])= 437
-len(lessThan)= 432 	len(greaterThan)= 5
-
-node= 6 parentNode= 2 	parentTup= (2, 0.6598539256130258, 'CabinNumbers', 12.545454545454545, 13.545454545454545) 	len(parentDFIDs)= 517
-len(dfCurr)= 80 	parentTup[3]= 12.5454545455
-######## NEW ########: nodeValues[nodeCount]= (6, 0.54679430931898776, 'TicketNumber', 35461.0, 34766.0) 	len(nodeDFIds[ 6 ][1])= 80
-len(lessThan)= 47 	len(greaterThan)= 33
-
-node= 7 parentNode= 3 	parentTup= (3, 0.77295391065176611, 'YesRev', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 202
-len(dfCurr)= 196 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (7, 0.78827177428193751, 'YesFancy', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 7 ][1])= 196
-len(lessThan)= 178 	len(greaterThan)= 18
-
-node= 8 parentNode= 3 	parentTup= (3, 0.77295391065176611, 'YesRev', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 202
-len(dfCurr)= 6 	parentTup[3]= 0.0
-*****************END NODE
-######## NEW ########: nodeValues[nodeCount]= (8, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[ 8 ][1])= 6
-
-node= 9 parentNode= 4 	parentTup= (4, 0.55743556603502831, 'FamilySize', 4.5, 0.90909090909090906) 	len(parentDFIDs)= 172
-len(dfCurr)= 127 	parentTup[3]= 4.5
-######## NEW ########: nodeValues[nodeCount]= (9, 0.53259562501901903, 'YesMaster', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 9 ][1])= 127
-len(lessThan)= 117 	len(greaterThan)= 10
-
-node= 10 parentNode= 4 	parentTup= (4, 0.55743556603502831, 'FamilySize', 4.5, 0.90909090909090906) 	len(parentDFIDs)= 172
-len(dfCurr)= 45 	parentTup[3]= 4.5
-######## NEW ########: nodeValues[nodeCount]= (10, 0.78047897868369021, 'FamilySize', 6.5, 0.54545454545454541) 	len(nodeDFIds[ 10 ][1])= 45
-len(lessThan)= 25 	len(greaterThan)= 20
-
-node= 11 parentNode= 5 	parentTup= (5, 0.703761897333394, 'CabinNumbers', 7.5, 1.1818181818181819) 	len(parentDFIDs)= 437
-len(dfCurr)= 432 	parentTup[3]= 7.5
-######## NEW ########: nodeValues[nodeCount]= (11, 0.70736053000700949, 'TicketDashes', 1.5, 0.36363636363636365) 	len(nodeDFIds[ 11 ][1])= 432
-len(lessThan)= 392 	len(greaterThan)= 40
-
-node= 12 parentNode= 5 	parentTup= (5, 0.703761897333394, 'CabinNumbers', 7.5, 1.1818181818181819) 	len(parentDFIDs)= 437
-len(dfCurr)= 5 	parentTup[3]= 7.5
-Less that Min gini improvement: bestGiniSplit[1]= -1 	giniEndVal= 1.122334455667789e-05
-######## NEW ########: nodeValues[nodeCount]= (12, nan, '', nan, nan) 	len(nodeDFIds[ 12 ][1])= 5
-
-node= 13 parentNode= 6 	parentTup= (6, 0.54679430931898776, 'TicketNumber', 35461.0, 34766.0) 	len(parentDFIDs)= 80
-len(dfCurr)= 47 	parentTup[3]= 35461.0
-######## NEW ########: nodeValues[nodeCount]= (13, 0.53696492504540405, 'AgeGroup', 0.75, 0.13636363636363635) 	len(nodeDFIds[ 13 ][1])= 47
-len(lessThan)= 37 	len(greaterThan)= 10
-
-node= 14 parentNode= 6 	parentTup= (6, 0.54679430931898776, 'TicketNumber', 35461.0, 34766.0) 	len(parentDFIDs)= 80
-len(dfCurr)= 33 	parentTup[3]= 35461.0
-######## NEW ########: nodeValues[nodeCount]= (14, 0.63005987403434349, 'EmbarkIsC', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 14 ][1])= 33
-len(lessThan)= 28 	len(greaterThan)= 5
-
-node= 15 parentNode= 7 	parentTup= (7, 0.78827177428193751, 'YesFancy', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 196
-len(dfCurr)= 178 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (15, 0.82975463751570855, 'TicketNumber', 45576.090909090912, 22786.545454545456) 	len(nodeDFIds[ 15 ][1])= 178
-len(lessThan)= 111 	len(greaterThan)= 67
-
-node= 16 parentNode= 7 	parentTup= (7, 0.78827177428193751, 'YesFancy', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 196
-len(dfCurr)= 18 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (16, 0.61425846749883473, 'CabinNumbers', 8.545454545454545, 9.545454545454545) 	len(nodeDFIds[ 16 ][1])= 18
-len(lessThan)= 7 	len(greaterThan)= 11
-
-node= 17 parentNode= 8 	parentTup= (8, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(parentDFIDs)= 6
-
-node= 18 parentNode= 8 	parentTup= (8, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(parentDFIDs)= 6
-
-node= 19 parentNode= 9 	parentTup= (9, 0.53259562501901903, 'YesMaster', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 127
-len(dfCurr)= 117 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (19, 0.51300589843369726, 'Fare', -0.25, 0.045454545454545456) 	len(nodeDFIds[ 19 ][1])= 117
-len(lessThan)= 83 	len(greaterThan)= 34
-
-node= 20 parentNode= 9 	parentTup= (9, 0.53259562501901903, 'YesMaster', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 127
-len(dfCurr)= 10 	parentTup[3]= 0.0
-*****************END NODE
-######## NEW ########: nodeValues[nodeCount]= (20, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[ 20 ][1])= 10
-
-node= 21 parentNode= 10 	parentTup= (10, 0.78047897868369021, 'FamilySize', 6.5, 0.54545454545454541) 	len(parentDFIDs)= 45
-len(dfCurr)= 25 	parentTup[3]= 6.5
-*****************END NODE
-######## NEW ########: nodeValues[nodeCount]= (21, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[ 21 ][1])= 25
-
-node= 22 parentNode= 10 	parentTup= (10, 0.78047897868369021, 'FamilySize', 6.5, 0.54545454545454541) 	len(parentDFIDs)= 45
-len(dfCurr)= 20 	parentTup[3]= 6.5
-######## NEW ########: nodeValues[nodeCount]= (22, 0.68821329657171171, 'TicketBeginLetter', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 22 ][1])= 20
-len(lessThan)= 11 	len(greaterThan)= 9
-
-node= 23 parentNode= 11 	parentTup= (11, 0.70736053000700949, 'TicketDashes', 1.5, 0.36363636363636365) 	len(parentDFIDs)= 432
-len(dfCurr)= 392 	parentTup[3]= 1.5
-######## NEW ########: nodeValues[nodeCount]= (23, 0.69273438585838398, 'AgeGroup', 0.75, 0.13636363636363635) 	len(nodeDFIds[ 23 ][1])= 392
-len(lessThan)= 370 	len(greaterThan)= 22
-
-node= 24 parentNode= 11 	parentTup= (11, 0.70736053000700949, 'TicketDashes', 1.5, 0.36363636363636365) 	len(parentDFIDs)= 432
-len(dfCurr)= 40 	parentTup[3]= 1.5
-######## NEW ########: nodeValues[nodeCount]= (24, 0.91270712915706431, 'AgeGroup', 0.25, 0.13636363636363635) 	len(nodeDFIds[ 24 ][1])= 40
-len(lessThan)= 24 	len(greaterThan)= 16
-
-node= 25 parentNode= 12 	parentTup= (12, nan, '', nan, nan) 	len(parentDFIDs)= 5
-
-node= 26 parentNode= 12 	parentTup= (12, nan, '', nan, nan) 	len(parentDFIDs)= 5
-
-node= 27 parentNode= 13 	parentTup= (13, 0.53696492504540405, 'AgeGroup', 0.75, 0.13636363636363635) 	len(parentDFIDs)= 47
-len(dfCurr)= 37 	parentTup[3]= 0.75
-######## NEW ########: nodeValues[nodeCount]= (27, 0.56303137936273906, 'TicketBeginLetter', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 27 ][1])= 37
-len(lessThan)= 19 	len(greaterThan)= 18
-
-node= 28 parentNode= 13 	parentTup= (13, 0.53696492504540405, 'AgeGroup', 0.75, 0.13636363636363635) 	len(parentDFIDs)= 47
-len(dfCurr)= 10 	parentTup[3]= 0.75
-######## NEW ########: nodeValues[nodeCount]= (28, 0.55309273733921238, 'CabinNumbers', 39.5, 5.7272727272727275) 	len(nodeDFIds[ 28 ][1])= 10
-len(lessThan)= 5 	len(greaterThan)= 5
-
-node= 29 parentNode= 14 	parentTup= (14, 0.63005987403434349, 'EmbarkIsC', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 33
-len(dfCurr)= 28 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (29, 0.67136151417076784, 'CabinNumbers', 107.27272727272727, 10.363636363636363) 	len(nodeDFIds[ 29 ][1])= 28
-len(lessThan)= 23 	len(greaterThan)= 5
-
-node= 30 parentNode= 14 	parentTup= (14, 0.63005987403434349, 'EmbarkIsC', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 33
-len(dfCurr)= 5 	parentTup[3]= 0.0
-Less that Min gini improvement: bestGiniSplit[1]= -1 	giniEndVal= 1.122334455667789e-05
-######## NEW ########: nodeValues[nodeCount]= (30, nan, '', nan, nan) 	len(nodeDFIds[ 30 ][1])= 5
-
-
-###########################
-Writing Out the Nodes, Values, and df ID's of the nodes
-###########################
-df_weights['Weights'].sum(axis=0)= 1.0
-
-
-index= 14 	currentLeaf= (14, 0.63005987403434349, 'EmbarkIsC', 0.0, 0.18181818181818182) 	len(currentDF)= 33
-Blank Node has a non-Blank Sister, so only make decision for one part of parent node.
-	classVal= 0 	currWeight= 0.00292901975404
-	classVal= 1 	currWeight= 0.00340551154145
-
-
-index= 29 	currentLeaf= (29, 0.67136151417076784, 'CabinNumbers', 107.27272727272727, 10.363636363636363) 	len(currentDF)= 28
-	len(ltDF)= 23 	len(gtDF)= 5
-	LESS THAN
-	classVal= 0 	currWeight= 0.0209395670725
-	classVal= 1 	currWeight= 0.0073768999607
-	GREATER THAN
-	classVal= 0 	currWeight= 0.00488169959006
-	 (29, 0, 0, 0.020939567072452845, 0.0048816995900595513, 0.028316467033153141, 0.0048816995900595513)
-
-
-index= 28 	currentLeaf= (28, 0.55309273733921238, 'CabinNumbers', 39.5, 5.7272727272727275) 	len(currentDF)= 10
-	len(ltDF)= 5 	len(gtDF)= 5
-	LESS THAN
-	classVal= 0 	currWeight= 0.00390535967205
-	classVal= 1 	currWeight= 0.00198569420963
-	GREATER THAN
-	classVal= 0 	currWeight= 0.00390535967205
-	classVal= 1 	currWeight= 0.00198569420963
-	 (28, 0, 0, 0.0039053596720476408, 0.0039053596720476408, 0.0058910538816738141, 0.0058910538816738141)
-
-
-index= 27 	currentLeaf= (27, 0.56303137936273906, 'TicketBeginLetter', 0.0, 0.18181818181818182) 	len(currentDF)= 37
-	len(ltDF)= 19 	len(gtDF)= 18
-	LESS THAN
-	classVal= 0 	currWeight= 0.00746889565173
-	classVal= 1 	currWeight= 0.0208435322889
-	GREATER THAN
-	classVal= 0 	currWeight= 0.011161879715
-	classVal= 1 	currWeight= 0.0107163827549
-	 (27, 1, 0, 0.020843532288895211, 0.011161879715016703, 0.028312427940626557, 0.021878262469960243)
-
-
-index= 5 	currentLeaf= (5, 0.703761897333394, 'CabinNumbers', 7.5, 1.1818181818181819) 	len(currentDF)= 437
-Blank Node has a non-Blank Sister, so only make decision for one part of parent node.
-	classVal= 0 	currWeight= 0.0013654661613
-	classVal= 1 	currWeight= 0.00535819137747
-
-
-index= 5 	currentLeaf= (5, 0.703761897333394, 'CabinNumbers', 7.5, 1.1818181818181819) 	len(currentDF)= 437
-Blank Node has a non-Blank Sister, so only make decision for one part of parent node.
-	classVal= 0 	currWeight= 0.0013654661613
-	classVal= 1 	currWeight= 0.00535819137747
-Decision already included from other daugther node
-
-
-index= 24 	currentLeaf= (24, 0.91270712915706431, 'AgeGroup', 0.25, 0.13636363636363635) 	len(currentDF)= 40
-	len(ltDF)= 24 	len(gtDF)= 16
-	LESS THAN
-	classVal= 0 	currWeight= 0.0234321580323
-	GREATER THAN
-	classVal= 0 	currWeight= 0.0146450987702
-	classVal= 1 	currWeight= 0.00198569420963
-	 (24, 0, 0, 0.023432158032285846, 0.014645098770178657, 0.023432158032285846, 0.016630792979804826)
-
-
-index= 23 	currentLeaf= (23, 0.69273438585838398, 'AgeGroup', 0.75, 0.13636363636363635) 	len(currentDF)= 392
-	len(ltDF)= 370 	len(gtDF)= 22
-	LESS THAN
-	classVal= 0 	currWeight= 0.324543827992
-	classVal= 1 	currWeight= 0.082617058543
-	GREATER THAN
-	classVal= 0 	currWeight= 0.0214794781963
-	 (23, 0, 0, 0.32454382799175524, 0.02147947819626202, 0.40716088653472626, 0.02147947819626202)
-
-
-index= 22 	currentLeaf= (22, 0.68821329657171171, 'TicketBeginLetter', 0.0, 0.18181818181818182) 	len(currentDF)= 20
-	len(ltDF)= 11 	len(gtDF)= 9
-	LESS THAN
-	classVal= 0 	currWeight= 0.00683437942608
-	classVal= 1 	currWeight= 0.0079427768385
-	GREATER THAN
-	classVal= 0 	currWeight= 0.00878705926211
-	 (22, 1, 0, 0.0079427768385046931, 0.0087870592621071917, 0.014777156264588066, 0.0087870592621071917)
-
-
-index= 21 	currentLeaf= (21, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 25
-This is An End Node
-
-
-index= 20 	currentLeaf= (20, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 10
-This is An End Node
-
-
-index= 19 	currentLeaf= (19, 0.51300589843369726, 'Fare', -0.25, 0.045454545454545456) 	len(currentDF)= 117
-	len(ltDF)= 83 	len(gtDF)= 34
-	LESS THAN
-	classVal= 0 	currWeight= 0.0557389294292
-	classVal= 1 	currWeight= 0.0541483828967
-	GREATER THAN
-	classVal= 0 	currWeight= 0.0151475563116
-	classVal= 1 	currWeight= 0.028267144936
-	 (19, 0, 1, 0.055738929429248317, 0.028267144935970448, 0.10988731232597711, 0.043414701247556545)
-
-
-index= 8 	currentLeaf= (8, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 6
-This is An End Node
-
-
-index= 8 	currentLeaf= (8, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 6
-This is An End Node
-Decision already included from other daugther node
-
-
-index= 16 	currentLeaf= (16, 0.61425846749883473, 'CabinNumbers', 8.545454545454545, 9.545454545454545) 	len(currentDF)= 18
-	len(ltDF)= 7 	len(gtDF)= 11
-	LESS THAN
-	classVal= 0 	currWeight= 0.00585803950807
-	classVal= 1 	currWeight= 0.00198569420963
-	GREATER THAN
-	classVal= 0 	currWeight= 0.00409639848389
-	classVal= 1 	currWeight= 0.0113585386546
-	 (16, 0, 1, 0.0058580395080714614, 0.011358538654574216, 0.0078437337176976343, 0.015454937138459959)
-
-
-index= 15 	currentLeaf= (15, 0.82975463751570855, 'TicketNumber', 45576.090909090912, 22786.545454545456) 	len(currentDF)= 178
-	len(ltDF)= 111 	len(gtDF)= 67
-	LESS THAN
-	classVal= 0 	currWeight= 0.00595708262888
-	classVal= 1 	currWeight= 0.105444711145
-	GREATER THAN
-	classVal= 0 	currWeight= 0.0119141652578
-	classVal= 1 	currWeight= 0.0595567349987
-	 (15, 1, 1, 0.10544471114528632, 0.059556734998726518, 0.11140179377416484, 0.07147090025648356)
-
-##############
- Getting Tree Error
- ###################
-
-decisionTup= ('14', 'nan', '1', 'nan', '0.00340551154145', 'nan', '0.00633453129548')
-totalCorrWeight= 0 	float(decisionTup[4])= 0.00340551154145
-	totalCorrWeight= 0.00340551154145
-
-decisionTup= ('29', '0', '0', '0.0209395670725', '0.00488169959006', '0.0283164670332', '0.00488169959006')
-totalCorrWeight= 0.00340551154145 	float(decisionTup[3])= 0.0209395670725 	float(decisionTup[4])= 0.00488169959006
-	totalCorrWeight= 0.029226778204009998
-
-decisionTup= ('28', '0', '0', '0.00390535967205', '0.00390535967205', '0.00589105388167', '0.00589105388167')
-totalCorrWeight= 0.029226778204009998 	float(decisionTup[3])= 0.00390535967205 	float(decisionTup[4])= 0.00390535967205
-	totalCorrWeight= 0.03703749754811
-
-decisionTup= ('27', '1', '0', '0.0208435322889', '0.011161879715', '0.0283124279406', '0.02187826247')
-totalCorrWeight= 0.03703749754811 	float(decisionTup[3])= 0.0208435322889 	float(decisionTup[4])= 0.011161879715
-	totalCorrWeight= 0.06904290955201
-
-decisionTup= ('5', 'nan', '1', 'nan', '0.00535819137747', 'nan', '0.00672365753877')
-totalCorrWeight= 0.06904290955201 	float(decisionTup[4])= 0.00535819137747
-	totalCorrWeight= 0.07440110092948
-
-decisionTup= ('24', '0', '0', '0.0234321580323', '0.0146450987702', '0.0234321580323', '0.0166307929798')
-totalCorrWeight= 0.07440110092948 	float(decisionTup[3])= 0.0234321580323 	float(decisionTup[4])= 0.0146450987702
-	totalCorrWeight= 0.11247835773198
-
-decisionTup= ('23', '0', '0', '0.324543827992', '0.0214794781963', '0.407160886535', '0.0214794781963')
-totalCorrWeight= 0.11247835773198 	float(decisionTup[3])= 0.324543827992 	float(decisionTup[4])= 0.0214794781963
-	totalCorrWeight= 0.45850166392028
-
-decisionTup= ('22', '1', '0', '0.0079427768385', '0.00878705926211', '0.0147771562646', '0.00878705926211')
-totalCorrWeight= 0.45850166392028 	float(decisionTup[3])= 0.0079427768385 	float(decisionTup[4])= 0.00878705926211
-	totalCorrWeight= 0.47523150002089004
-
-decisionTup= ('21', '0', 'nan', '0.0244084979503', 'nan', '0.0244084979503', 'nan')
-totalCorrWeight= 0.47523150002089004 	float(decisionTup[3])= 0.0244084979503
-	totalCorrWeight= 0.49963999797119
-
-decisionTup= ('20', '1', 'nan', '0.00976339918012', 'nan', '0.00976339918012', 'nan')
-totalCorrWeight= 0.49963999797119 	float(decisionTup[3])= 0.00976339918012
-	totalCorrWeight= 0.50940339715131
-
-decisionTup= ('19', '0', '1', '0.0557389294292', '0.028267144936', '0.109887312326', '0.0434147012476')
-totalCorrWeight= 0.50940339715131 	float(decisionTup[3])= 0.0557389294292 	float(decisionTup[4])= 0.028267144936
-	totalCorrWeight= 0.59340947151651
-
-decisionTup= ('8', '0', 'nan', '0.00585803950807', 'nan', '0.00585803950807', 'nan')
-totalCorrWeight= 0.59340947151651 	float(decisionTup[3])= 0.00585803950807
-	totalCorrWeight= 0.59926751102458
-
-decisionTup= ('16', '0', '1', '0.00585803950807', '0.0113585386546', '0.0078437337177', '0.0154549371385')
-totalCorrWeight= 0.59926751102458 	float(decisionTup[3])= 0.00585803950807 	float(decisionTup[4])= 0.0113585386546
-	totalCorrWeight= 0.61648408918725
-
-decisionTup= ('15', '1', '1', '0.105444711145', '0.0595567349987', '0.111401793774', '0.0714709002565')
-totalCorrWeight= 0.61648408918725 	float(decisionTup[3])= 0.105444711145 	float(decisionTup[4])= 0.0595567349987
-	totalCorrWeight= 0.78148553533095
-totalCorrWeight= 0.78148553533095 	sumWeights= 1.00000000000035 	error= 0.21851446466932345
-error= 0.21851446466932345 	alpha= 0.15209030667780024 	CorrectFactor= 0.8589107118657668 	IncorrectFactor= 1.1642653726226702
-WEIGHT NOT CHANGED.
-WEIGHT NOT CHANGED.
-BEFORE: df_weights['Weights'].unique()= [ 0.00097634  0.00141982  0.00136547  0.00198569]
-After: df_weights['Weights'].unique()= [ 0.00083859  0.00165304  0.00117281  0.00231188  0.00113672  0.00170553
-  0.00158976  0.0012195 ]
-	len('Weights' == 0.000838588814003 )= 647
-	len('Weights' == 0.00165304415489 )= 26
-	len('Weights' == 0.00117281351263 )= 38
-	len('Weights' == 0.00231187500889 )= 54
-	len('Weights' == 0.00113671875845 )= 51
-	len('Weights' == 0.00170553402714 )= 30
-	len('Weights' == 0.00158976496908 )= 18
-	len('Weights' == 0.00121949631519 )= 27
-
-
-###############################################################
-FINAL SCORE FOR TREE # 3 is 0.21851446466932345 
-###############################################################
-#############################################
-#############################################
-  STARTING ESTIMATOR 2 
-#############################################
-#############################################
-
-
-###################################
- Making a Decision Tree
-###################################
-
-node= 1 parentNode= 0 	parentTup= (0, 0.57421810999908873, 'YesMr', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 891
-len(dfCurr)= 374 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (1, 0.59353483631554727, 'Pclass', 2.5, 0.18181818181818182) 	len(nodeDFIds[ 1 ][1])= 374
-len(lessThan)= 202 	len(greaterThan)= 172
-
-node= 2 parentNode= 0 	parentTup= (0, 0.57421810999908873, 'YesMr', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 891
-len(dfCurr)= 517 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (2, 0.61303324554621597, 'CabinNumbers', 12.545454545454545, 13.545454545454545) 	len(nodeDFIds[ 2 ][1])= 517
-len(lessThan)= 437 	len(greaterThan)= 80
-
-node= 3 parentNode= 1 	parentTup= (1, 0.59353483631554727, 'Pclass', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 374
-len(dfCurr)= 202 	parentTup[3]= 2.5
-######## NEW ########: nodeValues[nodeCount]= (3, 0.73048217583137931, 'YesRev', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 3 ][1])= 202
-len(lessThan)= 196 	len(greaterThan)= 6
-
-node= 4 parentNode= 1 	parentTup= (1, 0.59353483631554727, 'Pclass', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 374
-len(dfCurr)= 172 	parentTup[3]= 2.5
-######## NEW ########: nodeValues[nodeCount]= (4, 0.56346682741386034, 'FamilySize', 4.5, 0.90909090909090906) 	len(nodeDFIds[ 4 ][1])= 172
-len(lessThan)= 127 	len(greaterThan)= 45
-
-node= 5 parentNode= 2 	parentTup= (2, 0.61303324554621597, 'CabinNumbers', 12.545454545454545, 13.545454545454545) 	len(parentDFIDs)= 517
-len(dfCurr)= 437 	parentTup[3]= 12.5454545455
-######## NEW ########: nodeValues[nodeCount]= (5, 0.64549288341777811, 'CabinNumbers', 7.5, 1.1818181818181819) 	len(nodeDFIds[ 5 ][1])= 437
-len(lessThan)= 432 	len(greaterThan)= 5
-
-node= 6 parentNode= 2 	parentTup= (2, 0.61303324554621597, 'CabinNumbers', 12.545454545454545, 13.545454545454545) 	len(parentDFIDs)= 517
-len(dfCurr)= 80 	parentTup[3]= 12.5454545455
-######## NEW ########: nodeValues[nodeCount]= (6, 0.53609746642351164, 'TicketNumber', 35461.0, 34766.0) 	len(nodeDFIds[ 6 ][1])= 80
-len(lessThan)= 47 	len(greaterThan)= 33
-
-node= 7 parentNode= 3 	parentTup= (3, 0.73048217583137931, 'YesRev', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 202
-len(dfCurr)= 196 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (7, 0.744555623654924, 'YesFancy', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 7 ][1])= 196
-len(lessThan)= 178 	len(greaterThan)= 18
-
-node= 8 parentNode= 3 	parentTup= (3, 0.73048217583137931, 'YesRev', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 202
-len(dfCurr)= 6 	parentTup[3]= 0.0
-*****************END NODE
-######## NEW ########: nodeValues[nodeCount]= (8, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[ 8 ][1])= 6
-
-node= 9 parentNode= 4 	parentTup= (4, 0.56346682741386034, 'FamilySize', 4.5, 0.90909090909090906) 	len(parentDFIDs)= 172
-len(dfCurr)= 127 	parentTup[3]= 4.5
-######## NEW ########: nodeValues[nodeCount]= (9, 0.53566190909303268, 'YesMaster', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 9 ][1])= 127
-len(lessThan)= 117 	len(greaterThan)= 10
-
-node= 10 parentNode= 4 	parentTup= (4, 0.56346682741386034, 'FamilySize', 4.5, 0.90909090909090906) 	len(parentDFIDs)= 172
-len(dfCurr)= 45 	parentTup[3]= 4.5
-######## NEW ########: nodeValues[nodeCount]= (10, 0.78113117707223667, 'FamilySize', 6.5, 0.54545454545454541) 	len(nodeDFIds[ 10 ][1])= 45
-len(lessThan)= 25 	len(greaterThan)= 20
-
-node= 11 parentNode= 5 	parentTup= (5, 0.64549288341777811, 'CabinNumbers', 7.5, 1.1818181818181819) 	len(parentDFIDs)= 437
-len(dfCurr)= 432 	parentTup[3]= 7.5
-######## NEW ########: nodeValues[nodeCount]= (11, 0.65066755757678674, 'TicketDashes', 1.5, 0.36363636363636365) 	len(nodeDFIds[ 11 ][1])= 432
-len(lessThan)= 392 	len(greaterThan)= 40
-
-node= 12 parentNode= 5 	parentTup= (5, 0.64549288341777811, 'CabinNumbers', 7.5, 1.1818181818181819) 	len(parentDFIDs)= 437
-len(dfCurr)= 5 	parentTup[3]= 7.5
-Less that Min gini improvement: bestGiniSplit[1]= -1 	giniEndVal= 1.122334455667789e-05
-######## NEW ########: nodeValues[nodeCount]= (12, nan, '', nan, nan) 	len(nodeDFIds[ 12 ][1])= 5
-
-node= 13 parentNode= 6 	parentTup= (6, 0.53609746642351164, 'TicketNumber', 35461.0, 34766.0) 	len(parentDFIDs)= 80
-len(dfCurr)= 47 	parentTup[3]= 35461.0
-######## NEW ########: nodeValues[nodeCount]= (13, 0.5333197252908034, 'CabinNumbers', 87.090909090909093, 9.7272727272727266) 	len(nodeDFIds[ 13 ][1])= 47
-len(lessThan)= 39 	len(greaterThan)= 8
-
-node= 14 parentNode= 6 	parentTup= (6, 0.53609746642351164, 'TicketNumber', 35461.0, 34766.0) 	len(parentDFIDs)= 80
-len(dfCurr)= 33 	parentTup[3]= 35461.0
-######## NEW ########: nodeValues[nodeCount]= (14, 0.58867632901407785, 'CabinNumbers', 62.727272727272727, 12.181818181818182) 	len(nodeDFIds[ 14 ][1])= 33
-len(lessThan)= 15 	len(greaterThan)= 18
-
-node= 15 parentNode= 7 	parentTup= (7, 0.744555623654924, 'YesFancy', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 196
-len(dfCurr)= 178 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (15, 0.78644350677550778, 'TicketNumber', 45576.090909090912, 22786.545454545456) 	len(nodeDFIds[ 15 ][1])= 178
-len(lessThan)= 111 	len(greaterThan)= 67
-
-node= 16 parentNode= 7 	parentTup= (7, 0.744555623654924, 'YesFancy', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 196
-len(dfCurr)= 18 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (16, 0.56498234830962335, 'EmbarkIsC', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 16 ][1])= 18
-len(lessThan)= 11 	len(greaterThan)= 7
-
-node= 17 parentNode= 8 	parentTup= (8, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(parentDFIDs)= 6
-
-node= 18 parentNode= 8 	parentTup= (8, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(parentDFIDs)= 6
-
-node= 19 parentNode= 9 	parentTup= (9, 0.53566190909303268, 'YesMaster', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 127
-len(dfCurr)= 117 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (19, 0.52016356557647492, 'TicketDots', 0.5, 0.090909090909090912) 	len(nodeDFIds[ 19 ][1])= 117
-len(lessThan)= 107 	len(greaterThan)= 10
-
-node= 20 parentNode= 9 	parentTup= (9, 0.53566190909303268, 'YesMaster', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 127
-len(dfCurr)= 10 	parentTup[3]= 0.0
-*****************END NODE
-######## NEW ########: nodeValues[nodeCount]= (20, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[ 20 ][1])= 10
-
-node= 21 parentNode= 10 	parentTup= (10, 0.78113117707223667, 'FamilySize', 6.5, 0.54545454545454541) 	len(parentDFIDs)= 45
-len(dfCurr)= 25 	parentTup[3]= 6.5
-*****************END NODE
-######## NEW ########: nodeValues[nodeCount]= (21, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[ 21 ][1])= 25
-
-node= 22 parentNode= 10 	parentTup= (10, 0.78113117707223667, 'FamilySize', 6.5, 0.54545454545454541) 	len(parentDFIDs)= 45
-len(dfCurr)= 20 	parentTup[3]= 6.5
-######## NEW ########: nodeValues[nodeCount]= (22, 0.67097304829861826, 'nTicketStrings', 1.5, 0.090909090909090912) 	len(nodeDFIds[ 22 ][1])= 20
-len(lessThan)= 11 	len(greaterThan)= 9
-
-node= 23 parentNode= 11 	parentTup= (11, 0.65066755757678674, 'TicketDashes', 1.5, 0.36363636363636365) 	len(parentDFIDs)= 432
-len(dfCurr)= 392 	parentTup[3]= 1.5
-######## NEW ########: nodeValues[nodeCount]= (23, 0.63643352933045361, 'AgeGroup', 0.75, 0.13636363636363635) 	len(nodeDFIds[ 23 ][1])= 392
-len(lessThan)= 370 	len(greaterThan)= 22
-
-node= 24 parentNode= 11 	parentTup= (11, 0.65066755757678674, 'TicketDashes', 1.5, 0.36363636363636365) 	len(parentDFIDs)= 432
-len(dfCurr)= 40 	parentTup[3]= 1.5
-######## NEW ########: nodeValues[nodeCount]= (24, 0.88845697733440998, 'AgeGroup', 0.25, 0.13636363636363635) 	len(nodeDFIds[ 24 ][1])= 40
-len(lessThan)= 24 	len(greaterThan)= 16
-
-node= 25 parentNode= 12 	parentTup= (12, nan, '', nan, nan) 	len(parentDFIDs)= 5
-
-node= 26 parentNode= 12 	parentTup= (12, nan, '', nan, nan) 	len(parentDFIDs)= 5
-
-node= 27 parentNode= 13 	parentTup= (13, 0.5333197252908034, 'CabinNumbers', 87.090909090909093, 9.7272727272727266) 	len(parentDFIDs)= 47
-len(dfCurr)= 39 	parentTup[3]= 87.0909090909
-######## NEW ########: nodeValues[nodeCount]= (27, 0.57131937872499405, 'CabinNumbers', 25.09090909090909, 6.0909090909090908) 	len(nodeDFIds[ 27 ][1])= 39
-len(lessThan)= 8 	len(greaterThan)= 31
-
-node= 28 parentNode= 13 	parentTup= (13, 0.5333197252908034, 'CabinNumbers', 87.090909090909093, 9.7272727272727266) 	len(parentDFIDs)= 47
-len(dfCurr)= 8 	parentTup[3]= 87.0909090909
-Less that Min gini improvement: bestGiniSplit[1]= -1 	giniEndVal= 1.122334455667789e-05
-######## NEW ########: nodeValues[nodeCount]= (28, nan, '', nan, nan) 	len(nodeDFIds[ 28 ][1])= 8
-
-node= 29 parentNode= 14 	parentTup= (14, 0.58867632901407785, 'CabinNumbers', 62.727272727272727, 12.181818181818182) 	len(parentDFIDs)= 33
-len(dfCurr)= 15 	parentTup[3]= 62.7272727273
-######## NEW ########: nodeValues[nodeCount]= (29, 0.55705203332453779, 'CabinNumbers', 36.909090909090907, 3.8181818181818183) 	len(nodeDFIds[ 29 ][1])= 15
-len(lessThan)= 10 	len(greaterThan)= 5
-
-node= 30 parentNode= 14 	parentTup= (14, 0.58867632901407785, 'CabinNumbers', 62.727272727272727, 12.181818181818182) 	len(parentDFIDs)= 33
-len(dfCurr)= 18 	parentTup[3]= 62.7272727273
-######## NEW ########: nodeValues[nodeCount]= (30, 0.72263712061965324, 'CabinNumbers', 93.909090909090907, 7.7272727272727275) 	len(nodeDFIds[ 30 ][1])= 18
-len(lessThan)= 8 	len(greaterThan)= 10
-
-
-###########################
-Writing Out the Nodes, Values, and df ID's of the nodes
-###########################
-df_weights['Weights'].sum(axis=0)= 1.0
-
-
-index= 30 	currentLeaf= (30, 0.72263712061965324, 'CabinNumbers', 93.909090909090907, 7.7272727272727275) 	len(currentDF)= 18
-	len(ltDF)= 8 	len(gtDF)= 10
-	LESS THAN
-	classVal= 0 	currWeight= 0.00798127445827
-	GREATER THAN
-	classVal= 0 	currWeight= 0.00756976511501
-	classVal= 1 	currWeight= 0.0043401648664
-	 (30, 0, 0, 0.0079812744582739986, 0.0075697651150139931, 0.0079812744582739986, 0.011909929981412964)
-
-
-index= 29 	currentLeaf= (29, 0.55705203332453779, 'CabinNumbers', 36.909090909090907, 3.8181818181818183) 	len(currentDF)= 15
-	len(ltDF)= 10 	len(gtDF)= 5
-	LESS THAN
-	classVal= 0 	currWeight= 0.00901406942303
-	classVal= 1 	currWeight= 0.00381507922483
-	GREATER THAN
-	classVal= 0 	currWeight= 0.00307895743431
-	classVal= 1 	currWeight= 0.00428345799455
-	 (29, 0, 1, 0.0090140694230337187, 0.0042834579945493761, 0.012829148647864604, 0.0073624154288573973)
-
-
-index= 13 	currentLeaf= (13, 0.5333197252908034, 'CabinNumbers', 87.090909090909093, 9.7272727272727266) 	len(currentDF)= 47
-Blank Node has a non-Blank Sister, so only make decision for one part of parent node.
-	classVal= 0 	currWeight= 0.0027178813573
-	classVal= 1 	currWeight= 0.00986783117819
-
-
-index= 27 	currentLeaf= (27, 0.57131937872499405, 'CabinNumbers', 25.09090909090909, 6.0909090909090908) 	len(currentDF)= 39
-	len(ltDF)= 8 	len(gtDF)= 31
-	LESS THAN
-	classVal= 0 	currWeight= 0.00126703652944
-	classVal= 1 	currWeight= 0.0100447168124
-	GREATER THAN
-	classVal= 0 	currWeight= 0.0230144305026
-	classVal= 1 	currWeight= 0.0179027808573
-	 (27, 1, 0, 0.010044716812419046, 0.023014430502585562, 0.011311753341858341, 0.040917211359852969)
-
-
-index= 5 	currentLeaf= (5, 0.64549288341777811, 'CabinNumbers', 7.5, 1.1818181818181819) 	len(currentDF)= 437
-Blank Node has a non-Blank Sister, so only make decision for one part of parent node.
-	classVal= 0 	currWeight= 0.00171748557411
-	classVal= 1 	currWeight= 0.00497194613783
-
-
-index= 5 	currentLeaf= (5, 0.64549288341777811, 'CabinNumbers', 7.5, 1.1818181818181819) 	len(currentDF)= 437
-Blank Node has a non-Blank Sister, so only make decision for one part of parent node.
-	classVal= 0 	currWeight= 0.00171748557411
-	classVal= 1 	currWeight= 0.00497194613783
-Decision already included from other daugther node
-
-
-index= 24 	currentLeaf= (24, 0.88845697733440998, 'AgeGroup', 0.25, 0.13636363636363635) 	len(currentDF)= 40
-	len(ltDF)= 24 	len(gtDF)= 16
-	LESS THAN
-	classVal= 0 	currWeight= 0.0217430508584
-	GREATER THAN
-	classVal= 0 	currWeight= 0.0135894067865
-	classVal= 1 	currWeight= 0.00249760942914
-	 (24, 0, 0, 0.021743050858424727, 0.013589406786515452, 0.021743050858424727, 0.016087016215651971)
-
-
-index= 23 	currentLeaf= (23, 0.63643352933045361, 'AgeGroup', 0.75, 0.13636363636363635) 	len(currentDF)= 392
-	len(ltDF)= 370 	len(gtDF)= 22
-	LESS THAN
-	classVal= 0 	currWeight= 0.301149085291
-	classVal= 1 	currWeight= 0.10391587155
-	GREATER THAN
-	classVal= 0 	currWeight= 0.0199311299536
-	 (23, 0, 0, 0.30114908529080953, 0.019931129953556004, 0.40506495684048521, 0.019931129953556004)
-
-
-index= 22 	currentLeaf= (22, 0.67097304829861826, 'nTicketStrings', 1.5, 0.090909090909090912) 	len(currentDF)= 20
-	len(ltDF)= 11 	len(gtDF)= 9
-	LESS THAN
-	classVal= 0 	currWeight= 0.00859629363581
-	classVal= 1 	currWeight= 0.00737022174905
-	GREATER THAN
-	classVal= 0 	currWeight= 0.00815364407191
-	 (22, 0, 0, 0.0085962936358141354, 0.0081536440719092718, 0.01596651538486395, 0.0081536440719092718)
-
-
-index= 21 	currentLeaf= (21, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 25
-This is An End Node
-
-
-index= 20 	currentLeaf= (20, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 10
-This is An End Node
-
-
-index= 19 	currentLeaf= (19, 0.52016356557647492, 'TicketDots', 0.5, 0.090909090909090912) 	len(currentDF)= 117
-	len(ltDF)= 107 	len(gtDF)= 10
-	LESS THAN
-	classVal= 0 	currWeight= 0.0613645319733
-	classVal= 1 	currWeight= 0.0894482654862
-	GREATER THAN
-	classVal= 0 	currWeight= 0.0094090777184
-	classVal= 1 	currWeight= 0.00488916692652
-	 (19, 1, 0, 0.089448265486242212, 0.0094090777184026239, 0.1508127974595859, 0.014298244644922711)
-
-
-index= 8 	currentLeaf= (8, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 6
-This is An End Node
-
-
-index= 8 	currentLeaf= (8, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 6
-This is An End Node
-Decision already included from other daugther node
-
-
-index= 16 	currentLeaf= (16, 0.56498234830962335, 'EmbarkIsC', 0.0, 0.18181818181818182) 	len(currentDF)= 18
-	len(ltDF)= 11 	len(gtDF)= 7
-	LESS THAN
-	classVal= 0 	currWeight= 0.00877629853205
-	classVal= 1 	currWeight= 0.00645001881622
-	GREATER THAN
-	classVal= 0 	currWeight= 0.00181192090487
-	classVal= 1 	currWeight= 0.00658734897847
-	 (16, 0, 1, 0.0087762985320540762, 0.0065873489784718433, 0.015226317348273698, 0.0083992698833405717)
-
-
-index= 15 	currentLeaf= (15, 0.78644350677550778, 'TicketNumber', 45576.090909090912, 22786.545454545456) 	len(currentDF)= 178
-	len(ltDF)= 111 	len(gtDF)= 67
-	LESS THAN
-	classVal= 0 	currWeight= 0.00749282828741
-	classVal= 1 	currWeight= 0.0978437288629
-	GREATER THAN
-	classVal= 0 	currWeight= 0.0149856565748
-	classVal= 1 	currWeight= 0.0552635875985
-	 (15, 1, 1, 0.097843728862911261, 0.055263587598496179, 0.10533655715032082, 0.070249244173315281)
-
-##############
- Getting Tree Error
- ###################
-
-decisionTup= ('30', '0', '0', '0.00798127445827', '0.00756976511501', '0.00798127445827', '0.0119099299814')
-totalCorrWeight= 0 	float(decisionTup[3])= 0.00798127445827 	float(decisionTup[4])= 0.00756976511501
-	totalCorrWeight= 0.015551039573279999
-
-decisionTup= ('29', '0', '1', '0.00901406942303', '0.00428345799455', '0.0128291486479', '0.00736241542886')
-totalCorrWeight= 0.015551039573279999 	float(decisionTup[3])= 0.00901406942303 	float(decisionTup[4])= 0.00428345799455
-	totalCorrWeight= 0.028848566990859997
-
-decisionTup= ('13', 'nan', '1', 'nan', '0.00986783117819', 'nan', '0.0125857125355')
-totalCorrWeight= 0.028848566990859997 	float(decisionTup[4])= 0.00986783117819
-	totalCorrWeight= 0.038716398169049995
-
-decisionTup= ('27', '1', '0', '0.0100447168124', '0.0230144305026', '0.0113117533419', '0.0409172113599')
-totalCorrWeight= 0.038716398169049995 	float(decisionTup[3])= 0.0100447168124 	float(decisionTup[4])= 0.0230144305026
-	totalCorrWeight= 0.07177554548404999
-
-decisionTup= ('5', 'nan', '1', 'nan', '0.00497194613783', 'nan', '0.00668943171193')
-totalCorrWeight= 0.07177554548404999 	float(decisionTup[4])= 0.00497194613783
-	totalCorrWeight= 0.07674749162187999
-
-decisionTup= ('24', '0', '0', '0.0217430508584', '0.0135894067865', '0.0217430508584', '0.0160870162157')
-totalCorrWeight= 0.07674749162187999 	float(decisionTup[3])= 0.0217430508584 	float(decisionTup[4])= 0.0135894067865
-	totalCorrWeight= 0.11207994926678
-
-decisionTup= ('23', '0', '0', '0.301149085291', '0.0199311299536', '0.40506495684', '0.0199311299536')
-totalCorrWeight= 0.11207994926678 	float(decisionTup[3])= 0.301149085291 	float(decisionTup[4])= 0.0199311299536
-	totalCorrWeight= 0.43316016451138
-
-decisionTup= ('22', '0', '0', '0.00859629363581', '0.00815364407191', '0.0159665153849', '0.00815364407191')
-totalCorrWeight= 0.43316016451138 	float(decisionTup[3])= 0.00859629363581 	float(decisionTup[4])= 0.00815364407191
-	totalCorrWeight= 0.4499101022191
-
-decisionTup= ('21', '0', 'nan', '0.0226490113109', 'nan', '0.0226490113109', 'nan')
-totalCorrWeight= 0.4499101022191 	float(decisionTup[3])= 0.0226490113109
-	totalCorrWeight= 0.47255911353
-
-decisionTup= ('20', '1', 'nan', '0.00905960452434', 'nan', '0.00905960452434', 'nan')
-totalCorrWeight= 0.47255911353 	float(decisionTup[3])= 0.00905960452434
-	totalCorrWeight= 0.48161871805434003
-
-decisionTup= ('19', '1', '0', '0.0894482654862', '0.0094090777184', '0.15081279746', '0.0142982446449')
-totalCorrWeight= 0.48161871805434003 	float(decisionTup[3])= 0.0894482654862 	float(decisionTup[4])= 0.0094090777184
-	totalCorrWeight= 0.58047606125894
-
-decisionTup= ('8', '0', 'nan', '0.00543576271461', 'nan', '0.00543576271461', 'nan')
-totalCorrWeight= 0.58047606125894 	float(decisionTup[3])= 0.00543576271461
-	totalCorrWeight= 0.58591182397355
-
-decisionTup= ('16', '0', '1', '0.00877629853205', '0.00658734897847', '0.0152263173483', '0.00839926988334')
-totalCorrWeight= 0.58591182397355 	float(decisionTup[3])= 0.00877629853205 	float(decisionTup[4])= 0.00658734897847
-	totalCorrWeight= 0.60127547148407
-
-decisionTup= ('15', '1', '1', '0.0978437288629', '0.0552635875985', '0.10533655715', '0.0702492441733')
-totalCorrWeight= 0.60127547148407 	float(decisionTup[3])= 0.0978437288629 	float(decisionTup[4])= 0.0552635875985
-	totalCorrWeight= 0.7543827879454701
-totalCorrWeight= 0.7543827879454701 	sumWeights= 0.9999999999998599 	error= 0.24561721205442422
-error= 0.24561721205442422 	alpha= 0.14039810035099323 	CorrectFactor= 0.8690122124606512 	IncorrectFactor= 1.1507318144223202
-WEIGHT NOT CHANGED.
-WEIGHT NOT CHANGED.
-BEFORE: df_weights['Weights'].unique()= [ 0.00090596  0.00178585  0.00126704  0.00249761  0.00122804  0.00184256
-  0.00171749  0.00131747]
-After: df_weights['Weights'].unique()= [ 0.00078729  0.00205503  0.00155192  0.00145802  0.00287408  0.00141315
-  0.00106718  0.00217045  0.00212029  0.00149252  0.00104252  0.00110107
-  0.00197637  0.00151605  0.0016012   0.0011449 ]
-	len('Weights' == 0.000787290697172 )= 634
-	len('Weights' == 0.00205503275996 )= 12
-	len('Weights' == 0.00155192421295 )= 14
-	len('Weights' == 0.00145801924446 )= 15
-	len('Weights' == 0.00287407863011 )= 48
-	len('Weights' == 0.00141314693898 )= 6
-	len('Weights' == 0.0010671834502 )= 45
-	len('Weights' == 0.00217045309588 )= 6
-	len('Weights' == 0.00212028716149 )= 18
-	len('Weights' == 0.00149251593862 )= 8
-	len('Weights' == 0.00104251751522 )= 13
-	len('Weights' == 0.00110107021772 )= 23
-	len('Weights' == 0.00197636529093 )= 10
-	len('Weights' == 0.00151605440845 )= 12
-	len('Weights' == 0.00160120317712 )= 12
-	len('Weights' == 0.00114489734201 )= 15
-
-
-###############################################################
-FINAL SCORE FOR TREE # 2 is 0.24561721205442422 
-###############################################################
-#############################################
-#############################################
-  STARTING ESTIMATOR 1 
-#############################################
-#############################################
-
-
-###################################
- Making a Decision Tree
-###################################
-
-node= 1 parentNode= 0 	parentTup= (0, 0.54469735112747208, 'YesMr', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 891
-len(dfCurr)= 374 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (1, 0.57634786856888165, 'Pclass', 2.5, 0.18181818181818182) 	len(nodeDFIds[ 1 ][1])= 374
-len(lessThan)= 202 	len(greaterThan)= 172
-
-node= 2 parentNode= 0 	parentTup= (0, 0.54469735112747208, 'YesMr', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 891
-len(dfCurr)= 517 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (2, 0.57237754527898654, 'CabinNumbers', 12.545454545454545, 13.545454545454545) 	len(nodeDFIds[ 2 ][1])= 517
-len(lessThan)= 437 	len(greaterThan)= 80
-
-node= 3 parentNode= 1 	parentTup= (1, 0.57634786856888165, 'Pclass', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 374
-len(dfCurr)= 202 	parentTup[3]= 2.5
-######## NEW ########: nodeValues[nodeCount]= (3, 0.69314014643193822, 'YesRev', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 3 ][1])= 202
-len(lessThan)= 196 	len(greaterThan)= 6
-
-node= 4 parentNode= 1 	parentTup= (1, 0.57634786856888165, 'Pclass', 2.5, 0.18181818181818182) 	len(parentDFIDs)= 374
-len(dfCurr)= 172 	parentTup[3]= 2.5
-######## NEW ########: nodeValues[nodeCount]= (4, 0.53863865545504119, 'FamilySize', 4.5, 0.90909090909090906) 	len(nodeDFIds[ 4 ][1])= 172
-len(lessThan)= 127 	len(greaterThan)= 45
-
-node= 5 parentNode= 2 	parentTup= (2, 0.57237754527898654, 'CabinNumbers', 12.545454545454545, 13.545454545454545) 	len(parentDFIDs)= 517
-len(dfCurr)= 437 	parentTup[3]= 12.5454545455
-######## NEW ########: nodeValues[nodeCount]= (5, 0.59425653377026111, 'CabinNumbers', 5.5, 1.1818181818181819) 	len(nodeDFIds[ 5 ][1])= 437
-len(lessThan)= 429 	len(greaterThan)= 8
-
-node= 6 parentNode= 2 	parentTup= (2, 0.57237754527898654, 'CabinNumbers', 12.545454545454545, 13.545454545454545) 	len(parentDFIDs)= 517
-len(dfCurr)= 80 	parentTup[3]= 12.5454545455
-######## NEW ########: nodeValues[nodeCount]= (6, 0.53244760774394151, 'EmbarkIsC', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 6 ][1])= 80
-len(lessThan)= 56 	len(greaterThan)= 24
-
-node= 7 parentNode= 3 	parentTup= (3, 0.69314014643193822, 'YesRev', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 202
-len(dfCurr)= 196 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (7, 0.70027017961164018, 'YesFancy', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 7 ][1])= 196
-len(lessThan)= 178 	len(greaterThan)= 18
-
-node= 8 parentNode= 3 	parentTup= (3, 0.69314014643193822, 'YesRev', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 202
-len(dfCurr)= 6 	parentTup[3]= 0.0
-*****************END NODE
-######## NEW ########: nodeValues[nodeCount]= (8, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[ 8 ][1])= 6
-
-node= 9 parentNode= 4 	parentTup= (4, 0.53863865545504119, 'FamilySize', 4.5, 0.90909090909090906) 	len(parentDFIDs)= 172
-len(dfCurr)= 127 	parentTup[3]= 4.5
-######## NEW ########: nodeValues[nodeCount]= (9, 0.52353098361030526, 'YesMaster', 0.0, 0.18181818181818182) 	len(nodeDFIds[ 9 ][1])= 127
-len(lessThan)= 117 	len(greaterThan)= 10
-
-node= 10 parentNode= 4 	parentTup= (4, 0.53863865545504119, 'FamilySize', 4.5, 0.90909090909090906) 	len(parentDFIDs)= 172
-len(dfCurr)= 45 	parentTup[3]= 4.5
-######## NEW ########: nodeValues[nodeCount]= (10, 0.74911620883691088, 'FamilySize', 6.5, 0.54545454545454541) 	len(nodeDFIds[ 10 ][1])= 45
-len(lessThan)= 25 	len(greaterThan)= 20
-
-node= 11 parentNode= 5 	parentTup= (5, 0.59425653377026111, 'CabinNumbers', 5.5, 1.1818181818181819) 	len(parentDFIDs)= 437
-len(dfCurr)= 429 	parentTup[3]= 5.5
-######## NEW ########: nodeValues[nodeCount]= (11, 0.60229905494685376, 'TicketDashes', 1.5, 0.36363636363636365) 	len(nodeDFIds[ 11 ][1])= 429
-len(lessThan)= 389 	len(greaterThan)= 40
-
-node= 12 parentNode= 5 	parentTup= (5, 0.59425653377026111, 'CabinNumbers', 5.5, 1.1818181818181819) 	len(parentDFIDs)= 437
-len(dfCurr)= 8 	parentTup[3]= 5.5
-Less that Min gini improvement: bestGiniSplit[1]= -1 	giniEndVal= 1.122334455667789e-05
-######## NEW ########: nodeValues[nodeCount]= (12, nan, '', nan, nan) 	len(nodeDFIds[ 12 ][1])= 8
-
-node= 13 parentNode= 6 	parentTup= (6, 0.53244760774394151, 'EmbarkIsC', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 80
-len(dfCurr)= 56 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (13, 0.55123144033943094, 'CabinNumbers', 24.363636363636363, 10.363636363636363) 	len(nodeDFIds[ 13 ][1])= 56
-len(lessThan)= 10 	len(greaterThan)= 46
-
-node= 14 parentNode= 6 	parentTup= (6, 0.53244760774394151, 'EmbarkIsC', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 80
-len(dfCurr)= 24 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (14, 0.6119793327994052, 'CabinNumbers', 62.18181818181818, 10.727272727272727) 	len(nodeDFIds[ 14 ][1])= 24
-len(lessThan)= 12 	len(greaterThan)= 12
-
-node= 15 parentNode= 7 	parentTup= (7, 0.70027017961164018, 'YesFancy', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 196
-len(dfCurr)= 178 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (15, 0.74179542851119873, 'TicketNumber', 45576.090909090912, 22786.545454545456) 	len(nodeDFIds[ 15 ][1])= 178
-len(lessThan)= 111 	len(greaterThan)= 67
-
-node= 16 parentNode= 7 	parentTup= (7, 0.70027017961164018, 'YesFancy', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 196
-len(dfCurr)= 18 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (16, 0.56482868465643388, 'CabinNumbers', 8.545454545454545, 9.545454545454545) 	len(nodeDFIds[ 16 ][1])= 18
-len(lessThan)= 7 	len(greaterThan)= 11
-
-node= 17 parentNode= 8 	parentTup= (8, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(parentDFIDs)= 6
-
-node= 18 parentNode= 8 	parentTup= (8, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(parentDFIDs)= 6
-
-node= 19 parentNode= 9 	parentTup= (9, 0.52353098361030526, 'YesMaster', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 127
-len(dfCurr)= 117 	parentTup[3]= 0.0
-######## NEW ########: nodeValues[nodeCount]= (19, 0.5151498654957396, 'TicketNumber', 2102220.9090909092, 2099906.9090909092) 	len(nodeDFIds[ 19 ][1])= 117
-len(lessThan)= 109 	len(greaterThan)= 8
-
-node= 20 parentNode= 9 	parentTup= (9, 0.52353098361030526, 'YesMaster', 0.0, 0.18181818181818182) 	len(parentDFIDs)= 127
-len(dfCurr)= 10 	parentTup[3]= 0.0
-*****************END NODE
-######## NEW ########: nodeValues[nodeCount]= (20, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[ 20 ][1])= 10
-
-node= 21 parentNode= 10 	parentTup= (10, 0.74911620883691088, 'FamilySize', 6.5, 0.54545454545454541) 	len(parentDFIDs)= 45
-len(dfCurr)= 25 	parentTup[3]= 6.5
-*****************END NODE
-######## NEW ########: nodeValues[nodeCount]= (21, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(nodeDFIds[ 21 ][1])= 25
-
-node= 22 parentNode= 10 	parentTup= (10, 0.74911620883691088, 'FamilySize', 6.5, 0.54545454545454541) 	len(parentDFIDs)= 45
-len(dfCurr)= 20 	parentTup[3]= 6.5
-######## NEW ########: nodeValues[nodeCount]= (22, 0.65517777780409292, 'TicketNumber', 174710.0, 281739.72727272729) 	len(nodeDFIds[ 22 ][1])= 20
-len(lessThan)= 9 	len(greaterThan)= 11
-
-node= 23 parentNode= 11 	parentTup= (11, 0.60229905494685376, 'TicketDashes', 1.5, 0.36363636363636365) 	len(parentDFIDs)= 429
-len(dfCurr)= 389 	parentTup[3]= 1.5
-######## NEW ########: nodeValues[nodeCount]= (23, 0.58953464080564866, 'AgeGroup', 0.75, 0.13636363636363635) 	len(nodeDFIds[ 23 ][1])= 389
-len(lessThan)= 368 	len(greaterThan)= 21
-
-node= 24 parentNode= 11 	parentTup= (11, 0.60229905494685376, 'TicketDashes', 1.5, 0.36363636363636365) 	len(parentDFIDs)= 429
-len(dfCurr)= 40 	parentTup[3]= 1.5
-######## NEW ########: nodeValues[nodeCount]= (24, 0.86232121296895003, 'AgeGroup', 0.25, 0.13636363636363635) 	len(nodeDFIds[ 24 ][1])= 40
-len(lessThan)= 24 	len(greaterThan)= 16
-
-node= 25 parentNode= 12 	parentTup= (12, nan, '', nan, nan) 	len(parentDFIDs)= 8
-
-node= 26 parentNode= 12 	parentTup= (12, nan, '', nan, nan) 	len(parentDFIDs)= 8
-
-node= 27 parentNode= 13 	parentTup= (13, 0.55123144033943094, 'CabinNumbers', 24.363636363636363, 10.363636363636363) 	len(parentDFIDs)= 56
-len(dfCurr)= 10 	parentTup[3]= 24.3636363636
-######## NEW ########: nodeValues[nodeCount]= (27, 0.58831040057542161, 'CabinNumbers', 19.5, 0.90909090909090906) 	len(nodeDFIds[ 27 ][1])= 10
-len(lessThan)= 5 	len(greaterThan)= 5
-
-node= 28 parentNode= 13 	parentTup= (13, 0.55123144033943094, 'CabinNumbers', 24.363636363636363, 10.363636363636363) 	len(parentDFIDs)= 56
-len(dfCurr)= 46 	parentTup[3]= 24.3636363636
-######## NEW ########: nodeValues[nodeCount]= (28, 0.58660518450796451, 'AgeGroup', 0.75, 0.13636363636363635) 	len(nodeDFIds[ 28 ][1])= 46
-len(lessThan)= 37 	len(greaterThan)= 9
-
-node= 29 parentNode= 14 	parentTup= (14, 0.6119793327994052, 'CabinNumbers', 62.18181818181818, 10.727272727272727) 	len(parentDFIDs)= 24
-len(dfCurr)= 12 	parentTup[3]= 62.1818181818
-######## NEW ########: nodeValues[nodeCount]= (29, 0.73110068453724175, 'Parch', 0.5, 0.18181818181818182) 	len(nodeDFIds[ 29 ][1])= 12
-len(lessThan)= 7 	len(greaterThan)= 5
-
-node= 30 parentNode= 14 	parentTup= (14, 0.6119793327994052, 'CabinNumbers', 62.18181818181818, 10.727272727272727) 	len(parentDFIDs)= 24
-len(dfCurr)= 12 	parentTup[3]= 62.1818181818
-######## NEW ########: nodeValues[nodeCount]= (30, 0.60188858573924842, 'CabinNumbers', 87.63636363636364, 7.5454545454545459) 	len(nodeDFIds[ 30 ][1])= 12
-len(lessThan)= 7 	len(greaterThan)= 5
-
-
-###########################
-Writing Out the Nodes, Values, and df ID's of the nodes
-###########################
-df_weights['Weights'].sum(axis=0)= 1.0
-
-
-index= 30 	currentLeaf= (30, 0.60188858573924842, 'CabinNumbers', 87.63636363636364, 7.5454545454545459) 	len(currentDF)= 12
-	len(ltDF)= 7 	len(gtDF)= 5
-	LESS THAN
-	classVal= 0 	currWeight= 0.00563151571118
-	classVal= 1 	currWeight= 0.00225993439326
-	GREATER THAN
-	classVal= 0 	currWeight= 0.00224865096476
-	classVal= 1 	currWeight= 0.00628000105483
-	 (30, 0, 1, 0.0056315157111805694, 0.0062800010548255212, 0.0078914501044368111, 0.0085286520195818668)
-
-
-index= 29 	currentLeaf= (29, 0.73110068453724175, 'Parch', 0.5, 0.18181818181818182) 	len(currentDF)= 12
-	len(ltDF)= 7 	len(gtDF)= 5
-	LESS THAN
-	classVal= 0 	currWeight= 0.000839143563353
-	classVal= 1 	currWeight= 0.0103396608311
-	GREATER THAN
-	classVal= 0 	currWeight= 0.00281575785559
-	classVal= 1 	currWeight= 0.00612674477595
-	 (29, 1, 1, 0.010339660831066945, 0.0061267447759540189, 0.011178804394420424, 0.0089425026315443027)
-
-
-index= 28 	currentLeaf= (28, 0.58660518450796451, 'AgeGroup', 0.75, 0.13636363636363635) 	len(currentDF)= 46
-	len(ltDF)= 37 	len(gtDF)= 9
-	LESS THAN
-	classVal= 0 	currWeight= 0.0286346573378
-	classVal= 1 	currWeight= 0.0192735590013
-	GREATER THAN
-	classVal= 0 	currWeight= 0.0078243287427
-	 (28, 0, 0, 0.028634657337782747, 0.007824328742700842, 0.047908216339102042, 0.007824328742700842)
-
-
-index= 27 	currentLeaf= (27, 0.58831040057542161, 'CabinNumbers', 19.5, 0.90909090909090906) 	len(currentDF)= 10
-	len(ltDF)= 5 	len(gtDF)= 5
-	LESS THAN
-	classVal= 0 	currWeight= 0.0031863222848
-	classVal= 1 	currWeight= 0.00428367543321
-	GREATER THAN
-	classVal= 0 	currWeight= 0.0015540479122
-	classVal= 1 	currWeight= 0.0058086488802
-	 (27, 1, 1, 0.0042836754332135759, 0.0058086488802022457, 0.0074699977180129416, 0.0073626967924030132)
-
-
-index= 5 	currentLeaf= (5, 0.59425653377026111, 'CabinNumbers', 5.5, 1.1818181818181819) 	len(currentDF)= 437
-Blank Node has a non-Blank Sister, so only make decision for one part of parent node.
-	classVal= 0 	currWeight= 0.00411926640489
-	classVal= 1 	currWeight= 0.0067956346356
-
-
-index= 5 	currentLeaf= (5, 0.59425653377026111, 'CabinNumbers', 5.5, 1.1818181818181819) 	len(currentDF)= 437
-Blank Node has a non-Blank Sister, so only make decision for one part of parent node.
-	classVal= 0 	currWeight= 0.00411926640489
-	classVal= 1 	currWeight= 0.0067956346356
-Decision already included from other daugther node
-
-
-index= 24 	currentLeaf= (24, 0.86232121296895003, 'AgeGroup', 0.25, 0.13636363636363635) 	len(currentDF)= 40
-	len(ltDF)= 24 	len(gtDF)= 16
-	LESS THAN
-	classVal= 0 	currWeight= 0.0201394455205
-	GREATER THAN
-	classVal= 0 	currWeight= 0.0125871534503
-	classVal= 1 	currWeight= 0.00306337238798
-	 (24, 0, 0, 0.020139445520483475, 0.012587153450302174, 0.020139445520483475, 0.015650525838279181)
-
-
-index= 23 	currentLeaf= (23, 0.58953464080564866, 'AgeGroup', 0.75, 0.13636363636363635) 	len(currentDF)= 389
-	len(ltDF)= 368 	len(gtDF)= 21
-	LESS THAN
-	classVal= 0 	currWeight= 0.277764984451
-	classVal= 1 	currWeight= 0.125264698613
-	GREATER THAN
-	classVal= 0 	currWeight= 0.0176220148304
-	 (23, 0, 0, 0.27776498445067527, 0.017622014830423045, 0.40302968306354525, 0.017622014830423045)
-
-
-index= 22 	currentLeaf= (22, 0.65517777780409292, 'TicketNumber', 174710.0, 281739.72727272729) 	len(currentDF)= 20
-	len(ltDF)= 9 	len(gtDF)= 11
-	LESS THAN
-	classVal= 0 	currWeight= 0.00755229207018
-	GREATER THAN
-	classVal= 0 	currWeight= 0.00796229510218
-	classVal= 1 	currWeight= 0.00903973757302
-	 (22, 0, 1, 0.007552292070181303, 0.0090397375730249703, 0.007552292070181303, 0.017002032675208271)
-
-
-index= 21 	currentLeaf= (21, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 25
-This is An End Node
-
-
-index= 20 	currentLeaf= (20, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 10
-This is An End Node
-
-
-index= 19 	currentLeaf= (19, 0.5151498654957396, 'TicketNumber', 2102220.9090909092, 2099906.9090909092) 	len(currentDF)= 117
-	len(ltDF)= 109 	len(gtDF)= 8
-	LESS THAN
-	classVal= 0 	currWeight= 0.0816328911728
-	classVal= 1 	currWeight= 0.0783529575545
-	GREATER THAN
-	classVal= 0 	currWeight= 0.00234717872145
-	classVal= 1 	currWeight= 0.0104949404727
-	 (19, 0, 1, 0.081632891172807809, 0.010494940472672527, 0.1599858487273155, 0.012842119194118415)
-
-
-index= 8 	currentLeaf= (8, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 6
-This is An End Node
-
-
-index= 8 	currentLeaf= (8, 1.0, 'ThisIsAnEndNode', nan, nan) 	len(currentDF)= 6
-This is An End Node
-Decision already included from other daugther node
-
-
-index= 16 	currentLeaf= (16, 0.56482868465643388, 'CabinNumbers', 8.545454545454545, 9.545454545454545) 	len(currentDF)= 18
-	len(ltDF)= 7 	len(gtDF)= 11
-	LESS THAN
-	classVal= 0 	currWeight= 0.00557893472516
-	classVal= 1 	currWeight= 0.00306337238798
-	GREATER THAN
-	classVal= 0 	currWeight= 0.00477244992579
-	classVal= 1 	currWeight= 0.0109492314628
-	 (16, 0, 1, 0.0055789347251599467, 0.010949231462807322, 0.0086423071131369565, 0.015721681388597652)
-
-
-index= 15 	currentLeaf= (15, 0.74179542851119873, 'TicketNumber', 45576.090909090912, 22786.545454545456) 	len(currentDF)= 178
-	len(ltDF)= 111 	len(gtDF)= 67
-	LESS THAN
-	classVal= 0 	currWeight= 0.00919011716393
-	classVal= 1 	currWeight= 0.0906275048422
-	GREATER THAN
-	classVal= 0 	currWeight= 0.0183802343279
-	classVal= 1 	currWeight= 0.0511877573646
-	 (15, 1, 1, 0.090627504842175632, 0.051187757364562152, 0.099817622006106652, 0.069567991692424211)
-
-##############
- Getting Tree Error
- ###################
-
-decisionTup= ('30', '0', '1', '0.00563151571118', '0.00628000105483', '0.00789145010444', '0.00852865201958')
-totalCorrWeight= 0 	float(decisionTup[3])= 0.00563151571118 	float(decisionTup[4])= 0.00628000105483
-	totalCorrWeight= 0.011911516766009999
-
-decisionTup= ('29', '1', '1', '0.0103396608311', '0.00612674477595', '0.0111788043944', '0.00894250263154')
-totalCorrWeight= 0.011911516766009999 	float(decisionTup[3])= 0.0103396608311 	float(decisionTup[4])= 0.00612674477595
-	totalCorrWeight= 0.02837792237306
-
-decisionTup= ('28', '0', '0', '0.0286346573378', '0.0078243287427', '0.0479082163391', '0.0078243287427')
-totalCorrWeight= 0.02837792237306 	float(decisionTup[3])= 0.0286346573378 	float(decisionTup[4])= 0.0078243287427
-	totalCorrWeight= 0.06483690845356
-
-decisionTup= ('27', '1', '1', '0.00428367543321', '0.0058086488802', '0.00746999771801', '0.0073626967924')
-totalCorrWeight= 0.06483690845356 	float(decisionTup[3])= 0.00428367543321 	float(decisionTup[4])= 0.0058086488802
-	totalCorrWeight= 0.07492923276697
-
-decisionTup= ('5', 'nan', '1', 'nan', '0.0067956346356', 'nan', '0.0109149010405')
-totalCorrWeight= 0.07492923276697 	float(decisionTup[4])= 0.0067956346356
-	totalCorrWeight= 0.08172486740257
-
-decisionTup= ('24', '0', '0', '0.0201394455205', '0.0125871534503', '0.0201394455205', '0.0156505258383')
-totalCorrWeight= 0.08172486740257 	float(decisionTup[3])= 0.0201394455205 	float(decisionTup[4])= 0.0125871534503
-	totalCorrWeight= 0.11445146637337
-
-decisionTup= ('23', '0', '0', '0.277764984451', '0.0176220148304', '0.403029683064', '0.0176220148304')
-totalCorrWeight= 0.11445146637337 	float(decisionTup[3])= 0.277764984451 	float(decisionTup[4])= 0.0176220148304
-	totalCorrWeight= 0.40983846565477
-
-decisionTup= ('22', '0', '1', '0.00755229207018', '0.00903973757302', '0.00755229207018', '0.0170020326752')
-totalCorrWeight= 0.40983846565477 	float(decisionTup[3])= 0.00755229207018 	float(decisionTup[4])= 0.00903973757302
-	totalCorrWeight= 0.42643049529797
-
-decisionTup= ('21', '0', 'nan', '0.0209785890838', 'nan', '0.0209785890838', 'nan')
-totalCorrWeight= 0.42643049529797 	float(decisionTup[3])= 0.0209785890838
-	totalCorrWeight= 0.44740908438177
-
-decisionTup= ('20', '1', 'nan', '0.00839143563353', 'nan', '0.00839143563353', 'nan')
-totalCorrWeight= 0.44740908438177 	float(decisionTup[3])= 0.00839143563353
-	totalCorrWeight= 0.4558005200153
-
-decisionTup= ('19', '0', '1', '0.0816328911728', '0.0104949404727', '0.159985848727', '0.0128421191941')
-totalCorrWeight= 0.4558005200153 	float(decisionTup[3])= 0.0816328911728 	float(decisionTup[4])= 0.0104949404727
-	totalCorrWeight= 0.5479283516608
-
-decisionTup= ('8', '0', 'nan', '0.00503486138012', 'nan', '0.00503486138012', 'nan')
-totalCorrWeight= 0.5479283516608 	float(decisionTup[3])= 0.00503486138012
-	totalCorrWeight= 0.55296321304092
-
-decisionTup= ('16', '0', '1', '0.00557893472516', '0.0109492314628', '0.00864230711314', '0.0157216813886')
-totalCorrWeight= 0.55296321304092 	float(decisionTup[3])= 0.00557893472516 	float(decisionTup[4])= 0.0109492314628
-	totalCorrWeight= 0.56949137922888
-
-decisionTup= ('15', '1', '1', '0.0906275048422', '0.0511877573646', '0.0998176220061', '0.0695679916924')
-totalCorrWeight= 0.56949137922888 	float(decisionTup[3])= 0.0906275048422 	float(decisionTup[4])= 0.0511877573646
-	totalCorrWeight= 0.7113066414356801
-totalCorrWeight= 0.7113066414356801 	sumWeights= 1.00000000000004 	error= 0.2886933585643483
-error= 0.2886933585643483 	alpha= 0.12423901972042928 	CorrectFactor= 0.8831687209120735 	IncorrectFactor= 1.1322864774550343
-WEIGHT NOT CHANGED.
-BEFORE: df_weights['Weights'].unique()= [ 0.00083914  0.00219038  0.00165414  0.00155405  0.00306337  0.00150622
-  0.00113747  0.0023134   0.00225993  0.00159082  0.00111118  0.00117359
-  0.00210653  0.00161591  0.00170666  0.0012203 ]
-After: df_weights['Weights'].unique()= [ 0.00074111  0.00193448  0.00187296  0.00095015  0.00137249  0.00346862
-  0.00133025  0.00128794  0.00261944  0.0019959   0.00140496  0.00098136
-  0.00103648  0.00186042  0.00182967  0.0023852   0.00150727  0.00107773
-  0.00270547  0.00142712  0.00248014  0.00193243  0.00180126  0.00125817
-  0.00132884  0.00138173  0.00100458  0.00170547  0.00255889  0.00204313
-  0.00146088  0.00175963]
-	len('Weights' == 0.000741105347508 )= 614
-	len('Weights' == 0.00193447702759 )= 6
-	len('Weights' == 0.0018729577367 )= 12
-	len('Weights' == 0.000950150909429 )= 20
-	len('Weights' == 0.00137248650685 )= 14
-	len('Weights' == 0.00346861513032 )= 43
-	len('Weights' == 0.00133024657481 )= 3
-	len('Weights' == 0.00128794272482 )= 39
-	len('Weights' == 0.00261943649319 )= 4
-	len('Weights' == 0.00199590336744 )= 17
-	len('Weights' == 0.00140495949886 )= 5
-	len('Weights' == 0.000981359627619 )= 12
-	len('Weights' == 0.00103647741459 )= 18
-	len('Weights' == 0.00186042447981 )= 3
-	len('Weights' == 0.00182966784709 )= 3
-	len('Weights' == 0.00238519937463 )= 7
-	len('Weights' == 0.00150727074672 )= 6
-	len('Weights' == 0.00107773347959 )= 12
-	len('Weights' == 0.00270547467357 )= 5
-	len('Weights' == 0.00142711711601 )= 9
-	len('Weights' == 0.00248014012206 )= 6
-	len('Weights' == 0.00193243062617 )= 6
-	len('Weights' == 0.00180126017177 )= 3
-	len('Weights' == 0.00125817435509 )= 1
-	len('Weights' == 0.00132883936323 )= 5
-	len('Weights' == 0.00138173263652 )= 3
-	len('Weights' == 0.0010045785687 )= 6
-	len('Weights' == 0.00170547277397 )= 3
-	len('Weights' == 0.00255889315342 )= 1
-	len('Weights' == 0.00204312638476 )= 2
-	len('Weights' == 0.00146088266669 )= 2
-	len('Weights' == 0.0017596274363 )= 1
-
-
-###############################################################
-FINAL SCORE FOR TREE # 1 is 0.2886933585643483 
-###############################################################
+
+
+########################################################################
+ Classifying Boosted Tree
+######################################################################
+currEst= 1
+
+	nodeValueTup= (0, 0.544697351127, 'YesMr', 0.0, 0.181818181818)
+	len(lt)= 178 	len(gt)= 240
+	nodeValueTup[0]*2 + 1= 1 
+	ltDFIiDs= 178
+	gtDFIDs= 240
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (1, 0.576347868569, 'Pclass', 2.5, 0.181818181818)
+	len(lt)= 89 	len(gt)= 89
+	nodeValueTup[0]*2 + 1= 3 
+	ltDFIiDs= 89
+	gtDFIDs= 89
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (2, 0.572377545279, 'CabinNumbers', 12.5454545455, 13.5454545455)
+	len(lt)= 206 	len(gt)= 34
+	nodeValueTup[0]*2 + 1= 5 
+	ltDFIiDs= 206
+	gtDFIDs= 34
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (3, 0.693140146432, 'YesRev', 0.0, 0.181818181818)
+	len(lt)= 87 	len(gt)= 2
+	nodeValueTup[0]*2 + 1= 7 
+	ltDFIiDs= 87
+	gtDFIDs= 2
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (4, 0.538638655455, 'FamilySize', 4.5, 0.909090909091)
+	len(lt)= 79 	len(gt)= 10
+	nodeValueTup[0]*2 + 1= 9 
+	ltDFIiDs= 79
+	gtDFIDs= 10
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (5, 0.59425653377, 'CabinNumbers', 5.5, 1.18181818182)
+	len(lt)= 201 	len(gt)= 5
+	nodeValueTup[0]*2 + 1= 11 
+	ltDFIiDs= 201
+	gtDFIDs= 5
+	One of this Node's Daughters is a BlankNode.
+	Class for GT= 1 	len(gtIDs)= 5
+
+	nodeValueTup= (6, 0.532447607744, 'EmbarkIsC', 0.0, 0.181818181818)
+	len(lt)= 16 	len(gt)= 18
+	nodeValueTup[0]*2 + 1= 13 
+	ltDFIiDs= 16
+	gtDFIDs= 18
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (7, 0.700270179612, 'YesFancy', 0.0, 0.181818181818)
+	len(lt)= 82 	len(gt)= 5
+	nodeValueTup[0]*2 + 1= 15 
+	ltDFIiDs= 82
+	gtDFIDs= 5
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (8, 1.0, 'ThisIsAnEndNode', nan, nan)
+	decision= 0 	alpha= 1.2423901972042928
+
+	nodeValueTup= (9, 0.52353098361, 'YesMaster', 0.0, 0.181818181818)
+	len(lt)= 67 	len(gt)= 12
+	nodeValueTup[0]*2 + 1= 19 
+	ltDFIiDs= 67
+	gtDFIDs= 12
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (10, 0.749116208837, 'FamilySize', 6.5, 0.545454545455)
+	len(lt)= 3 	len(gt)= 7
+	nodeValueTup[0]*2 + 1= 21 
+	ltDFIiDs= 3
+	gtDFIDs= 7
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (11, 0.602299054947, 'TicketDashes', 1.5, 0.363636363636)
+	len(lt)= 174 	len(gt)= 27
+	nodeValueTup[0]*2 + 1= 23 
+	ltDFIiDs= 174
+	gtDFIDs= 27
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (12, nan, '', nan, nan)
+	df= [938, 1010, 1058, 1107, 1162]
+
+	nodeValueTup= (13, 0.551231440339, 'CabinNumbers', 24.3636363636, 10.3636363636)
+	len(lt)= 4 	len(gt)= 12
+	nodeValueTup[0]*2 + 1= 27 
+	ltDFIiDs= 4
+	gtDFIDs= 12
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (14, 0.611979332799, 'CabinNumbers', 62.1818181818, 10.7272727273)
+	len(lt)= 10 	len(gt)= 8
+	nodeValueTup[0]*2 + 1= 29 
+	ltDFIiDs= 10
+	gtDFIDs= 8
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (15, 0.741795428511, 'TicketNumber', 45576.0909091, 22786.5454545)
+	Class for LT= 1 	len(ltIDs)= 64 	Class for GT= 1 	len(gtIDs)= 18
+
+	nodeValueTup= (16, 0.564828684656, 'CabinNumbers', 8.54545454545, 9.54545454545)
+	Class for LT= 0 	len(ltIDs)= 0 	Class for GT= 0 	len(gtIDs)= 5
+
+	nodeValueTup= (17, nan, '', nan, nan)
+	df= []
+
+	nodeValueTup= (18, nan, '', nan, nan)
+	df= []
+
+	nodeValueTup= (19, 0.515149865496, 'TicketNumber', 2102220.90909, 2099906.90909)
+	Class for LT= 0 	len(ltIDs)= 61 	Class for GT= 0 	len(gtIDs)= 6
+
+	nodeValueTup= (20, 1.0, 'ThisIsAnEndNode', nan, nan)
+	decision= 1 	alpha= 1.2423901972042928
+
+	nodeValueTup= (21, 1.0, 'ThisIsAnEndNode', nan, nan)
+	decision= 0 	alpha= 1.2423901972042928
+
+	nodeValueTup= (22, 0.655177777804, 'Fare', 0.25, 0.0909090909091)
+	Class for LT= 1 	len(ltIDs)= 3 	Class for GT= 1 	len(gtIDs)= 4
+
+	nodeValueTup= (23, 0.589534640806, 'AgeGroup', 0.75, 0.136363636364)
+	Class for LT= 0 	len(ltIDs)= 165 	Class for GT= 0 	len(gtIDs)= 9
+
+	nodeValueTup= (24, 0.862321212969, 'AgeGroup', 0.25, 0.136363636364)
+	Class for LT= 0 	len(ltIDs)= 19 	Class for GT= 0 	len(gtIDs)= 8
+
+	nodeValueTup= (25, nan, '', nan, nan)
+	df= []
+
+	nodeValueTup= (26, nan, '', nan, nan)
+	df= []
+
+	nodeValueTup= (27, 0.588310400575, 'CabinNumbers', 19.5, 0.909090909091)
+	Class for LT= 1 	len(ltIDs)= 0 	Class for GT= 1 	len(gtIDs)= 4
+
+	nodeValueTup= (28, 0.586605184508, 'AgeGroup', 0.75, 0.136363636364)
+	Class for LT= 0 	len(ltIDs)= 8 	Class for GT= 0 	len(gtIDs)= 4
+
+	nodeValueTup= (29, 0.731100684537, 'Parch', 0.5, 0.181818181818)
+	Class for LT= 1 	len(ltIDs)= 8 	Class for GT= 1 	len(gtIDs)= 2
+
+	nodeValueTup= (30, 0.601888585739, 'CabinNumbers', 87.6363636364, 7.54545454545)
+	Class for LT= 0 	len(ltIDs)= 5 	Class for GT= 0 	len(gtIDs)= 3
+currEst= 2
+
+	nodeValueTup= (0, 0.574218109999, 'YesMr', 0.0, 0.181818181818)
+	len(lt)= 178 	len(gt)= 240
+	nodeValueTup[0]*2 + 1= 1 
+	ltDFIiDs= 178
+	gtDFIDs= 240
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (1, 0.593534836316, 'Pclass', 2.5, 0.181818181818)
+	len(lt)= 89 	len(gt)= 89
+	nodeValueTup[0]*2 + 1= 3 
+	ltDFIiDs= 89
+	gtDFIDs= 89
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (2, 0.613033245546, 'CabinNumbers', 12.5454545455, 13.5454545455)
+	len(lt)= 206 	len(gt)= 34
+	nodeValueTup[0]*2 + 1= 5 
+	ltDFIiDs= 206
+	gtDFIDs= 34
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (3, 0.730482175831, 'YesRev', 0.0, 0.181818181818)
+	len(lt)= 87 	len(gt)= 2
+	nodeValueTup[0]*2 + 1= 7 
+	ltDFIiDs= 87
+	gtDFIDs= 2
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (4, 0.563466827414, 'FamilySize', 4.5, 0.909090909091)
+	len(lt)= 79 	len(gt)= 10
+	nodeValueTup[0]*2 + 1= 9 
+	ltDFIiDs= 79
+	gtDFIDs= 10
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (5, 0.645492883418, 'CabinNumbers', 7.5, 1.18181818182)
+	len(lt)= 203 	len(gt)= 3
+	nodeValueTup[0]*2 + 1= 11 
+	ltDFIiDs= 203
+	gtDFIDs= 3
+	One of this Node's Daughters is a BlankNode.
+	Class for GT= 1 	len(gtIDs)= 3
+
+	nodeValueTup= (6, 0.536097466424, 'TicketNumber', 35461.0, 34766.0)
+	len(lt)= 23 	len(gt)= 11
+	nodeValueTup[0]*2 + 1= 13 
+	ltDFIiDs= 23
+	gtDFIDs= 11
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (7, 0.744555623655, 'YesFancy', 0.0, 0.181818181818)
+	len(lt)= 82 	len(gt)= 5
+	nodeValueTup[0]*2 + 1= 15 
+	ltDFIiDs= 82
+	gtDFIDs= 5
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (8, 1.0, 'ThisIsAnEndNode', nan, nan)
+	decision= 0 	alpha= 1.4039810035099323
+
+	nodeValueTup= (9, 0.535661909093, 'Gender', 0.0, 0.181818181818)
+	len(lt)= 67 	len(gt)= 12
+	nodeValueTup[0]*2 + 1= 19 
+	ltDFIiDs= 67
+	gtDFIDs= 12
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (10, 0.781131177072, 'FamilySize', 6.5, 0.545454545455)
+	len(lt)= 3 	len(gt)= 7
+	nodeValueTup[0]*2 + 1= 21 
+	ltDFIiDs= 3
+	gtDFIDs= 7
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (11, 0.650667557577, 'TicketDashes', 1.5, 0.363636363636)
+	len(lt)= 176 	len(gt)= 27
+	nodeValueTup[0]*2 + 1= 23 
+	ltDFIiDs= 176
+	gtDFIDs= 27
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (12, nan, '', nan, nan)
+	df= [938, 1058, 1107]
+
+	nodeValueTup= (13, 0.533319725291, 'CabinNumbers', 87.0909090909, 9.72727272727)
+	len(lt)= 21 	len(gt)= 2
+	nodeValueTup[0]*2 + 1= 27 
+	ltDFIiDs= 21
+	gtDFIDs= 2
+	One of this Node's Daughters is a BlankNode.
+	Class for GT= 1 	len(gtIDs)= 2
+
+	nodeValueTup= (14, 0.588676329014, 'CabinNumbers', 62.7272727273, 12.1818181818)
+	len(lt)= 7 	len(gt)= 4
+	nodeValueTup[0]*2 + 1= 29 
+	ltDFIiDs= 7
+	gtDFIDs= 4
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (15, 0.786443506776, 'TicketNumber', 45576.0909091, 22786.5454545)
+	Class for LT= 1 	len(ltIDs)= 64 	Class for GT= 1 	len(gtIDs)= 18
+
+	nodeValueTup= (16, 0.56498234831, 'EmbarkIsC', 0.0, 0.181818181818)
+	Class for LT= 0 	len(ltIDs)= 1 	Class for GT= 0 	len(gtIDs)= 4
+
+	nodeValueTup= (17, nan, '', nan, nan)
+	df= []
+
+	nodeValueTup= (18, nan, '', nan, nan)
+	df= []
+
+	nodeValueTup= (19, 0.520163565576, 'TicketDots', 0.5, 0.0909090909091)
+	Class for LT= 1 	len(ltIDs)= 60 	Class for GT= 1 	len(gtIDs)= 7
+
+	nodeValueTup= (20, 1.0, 'ThisIsAnEndNode', nan, nan)
+	decision= 1 	alpha= 1.4039810035099323
+
+	nodeValueTup= (21, 1.0, 'ThisIsAnEndNode', nan, nan)
+	decision= 0 	alpha= 1.4039810035099323
+
+	nodeValueTup= (22, 0.670973048299, 'TicketBeginLetter', 0.0, 0.181818181818)
+	Class for LT= 0 	len(ltIDs)= 3 	Class for GT= 0 	len(gtIDs)= 4
+
+	nodeValueTup= (23, 0.63643352933, 'AgeGroup', 0.75, 0.136363636364)
+	Class for LT= 0 	len(ltIDs)= 167 	Class for GT= 0 	len(gtIDs)= 9
+
+	nodeValueTup= (24, 0.888456977334, 'AgeGroup', 0.25, 0.136363636364)
+	Class for LT= 0 	len(ltIDs)= 19 	Class for GT= 0 	len(gtIDs)= 8
+
+	nodeValueTup= (25, nan, '', nan, nan)
+	df= []
+
+	nodeValueTup= (26, nan, '', nan, nan)
+	df= []
+
+	nodeValueTup= (27, 0.571319378725, 'CabinNumbers', 25.0909090909, 6.09090909091)
+	Class for LT= 1 	len(ltIDs)= 3 	Class for GT= 1 	len(gtIDs)= 18
+
+	nodeValueTup= (28, nan, '', nan, nan)
+	df= [1069, 1144]
+
+	nodeValueTup= (29, 0.557052033325, 'CabinNumbers', 36.9090909091, 3.81818181818)
+	Class for LT= 0 	len(ltIDs)= 4 	Class for GT= 0 	len(gtIDs)= 3
+
+	nodeValueTup= (30, 0.72263712062, 'CabinNumbers', 93.9090909091, 7.72727272727)
+	Class for LT= 0 	len(ltIDs)= 2 	Class for GT= 0 	len(gtIDs)= 2
+currEst= 3
+
+	nodeValueTup= (0, 0.601473749834, 'YesMr', 0.0, 0.181818181818)
+	len(lt)= 178 	len(gt)= 240
+	nodeValueTup[0]*2 + 1= 1 
+	ltDFIiDs= 178
+	gtDFIDs= 240
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (1, 0.61729937254, 'Pclass', 2.5, 0.181818181818)
+	len(lt)= 89 	len(gt)= 89
+	nodeValueTup[0]*2 + 1= 3 
+	ltDFIiDs= 89
+	gtDFIDs= 89
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (2, 0.659853925613, 'CabinNumbers', 12.5454545455, 13.5454545455)
+	len(lt)= 206 	len(gt)= 34
+	nodeValueTup[0]*2 + 1= 5 
+	ltDFIiDs= 206
+	gtDFIDs= 34
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (3, 0.772953910652, 'YesRev', 0.0, 0.181818181818)
+	len(lt)= 87 	len(gt)= 2
+	nodeValueTup[0]*2 + 1= 7 
+	ltDFIiDs= 87
+	gtDFIDs= 2
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (4, 0.557435566035, 'FamilySize', 4.5, 0.909090909091)
+	len(lt)= 79 	len(gt)= 10
+	nodeValueTup[0]*2 + 1= 9 
+	ltDFIiDs= 79
+	gtDFIDs= 10
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (5, 0.703761897333, 'CabinNumbers', 7.5, 1.18181818182)
+	len(lt)= 203 	len(gt)= 3
+	nodeValueTup[0]*2 + 1= 11 
+	ltDFIiDs= 203
+	gtDFIDs= 3
+	One of this Node's Daughters is a BlankNode.
+	Class for GT= 1 	len(gtIDs)= 3
+
+	nodeValueTup= (6, 0.546794309319, 'TicketNumber', 35461.0, 34766.0)
+	len(lt)= 23 	len(gt)= 11
+	nodeValueTup[0]*2 + 1= 13 
+	ltDFIiDs= 23
+	gtDFIDs= 11
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (7, 0.788271774282, 'YesFancy', 0.0, 0.181818181818)
+	len(lt)= 82 	len(gt)= 5
+	nodeValueTup[0]*2 + 1= 15 
+	ltDFIiDs= 82
+	gtDFIDs= 5
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (8, 1.0, 'ThisIsAnEndNode', nan, nan)
+	decision= 0 	alpha= 1.5209030667780024
+
+	nodeValueTup= (9, 0.532595625019, 'Gender', 0.0, 0.181818181818)
+	len(lt)= 67 	len(gt)= 12
+	nodeValueTup[0]*2 + 1= 19 
+	ltDFIiDs= 67
+	gtDFIDs= 12
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (10, 0.780478978684, 'FamilySize', 6.5, 0.545454545455)
+	len(lt)= 3 	len(gt)= 7
+	nodeValueTup[0]*2 + 1= 21 
+	ltDFIiDs= 3
+	gtDFIDs= 7
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (11, 0.707360530007, 'TicketDashes', 1.5, 0.363636363636)
+	len(lt)= 176 	len(gt)= 27
+	nodeValueTup[0]*2 + 1= 23 
+	ltDFIiDs= 176
+	gtDFIDs= 27
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (12, nan, '', nan, nan)
+	df= [938, 1058, 1107]
+
+	nodeValueTup= (13, 0.536964925045, 'AgeGroup', 0.75, 0.136363636364)
+	len(lt)= 17 	len(gt)= 6
+	nodeValueTup[0]*2 + 1= 27 
+	ltDFIiDs= 17
+	gtDFIDs= 6
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (14, 0.630059874034, 'EmbarkIsC', 0.0, 0.181818181818)
+	len(lt)= 8 	len(gt)= 3
+	nodeValueTup[0]*2 + 1= 29 
+	ltDFIiDs= 8
+	gtDFIDs= 3
+	One of this Node's Daughters is a BlankNode.
+	Class for GT= 1 	len(gtIDs)= 3
+
+	nodeValueTup= (15, 0.829754637516, 'TicketNumber', 45576.0909091, 22786.5454545)
+	Class for LT= 1 	len(ltIDs)= 64 	Class for GT= 1 	len(gtIDs)= 18
+
+	nodeValueTup= (16, 0.614258467499, 'CabinNumbers', 8.54545454545, 9.54545454545)
+	Class for LT= 0 	len(ltIDs)= 0 	Class for GT= 0 	len(gtIDs)= 5
+
+	nodeValueTup= (17, nan, '', nan, nan)
+	df= []
+
+	nodeValueTup= (18, nan, '', nan, nan)
+	df= []
+
+	nodeValueTup= (19, 0.513005898434, 'Fare', -0.25, 0.0454545454545)
+	Class for LT= 0 	len(ltIDs)= 50 	Class for GT= 0 	len(gtIDs)= 17
+
+	nodeValueTup= (20, 1.0, 'ThisIsAnEndNode', nan, nan)
+	decision= 1 	alpha= 1.5209030667780024
+
+	nodeValueTup= (21, 1.0, 'ThisIsAnEndNode', nan, nan)
+	decision= 0 	alpha= 1.5209030667780024
+
+	nodeValueTup= (22, 0.688213296572, 'TicketBeginLetter', 0.0, 0.181818181818)
+	Class for LT= 1 	len(ltIDs)= 3 	Class for GT= 1 	len(gtIDs)= 4
+
+	nodeValueTup= (23, 0.692734385858, 'AgeGroup', 0.75, 0.136363636364)
+	Class for LT= 0 	len(ltIDs)= 167 	Class for GT= 0 	len(gtIDs)= 9
+
+	nodeValueTup= (24, 0.912707129157, 'AgeGroup', 0.25, 0.136363636364)
+	Class for LT= 0 	len(ltIDs)= 19 	Class for GT= 0 	len(gtIDs)= 8
+
+	nodeValueTup= (25, nan, '', nan, nan)
+	df= []
+
+	nodeValueTup= (26, nan, '', nan, nan)
+	df= []
+
+	nodeValueTup= (27, 0.563031379363, 'TicketBeginLetter', 0.0, 0.181818181818)
+	Class for LT= 1 	len(ltIDs)= 12 	Class for GT= 1 	len(gtIDs)= 5
+
+	nodeValueTup= (28, 0.553092737339, 'TicketNumber', 17612.0, 2137.27272727)
+	Class for LT= 0 	len(ltIDs)= 6 	Class for GT= 0 	len(gtIDs)= 0
+
+	nodeValueTup= (29, 0.671361514171, 'CabinNumbers', 107.272727273, 10.3636363636)
+	Class for LT= 0 	len(ltIDs)= 8 	Class for GT= 0 	len(gtIDs)= 0
+
+	nodeValueTup= (30, nan, '', nan, nan)
+	df= [967, 1128, 1299]
+currEst= 4
+
+	nodeValueTup= (0, 0.633910757788, 'YesMr', 0.0, 0.181818181818)
+	len(lt)= 178 	len(gt)= 240
+	nodeValueTup[0]*2 + 1= 1 
+	ltDFIiDs= 178
+	gtDFIDs= 240
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (1, 0.639975941753, 'Pclass', 2.5, 0.181818181818)
+	len(lt)= 89 	len(gt)= 89
+	nodeValueTup[0]*2 + 1= 3 
+	ltDFIiDs= 89
+	gtDFIDs= 89
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (2, 0.705049547795, 'Pclass', 1.5, 0.181818181818)
+	len(lt)= 52 	len(gt)= 188
+	nodeValueTup[0]*2 + 1= 5 
+	ltDFIiDs= 52
+	gtDFIDs= 188
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (3, 0.812552277063, 'YesRev', 0.0, 0.181818181818)
+	len(lt)= 87 	len(gt)= 2
+	nodeValueTup[0]*2 + 1= 7 
+	ltDFIiDs= 87
+	gtDFIDs= 2
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (4, 0.589820300314, 'FamilySize', 4.5, 0.909090909091)
+	len(lt)= 79 	len(gt)= 10
+	nodeValueTup[0]*2 + 1= 9 
+	ltDFIiDs= 79
+	gtDFIDs= 10
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (5, 0.545444734624, 'AgeGroup', 0.75, 0.136363636364)
+	len(lt)= 41 	len(gt)= 11
+	nodeValueTup[0]*2 + 1= 11 
+	ltDFIiDs= 41
+	gtDFIDs= 11
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (6, 0.763685831086, 'nTicketStrings', 2.5, 0.181818181818)
+	len(lt)= 186 	len(gt)= 2
+	nodeValueTup[0]*2 + 1= 13 
+	ltDFIiDs= 186
+	gtDFIDs= 2
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (7, 0.828773835777, 'YesFancy', 0.0, 0.181818181818)
+	len(lt)= 82 	len(gt)= 5
+	nodeValueTup[0]*2 + 1= 15 
+	ltDFIiDs= 82
+	gtDFIDs= 5
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (8, 1.0, 'ThisIsAnEndNode', nan, nan)
+	decision= 0 	alpha= 1.677201784968804
+
+	nodeValueTup= (9, 0.549492252045, 'Gender', 0.0, 0.181818181818)
+	len(lt)= 67 	len(gt)= 12
+	nodeValueTup[0]*2 + 1= 19 
+	ltDFIiDs= 67
+	gtDFIDs= 12
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (10, 0.817759133076, 'FamilySize', 6.5, 0.545454545455)
+	len(lt)= 3 	len(gt)= 7
+	nodeValueTup[0]*2 + 1= 21 
+	ltDFIiDs= 3
+	gtDFIDs= 7
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (11, 0.525918642552, 'Fare', -0.5, 0.181818181818)
+	len(lt)= 2 	len(gt)= 39
+	nodeValueTup[0]*2 + 1= 23 
+	ltDFIiDs= 2
+	gtDFIDs= 39
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (12, 0.73771117811, 'CabinNumbers', 7.0, 8.0)
+	len(lt)= 2 	len(gt)= 9
+	nodeValueTup[0]*2 + 1= 25 
+	ltDFIiDs= 2
+	gtDFIDs= 9
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (13, 0.774584019225, 'CabinNumbers', 6.0, 6.72727272727)
+	len(lt)= 182 	len(gt)= 4
+	nodeValueTup[0]*2 + 1= 27 
+	ltDFIiDs= 182
+	gtDFIDs= 4
+	One of this Node's Daughters is a BlankNode.
+	Class for GT= 0 	len(gtIDs)= 4
+
+	nodeValueTup= (14, 0.580452938052, 'TicketNumber', 23101280.3636, 2.27272727273)
+	len(lt)= 1 	len(gt)= 1
+	nodeValueTup[0]*2 + 1= 29 
+	ltDFIiDs= 1
+	gtDFIDs= 1
+	One of this Node's Daughters is a BlankNode.
+	Class for LT= 0 	len(ltIDs)= 1 	Class for GT= 1 	len(gtIDs)= 1
+
+	nodeValueTup= (15, 0.870098516477, 'TicketNumber', 45576.0909091, 22786.5454545)
+	Class for LT= 1 	len(ltIDs)= 64 	Class for GT= 1 	len(gtIDs)= 18
+
+	nodeValueTup= (16, 0.678059960362, 'CabinNumbers', 8.54545454545, 9.54545454545)
+	Class for LT= 0 	len(ltIDs)= 0 	Class for GT= 0 	len(gtIDs)= 5
+
+	nodeValueTup= (17, nan, '', nan, nan)
+	df= []
+
+	nodeValueTup= (18, nan, '', nan, nan)
+	df= []
+
+	nodeValueTup= (19, 0.526846016743, 'AgeGroup', 0.25, 0.181818181818)
+	Class for LT= 1 	len(ltIDs)= 55 	Class for GT= 1 	len(gtIDs)= 12
+
+	nodeValueTup= (20, 1.0, 'ThisIsAnEndNode', nan, nan)
+	decision= 1 	alpha= 1.677201784968804
+
+	nodeValueTup= (21, 1.0, 'ThisIsAnEndNode', nan, nan)
+	decision= 0 	alpha= 1.677201784968804
+
+	nodeValueTup= (22, 0.708765013304, 'TicketBeginLetter', 0.0, 0.181818181818)
+	Class for LT= 0 	len(ltIDs)= 3 	Class for GT= 0 	len(gtIDs)= 4
+
+	nodeValueTup= (23, 1.0, 'ThisIsAnEndNode', nan, nan)
+	decision= 0 	alpha= 1.677201784968804
+
+	nodeValueTup= (24, 0.51324278102, 'CabinNumbers', 53.1818181818, 13.5454545455)
+	Class for LT= 1 	len(ltIDs)= 34 	Class for GT= 1 	len(gtIDs)= 5
+
+	nodeValueTup= (25, 1.0, 'ThisIsAnEndNode', nan, nan)
+	decision= 0 	alpha= 1.677201784968804
+
+	nodeValueTup= (26, 0.707271979218, 'CabinNumbers', 42.4545454545, 6.36363636364)
+	Class for LT= 0 	len(ltIDs)= 2 	Class for GT= 0 	len(gtIDs)= 7
+
+	nodeValueTup= (27, 0.781172464299, 'Fare', 0.25, 0.136363636364)
+	Class for LT= 0 	len(ltIDs)= 175 	Class for GT= 0 	len(gtIDs)= 7
+
+	nodeValueTup= (28, nan, '', nan, nan)
+	df= [949, 1180, 1213, 1297]
+
+	nodeValueTup= (29, nan, '', nan, nan)
+	df= [989]
+
+	nodeValueTup= (30, nan, '', nan, nan)
+	df= [937]
+currEst= 5
+
+	nodeValueTup= (0, 0.669657089728, 'YesMr', 0.0, 0.181818181818)
+	len(lt)= 178 	len(gt)= 240
+	nodeValueTup[0]*2 + 1= 1 
+	ltDFIiDs= 178
+	gtDFIDs= 240
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (1, 0.657809197419, 'FamilySize', 4.5, 0.909090909091)
+	len(lt)= 164 	len(gt)= 14
+	nodeValueTup[0]*2 + 1= 3 
+	ltDFIiDs= 164
+	gtDFIDs= 14
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (2, 0.754415256259, 'Pclass', 1.5, 0.181818181818)
+	len(lt)= 52 	len(gt)= 188
+	nodeValueTup[0]*2 + 1= 5 
+	ltDFIiDs= 52
+	gtDFIDs= 188
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (3, 0.684709026586, 'Pclass', 2.5, 0.181818181818)
+	len(lt)= 85 	len(gt)= 79
+	nodeValueTup[0]*2 + 1= 7 
+	ltDFIiDs= 85
+	gtDFIDs= 79
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (4, 0.857080610022, 'Pclass', 2.5, 0.181818181818)
+	len(lt)= 4 	len(gt)= 10
+	nodeValueTup[0]*2 + 1= 9 
+	ltDFIiDs= 4
+	gtDFIDs= 10
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (5, 0.575751604549, 'AgeGroup', 0.75, 0.136363636364)
+	len(lt)= 41 	len(gt)= 11
+	nodeValueTup[0]*2 + 1= 11 
+	ltDFIiDs= 41
+	gtDFIDs= 11
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (6, 0.814170445725, 'nTicketStrings', 2.5, 0.181818181818)
+	len(lt)= 186 	len(gt)= 2
+	nodeValueTup[0]*2 + 1= 13 
+	ltDFIiDs= 186
+	gtDFIDs= 2
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (7, 0.833727175081, 'YesRev', 0.0, 0.181818181818)
+	len(lt)= 83 	len(gt)= 2
+	nodeValueTup[0]*2 + 1= 15 
+	ltDFIiDs= 83
+	gtDFIDs= 2
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (8, 0.555954628478, 'AgeGroup', -0.75, 0.181818181818)
+	len(lt)= 12 	len(gt)= 67
+	nodeValueTup[0]*2 + 1= 17 
+	ltDFIiDs= 12
+	gtDFIDs= 67
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (9, 1.0, 'ThisIsAnEndNode', nan, nan)
+	decision= 1 	alpha= 1.8723635016399733
+
+	nodeValueTup= (10, 0.857777777778, 'FamilySize', 6.5, 0.545454545455)
+	len(lt)= 3 	len(gt)= 7
+	nodeValueTup[0]*2 + 1= 21 
+	ltDFIiDs= 3
+	gtDFIDs= 7
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (11, 0.539428948671, 'CabinE', 0.0, 0.181818181818)
+	len(lt)= 38 	len(gt)= 3
+	nodeValueTup[0]*2 + 1= 23 
+	ltDFIiDs= 38
+	gtDFIDs= 3
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (12, 0.794117647059, 'CabinNumbers', 7.0, 8.0)
+	len(lt)= 2 	len(gt)= 9
+	nodeValueTup[0]*2 + 1= 25 
+	ltDFIiDs= 2
+	gtDFIDs= 9
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (13, 0.826656828996, 'Fare', 0.25, 0.136363636364)
+	len(lt)= 179 	len(gt)= 7
+	nodeValueTup[0]*2 + 1= 27 
+	ltDFIiDs= 179
+	gtDFIDs= 7
+Non of this node's daughters are Blank Nodes
+
+	nodeValueTup= (14, 0.580952380952, 'AgeGroup', 0.25, 0.0909090909091)
+	len(lt)= 2 	len(gt)= 0
+	nodeValueTup[0]*2 + 1= 29 
+	ltDFIiDs= 2
+	gtDFIDs= 0
+	One of this Node's Daughters is a BlankNode.
+	Class for LT= 0 	len(ltIDs)= 2 	Class for GT= 1 	len(gtIDs)= 0
+
+	nodeValueTup= (15, 0.862851897185, 'YesFancy', 0.0, 0.181818181818)
+	Class for LT= 1 	len(ltIDs)= 78 	Class for GT= 1 	len(gtIDs)= 5
+
+	nodeValueTup= (16, 1.0, 'ThisIsAnEndNode', nan, nan)
+	decision= 0 	alpha= 1.8723635016399733
+
+	nodeValueTup= (17, 0.824561403509, 'YesMiss', 0.0, 0.181818181818)
+	Class for LT= 1 	len(ltIDs)= 6 	Class for GT= 1 	len(gtIDs)= 6
+
+	nodeValueTup= (18, 0.546067358567, 'EmbarkIsS', 0.0, 0.181818181818)
+	Class for LT= 1 	len(ltIDs)= 32 	Class for GT= 1 	len(gtIDs)= 35
+
+	nodeValueTup= (19, nan, '', nan, nan)
+	df= []
+
+	nodeValueTup= (20, nan, '', nan, nan)
+	df= []
+
+	nodeValueTup= (21, 1.0, 'ThisIsAnEndNode', nan, nan)
+	decision= 0 	alpha= 1.8723635016399733
+
+	nodeValueTup= (22, 0.745454545455, 'nTicketStrings', 1.5, 0.0909090909091)
+	Class for LT= 0 	len(ltIDs)= 3 	Class for GT= 0 	len(gtIDs)= 4
+
+	nodeValueTup= (23, 0.553988718775, 'Fare', -0.5, 0.181818181818)
+	Class for LT= 0 	len(ltIDs)= 2 	Class for GT= 0 	len(gtIDs)= 36
+
+	nodeValueTup= (24, 0.6, 'nTicketStrings', 1.5, 0.0909090909091)
+	Class for LT= 1 	len(ltIDs)= 2 	Class for GT= 1 	len(gtIDs)= 1
+
+	nodeValueTup= (25, 1.0, 'ThisIsAnEndNode', nan, nan)
+	decision= 0 	alpha= 1.8723635016399733
+
+	nodeValueTup= (26, 0.752941176471, 'CabinNumbers', 42.4545454545, 6.36363636364)
+	Class for LT= 0 	len(ltIDs)= 2 	Class for GT= 0 	len(gtIDs)= 7
+
+	nodeValueTup= (27, 0.83935608049, 'CabinNumbers', 6.0, 6.72727272727)
+	Class for LT= 0 	len(ltIDs)= 175 	Class for GT= 0 	len(gtIDs)= 4
+
+	nodeValueTup= (28, 0.831932773109, 'nTicketStrings', 1.5, 0.0909090909091)
+	Class for LT= 1 	len(ltIDs)= 3 	Class for GT= 1 	len(gtIDs)= 4
+
+	nodeValueTup= (29, nan, '', nan, nan)
+	df= [937, 989]
+
+	nodeValueTup= (30, nan, '', nan, nan)
+	df= []
+     PassengerId  Survived_total  Survived_0  Survived_1  Survived  \
+0            892         7.71684    7.716840    0.000000        -1   
+1            893         7.71684    6.312859    1.403981        -1   
+2            894         7.71684    7.716840    0.000000        -1   
+3            895         7.71684    7.716840    0.000000        -1   
+4            896         7.71684    3.393267    4.323573        -1   
+5            897         7.71684    7.716840    0.000000        -1   
+6            898         7.71684    4.440495    3.276345        -1   
+7            899         7.71684    7.716840    0.000000        -1   
+8            900         7.71684    2.763293    4.953546        -1   
+9            901         7.71684    7.716840    0.000000        -1   
+10           902         7.71684    7.716840    0.000000        -1   
+11           903         7.71684    6.039638    1.677202        -1   
+12           904         7.71684    0.000000    7.716840        -1   
+13           905         7.71684    7.716840    0.000000        -1   
+14           906         7.71684    0.000000    7.716840        -1   
+15           907         7.71684    0.000000    7.716840        -1   
+16           908         7.71684    7.716840    0.000000        -1   
+17           909         7.71684    7.716840    0.000000        -1   
+18           910         7.71684    4.797248    2.919592        -1   
+19           911         7.71684    4.440495    3.276345        -1   
+20           912         7.71684    7.716840    0.000000        -1   
+21           913         7.71684    0.000000    7.716840        -1   
+22           914         7.71684    0.000000    7.716840        -1   
+23           915         7.71684    6.039638    1.677202        -1   
+24           916         7.71684    0.000000    7.716840        -1   
+25           917         7.71684    7.716840    0.000000        -1   
+26           918         7.71684    0.000000    7.716840        -1   
+27           919         7.71684    7.716840    0.000000        -1   
+28           920         7.71684    4.797248    2.919592        -1   
+29           921         7.71684    7.716840    0.000000        -1   
+30           922         7.71684    7.716840    0.000000        -1   
+31           923         7.71684    7.716840    0.000000        -1   
+32           924         7.71684    4.791955    2.924884        -1   
+33           925         7.71684    4.518735    3.198105        -1   
+34           926         7.71684    6.195936    1.520903        -1   
+35           927         7.71684    7.716840    0.000000        -1   
+36           928         7.71684    4.635657    3.081183        -1   
+37           929         7.71684    4.635657    3.081183        -1   
+38           930         7.71684    7.716840    0.000000        -1   
+39           931         7.71684    5.844476    1.872364        -1   
+40           932         7.71684    7.716840    0.000000        -1   
+41           933         7.71684    6.039638    1.677202        -1   
+42           934         7.71684    7.716840    0.000000        -1   
+43           935         7.71684    0.000000    7.716840        -1   
+44           936         7.71684    0.000000    7.716840        -1   
+45           937         7.71684    6.039638    1.677202        -1   
+46           938         7.71684    1.872364    5.844476        -1   
+47           939         7.71684    7.716840    0.000000        -1   
+48           940         7.71684    0.000000    7.716840        -1   
+49           941         7.71684    4.791955    2.924884        -1   
+50           942         7.71684    4.518735    3.198105        -1   
+51           943         7.71684    7.716840    0.000000        -1   
+52           944         7.71684    0.000000    7.716840        -1   
+53           945         7.71684    0.000000    7.716840        -1   
+54           946         7.71684    7.716840    0.000000        -1   
+55           947         7.71684    7.716840    0.000000        -1   
+56           948         7.71684    7.716840    0.000000        -1   
+57           949         7.71684    7.716840    0.000000        -1   
+58           950         7.71684    7.716840    0.000000        -1   
+59           951         7.71684    0.000000    7.716840        -1   
+60           952         7.71684    7.716840    0.000000        -1   
+61           953         7.71684    7.716840    0.000000        -1   
+62           954         7.71684    7.716840    0.000000        -1   
+63           955         7.71684    2.763293    4.953546        -1   
+64           956         7.71684    0.000000    7.716840        -1   
+65           957         7.71684    0.000000    7.716840        -1   
+66           958         7.71684    2.763293    4.953546        -1   
+67           959         7.71684    6.039638    1.677202        -1   
+68           960         7.71684    3.276345    4.440495        -1   
+69           961         7.71684    0.000000    7.716840        -1   
+70           962         7.71684    2.763293    4.953546        -1   
+71           963         7.71684    7.716840    0.000000        -1   
+72           964         7.71684    3.393267    4.323573        -1   
+73           965         7.71684    4.797248    2.919592        -1   
+74           966         7.71684    0.000000    7.716840        -1   
+75           967         7.71684    4.953546    2.763293        -1   
+76           968         7.71684    7.716840    0.000000        -1   
+77           969         7.71684    0.000000    7.716840        -1   
+78           970         7.71684    7.716840    0.000000        -1   
+79           971         7.71684    2.763293    4.953546        -1   
+80           972         7.71684    0.000000    7.716840        -1   
+81           973         7.71684    7.716840    0.000000        -1   
+82           974         7.71684    6.039638    1.677202        -1   
+83           975         7.71684    7.716840    0.000000        -1   
+84           976         7.71684    7.716840    0.000000        -1   
+85           977         7.71684    7.716840    0.000000        -1   
+86           978         7.71684    2.763293    4.953546        -1   
+87           979         7.71684    6.039638    1.677202        -1   
+88           980         7.71684    2.763293    4.953546        -1   
+89           981         7.71684    0.000000    7.716840        -1   
+90           982         7.71684    4.635657    3.081183        -1   
+91           983         7.71684    7.716840    0.000000        -1   
+92           984         7.71684    0.000000    7.716840        -1   
+93           985         7.71684    7.716840    0.000000        -1   
+94           986         7.71684    6.039638    1.677202        -1   
+95           987         7.71684    7.716840    0.000000        -1   
+96           988         7.71684    0.000000    7.716840        -1   
+97           989         7.71684    7.716840    0.000000        -1   
+98           990         7.71684    4.635657    3.081183        -1   
+99           991         7.71684    7.716840    0.000000        -1   
+100          992         7.71684    0.000000    7.716840        -1   
+101          993         7.71684    7.716840    0.000000        -1   
+102          994         7.71684    7.716840    0.000000        -1   
+103          995         7.71684    7.716840    0.000000        -1   
+104          996         7.71684    2.763293    4.953546        -1   
+105          997         7.71684    7.716840    0.000000        -1   
+106          998         7.71684    7.716840    0.000000        -1   
+107          999         7.71684    7.716840    0.000000        -1   
+108         1000         7.71684    7.716840    0.000000        -1   
+109         1001         7.71684    7.716840    0.000000        -1   
+110         1002         7.71684    7.716840    0.000000        -1   
+111         1003         7.71684    2.763293    4.953546        -1   
+112         1004         7.71684    0.000000    7.716840        -1   
+113         1005         7.71684    2.763293    4.953546        -1   
+114         1006         7.71684    0.000000    7.716840        -1   
+115         1007         7.71684    7.716840    0.000000        -1   
+116         1008         7.71684    7.716840    0.000000        -1   
+117         1009         7.71684    1.242390    6.474449        -1   
+118         1010         7.71684    4.797248    2.919592        -1   
+119         1011         7.71684    0.000000    7.716840        -1   
+120         1012         7.71684    0.000000    7.716840        -1   
+121         1013         7.71684    7.716840    0.000000        -1   
+122         1014         7.71684    0.000000    7.716840        -1   
+123         1015         7.71684    7.716840    0.000000        -1   
+124         1016         7.71684    7.716840    0.000000        -1   
+125         1017         7.71684    3.114754    4.602086        -1   
+126         1018         7.71684    7.716840    0.000000        -1   
+127         1019         7.71684    1.242390    6.474449        -1   
+128         1020         7.71684    7.716840    0.000000        -1   
+129         1021         7.71684    7.716840    0.000000        -1   
+130         1022         7.71684    7.716840    0.000000        -1   
+131         1023         7.71684    1.872364    5.844476        -1   
+132         1024         7.71684    7.716840    0.000000        -1   
+133         1025         7.71684    7.716840    0.000000        -1   
+134         1026         7.71684    7.716840    0.000000        -1   
+135         1027         7.71684    7.716840    0.000000        -1   
+136         1028         7.71684    7.716840    0.000000        -1   
+137         1029         7.71684    7.716840    0.000000        -1   
+138         1030         7.71684    6.039638    1.677202        -1   
+139         1031         7.71684    7.716840    0.000000        -1   
+140         1032         7.71684    7.716840    0.000000        -1   
+141         1033         7.71684    0.000000    7.716840        -1   
+142         1034         7.71684    7.716840    0.000000        -1   
+143         1035         7.71684    7.716840    0.000000        -1   
+144         1036         7.71684    6.039638    1.677202        -1   
+145         1037         7.71684    7.716840    0.000000        -1   
+146         1038         7.71684    2.646371    5.070468        -1   
+147         1039         7.71684    7.716840    0.000000        -1   
+148         1040         7.71684    6.039638    1.677202        -1   
+149         1041         7.71684    7.716840    0.000000        -1   
+150         1042         7.71684    0.000000    7.716840        -1   
+151         1043         7.71684    7.716840    0.000000        -1   
+152         1044         7.71684    7.716840    0.000000        -1   
+153         1045         7.71684    6.312859    1.403981        -1   
+154         1046         7.71684    4.953546    2.763293        -1   
+155         1047         7.71684    7.716840    0.000000        -1   
+156         1048         7.71684    0.000000    7.716840        -1   
+157         1049         7.71684    4.635657    3.081183        -1   
+158         1050         7.71684    4.797248    2.919592        -1   
+159         1051         7.71684    4.797248    2.919592        -1   
+160         1052         7.71684    2.763293    4.953546        -1   
+161         1053         7.71684    0.000000    7.716840        -1   
+162         1054         7.71684    0.000000    7.716840        -1   
+163         1055         7.71684    7.716840    0.000000        -1   
+164         1056         7.71684    7.716840    0.000000        -1   
+165         1057         7.71684    3.114754    4.602086        -1   
+166         1058         7.71684    1.872364    5.844476        -1   
+167         1059         7.71684    7.716840    0.000000        -1   
+168         1060         7.71684    0.000000    7.716840        -1   
+169         1061         7.71684    4.635657    3.081183        -1   
+170         1062         7.71684    7.716840    0.000000        -1   
+171         1063         7.71684    7.716840    0.000000        -1   
+172         1064         7.71684    7.716840    0.000000        -1   
+173         1065         7.71684    7.716840    0.000000        -1   
+174         1066         7.71684    7.716840    0.000000        -1   
+175         1067         7.71684    0.000000    7.716840        -1   
+176         1068         7.71684    0.000000    7.716840        -1   
+177         1069         7.71684    5.070468    2.646371        -1   
+178         1070         7.71684    0.000000    7.716840        -1   
+179         1071         7.71684    0.000000    7.716840        -1   
+180         1072         7.71684    7.716840    0.000000        -1   
+181         1073         7.71684    2.924884    4.791955        -1   
+182         1074         7.71684    0.000000    7.716840        -1   
+183         1075         7.71684    7.716840    0.000000        -1   
+184         1076         7.71684    0.000000    7.716840        -1   
+185         1077         7.71684    7.716840    0.000000        -1   
+186         1078         7.71684    0.000000    7.716840        -1   
+187         1079         7.71684    7.716840    0.000000        -1   
+188         1080         7.71684    7.716840    0.000000        -1   
+189         1081         7.71684    7.716840    0.000000        -1   
+190         1082         7.71684    7.716840    0.000000        -1   
+191         1083         7.71684    6.039638    1.677202        -1   
+192         1084         7.71684    1.872364    5.844476        -1   
+193         1085         7.71684    7.716840    0.000000        -1   
+194         1086         7.71684    0.000000    7.716840        -1   
+195         1087         7.71684    7.716840    0.000000        -1   
+196         1088         7.71684    0.000000    7.716840        -1   
+197         1089         7.71684    4.635657    3.081183        -1   
+198         1090         7.71684    7.716840    0.000000        -1   
+199         1091         7.71684    4.635657    3.081183        -1   
+200         1092         7.71684    1.242390    6.474449        -1   
+201         1093         7.71684    0.000000    7.716840        -1   
+202         1094         7.71684    1.872364    5.844476        -1   
+203         1095         7.71684    0.000000    7.716840        -1   
+204         1096         7.71684    7.716840    0.000000        -1   
+205         1097         7.71684    6.039638    1.677202        -1   
+206         1098         7.71684    4.440495    3.276345        -1   
+207         1099         7.71684    7.716840    0.000000        -1   
+208         1100         7.71684    0.000000    7.716840        -1   
+209         1101         7.71684    7.716840    0.000000        -1   
+210         1102         7.71684    7.716840    0.000000        -1   
+211         1103         7.71684    7.716840    0.000000        -1   
+212         1104         7.71684    7.716840    0.000000        -1   
+213         1105         7.71684    0.000000    7.716840        -1   
+214         1106         7.71684    4.953546    2.763293        -1   
+215         1107         7.71684    1.872364    5.844476        -1   
+216         1108         7.71684    2.763293    4.953546        -1   
+217         1109         7.71684    7.716840    0.000000        -1   
+218         1110         7.71684    0.000000    7.716840        -1   
+219         1111         7.71684    7.716840    0.000000        -1   
+220         1112         7.71684    0.000000    7.716840        -1   
+221         1113         7.71684    7.716840    0.000000        -1   
+222         1114         7.71684    0.000000    7.716840        -1   
+223         1115         7.71684    7.716840    0.000000        -1   
+224         1116         7.71684    0.000000    7.716840        -1   
+225         1117         7.71684    1.242390    6.474449        -1   
+226         1118         7.71684    7.716840    0.000000        -1   
+227         1119         7.71684    2.763293    4.953546        -1   
+228         1120         7.71684    7.716840    0.000000        -1   
+229         1121         7.71684    7.716840    0.000000        -1   
+230         1122         7.71684    5.844476    1.872364        -1   
+231         1123         7.71684    0.000000    7.716840        -1   
+232         1124         7.71684    7.716840    0.000000        -1   
+233         1125         7.71684    7.716840    0.000000        -1   
+234         1126         7.71684    7.716840    0.000000        -1   
+235         1127         7.71684    7.716840    0.000000        -1   
+236         1128         7.71684    3.549565    4.167274        -1   
+237         1129         7.71684    7.716840    0.000000        -1   
+238         1130         7.71684    0.000000    7.716840        -1   
+239         1131         7.71684    1.872364    5.844476        -1   
+240         1132         7.71684    0.000000    7.716840        -1   
+241         1133         7.71684    0.000000    7.716840        -1   
+242         1134         7.71684    1.403981    6.312859        -1   
+243         1135         7.71684    7.716840    0.000000        -1   
+244         1136         7.71684    1.872364    5.844476        -1   
+245         1137         7.71684    1.872364    5.844476        -1   
+246         1138         7.71684    0.000000    7.716840        -1   
+247         1139         7.71684    7.716840    0.000000        -1   
+248         1140         7.71684    0.000000    7.716840        -1   
+249         1141         7.71684    2.763293    4.953546        -1   
+250         1142         7.71684    0.000000    7.716840        -1   
+251         1143         7.71684    7.716840    0.000000        -1   
+252         1144         7.71684    3.549565    4.167274        -1   
+253         1145         7.71684    7.716840    0.000000        -1   
+254         1146         7.71684    7.716840    0.000000        -1   
+255         1147         7.71684    7.716840    0.000000        -1   
+256         1148         7.71684    7.716840    0.000000        -1   
+257         1149         7.71684    7.716840    0.000000        -1   
+258         1150         7.71684    0.000000    7.716840        -1   
+259         1151         7.71684    7.716840    0.000000        -1   
+260         1152         7.71684    7.716840    0.000000        -1   
+261         1153         7.71684    7.716840    0.000000        -1   
+262         1154         7.71684    0.000000    7.716840        -1   
+263         1155         7.71684    2.763293    4.953546        -1   
+264         1156         7.71684    7.716840    0.000000        -1   
+265         1157         7.71684    7.716840    0.000000        -1   
+266         1158         7.71684    7.716840    0.000000        -1   
+267         1159         7.71684    7.716840    0.000000        -1   
+268         1160         7.71684    4.635657    3.081183        -1   
+269         1161         7.71684    7.716840    0.000000        -1   
+270         1162         7.71684    4.797248    2.919592        -1   
+271         1163         7.71684    7.716840    0.000000        -1   
+272         1164         7.71684    0.000000    7.716840        -1   
+273         1165         7.71684    1.242390    6.474449        -1   
+274         1166         7.71684    7.716840    0.000000        -1   
+275         1167         7.71684    0.000000    7.716840        -1   
+276         1168         7.71684    7.716840    0.000000        -1   
+277         1169         7.71684    7.716840    0.000000        -1   
+278         1170         7.71684    7.716840    0.000000        -1   
+279         1171         7.71684    7.716840    0.000000        -1   
+280         1172         7.71684    4.635657    3.081183        -1   
+281         1173         7.71684    0.000000    7.716840        -1   
+282         1174         7.71684    2.763293    4.953546        -1   
+283         1175         7.71684    1.242390    6.474449        -1   
+284         1176         7.71684    1.242390    6.474449        -1   
+285         1177         7.71684    7.716840    0.000000        -1   
+286         1178         7.71684    7.716840    0.000000        -1   
+287         1179         7.71684    4.518735    3.198105        -1   
+288         1180         7.71684    4.953546    2.763293        -1   
+289         1181         7.71684    7.716840    0.000000        -1   
+290         1182         7.71684    6.039638    1.677202        -1   
+291         1183         7.71684    4.440495    3.276345        -1   
+292         1184         7.71684    7.716840    0.000000        -1   
+293         1185         7.71684    3.276345    4.440495        -1   
+294         1186         7.71684    7.716840    0.000000        -1   
+295         1187         7.71684    7.716840    0.000000        -1   
+296         1188         7.71684    0.000000    7.716840        -1   
+297         1189         7.71684    7.716840    0.000000        -1   
+298         1190         7.71684    6.039638    1.677202        -1   
+299         1191         7.71684    7.716840    0.000000        -1   
+300         1192         7.71684    7.716840    0.000000        -1   
+301         1193         7.71684    7.716840    0.000000        -1   
+302         1194         7.71684    7.716840    0.000000        -1   
+303         1195         7.71684    7.716840    0.000000        -1   
+304         1196         7.71684    2.763293    4.953546        -1   
+305         1197         7.71684    0.000000    7.716840        -1   
+306         1198         7.71684    6.039638    1.677202        -1   
+307         1199         7.71684    0.000000    7.716840        -1   
+308         1200         7.71684    7.716840    0.000000        -1   
+309         1201         7.71684    6.312859    1.403981        -1   
+310         1202         7.71684    7.716840    0.000000        -1   
+311         1203         7.71684    7.716840    0.000000        -1   
+312         1204         7.71684    7.716840    0.000000        -1   
+313         1205         7.71684    4.440495    3.276345        -1   
+314         1206         7.71684    0.000000    7.716840        -1   
+315         1207         7.71684    4.167274    3.549565        -1   
+316         1208         7.71684    7.716840    0.000000        -1   
+317         1209         7.71684    7.716840    0.000000        -1   
+318         1210         7.71684    7.716840    0.000000        -1   
+319         1211         7.71684    7.716840    0.000000        -1   
+320         1212         7.71684    7.716840    0.000000        -1   
+321         1213         7.71684    4.953546    2.763293        -1   
+322         1214         7.71684    7.716840    0.000000        -1   
+323         1215         7.71684    6.039638    1.677202        -1   
+324         1216         7.71684    0.000000    7.716840        -1   
+325         1217         7.71684    7.716840    0.000000        -1   
+326         1218         7.71684    0.000000    7.716840        -1   
+327         1219         7.71684    6.039638    1.677202        -1   
+328         1220         7.71684    7.716840    0.000000        -1   
+329         1221         7.71684    7.716840    0.000000        -1   
+330         1222         7.71684    0.000000    7.716840        -1   
+331         1223         7.71684    3.393267    4.323573        -1   
+332         1224         7.71684    7.716840    0.000000        -1   
+333         1225         7.71684    1.242390    6.474449        -1   
+334         1226         7.71684    7.716840    0.000000        -1   
+335         1227         7.71684    7.716840    0.000000        -1   
+336         1228         7.71684    7.716840    0.000000        -1   
+337         1229         7.71684    7.716840    0.000000        -1   
+338         1230         7.71684    7.716840    0.000000        -1   
+339         1231         7.71684    0.000000    7.716840        -1   
+340         1232         7.71684    7.716840    0.000000        -1   
+341         1233         7.71684    7.716840    0.000000        -1   
+342         1234         7.71684    7.716840    0.000000        -1   
+343         1235         7.71684    0.000000    7.716840        -1   
+344         1236         7.71684    1.872364    5.844476        -1   
+345         1237         7.71684    4.635657    3.081183        -1   
+346         1238         7.71684    7.716840    0.000000        -1   
+347         1239         7.71684    4.440495    3.276345        -1   
+348         1240         7.71684    7.716840    0.000000        -1   
+349         1241         7.71684    0.000000    7.716840        -1   
+350         1242         7.71684    0.000000    7.716840        -1   
+351         1243         7.71684    7.716840    0.000000        -1   
+352         1244         7.71684    7.716840    0.000000        -1   
+353         1245         7.71684    5.844476    1.872364        -1   
+354         1246         7.71684    1.242390    6.474449        -1   
+355         1247         7.71684    6.312859    1.403981        -1   
+356         1248         7.71684    0.000000    7.716840        -1   
+357         1249         7.71684    7.716840    0.000000        -1   
+358         1250         7.71684    7.716840    0.000000        -1   
+359         1251         7.71684    4.791955    2.924884        -1   
+360         1252         7.71684    7.716840    0.000000        -1   
+361         1253         7.71684    0.000000    7.716840        -1   
+362         1254         7.71684    0.000000    7.716840        -1   
+363         1255         7.71684    7.716840    0.000000        -1   
+364         1256         7.71684    0.000000    7.716840        -1   
+365         1257         7.71684    7.716840    0.000000        -1   
+366         1258         7.71684    7.716840    0.000000        -1   
+367         1259         7.71684    1.872364    5.844476        -1   
+368         1260         7.71684    0.000000    7.716840        -1   
+369         1261         7.71684    7.716840    0.000000        -1   
+370         1262         7.71684    7.716840    0.000000        -1   
+371         1263         7.71684    0.000000    7.716840        -1   
+372         1264         7.71684    6.312859    1.403981        -1   
+373         1265         7.71684    7.716840    0.000000        -1   
+374         1266         7.71684    0.000000    7.716840        -1   
+375         1267         7.71684    0.000000    7.716840        -1   
+376         1268         7.71684    4.635657    3.081183        -1   
+377         1269         7.71684    7.716840    0.000000        -1   
+378         1270         7.71684    7.716840    0.000000        -1   
+379         1271         7.71684    4.953546    2.763293        -1   
+380         1272         7.71684    7.716840    0.000000        -1   
+381         1273         7.71684    7.716840    0.000000        -1   
+382         1274         7.71684    4.635657    3.081183        -1   
+383         1275         7.71684    3.114754    4.602086        -1   
+384         1276         7.71684    7.716840    0.000000        -1   
+385         1277         7.71684    0.000000    7.716840        -1   
+386         1278         7.71684    7.716840    0.000000        -1   
+387         1279         7.71684    7.716840    0.000000        -1   
+388         1280         7.71684    7.716840    0.000000        -1   
+389         1281         7.71684    7.716840    0.000000        -1   
+390         1282         7.71684    1.872364    5.844476        -1   
+391         1283         7.71684    0.000000    7.716840        -1   
+392         1284         7.71684    1.872364    5.844476        -1   
+393         1285         7.71684    7.716840    0.000000        -1   
+394         1286         7.71684    7.716840    0.000000        -1   
+395         1287         7.71684    0.000000    7.716840        -1   
+396         1288         7.71684    7.716840    0.000000        -1   
+397         1289         7.71684    0.000000    7.716840        -1   
+398         1290         7.71684    7.716840    0.000000        -1   
+399         1291         7.71684    7.716840    0.000000        -1   
+400         1292         7.71684    0.000000    7.716840        -1   
+401         1293         7.71684    7.716840    0.000000        -1   
+402         1294         7.71684    0.000000    7.716840        -1   
+403         1295         7.71684    6.039638    1.677202        -1   
+404         1296         7.71684    3.276345    4.440495        -1   
+405         1297         7.71684    6.474449    1.242390        -1   
+406         1298         7.71684    7.716840    0.000000        -1   
+407         1299         7.71684    6.195936    1.520903        -1   
+408         1300         7.71684    2.763293    4.953546        -1   
+409         1301         7.71684    2.924884    4.791955        -1   
+410         1302         7.71684    2.763293    4.953546        -1   
+411         1303         7.71684    0.000000    7.716840        -1   
+412         1304         7.71684    4.635657    3.081183        -1   
+413         1305         7.71684    7.716840    0.000000        -1   
+414         1306         7.71684    1.872364    5.844476        -1   
+415         1307         7.71684    7.716840    0.000000        -1   
+416         1308         7.71684    7.716840    0.000000        -1   
+417         1309         7.71684    0.000000    7.716840        -1   
+
+     Survived_probability  
+0                      -1  
+1                      -1  
+2                      -1  
+3                      -1  
+4                      -1  
+5                      -1  
+6                      -1  
+7                      -1  
+8                      -1  
+9                      -1  
+10                     -1  
+11                     -1  
+12                     -1  
+13                     -1  
+14                     -1  
+15                     -1  
+16                     -1  
+17                     -1  
+18                     -1  
+19                     -1  
+20                     -1  
+21                     -1  
+22                     -1  
+23                     -1  
+24                     -1  
+25                     -1  
+26                     -1  
+27                     -1  
+28                     -1  
+29                     -1  
+30                     -1  
+31                     -1  
+32                     -1  
+33                     -1  
+34                     -1  
+35                     -1  
+36                     -1  
+37                     -1  
+38                     -1  
+39                     -1  
+40                     -1  
+41                     -1  
+42                     -1  
+43                     -1  
+44                     -1  
+45                     -1  
+46                     -1  
+47                     -1  
+48                     -1  
+49                     -1  
+50                     -1  
+51                     -1  
+52                     -1  
+53                     -1  
+54                     -1  
+55                     -1  
+56                     -1  
+57                     -1  
+58                     -1  
+59                     -1  
+60                     -1  
+61                     -1  
+62                     -1  
+63                     -1  
+64                     -1  
+65                     -1  
+66                     -1  
+67                     -1  
+68                     -1  
+69                     -1  
+70                     -1  
+71                     -1  
+72                     -1  
+73                     -1  
+74                     -1  
+75                     -1  
+76                     -1  
+77                     -1  
+78                     -1  
+79                     -1  
+80                     -1  
+81                     -1  
+82                     -1  
+83                     -1  
+84                     -1  
+85                     -1  
+86                     -1  
+87                     -1  
+88                     -1  
+89                     -1  
+90                     -1  
+91                     -1  
+92                     -1  
+93                     -1  
+94                     -1  
+95                     -1  
+96                     -1  
+97                     -1  
+98                     -1  
+99                     -1  
+100                    -1  
+101                    -1  
+102                    -1  
+103                    -1  
+104                    -1  
+105                    -1  
+106                    -1  
+107                    -1  
+108                    -1  
+109                    -1  
+110                    -1  
+111                    -1  
+112                    -1  
+113                    -1  
+114                    -1  
+115                    -1  
+116                    -1  
+117                    -1  
+118                    -1  
+119                    -1  
+120                    -1  
+121                    -1  
+122                    -1  
+123                    -1  
+124                    -1  
+125                    -1  
+126                    -1  
+127                    -1  
+128                    -1  
+129                    -1  
+130                    -1  
+131                    -1  
+132                    -1  
+133                    -1  
+134                    -1  
+135                    -1  
+136                    -1  
+137                    -1  
+138                    -1  
+139                    -1  
+140                    -1  
+141                    -1  
+142                    -1  
+143                    -1  
+144                    -1  
+145                    -1  
+146                    -1  
+147                    -1  
+148                    -1  
+149                    -1  
+150                    -1  
+151                    -1  
+152                    -1  
+153                    -1  
+154                    -1  
+155                    -1  
+156                    -1  
+157                    -1  
+158                    -1  
+159                    -1  
+160                    -1  
+161                    -1  
+162                    -1  
+163                    -1  
+164                    -1  
+165                    -1  
+166                    -1  
+167                    -1  
+168                    -1  
+169                    -1  
+170                    -1  
+171                    -1  
+172                    -1  
+173                    -1  
+174                    -1  
+175                    -1  
+176                    -1  
+177                    -1  
+178                    -1  
+179                    -1  
+180                    -1  
+181                    -1  
+182                    -1  
+183                    -1  
+184                    -1  
+185                    -1  
+186                    -1  
+187                    -1  
+188                    -1  
+189                    -1  
+190                    -1  
+191                    -1  
+192                    -1  
+193                    -1  
+194                    -1  
+195                    -1  
+196                    -1  
+197                    -1  
+198                    -1  
+199                    -1  
+200                    -1  
+201                    -1  
+202                    -1  
+203                    -1  
+204                    -1  
+205                    -1  
+206                    -1  
+207                    -1  
+208                    -1  
+209                    -1  
+210                    -1  
+211                    -1  
+212                    -1  
+213                    -1  
+214                    -1  
+215                    -1  
+216                    -1  
+217                    -1  
+218                    -1  
+219                    -1  
+220                    -1  
+221                    -1  
+222                    -1  
+223                    -1  
+224                    -1  
+225                    -1  
+226                    -1  
+227                    -1  
+228                    -1  
+229                    -1  
+230                    -1  
+231                    -1  
+232                    -1  
+233                    -1  
+234                    -1  
+235                    -1  
+236                    -1  
+237                    -1  
+238                    -1  
+239                    -1  
+240                    -1  
+241                    -1  
+242                    -1  
+243                    -1  
+244                    -1  
+245                    -1  
+246                    -1  
+247                    -1  
+248                    -1  
+249                    -1  
+250                    -1  
+251                    -1  
+252                    -1  
+253                    -1  
+254                    -1  
+255                    -1  
+256                    -1  
+257                    -1  
+258                    -1  
+259                    -1  
+260                    -1  
+261                    -1  
+262                    -1  
+263                    -1  
+264                    -1  
+265                    -1  
+266                    -1  
+267                    -1  
+268                    -1  
+269                    -1  
+270                    -1  
+271                    -1  
+272                    -1  
+273                    -1  
+274                    -1  
+275                    -1  
+276                    -1  
+277                    -1  
+278                    -1  
+279                    -1  
+280                    -1  
+281                    -1  
+282                    -1  
+283                    -1  
+284                    -1  
+285                    -1  
+286                    -1  
+287                    -1  
+288                    -1  
+289                    -1  
+290                    -1  
+291                    -1  
+292                    -1  
+293                    -1  
+294                    -1  
+295                    -1  
+296                    -1  
+297                    -1  
+298                    -1  
+299                    -1  
+300                    -1  
+301                    -1  
+302                    -1  
+303                    -1  
+304                    -1  
+305                    -1  
+306                    -1  
+307                    -1  
+308                    -1  
+309                    -1  
+310                    -1  
+311                    -1  
+312                    -1  
+313                    -1  
+314                    -1  
+315                    -1  
+316                    -1  
+317                    -1  
+318                    -1  
+319                    -1  
+320                    -1  
+321                    -1  
+322                    -1  
+323                    -1  
+324                    -1  
+325                    -1  
+326                    -1  
+327                    -1  
+328                    -1  
+329                    -1  
+330                    -1  
+331                    -1  
+332                    -1  
+333                    -1  
+334                    -1  
+335                    -1  
+336                    -1  
+337                    -1  
+338                    -1  
+339                    -1  
+340                    -1  
+341                    -1  
+342                    -1  
+343                    -1  
+344                    -1  
+345                    -1  
+346                    -1  
+347                    -1  
+348                    -1  
+349                    -1  
+350                    -1  
+351                    -1  
+352                    -1  
+353                    -1  
+354                    -1  
+355                    -1  
+356                    -1  
+357                    -1  
+358                    -1  
+359                    -1  
+360                    -1  
+361                    -1  
+362                    -1  
+363                    -1  
+364                    -1  
+365                    -1  
+366                    -1  
+367                    -1  
+368                    -1  
+369                    -1  
+370                    -1  
+371                    -1  
+372                    -1  
+373                    -1  
+374                    -1  
+375                    -1  
+376                    -1  
+377                    -1  
+378                    -1  
+379                    -1  
+380                    -1  
+381                    -1  
+382                    -1  
+383                    -1  
+384                    -1  
+385                    -1  
+386                    -1  
+387                    -1  
+388                    -1  
+389                    -1  
+390                    -1  
+391                    -1  
+392                    -1  
+393                    -1  
+394                    -1  
+395                    -1  
+396                    -1  
+397                    -1  
+398                    -1  
+399                    -1  
+400                    -1  
+401                    -1  
+402                    -1  
+403                    -1  
+404                    -1  
+405                    -1  
+406                    -1  
+407                    -1  
+408                    -1  
+409                    -1  
+410                    -1  
+411                    -1  
+412                    -1  
+413                    -1  
+414                    -1  
+415                    -1  
+416                    -1  
+417                    -1  
+
+
+
+
+    PassengerId  Survived_total  Survived_0  Survived_1  Survived  \
+0          892         7.71684    1.000000    0.000000        -1   
+1          893         7.71684    0.818063    1.403981        -1   
+2          894         7.71684    1.000000    0.000000        -1   
+3          895         7.71684    1.000000    0.000000        -1   
+4          896         7.71684    0.439722    4.323573        -1   
+5          897         7.71684    1.000000    0.000000        -1   
+6          898         7.71684    0.575429    3.276345        -1   
+7          899         7.71684    1.000000    0.000000        -1   
+8          900         7.71684    0.358086    4.953546        -1   
+9          901         7.71684    1.000000    0.000000        -1   
+
+   Survived_probability  
+0                    -1  
+1                    -1  
+2                    -1  
+3                    -1  
+4                    -1  
+5                    -1  
+6                    -1  
+7                    -1  
+8                    -1  
+9                    -1  
+
+
+
+
+    PassengerId  Survived_total  Survived_0  Survived_1  Survived  \
+0          892         7.71684    1.000000    0.000000         0   
+1          893         7.71684    0.818063    0.181937         0   
+2          894         7.71684    1.000000    0.000000         0   
+3          895         7.71684    1.000000    0.000000         0   
+4          896         7.71684    0.439722    0.560278         0   
+5          897         7.71684    1.000000    0.000000         0   
+6          898         7.71684    0.575429    0.424571         0   
+7          899         7.71684    1.000000    0.000000         0   
+8          900         7.71684    0.358086    0.641914         0   
+9          901         7.71684    1.000000    0.000000         0   
+
+   Survived_probability  
+0              1.000000  
+1              0.818063  
+2              1.000000  
+3              1.000000  
+4              0.439722  
+5              1.000000  
+6              0.575429  
+7              1.000000  
+8              0.358086  
+9              1.000000  

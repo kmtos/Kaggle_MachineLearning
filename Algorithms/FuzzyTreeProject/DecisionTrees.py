@@ -249,10 +249,10 @@ def GetWeightedNodeDecisions(df, leaf, index, className, soloNodeDecision, gt_or
         ltMaxWeight = currWeight
         ltMaxClassVal = classVal
     if gt_or_lt > 0: 
-      print ("Blank Node has a non-Blank Sister, so only make decision for one part of parent node. GT Node Decision."
+      print ("Blank Node has a non-Blank Sister, so only make decision for one part of parent node. GT Node Decision.")
       return (index, np.NaN, ltMaxClassVal, np.NaN, ltMaxWeight, np.NaN, totalWeight)
     else:            
-      print ("Blank Node has a non-Blank Sister, so only make decision for one part of parent node. LT Node Decision."
+      print ("Blank Node has a non-Blank Sister, so only make decision for one part of parent node. LT Node Decision.")
       return (index, ltMaxClassVal, np.NaN, ltMaxWeight, np.NaN, totalWeight, np.NaN)
 
   print ("\tlen(ltDF)=", len(df[ df[leaf[2]]<=leaf[3] ]), "\tlen(gtDF)=", len(df[ df[leaf[2]]>leaf[3] ]) )
@@ -301,40 +301,39 @@ def ClassifyWithTree(df_test, className, idColumn, maxDepth, outputFileName, nod
   maxNodeCount = 0
   for i in range(1,maxDepth+1): maxNodeCount += 2**i # Get the max number of nodes from maxDepth
   for ite in nodeValues: #Iterate through the nodes
-    tup = (int(ite[0]),  float(ite[1]), ite[2], float(ite[3]), float(ite[4])) # The File stores all info as strings. Cleaner to reassing type now, not every instance.
-    print ("\n\ttup=", tup )
-    print ("\tdfIDList[tup[0][1]=", len(dfIDList[tup[0]][1])) 
-    dfCurr = df_test.loc[df_test[idColumn].isin(dfIDList[tup[0]][1])] # Get the elements of df_test at node
+    nodeValueTup = (int(ite[0]),  float(ite[1]), ite[2], float(ite[3]), float(ite[4])) # The File stores all info as strings. Cleaner to reassing type now, not every instance.
+    print ("\n\tnodeValueTup=", nodeValueTup )
+    dfCurr = df_test.loc[df_test[idColumn].isin(dfIDList[nodeValueTup[0]][1])] # Get the elements of df_test at node
 
-    if pd.isnull(tup[3]) and pd.isnull(tup[4]) and tup[2] == '' and pd.isnull(tup[1]): # If decision of node from MakeTree is blank, then skip
-      print ("\tdf=", dfIDList[tup[0]][1])
+    if pd.isnull(nodeValueTup[3]) and pd.isnull(nodeValueTup[4]) and nodeValueTup[2] == '' and pd.isnull(nodeValueTup[1]): # If decision of node from MakeTree is blank, then skip
+      print ("\tdf=", dfIDList[nodeValueTup[0]][1])
       continue
-    elif tup[2] == 'ThisIsAnEndNode' and pd.isnull(tup[3]) and pd.isnull(tup[4]) and tup[1] == 1.0: # If decision of node from MakeTree is an EndNode, then proceed
-      decision = next(iteTup for iteTup in nodeDecisions if int(iteTup[0]) == tup[0]) # Get the decision of the End Node
+    elif nodeValueTup[2] == 'ThisIsAnEndNode' and pd.isnull(nodeValueTup[3]) and pd.isnull(nodeValueTup[4]) and nodeValueTup[1] == 1.0: # If decision of node from MakeTree is an EndNode, then proceed
+      decision = next(iteTup for iteTup in nodeDecisions if int(iteTup[0]) == nodeValueTup[0]) # Get the decision of the End Node
       IDs = dfCurr[idColumn].tolist() # Get df_test elements that made it to this node following the tree structure
       df_Answers.loc[ df_Answers[idColumn].isin(IDs) , className] = decision[1] # Give the elements the appropriate class value from decision
       print ("Class for End-Node=",  decision[1], "\tlen(IDs)=", IDs)
-      if tup[0] < maxNodeCount / 2: # If this EndNode isn't at the furthest depth, then add empty placeholders for future BlankNodes
-        dfIDList.append( (tup[0]*2 + 1, [] ) )
-        dfIDList.append( (tup[0]*2 + 2, [] ) )
-    elif tup[0] < maxNodeCount / 2: # If element isn't an EndNode and also not at the furthest depth, then proceed
-      print ("\tlen(lt)=", len(dfCurr[ dfCurr[tup[2]] <= tup[3] ]), "\tlen(gt)=", len(dfCurr[ dfCurr[tup[2]] > tup[3] ]) )
-      dfIDList.append( (tup[0]*2 + 1, dfCurr[ dfCurr[tup[2]] <= tup[3] ][idColumn].tolist() ) ) # Give the df_test ID's in the daughter LT leaf of current Node
-      dfIDList.append( (tup[0]*2 + 2, dfCurr[ dfCurr[tup[2]] > tup[3] ][idColumn].tolist() ) )  # Give the df_test ID"s in the daughter Gt leaf of current Node
+      if nodeValueTup[0] < maxNodeCount / 2: # If this EndNode isn't at the furthest depth, then add empty placeholders for future BlankNodes
+        dfIDList.append( (nodeValueTup[0]*2 + 1, [] ) )
+        dfIDList.append( (nodeValueTup[0]*2 + 2, [] ) )
+    elif nodeValueTup[0] < maxNodeCount / 2: # If element isn't an EndNode and also not at the furthest depth, then proceed
+      print ("\tlen(lt)=", len(dfCurr[ dfCurr[nodeValueTup[2]] <= nodeValueTup[3] ]), "\tlen(gt)=", len(dfCurr[ dfCurr[nodeValueTup[2]] > nodeValueTup[3] ]) )
+      dfIDList.append( (nodeValueTup[0]*2 + 1, dfCurr[ dfCurr[nodeValueTup[2]] <= nodeValueTup[3] ][idColumn].tolist() ) ) # Give the df_test ID's in the daughter LT leaf of current Node
+      dfIDList.append( (nodeValueTup[0]*2 + 2, dfCurr[ dfCurr[nodeValueTup[2]] > nodeValueTup[3] ][idColumn].tolist() ) )  # Give the df_test ID"s in the daughter Gt leaf of current Node
       try:  # This sees if the decision of a node is already added. From a sister BlankNode
-        decision = next (itetup for itetup in nodeDecisions if int(itetup[0]) == tup[0])
+        decision = next (itetup for itetup in nodeDecisions if int(itetup[0]) == nodeValueTup[0])
         print ("\tOne of this Node's Daughters is a BlankNode.")
         if pd.isnull(float(decision[2]) ) and not pd.isnull(float(decision[1]) ):
-          ltIDs = dfCurr[ dfCurr[tup[2]] <= tup[3] ][idColumn].tolist() # Get the df_test ID's in the daughter LT leaf of current Node
+          ltIDs = dfCurr[ dfCurr[nodeValueTup[2]] <= nodeValueTup[3] ][idColumn].tolist() # Get the df_test ID's in the daughter LT leaf of current Node
           df_Answers.loc[ df_Answers[idColumn].isin(ltIDs) , className] = decision[1] # Apply decision to LT group
           print ("\tClass for LT=", decision[1], "\tlen(ltIDs)=",  len(ltIDs) )
         elif not pd.isnull(float(decision[2]) ) and pd.isnull(float(decision[1]) ):
-          gtIDs = dfCurr[ dfCurr[tup[2]] > tup[3] ][idColumn].tolist() # Get the df_test ID's in the daughter LT leaf of current Node
+          gtIDs = dfCurr[ dfCurr[nodeValueTup[2]] > nodeValueTup[3] ][idColumn].tolist() # Get the df_test ID's in the daughter LT leaf of current Node
           df_Answers.loc[ df_Answers[idColumn].isin(gtIDs) , className] = decision[2] # Apply decision to LT group
           print ("\tClass for GT=", decision[2], "\tlen(gtIDs)=",  len(gtIDs) )
         else:
-          ltIDs = dfCurr[ dfCurr[tup[2]] <= tup[3] ][idColumn].tolist() # Get the df_test ID's in the daughter LT leaf of current Node
-          gtIDs = dfCurr[ dfCurr[tup[2]] > tup[3] ][idColumn].tolist() # Get the df_test ID's in the daughter LT leaf of current Node
+          ltIDs = dfCurr[ dfCurr[nodeValueTup[2]] <= nodeValueTup[3] ][idColumn].tolist() # Get the df_test ID's in the daughter LT leaf of current Node
+          gtIDs = dfCurr[ dfCurr[nodeValueTup[2]] > nodeValueTup[3] ][idColumn].tolist() # Get the df_test ID's in the daughter LT leaf of current Node
           df_Answers.loc[ df_Answers[idColumn].isin(ltIDs) , className] = decision[1] # Apply decision to LT group
           df_Answers.loc[ df_Answers[idColumn].isin(gtIDs) , className] = decision[2] # Apply decision to LT group
           print ("\tClass for LT=", decision[1], "\tlen(ltIDs)=",  len(ltIDs), "\tClass for GT=", decision[2], "\tlen(gtIDs)=",  len(gtIDs) )
@@ -342,9 +341,9 @@ def ClassifyWithTree(df_test, className, idColumn, maxDepth, outputFileName, nod
         print ("Non of this node's daughters are Blank Nodes")
         continue #If node is not found in nodeDecisions, then add it
     else: # If not an EndNode, BlankNode, or a node NOT at the max depth, then get decisions there
-      decision = next(iteTup for iteTup in nodeDecisions if int(iteTup[0]) == tup[0]) # Get decision of Make Tree at node
-      ltIDs = dfCurr[ dfCurr[tup[2]] <= tup[3] ][idColumn].tolist() # Get the df_test ID's in the daughter LT leaf of current Node
-      gtIDs = dfCurr[ dfCurr[tup[2]] >  tup[3] ][idColumn].tolist() # Get the df_test ID's in the daughter GT leaf of current Node
+      decision = next(iteTup for iteTup in nodeDecisions if int(iteTup[0]) == nodeValueTup[0]) # Get decision of Make Tree at node
+      ltIDs = dfCurr[ dfCurr[nodeValueTup[2]] <= nodeValueTup[3] ][idColumn].tolist() # Get the df_test ID's in the daughter LT leaf of current Node
+      gtIDs = dfCurr[ dfCurr[nodeValueTup[2]] >  nodeValueTup[3] ][idColumn].tolist() # Get the df_test ID's in the daughter GT leaf of current Node
       df_Answers.loc[ df_Answers[idColumn].isin(ltIDs) , className] = decision[1] # Apply decision to LT group
       df_Answers.loc[ df_Answers[idColumn].isin(gtIDs) , className] = decision[2] # Apply decision to GT group
       print ("\tClass for LT=", decision[1], "\tlen(ltIDs)=",  len(ltIDs), "\tClass for GT=", decision[2], "\tlen(gtIDs)=",  len(gtIDs) )
