@@ -58,3 +58,430 @@ clf8= 0.738436575544 	oob_score= 0.737613656226
 clf9= 0.736912924322 	oob_score= 0.737000234156
 
 
+clf1 = RandomForestClassifier(criterion='entropy', max_depth=24, min_samples_leaf=1, min_samples_split=15, class_weight=None, n_estimators=125, oob_score=True, bootstrap=True, random_state=1 )
+clf2 = RandomForestClassifier(criterion='entropy', max_depth=23, min_samples_leaf=1, min_samples_split=15, class_weight=None, n_estimators=125, oob_score=True, bootstrap=True, random_state=1 )
+clf3 = RandomForestClassifier(criterion='entropy', max_depth=22, min_samples_leaf=1, min_samples_split=15, class_weight=None, n_estimators=125, oob_score=True, bootstrap=True, random_state=1 )
+clf4 = RandomForestClassifier(criterion='entropy', max_depth=21, min_samples_leaf=1, min_samples_split=15, class_weight=None, n_estimators=125, oob_score=True, bootstrap=True, random_state=1 )
+clf5 = RandomForestClassifier(criterion='entropy', max_depth=20, min_samples_leaf=1, min_samples_split=15, class_weight=None, n_estimators=125, oob_score=True, bootstrap=True, random_state=1 )
+clf6 = RandomForestClassifier(criterion='entropy', max_depth=19, min_samples_leaf=1, min_samples_split=15, class_weight=None, n_estimators=125, oob_score=True, bootstrap=True, random_state=1 )
+clf7 = RandomForestClassifier(criterion='entropy', max_depth=18, min_samples_leaf=1, min_samples_split=15, class_weight=None, n_estimators=125, oob_score=True, bootstrap=True, random_state=1 )
+clf8 = RandomForestClassifier(criterion='entropy', max_depth=17, min_samples_leaf=1, min_samples_split=15, class_weight=None, n_estimators=125, oob_score=True, bootstrap=True, random_state=1 )
+clf9 = RandomForestClassifier(criterion='entropy', max_depth=16, min_samples_leaf=1, min_samples_split=15, class_weight=None, n_estimators=125, oob_score=True, bootstrap=True, random_state=1 )
+clf1= 0.745500776666 	oob_score= 0.745067064182
+clf2= 0.744946721676 	oob_score= 0.743721493188
+clf3= 0.743858399375 	oob_score= 0.743879795658
+clf4= 0.742621669486 	oob_score= 0.742745294624
+clf5= 0.742671138682 	oob_score= 0.742141766458
+clf6= 0.740969398356 	oob_score= 0.741135886181
+clf7= 0.739742562306 	oob_score= 0.740014577019
+clf8= 0.738921373661 	oob_score= 0.73867889993
+clf9= 0.736932712 	oob_score= 0.737880791644
+
+clf1 = RandomForestClassifier(criterion='entropy', max_depth=25, min_samples_leaf=1, min_samples_split=15, class_weight=None, n_estimators=125, oob_score=True, bootstrap=True, random_state=1 )
+clf2 = RandomForestClassifier(criterion='entropy', max_depth=26, min_samples_leaf=1, min_samples_split=15, class_weight=None, n_estimators=125, oob_score=True, bootstrap=True, random_state=1 )
+clf3 = RandomForestClassifier(criterion='entropy', max_depth=27, min_samples_leaf=1, min_samples_split=15, class_weight=None, n_estimators=125, oob_score=True, bootstrap=True, random_state=1 )
+clf4 = RandomForestClassifier(criterion='entropy', max_depth=28, min_samples_leaf=1, min_samples_split=15, class_weight=None, n_estimators=125, oob_score=True, bootstrap=True, random_state=1 )
+clf5 = RandomForestClassifier(criterion='entropy', max_depth=29, min_samples_leaf=1, min_samples_split=15, class_weight=None, n_estimators=125, oob_score=True, bootstrap=True, random_state=1 )
+clf6 = RandomForestClassifier(criterion='entropy', max_depth=30, min_samples_leaf=1, min_samples_split=15, class_weight=None, n_estimators=125, oob_score=True, bootstrap=True, random_state=1 )
+clf7 = RandomForestClassifier(criterion='entropy', max_depth=31, min_samples_leaf=1, min_samples_split=15, class_weight=None, n_estimators=125, oob_score=True, bootstrap=True, random_state=1 )
+clf8 = RandomForestClassifier(criterion='entropy', max_depth=32, min_samples_leaf=1, min_samples_split=15, class_weight=None, n_estimators=125, oob_score=True, bootstrap=True, random_state=1 )
+clf9 = RandomForestClassifier(criterion='entropy', max_depth=33, min_samples_leaf=1, min_samples_split=15, class_weight=None, n_estimators=125, oob_score=True, bootstrap=True, random_state=1 )
+clf1= 0.745659078092 	oob_score= 0.744839504381
+clf2= 0.746549523612 	oob_score= 0.744931847489
+clf3= 0.74678697575 	oob_score= 0.744968125138
+clf4= 0.747618058235 	oob_score= 0.745485906133
+clf5= 0.747311349223 	oob_score= 0.745957515575
+clf6= 0.747588376718 	oob_score= 0.74561452689
+clf7= 0.747974236443 	oob_score= 0.745838788722
+clf8= 0.746500054416 	oob_score= 0.746237842865
+clf9= 0.7477862535 	oob_score= 0.745195684939
+
+clf1 = RandomForestClassifier(criterion='entropy', max_depth=42, min_samples_leaf=1, min_samples_split=15, class_weight=None, n_estimators=125, oob_score=True, bootstrap=True, random_state=1 )
+clf2 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=15, class_weight=None, n_estimators=125, oob_score=True, bootstrap=True, random_state=1 )
+clf3 = RandomForestClassifier(criterion='entropy', max_depth=40, min_samples_leaf=1, min_samples_split=15, class_weight=None, n_estimators=125, oob_score=True, bootstrap=True, random_state=1 )
+clf4 = RandomForestClassifier(criterion='entropy', max_depth=39, min_samples_leaf=1, min_samples_split=15, class_weight=None, n_estimators=125, oob_score=True, bootstrap=True, random_state=1 )
+clf5 = RandomForestClassifier(criterion='entropy', max_depth=38, min_samples_leaf=1, min_samples_split=15, class_weight=None, n_estimators=125, oob_score=True, bootstrap=True, random_state=1 )
+clf6 = RandomForestClassifier(criterion='entropy', max_depth=37, min_samples_leaf=1, min_samples_split=15, class_weight=None, n_estimators=125, oob_score=True, bootstrap=True, random_state=1 )
+clf7 = RandomForestClassifier(criterion='entropy', max_depth=36, min_samples_leaf=1, min_samples_split=15, class_weight=None, n_estimators=125, oob_score=True, bootstrap=True, random_state=1 )
+clf8 = RandomForestClassifier(criterion='entropy', max_depth=35, min_samples_leaf=1, min_samples_split=15, class_weight=None, n_estimators=125, oob_score=True, bootstrap=True, random_state=1 )
+clf9 = RandomForestClassifier(criterion='entropy', max_depth=34, min_samples_leaf=1, min_samples_split=15, class_weight=None, n_estimators=125, oob_score=True, bootstrap=True, random_state=1 )
+clf1= 0.747736784304 	oob_score= 0.745522183783
+clf2= 0.747924767247 	oob_score= 0.746297206291
+clf3= 0.747885191891 	oob_score= 0.745512289878
+clf4= 0.747370712257 	oob_score= 0.745396860994
+clf5= 0.747845616535 	oob_score= 0.746132307885
+clf6= 0.747054109406 	oob_score= 0.746218055056
+clf7= 0.747776359661 	oob_score= 0.746046560714
+clf8= 0.746974958693 	oob_score= 0.74508685199
+clf9= 0.748172113225 	oob_score= 0.745377073185
+
+clf1 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=5, class_weight=None, n_estimators=125, oob_score=True, bootstrap=True, random_state=1 )
+clf2 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=10, class_weight=None, n_estimators=125, oob_score=True, bootstrap=True, random_state=1 )
+clf3 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=15, class_weight=None, n_estimators=125, oob_score=True, bootstrap=True, random_state=1 )
+clf4 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=20, class_weight=None, n_estimators=125, oob_score=True, bootstrap=True, random_state=1 )
+clf5 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=25, class_weight=None, n_estimators=125, oob_score=True, bootstrap=True, random_state=1 )
+clf6 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=30, class_weight=None, n_estimators=125, oob_score=True, bootstrap=True, random_state=1 )
+clf7 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=35, class_weight=None, n_estimators=125, oob_score=True, bootstrap=True, random_state=1 )
+clf8 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=40, class_weight=None, n_estimators=125, oob_score=True, bootstrap=True, random_state=1 )
+clf9 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=50, class_weight=None, n_estimators=125, oob_score=True, bootstrap=True, random_state=1 )
+clf1= 0.747835722695 	oob_score= 0.744143633108
+clf2= 0.74767742127 	oob_score= 0.746129009917
+clf3= 0.747924767247 	oob_score= 0.746297206291
+clf4= 0.746262602278 	oob_score= 0.746326888004
+clf5= 0.74767742127 	oob_score= 0.746297206291
+clf6= 0.746628674324 	oob_score= 0.745047276373
+clf7= 0.746707825037 	oob_score= 0.745964111511
+clf8= 0.745540352023 	oob_score= 0.744552581155
+clf9= 0.745758016483 	oob_score= 0.744008416415
+
+clf1 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=55, class_weight=None, n_estimators=125, oob_score=True, bootstrap=True, random_state=1 )
+clf2 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=60, class_weight=None, n_estimators=125, oob_score=True, bootstrap=True, random_state=1 )
+clf3 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=65, class_weight=None, n_estimators=125, oob_score=True, bootstrap=True, random_state=1 )
+clf4 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=70, class_weight=None, n_estimators=125, oob_score=True, bootstrap=True, random_state=1 )
+clf5 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=75, class_weight=None, n_estimators=125, oob_score=True, bootstrap=True, random_state=1 )
+clf6 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=80, class_weight=None, n_estimators=125, oob_score=True, bootstrap=True, random_state=1 )
+clf7 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=85, class_weight=None, n_estimators=125, oob_score=True, bootstrap=True, random_state=1 )
+clf8 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=90, class_weight=None, n_estimators=125, oob_score=True, bootstrap=True, random_state=1 )
+clf9 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=95, class_weight=None, n_estimators=125, oob_score=True, bootstrap=True, random_state=1 )
+clf1= 0.745441413632 	oob_score= 0.74350712526
+clf2= 0.744303622134 	oob_score= 0.743523615101
+clf3= 0.743195512155 	oob_score= 0.743922669243
+clf4= 0.744867570964 	oob_score= 0.744061183905
+clf5= 0.743719885627 	oob_score= 0.743282863428
+clf6= 0.743551690362 	oob_score= 0.74340159028
+clf7= 0.743749567145 	oob_score= 0.742903597094
+clf8= 0.74358137188 	oob_score= 0.742267089246
+clf9= 0.742255597439 	oob_score= 0.741726222474
+
+clf1 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=5, class_weight=None, n_estimators=300, oob_score=True, bootstrap=True, random_state=1 )
+clf2 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=10, class_weight=None, n_estimators=300, oob_score=True, bootstrap=True, random_state=1 )
+clf3 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=15, class_weight=None, n_estimators=300, oob_score=True, bootstrap=True, random_state=1 )
+clf4 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=20, class_weight=None, n_estimators=300, oob_score=True, bootstrap=True, random_state=1 )
+clf5 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=25, class_weight=None, n_estimators=300, oob_score=True, bootstrap=True, random_state=1 )
+clf6 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=30, class_weight=None, n_estimators=300, oob_score=True, bootstrap=True, random_state=1 )
+clf7 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=35, class_weight=None, n_estimators=300, oob_score=True, bootstrap=True, random_state=1 )
+clf8 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=40, class_weight=None, n_estimators=300, oob_score=True, bootstrap=True, random_state=1 )
+clf9 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=50, class_weight=None, n_estimators=300, oob_score=True, bootstrap=True, random_state=1 )
+clf1= 0.749329692401 	oob_score= 0.748737702701
+clf2= 0.748844894284 	oob_score= 0.749014732024
+clf3= 0.748874575802 	oob_score= 0.748500248997
+clf4= 0.748261157777 	oob_score= 0.74859918804
+clf5= 0.748647017502 	oob_score= 0.748434289634
+clf6= 0.747667527431 	oob_score= 0.747698842743
+clf7= 0.747291561545 	oob_score= 0.747550434178
+clf8= 0.74612408853 	oob_score= 0.746458806729
+clf9= 0.74590642407 	oob_score= 0.745710167966
+
+clf1 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=55, class_weight=None, n_estimators=300, oob_score=True, bootstrap=True, random_state=1 )
+clf2 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=60, class_weight=None, n_estimators=300, oob_score=True, bootstrap=True, random_state=1 )
+clf3 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=65, class_weight=None, n_estimators=300, oob_score=True, bootstrap=True, random_state=1 )
+clf4 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=70, class_weight=None, n_estimators=300, oob_score=True, bootstrap=True, random_state=1 )
+clf5 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=75, class_weight=None, n_estimators=300, oob_score=True, bootstrap=True, random_state=1 )
+clf6 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=80, class_weight=None, n_estimators=300, oob_score=True, bootstrap=True, random_state=1 )
+clf7 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=85, class_weight=None, n_estimators=300, oob_score=True, bootstrap=True, random_state=1 )
+clf8 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=90, class_weight=None, n_estimators=300, oob_score=True, bootstrap=True, random_state=1 )
+clf9 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=95, class_weight=None, n_estimators=300, oob_score=True, bootstrap=True, random_state=1 )
+f1= 0.745876742552 	oob_score= 0.745449628484
+clf2= 0.745589821218 	oob_score= 0.744842802349
+clf3= 0.74523364301 	oob_score= 0.745515587846
+clf4= 0.7442442591 	oob_score= 0.74475375721
+clf5= 0.743967231605 	oob_score= 0.744061183905
+clf6= 0.744382772847 	oob_score= 0.744120547331
+clf7= 0.743393388937 	oob_score= 0.744015012351
+clf8= 0.743630841075 	oob_score= 0.743444463866
+clf9= 0.743561584202 	oob_score= 0.743606064304
+
+clf1 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=10, class_weight=None, n_estimators=300, oob_score=True, bootstrap=True, random_state=1 )
+clf2 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=10, class_weight=None, n_estimators=600, oob_score=True, bootstrap=True, random_state=1 )
+clf3 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=10, class_weight=None, n_estimators=900, oob_score=True, bootstrap=True, random_state=1 )
+clf4 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=10, class_weight=None, n_estimators=1200, oob_score=True, bootstrap=True, random_state=1 )
+clf5 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=10, class_weight=None, n_estimators=1500, oob_score=True, bootstrap=True, random_state=1 )
+clf6 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=10, class_weight=None, n_estimators=1800, oob_score=True, bootstrap=True, random_state=1 )
+clf7 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=10, class_weight=None, n_estimators=2100, oob_score=True, bootstrap=True, random_state=1 )
+clf8 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=10, class_weight=None, n_estimators=2400, oob_score=True, bootstrap=True, random_state=1 )
+clf9 = RandomForestClassifier(criterion='entropy', max_depth=41, min_samples_leaf=1, min_samples_split=10, class_weight=None, n_estimators=2700, oob_score=True, bootstrap=True, random_state=1 )
+clf1= 0.748844894284 	oob_score= 0.749014732024
+clf2= 0.749349480079 	oob_score= 0.750033804173
+clf3= 0.749844172034 	oob_score= 0.750726377479
+clf4= 0.74966608293 	oob_score= 0.751112239749
+clf5= 0.749844172034	oob_score= 0.750884679949
+clf6= 0.749962898103	oob_score= 0.751280436123 
+clf7= 0.750051942655 	oob_score= 0.751132027558
+clf8= 0.750259713277 	oob_score= 0.751270542219
+
+#########################################################
+## K-Nearest Neighbors ##################################
+#########################################################
+clf1 = KNeighborsClassifier(n_neighbors=10, weights='distance', metric='euclidean', p=1)
+clf2 = KNeighborsClassifier(n_neighbors=20, weights='distance', metric='euclidean', p=1)
+clf3 = KNeighborsClassifier(n_neighbors=30, weights='distance', metric='euclidean', p=1)
+clf4 = KNeighborsClassifier(n_neighbors=40, weights='distance', metric='euclidean', p=1)
+clf5 = KNeighborsClassifier(n_neighbors=50, weights='distance', metric='euclidean', p=1)
+clf6 = KNeighborsClassifier(n_neighbors=60, weights='distance', metric='euclidean', p=1)
+clf7 = KNeighborsClassifier(n_neighbors=70, weights='distance', metric='euclidean', p=1)
+clf8 = KNeighborsClassifier(n_neighbors=80, weights='distance', metric='euclidean', p=1)
+clf9 = KNeighborsClassifier(n_neighbors=90, weights='distance', metric='euclidean', p=1)
+clf10 = KNeighborsClassifier(n_neighbors=100, weights='distance', metric='euclidean', p=1)
+clf1= 0.682061480316
+clf2= 0.688353961988
+clf3= 0.690837315604
+clf4= 0.690926360156
+clf5= 0.691519990502
+clf6= 0.690520712752
+clf7= 0.690421774361
+clf8= 0.690154640705
+clf9= 0.689125681438
+clf10= 0.688433112701
+
+clf1 = KNeighborsClassifier(n_neighbors=10, weights=distanceWeight, metric='euclidean', p=1)
+clf2 = KNeighborsClassifier(n_neighbors=50, weights=distanceWeight, metric='euclidean', p=1)
+clf3 = KNeighborsClassifier(n_neighbors=100, weights=distanceWeight, metric='euclidean', p=1)
+clf4 = KNeighborsClassifier(n_neighbors=150, weights=distanceWeight, metric='euclidean', p=1)
+clf5 = KNeighborsClassifier(n_neighbors=200, weights=distanceWeight, metric='euclidean', p=1)
+clf6 = KNeighborsClassifier(n_neighbors=250, weights=distanceWeight, metric='euclidean', p=1)
+clf7 = KNeighborsClassifier(n_neighbors=300, weights=distanceWeight, metric='euclidean', p=1)
+clf8 = KNeighborsClassifier(n_neighbors=350, weights=distanceWeight, metric='euclidean', p=1)
+clf9 = KNeighborsClassifier(n_neighbors=400, weights=distanceWeight, metric='euclidean', p=1)
+clf10 = KNeighborsClassifier(n_neighbors=450, weights=distanceWeight, metric='euclidean', p=1)
+clf11 = KNeighborsClassifier(n_neighbors=500, weights=distanceWeight, metric='euclidean', p=1)
+clf12 = KNeighborsClassifier(n_neighbors=550, weights=distanceWeight, metric='euclidean', p=1)
+clf13 = KNeighborsClassifier(n_neighbors=600, weights=distanceWeight, metric='euclidean', p=1)
+clf14 = KNeighborsClassifier(n_neighbors=650, weights=distanceWeight, metric='euclidean', p=1)
+clf15 = KNeighborsClassifier(n_neighbors=700, weights=distanceWeight, metric='euclidean', p=1)
+clf16 = KNeighborsClassifier(n_neighbors=750, weights=distanceWeight, metric='euclidean', p=1)
+clf17 = KNeighborsClassifier(n_neighbors=800, weights=distanceWeight, metric='euclidean', p=1)
+clf18 = KNeighborsClassifier(n_neighbors=850, weights=distanceWeight, metric='euclidean', p=1)
+clf19 = KNeighborsClassifier(n_neighbors=900, weights=distanceWeight, metric='euclidean', p=1)
+clf20 = KNeighborsClassifier(n_neighbors=950, weights=distanceWeight, metric='euclidean', p=1)
+clf21 = KNeighborsClassifier(n_neighbors=1000, weights=distanceWeight, metric='euclidean', p=1)
+clf22 = KNeighborsClassifier(n_neighbors=1100, weights=distanceWeight, metric='euclidean', p=1)
+clf23 = KNeighborsClassifier(n_neighbors=1200, weights=distanceWeight, metric='euclidean', p=1)
+clf24 = KNeighborsClassifier(n_neighbors=1300, weights=distanceWeight, metric='euclidean', p=1)
+clf25 = KNeighborsClassifier(n_neighbors=1400, weights=distanceWeight, metric='euclidean', p=1)
+clf26 = KNeighborsClassifier(n_neighbors=1500, weights=distanceWeight, metric='euclidean', p=1)
+clf27 = KNeighborsClassifier(n_neighbors=1600, weights=distanceWeight, metric='euclidean', p=1)
+clf28 = KNeighborsClassifier(n_neighbors=1700, weights=distanceWeight, metric='euclidean', p=1)
+clf1= 0.672761271556
+clf2= 0.681062202566
+clf3= 0.676323053635
+clf4= 0.673483521811
+clf5= 0.671663055415
+clf6= 0.670436219366
+clf7= 0.668971931178
+clf8= 0.668793842075
+clf9= 0.66696348184
+clf10= 0.66551898133
+clf11= 0.665202378479
+clf12= 0.664678005006
+clf13= 0.66397554243
+clf14= 0.663579788865
+clf15= 0.663154353784
+clf16= 0.663104884588
+clf17= 0.662441997368
+clf18= 0.661996774608
+clf19= 0.661878048539
+clf10= 0.661630702562
+clf21= 0.661640596401
+clf22= 0.660196095891
+clf23= 0.660008112948
+clf24= 0.659572784027
+clf25= 0.659810236166
+clf26= 0.659414482602
+clf27= 0.658810958416
+clf28= 0.657910619058
+
+
+clf1 = KNeighborsClassifier(n_neighbors=10, weights='distance', metric='chebyshev', p=1)
+clf2 = KNeighborsClassifier(n_neighbors=20, weights='distance', metric='chebyshev', p=1)
+clf3 = KNeighborsClassifier(n_neighbors=30, weights='distance', metric='chebyshev', p=1)
+clf4 = KNeighborsClassifier(n_neighbors=40, weights='distance', metric='chebyshev', p=1)
+clf5 = KNeighborsClassifier(n_neighbors=50, weights='distance', metric='chebyshev', p=1)
+clf6 = KNeighborsClassifier(n_neighbors=60, weights='distance', metric='chebyshev', p=1)
+clf7 = KNeighborsClassifier(n_neighbors=70, weights='distance', metric='chebyshev', p=1)
+clf8 = KNeighborsClassifier(n_neighbors=80, weights='distance', metric='chebyshev', p=1)
+clf9 = KNeighborsClassifier(n_neighbors=90, weights='distance', metric='chebyshev', p=1)
+clf10 = KNeighborsClassifier(n_neighbors=100, weights='distance', metric='chebyshev', p=1)
+clf1= 0.649777883312
+clf2= 0.65412127868
+clf3= 0.656851978273
+clf4= 0.658573506278
+clf5= 0.65877138306
+clf6= 0.658959366003
+clf7= 0.658949472164
+clf8= 0.660423654191
+clf9= 0.659731085453
+clf10= 0.659365013406
+
+
+clf1 = KNeighborsClassifier(n_neighbors=10, weights=distanceWeight, metric='euclidean', p=1)
+clf2 = KNeighborsClassifier(n_neighbors=50, weights=distanceWeight, metric='euclidean', p=1)
+clf3 = KNeighborsClassifier(n_neighbors=100, weights=distanceWeight, metric='euclidean', p=1)
+clf4 = KNeighborsClassifier(n_neighbors=150, weights=distanceWeight, metric='euclidean', p=1)
+clf5 = KNeighborsClassifier(n_neighbors=200, weights=distanceWeight, metric='euclidean', p=1)
+clf6 = KNeighborsClassifier(n_neighbors=250, weights=distanceWeight, metric='euclidean', p=1)
+clf7 = KNeighborsClassifier(n_neighbors=300, weights=distanceWeight, metric='euclidean', p=1)
+clf8 = KNeighborsClassifier(n_neighbors=350, weights=distanceWeight, metric='euclidean', p=1)
+clf9 = KNeighborsClassifier(n_neighbors=400, weights=distanceWeight, metric='euclidean', p=1)
+clf10 = KNeighborsClassifier(n_neighbors=450, weights=distanceWeight, metric='euclidean', p=1)
+clf11 = KNeighborsClassifier(n_neighbors=500, weights=distanceWeight, metric='euclidean', p=1)
+clf12 = KNeighborsClassifier(n_neighbors=550, weights=distanceWeight, metric='euclidean', p=1)
+clf13 = KNeighborsClassifier(n_neighbors=600, weights=distanceWeight, metric='euclidean', p=1)
+clf14 = KNeighborsClassifier(n_neighbors=650, weights=distanceWeight, metric='euclidean', p=1)
+clf15 = KNeighborsClassifier(n_neighbors=700, weights=distanceWeight, metric='euclidean', p=1)
+clf16 = KNeighborsClassifier(n_neighbors=750, weights=distanceWeight, metric='euclidean', p=1)
+clf17 = KNeighborsClassifier(n_neighbors=800, weights=distanceWeight, metric='euclidean', p=1)
+clf18 = KNeighborsClassifier(n_neighbors=850, weights=distanceWeight, metric='euclidean', p=1)
+clf19 = KNeighborsClassifier(n_neighbors=900, weights=distanceWeight, metric='euclidean', p=1)
+clf20 = KNeighborsClassifier(n_neighbors=950, weights=distanceWeight, metric='euclidean', p=1)
+clf21 = KNeighborsClassifier(n_neighbors=1000, weights=distanceWeight, metric='euclidean', p=1)
+clf22 = KNeighborsClassifier(n_neighbors=1100, weights=distanceWeight, metric='euclidean', p=1)
+clf23 = KNeighborsClassifier(n_neighbors=1200, weights=distanceWeight, metric='euclidean', p=1)
+clf24 = KNeighborsClassifier(n_neighbors=1300, weights=distanceWeight, metric='euclidean', p=1)
+clf1= 0.672761271556
+clf2= 0.681062202566
+clf3= 0.676323053635
+clf4= 0.673483521811
+clf5= 0.671663055415
+clf6= 0.670436219366
+clf7= 0.668971931178
+clf8= 0.668793842075
+clf9= 0.66696348184
+clf10= 0.66551898133
+clf11= 0.665202378479
+clf12= 0.664678005006
+clf13= 0.66397554243
+clf14= 0.663579788865
+clf15= 0.663154353784
+clf16= 0.663104884588
+clf17= 0.662441997368
+clf18= 0.661996774608
+clf19= 0.661878048539
+clf10= 0.661630702562
+clf21= 0.661640596401
+clf22= 0.660196095891
+clf23= 0.660008112948
+clf24= 0.659572784027
+
+clf1 = KNeighborsClassifier(n_neighbors=10, weights=distanceWeight, metric='euclidean', p=2)
+clf2 = KNeighborsClassifier(n_neighbors=50, weights=distanceWeight, metric='euclidean', p=2)
+clf3 = KNeighborsClassifier(n_neighbors=100, weights=distanceWeight, metric='euclidean', p=2)
+clf4 = KNeighborsClassifier(n_neighbors=150, weights=distanceWeight, metric='euclidean', p=2)
+clf5 = KNeighborsClassifier(n_neighbors=200, weights=distanceWeight, metric='euclidean', p=2)
+clf6 = KNeighborsClassifier(n_neighbors=250, weights=distanceWeight, metric='euclidean', p=2)
+clf7 = KNeighborsClassifier(n_neighbors=300, weights=distanceWeight, metric='euclidean', p=2)
+clf8 = KNeighborsClassifier(n_neighbors=350, weights=distanceWeight, metric='euclidean', p=2)
+clf9 = KNeighborsClassifier(n_neighbors=400, weights=distanceWeight, metric='euclidean', p=2)
+clf10 = KNeighborsClassifier(n_neighbors=450, weights=distanceWeight, metric='euclidean', p=2)
+clf11 = KNeighborsClassifier(n_neighbors=500, weights=distanceWeight, metric='euclidean', p=2)
+clf12 = KNeighborsClassifier(n_neighbors=550, weights=distanceWeight, metric='euclidean', p=2)
+clf13 = KNeighborsClassifier(n_neighbors=600, weights=distanceWeight, metric='euclidean', p=2)
+clf14 = KNeighborsClassifier(n_neighbors=650, weights=distanceWeight, metric='euclidean', p=2)
+clf15 = KNeighborsClassifier(n_neighbors=700, weights=distanceWeight, metric='euclidean', p=2)
+clf1= 0.672761271556
+clf2= 0.681062202566
+clf3= 0.676323053635
+clf4= 0.673483521811
+clf5= 0.671663055415
+clf6= 0.670436219366
+clf7= 0.668971931178
+clf8= 0.668793842075
+clf9= 0.66696348184
+clf10= 0.66551898133
+clf11= 0.665202378479
+clf12= 0.664678005006
+clf13= 0.66397554243
+clf14= 0.663579788865
+clf15= 0.663154353784
+
+clf1 = KNeighborsClassifier(n_neighbors=10, weights=distanceWeight, metric='euclidean', p=3)
+clf2 = KNeighborsClassifier(n_neighbors=50, weights=distanceWeight, metric='euclidean', p=3)
+clf3 = KNeighborsClassifier(n_neighbors=100, weights=distanceWeight, metric='euclidean', p=3)
+clf4 = KNeighborsClassifier(n_neighbors=150, weights=distanceWeight, metric='euclidean', p=3)
+clf5 = KNeighborsClassifier(n_neighbors=200, weights=distanceWeight, metric='euclidean', p=3)
+clf6 = KNeighborsClassifier(n_neighbors=250, weights=distanceWeight, metric='euclidean', p=3)
+clf7 = KNeighborsClassifier(n_neighbors=300, weights=distanceWeight, metric='euclidean', p=3)
+clf8 = KNeighborsClassifier(n_neighbors=350, weights=distanceWeight, metric='euclidean', p=3)
+clf9 = KNeighborsClassifier(n_neighbors=400, weights=distanceWeight, metric='euclidean', p=3)
+clf10 = KNeighborsClassifier(n_neighbors=450, weights=distanceWeight, metric='euclidean', p=3)
+clf11 = KNeighborsClassifier(n_neighbors=500, weights=distanceWeight, metric='euclidean', p=3)
+clf12 = KNeighborsClassifier(n_neighbors=550, weights=distanceWeight, metric='euclidean', p=3)
+clf13 = KNeighborsClassifier(n_neighbors=600, weights=distanceWeight, metric='euclidean', p=3)
+clf14 = KNeighborsClassifier(n_neighbors=650, weights=distanceWeight, metric='euclidean', p=3)
+clf15 = KNeighborsClassifier(n_neighbors=700, weights=distanceWeight, metric='euclidean', p=3)
+clf1= 0.672761271556
+clf2= 0.681062202566
+clf3= 0.676323053635
+clf4= 0.673483521811
+clf5= 0.671663055415
+clf6= 0.670436219366
+clf7= 0.668971931178
+clf8= 0.668793842075
+clf9= 0.66696348184
+clf10= 0.66551898133
+clf11= 0.665202378479
+clf12= 0.664678005006
+clf13= 0.66397554243
+clf14= 0.663579788865
+clf15= 0.663154353784
+
+clf1 = KNeighborsClassifier(n_neighbors=10, weights=distanceWeight, metric='euclidean', p=4)
+clf2 = KNeighborsClassifier(n_neighbors=50, weights=distanceWeight, metric='euclidean', p=4)
+clf3 = KNeighborsClassifier(n_neighbors=100, weights=distanceWeight, metric='euclidean', p=4)
+clf4 = KNeighborsClassifier(n_neighbors=150, weights=distanceWeight, metric='euclidean', p=4)
+clf5 = KNeighborsClassifier(n_neighbors=200, weights=distanceWeight, metric='euclidean', p=4)
+clf6 = KNeighborsClassifier(n_neighbors=250, weights=distanceWeight, metric='euclidean', p=4)
+clf7 = KNeighborsClassifier(n_neighbors=300, weights=distanceWeight, metric='euclidean', p=4)
+clf8 = KNeighborsClassifier(n_neighbors=350, weights=distanceWeight, metric='euclidean', p=4)
+clf9 = KNeighborsClassifier(n_neighbors=400, weights=distanceWeight, metric='euclidean', p=4)
+clf10 = KNeighborsClassifier(n_neighbors=450, weights=distanceWeight, metric='euclidean', p=4)
+clf11 = KNeighborsClassifier(n_neighbors=500, weights=distanceWeight, metric='euclidean', p=4)
+clf12 = KNeighborsClassifier(n_neighbors=550, weights=distanceWeight, metric='euclidean', p=4)
+clf13 = KNeighborsClassifier(n_neighbors=600, weights=distanceWeight, metric='euclidean', p=4)
+clf14 = KNeighborsClassifier(n_neighbors=650, weights=distanceWeight, metric='euclidean', p=4)
+clf15 = KNeighborsClassifier(n_neighbors=700, weights=distanceWeight, metric='euclidean', p=4)
+clf1= 0.672761271556
+clf2= 0.681062202566
+clf3= 0.676323053635
+clf4= 0.673483521811
+clf5= 0.671663055415
+clf6= 0.670436219366
+clf7= 0.668971931178
+clf8= 0.668793842075
+clf9= 0.66696348184
+clf10= 0.66551898133
+clf11= 0.665202378479
+clf12= 0.664678005006
+clf13= 0.66397554243
+clf14= 0.663579788865
+clf15= 0.663154353784
+
+clf1 = KNeighborsClassifier(n_neighbors=10, weights=distanceWeight, metric='euclidean', p=5)
+clf2 = KNeighborsClassifier(n_neighbors=50, weights=distanceWeight, metric='euclidean', p=5)
+clf3 = KNeighborsClassifier(n_neighbors=100, weights=distanceWeight, metric='euclidean', p=5)
+clf4 = KNeighborsClassifier(n_neighbors=150, weights=distanceWeight, metric='euclidean', p=5)
+clf5 = KNeighborsClassifier(n_neighbors=200, weights=distanceWeight, metric='euclidean', p=5)
+clf6 = KNeighborsClassifier(n_neighbors=250, weights=distanceWeight, metric='euclidean', p=5)
+clf7 = KNeighborsClassifier(n_neighbors=300, weights=distanceWeight, metric='euclidean', p=5)
+clf8 = KNeighborsClassifier(n_neighbors=350, weights=distanceWeight, metric='euclidean', p=5)
+clf9 = KNeighborsClassifier(n_neighbors=400, weights=distanceWeight, metric='euclidean', p=5)
+clf10 = KNeighborsClassifier(n_neighbors=450, weights=distanceWeight, metric='euclidean', p=5)
+clf11 = KNeighborsClassifier(n_neighbors=500, weights=distanceWeight, metric='euclidean', p=5)
+clf12 = KNeighborsClassifier(n_neighbors=550, weights=distanceWeight, metric='euclidean', p=5)
+clf13 = KNeighborsClassifier(n_neighbors=600, weights=distanceWeight, metric='euclidean', p=5)
+clf14.fit(features_train_1, labels_train_1)
+clf1= 0.672761271556
+clf2= 0.681062202566
+clf3= 0.676323053635
+clf4= 0.673483521811
+clf5= 0.671663055415
+clf6= 0.670436219366
+clf7= 0.668971931178
+clf8= 0.668793842075
+clf9= 0.66696348184
+clf10= 0.66551898133
+clf11= 0.665202378479
+clf12= 0.664678005006
+clf13= 0.66397554243
+clf14= 0.663579788865
+clf15= 0.663154353784
+
