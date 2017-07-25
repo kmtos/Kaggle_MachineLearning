@@ -24,13 +24,16 @@ def GetBoostingTreesErrorsAndWeights(df, nEstimators, rateOfChange, df_weights, 
   treeError = []
   try:
     while currEst > 0: # Make a Tree for each of the desired estimators. Start at nEstimators and go down, so if run is stopped, then you can readjust the number to get the original # of Trees
-      dfCurr = df[ random.sample(df.columns.tolist(), math.ceil(len(df.columns) * (1-colRandomness) ) ) ].copy() #Selecting a random portion of columns like a randomForest
+      columnsList = [ ite for ite in df.columns.tolist() if ite != paramDict['className'] and ite != paramDict['idColumn'] ]
+      columnsList.extend((paramDict['className'], paramDict['idColumn']) )
+      dfCurr = df[ random.sample(columnsList, math.ceil(len(columnsList) * (1-colRandomness) ) ) ].copy() #Selecting a random portion of columns like a randomForest
       dfCurr = dfCurr.sample(math.ceil(len(dfCurr.index) * (1-rowRandomness) ) ) #Selecting random portion of rows for double randomness
       dfCurr_weights = df_weights[ df_weights[paramDict['idColumn']].isin(dfCurr[paramDict['idColumn']].tolist() )].copy()
       #dfCurr_NotIn = df[ ~dfCurr[idColumn].isin(dfCurr[idColumn].tolist()) ].copy()
-      paramDict['nodeDecisionsFileName'] = paramDict['nodeDecisionsFileName'][:-1] + str(currEst) # Add currEst to Tree names to differentiate solutions to each estimator
-      paramDict['nodeValuesFileName'] = paramDict['nodeValuesFileName'][:-1] + str(currEst)
-      paramDict['nodeDFIDsFileName'] = paramDict['nodeDFIDsFileName'][:-1] + str(currEst)
+      print (paramDict['nodeDecisionsFileName'].rstrip('1234567890') )
+      paramDict['nodeDecisionsFileName'] = paramDict['nodeDecisionsFileName'].rstrip('1234567890') + str(currEst) # Add currEst to Tree names to differentiate solutions to each estimator
+      paramDict['nodeValuesFileName'] = paramDict['nodeValuesFileName'].rstrip('1234567890') + str(currEst)
+      paramDict['nodeDFIDsFileName'] = paramDict['nodeDFIDsFileName'].rstrip('1234567890') + str(currEst)
       print ("#############################################\n#############################################\n  STARTING ESTIMATOR", currEst, "\n#############################################\n#############################################")
       MakeTree(df=dfCurr, df_weights=dfCurr_weights, **paramDict) # Make the Tree for currEst
       treeError.append( (currEst, GetTreeError(df=dfCurr, className=paramDict['className'], df_weights=dfCurr_weights, #Getting error for MakeTree currEst
@@ -161,9 +164,9 @@ def CalssifyWithBoost(df_test, nEstimators, maxDepth, idColumn, className, uniqu
   currEst = 1
   while currEst <= nEstimators: # Loop over the nEstimators number of trees in boost
     print ("currEst=", currEst)
-    nodeValuesFileName =  nodeValuesFileName[:-1] + str(currEst)
-    nodeDecisionsFileName =  nodeDecisionsFileName[:-1] + str(currEst)
-    nodeDFIDsFileName = nodeDFIDsFileName[:-1] + str(currEst)
+    nodeValuesFileName =  nodeValuesFileName.rstrip('1234567890') + str(currEst)
+    nodeDecisionsFileName =  nodeDecisionsFileName.rstrip('1234567890') + str(currEst)
+    nodeDFIDsFileName = nodeDFIDsFileName.rstrip('1234567890') + str(currEst)
     with open(nodeDecisionsFileName + ".csv") as nodeDecisionsFile:
       nodeDecisionsFileReader = csv.reader(nodeDecisionsFile)
       next(nodeDecisionsFileReader)
