@@ -27,6 +27,11 @@ def GetBoostingTreesErrorsAndWeights(df, nEstimators, rateOfChange, df_weights, 
       columnsList = [ ite for ite in df.columns.tolist() if ite != paramDict['className'] and ite != paramDict['idColumn'] ]
       columnsList.extend((paramDict['className'], paramDict['idColumn']) )
       dfCurr = df[ random.sample(columnsList, math.ceil(len(columnsList) * (1-colRandomness) ) ) ].copy() #Selecting a random portion of columns like a randomForest
+      #dfTemp = df[paramDict['className'], paramDict['idColumn']].copy()
+      #dfCurr = pd.concat([dfCurr, dfTemp ], axis=1)
+      #del dfTemp
+      dfCurr[paramDict['className'] ] = df[paramDict['className']]
+      dfCurr[paramDict['idColumn'] ] = df[paramDict['idColumn']]
       dfCurr = dfCurr.sample(math.ceil(len(dfCurr.index) * (1-rowRandomness) ) ) #Selecting random portion of rows for double randomness
       dfCurr_weights = df_weights[ df_weights[paramDict['idColumn']].isin(dfCurr[paramDict['idColumn']].tolist() )].copy()
       #dfCurr_NotIn = df[ ~dfCurr[idColumn].isin(dfCurr[idColumn].tolist()) ].copy()
