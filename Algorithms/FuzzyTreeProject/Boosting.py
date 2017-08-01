@@ -9,6 +9,7 @@ import pandas as pd
 import math
 import random
 from operator import itemgetter
+import os.path
 sys.path.insert(0, '/home/kyletos/Kaggle/Algorithms/FuzzyTreeProject/')
 from DecisionTrees import *
 
@@ -17,10 +18,13 @@ from DecisionTrees import *
 # desired and makes that many of the normally produced files in 
 # Make Trees. TreeErrors are also written based on tree correctness
 ####################################################################
-def GetBoostingTreesErrorsAndWeights(df, nEstimators, rateOfChange, df_weights, paramDict, colRandomness, rowRandomness, treeErrorFileName):
+def GetBoostingTreesErrorsAndWeights(df, nEstimators, rateOfChange, df_weights, paramDict, colRandomness, rowRandomness, treeErrorFileName, middleStart=False, middleStartNum=-1):
   if colRandomness > 1 or colRandomness < 0: print ("Give a colRandomness between 0-1 for the fraction of columns to be removed.") 
   if rowRandomness > 1 or rowRandomness < 0: print ("Give a rowRandomness between 0-1 for the fraction of row to be removed.") 
-  currEst = nEstimators 
+  if middleStart == False or middleStartNum == -1: currEst = nEstimators 
+  else: 
+    currEst = middleStartNum
+    df_weights = pd.read_csv("Answers/DF_WEIGHTS.csv")
   treeError = []
   try:
     while currEst > 0: # Make a Tree for each of the desired estimators. Start at nEstimators and go down, so if run is stopped, then you can readjust the number to get the original # of Trees
@@ -40,11 +44,13 @@ def GetBoostingTreesErrorsAndWeights(df, nEstimators, rateOfChange, df_weights, 
       paramDict['nodeValuesFileName'] = paramDict['nodeValuesFileName'].rstrip('1234567890') + str(currEst)
       paramDict['nodeDFIDsFileName'] = paramDict['nodeDFIDsFileName'].rstrip('1234567890') + str(currEst)
       print ("#############################################\n#############################################\n  STARTING ESTIMATOR", currEst, "\n#############################################\n#############################################")
-      MakeTree(df=dfCurr, df_weights=dfCurr_weights, **paramDict) # Make the Tree for currEst
+      TEMP = MakeTree(df=dfCurr, df_weights=dfCurr_weights, **paramDict) # Make the Tree for currEst
+      if TEMP == "ERROR": raise UnboundLocalError("\n\nRunning Ended Early")
       treeError.append( (currEst, GetTreeError(df=dfCurr, className=paramDict['className'], df_weights=dfCurr_weights, #Getting error for MakeTree currEst
                                                idColumn=paramDict['idColumn'], nodeDecisionsFileName=paramDict['nodeDecisionsFileName'] ) ) )
-      dfCurr_weights = AlterWeights(df=dfCurr, df_weights=dfCurr_weights, error=treeError[nEstimators-currEst][1], rateOfChange=rateOfChange, idColumn=paramDict['idColumn'],  className=paramDict['className'], nodeDecisionsFileName=paramDict['nodeDecisionsFileName'], nodeDFIDsFileName=paramDict['nodeDFIDsFileName'],  nodeValuesFileName=paramDict['nodeValuesFileName']) 
-
+      dfCurr_weights = AlterWeights(df=dfCurr, df_weights=dfCurr_weights, error=next(i[1] for i in treeError if i[0] == currEst), rateOfChange=rateOfChange, idColumn=paramDict['idColumn'],  
+                                    className=paramDict['className'], nodeDecisionsFileName=paramDict['nodeDecisionsFileName'], nodeDFIDsFileName=paramDict['nodeDFIDsFileName'],  
+                                    nodeValuesFileName=paramDict['nodeValuesFileName']) 
       print ("BEFORE: df_weights['Weights'].unique()=", df_weights['Weights'].unique() )
       IDs = dfCurr_weights[paramDict['idColumn']].tolist()  # Getting list of IDs of data points included from rowRandomness
       df_weights.loc[ df_weights[paramDict['idColumn']].isin( IDs ), 'Weights'] = dfCurr_weights['Weights'] # Changing the official weights of those points included fromt he rowRandomness
@@ -52,24 +58,30 @@ def GetBoostingTreesErrorsAndWeights(df, nEstimators, rateOfChange, df_weights, 
       for ite in df_weights['Weights'].unique():
         print ("\tlen('Weights' ==", ite, ")=", len(df_weights[ df_weights['Weights'] == ite].index) )
       df_weights['Weights'] = df_weights['Weights'] / df_weights['Weights'].sum(axis=0) # Normalizing weights to 1 after changing them
-      print ("\n\n###############################################################\nFINAL SCORE FOR TREE #", currEst, "is 1-error=", 1-treeError[nEstimators-currEst][1],"\n###############################################################")
+      print ("\n\n###############################################################\nFINAL SCORE FOR TREE #", currEst, "is 1-error=", 1-next(i[1] for i in treeError if i[0] == currEst),"\n###############################################################")
       currEst -= 1 
   
     # Writing the TreeErrors
     treeErrorFileName =  treeErrorFileName + ".csv"
-    treeErrorFile = open(treeErrorFileName, 'w')
+    if os.path.isfile(treeErrorFileName): treeErrorFile = open(treeErrorFileName, 'wa')
+    else: treeErrorFile = open(treeErrorFileName, 'w')
     treeErrorFileCSV=csv.writer(treeErrorFile)
     treeErrorFileCSV.writerow(["NumberOfEstimator,TreeErrorAssociatedWithCorrectness"])
     for tup in treeError:
       treeErrorFileCSV.writerow(tup)
 
-  except KeyboardInterrupt: #If user stops runnig, still save 
-      treeErrorFileName =  treeErrorFileName + "_LastCompletedEst_" + currEst + ".csv"
-      treeErrorFile = open(treeErrorFileName, 'w')
+  except (KeyboardInterrupt,UnboundLocalError): #If user stops runnig, still save 
+      treeErrorFileName =  treeErrorFileName + "_Incomplete.csv"
+      if os.path.isfile(treeErrorFileName): treeErrorFile = open(treeErrorFileName, 'wa')
+      else: treeErrorFile = open(treeErrorFileName, 'w')
       treeErrorFileCSV=csv.writer(treeErrorFile)
       treeErrorFileCSV.writerow(["NumberOfEstimator,TreeErrorAssociatedWithCorrectness"])
       for tup in treeError:
         treeErrorFileCSV.writerow(tup)
+      df_weights.to_csv("Answers/DF_WEIGHTS.csv", sep=',', index=False) 
+
+   
+      
 
 ########################################################
 # Takes Set of NodeDecisions and uses the nCorr to get

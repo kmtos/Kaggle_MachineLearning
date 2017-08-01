@@ -169,18 +169,19 @@ def MakeTree(df, className, nGiniSplits, giniEndVal, maxDepth, idColumn, minSamp
       nodeDecisionsFileCSV.writerow(tup)
 
   except KeyboardInterrupt: # If you manually end "MakeTree" before it finishes, it writes out the nodes it has completed. Haven't written a function to use this yet, but will do in the future
-    nodeValuesFileName = nodeValuesFileName + "_LastCompleteNode" + str(nodeCount-1) + ".csv"
-    nodeValuesFile = open(nodeValuesFileName, 'w')
-    nodeValuesFileCSV=csv.writer(nodeValuesFile)
-    nodeValuesFileCSV.writerow(["NodeNumber,GiniIncrease,ColumnName,ValueOfSplit,RangeBetweenSplits"])
-    for tup in nodeValues:
-      nodeValuesFileCSV.writerow(tup)
-    nodeDFIDsFileName = nodeDFIDsFileName + "_LastCompleteNode" + str(nodeCount-1) + ".csv"
-    nodeDFIdsFile = open(nodeDFIDsFileName, 'w')
-    nodeDFIdsFileCSV=csv.writer(nodeDFIdsFile)
-    nodeDFIdsFileCSV.writerow(["NodeNumber,ListOfID'sAtNode"])
-    for tup in nodeDFIds:
-      nodeDFIdsFileCSV.writerow(tup)
+#    nodeValuesFileName = nodeValuesFileName + "_LastCompleteNode" + str(nodeCount-1) + ".csv"
+#    nodeValuesFile = open(nodeValuesFileName, 'w')
+#    nodeValuesFileCSV=csv.writer(nodeValuesFile)
+#    nodeValuesFileCSV.writerow(["NodeNumber,GiniIncrease,ColumnName,ValueOfSplit,RangeBetweenSplits"])
+#    for tup in nodeValues:
+#      nodeValuesFileCSV.writerow(tup)
+#    nodeDFIDsFileName = nodeDFIDsFileName + "_LastCompleteNode" + str(nodeCount-1) + ".csv"
+#    nodeDFIdsFile = open(nodeDFIDsFileName, 'w')
+#    nodeDFIdsFileCSV=csv.writer(nodeDFIdsFile)
+#    nodeDFIdsFileCSV.writerow(["NodeNumber,ListOfID'sAtNode"])
+#    for tup in nodeDFIds:
+#      nodeDFIdsFileCSV.writerow(tup)
+    return "ERROR"
 
 ########################################################################
 # With a finished  tree, get the decisions at each final
