@@ -31,9 +31,6 @@ def GetBoostingTreesErrorsAndWeights(df, nEstimators, rateOfChange, df_weights, 
       columnsList = [ ite for ite in df.columns.tolist() if ite != paramDict['className'] and ite != paramDict['idColumn'] ]
       columnsList.extend((paramDict['className'], paramDict['idColumn']) )
       dfCurr = df[ random.sample(columnsList, math.ceil(len(columnsList) * (1-colRandomness) ) ) ].copy() #Selecting a random portion of columns like a randomForest
-      #dfTemp = df[paramDict['className'], paramDict['idColumn']].copy()
-      #dfCurr = pd.concat([dfCurr, dfTemp ], axis=1)
-      #del dfTemp
       dfCurr[paramDict['className'] ] = df[paramDict['className']]
       dfCurr[paramDict['idColumn'] ] = df[paramDict['idColumn']]
       dfCurr = dfCurr.sample(math.ceil(len(dfCurr.index) * (1-rowRandomness) ) ) #Selecting random portion of rows for double randomness
@@ -63,7 +60,7 @@ def GetBoostingTreesErrorsAndWeights(df, nEstimators, rateOfChange, df_weights, 
   
     # Writing the TreeErrors
     treeErrorFileName =  treeErrorFileName + ".csv"
-    if os.path.isfile(treeErrorFileName): treeErrorFile = open(treeErrorFileName, 'wa')
+    if os.path.isfile(treeErrorFileName): treeErrorFile = open(treeErrorFileName, 'a')
     else: treeErrorFile = open(treeErrorFileName, 'w')
     treeErrorFileCSV=csv.writer(treeErrorFile)
     treeErrorFileCSV.writerow(["NumberOfEstimator,TreeErrorAssociatedWithCorrectness"])
@@ -72,10 +69,13 @@ def GetBoostingTreesErrorsAndWeights(df, nEstimators, rateOfChange, df_weights, 
 
   except (KeyboardInterrupt,UnboundLocalError): #If user stops runnig, still save 
       treeErrorFileName =  treeErrorFileName + "_Incomplete.csv"
-      if os.path.isfile(treeErrorFileName): treeErrorFile = open(treeErrorFileName, 'wa')
-      else: treeErrorFile = open(treeErrorFileName, 'w')
-      treeErrorFileCSV=csv.writer(treeErrorFile)
-      treeErrorFileCSV.writerow(["NumberOfEstimator,TreeErrorAssociatedWithCorrectness"])
+      if os.path.isfile(treeErrorFileName): 
+        treeErrorFile = open(treeErrorFileName, 'a')
+        treeErrorFileCSV=csv.writer(treeErrorFile)
+      else: 
+        treeErrorFile = open(treeErrorFileName, 'w')
+        treeErrorFileCSV=csv.writer(treeErrorFile)
+        treeErrorFileCSV.writerow(["NumberOfEstimator,TreeErrorAssociatedWithCorrectness"])
       for tup in treeError:
         treeErrorFileCSV.writerow(tup)
       df_weights.to_csv("Answers/DF_WEIGHTS.csv", sep=',', index=False) 
