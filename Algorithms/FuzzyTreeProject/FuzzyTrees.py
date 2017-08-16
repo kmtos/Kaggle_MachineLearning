@@ -160,11 +160,12 @@ def ClassifyWithFuzzyTree(df_test, className, idColumn, maxDepth, duality, uniqu
   #Writing the answers out
   df_Answers[className] = -1
   df_Answers[className + "_probability"] = -1
-  print (df_Answers )
   for classVal in uniqueClasses:
+    print ("classVal=", classVal, "\ndf_test[className + '_' + str(classVal):\n", df_test[className + "_" + str(classVal)] )
+    df_Answers[className + "_" + str(classVal)] = df_test[className + "_" + str(classVal)]
     df_Answers.loc[ df_Answers[className + "_" + str(classVal)] > df_Answers[className], className] = classVal # if current classVal prob is greater, reassign answer to the classVal
     df_Answers.loc[ df_Answers[className] == classVal, className + "_probability"] = df_Answers[className + "_" + str(classVal)] # If current classVal prob got changed, reassign probab
-  df_Answers.to_csv(boostAnswersFileName + "_Prob_Frac_ExtraInfo.csv", sep=',', index=False) #Write out the answers with all answer information
-  df_Answers[[idColumn, className]].to_csv(boostAnswersFileName + ".csv", sep=',', index=False) #Write out the answers
+  df_Answers.to_csv(outputFileName + "_Prob_Frac_ExtraInfo.csv", sep=',', index=False) #Write out the answers with all answer information
+  df_Answers[[idColumn, className]].to_csv(outputFileName + ".csv", sep=',', index=False) #Write out the answers
 
 
