@@ -134,7 +134,7 @@ def AlterWeights(df, df_weights, error, idColumn, rateOfChange, className, nodeD
     nodeDFIDsFileReader = csv.reader(nodeDFIDsFile)
     next(nodeDFIDsFileReader)
     nodeDFIDs = [tuple(line) for line in nodeDFIDsFileReader]
-  alpha = math.log1p((1 - error) / error) * rateOfChange # exponent factor for adjustment of weights
+  alpha = .5 * math.log1p((1 - error) / error) * rateOfChange # exponent factor for adjustment of weights
   print ("error=", error, "\talpha*rateOfChange=", alpha, "\tCorrectFactor=", math.exp(-1*alpha), "\tIncorrectFactor=", math.exp(1*alpha)  )
   for decisionTup in nodeDecisions: 
     dfIDs = next(iteTup[1] for iteTup in nodeDFIDs if int(iteTup[0]) == int(decisionTup[0]) )
@@ -168,7 +168,7 @@ def AlterWeights(df, df_weights, error, idColumn, rateOfChange, className, nodeD
 # the probability of point based on correctness. Should work 
 # With >= 2 different classes, but haven't tested yet.
 #############################################################
-def CalssifyWithBoost(df_test, nEstimators, maxDepth, idColumn, className, uniqueClasses, treeErrorFileName, nodeValuesFileName, nodeDecisionsFileName, nodeDFIDsFileName, boostAnswersFileName):
+def CalssifyWithBoost(df_test, nEstimators, maxDepth, idColumn, className, uniqueClasses, treeErrorFileName, nodeValuesFileName, nodeDecisionsFileName, boostAnswersFileName):
   print ("\n\n########################################################################\n Classifying Boosted Tree\n######################################################################")
   df_Answers = df_test.filter([idColumn], axis=1)
   df_Answers[className + "_total"] = 0.0 # Total sum of the alphas over the nEstimator trees
@@ -183,7 +183,6 @@ def CalssifyWithBoost(df_test, nEstimators, maxDepth, idColumn, className, uniqu
     print ("currEst=", currEst)
     nodeValuesFileName =  nodeValuesFileName.rstrip('1234567890') + str(currEst)
     nodeDecisionsFileName =  nodeDecisionsFileName.rstrip('1234567890') + str(currEst)
-    nodeDFIDsFileName = nodeDFIDsFileName.rstrip('1234567890') + str(currEst)
     with open(nodeDecisionsFileName + ".csv") as nodeDecisionsFile:
       nodeDecisionsFileReader = csv.reader(nodeDecisionsFile)
       next(nodeDecisionsFileReader)
@@ -192,13 +191,9 @@ def CalssifyWithBoost(df_test, nEstimators, maxDepth, idColumn, className, uniqu
       nodeValuesFileReader = csv.reader(nodeValuesFile)
       next(nodeValuesFileReader)
       nodeValues = [tuple(line) for line in nodeValuesFileReader]
-    with open(nodeDFIDsFileName + ".csv") as nodeDFIDsFile:
-      nodeDFIDsFileReader = csv.reader(nodeDFIDsFile)
-      next(nodeDFIDsFileReader)
 
-    print 
     currErrorTup = next(iteTup for iteTup in treeError if int(iteTup[0]) == currEst)
-    alpha = math.log1p((1 - float(currErrorTup[1]) ) / float(currErrorTup[1]) ) # exponent factor for weight of decision 
+    alpha = .5 * math.log1p((1 - float(currErrorTup[1]) ) / float(currErrorTup[1]) ) # exponent factor for weight of decision 
     df_Answers[className + "_total"] += alpha
     dfIDList = [ (0, df_test[idColumn].tolist()) ] # List of node population of df_test based on the MakeTree nodeDecisions
     maxNodeCount = 0
@@ -272,12 +267,4 @@ def CalssifyWithBoost(df_test, nEstimators, maxDepth, idColumn, className, uniqu
     df_Answers.loc[ df_Answers[className] == classVal, className + "_probability"] = df_Answers[className + "_" + str(classVal)] # If current classVal prob got changed, reassign probab
   df_Answers.to_csv(boostAnswersFileName + "_Prob_Frac_ExtraInfo.csv", sep=',', index=False) #Write out the answers with all answer information
   df_Answers[[idColumn, className]].to_csv(boostAnswersFileName + ".csv", sep=',', index=False) #Write out the answers
-
-
-
-
-
-
-
-
 
