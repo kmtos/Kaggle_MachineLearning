@@ -39,15 +39,13 @@ def GetBoostingTreesErrorsAndWeights(df, nEstimators, rateOfChange, df_weights, 
       print (paramDict['nodeDecisionsFileName'].rstrip('1234567890') )
       paramDict['nodeDecisionsFileName'] = paramDict['nodeDecisionsFileName'].rstrip('1234567890') + str(currEst) # Add currEst to Tree names to differentiate solutions to each estimator
       paramDict['nodeValuesFileName'] = paramDict['nodeValuesFileName'].rstrip('1234567890') + str(currEst)
-      paramDict['nodeDFIDsFileName'] = paramDict['nodeDFIDsFileName'].rstrip('1234567890') + str(currEst)
       print ("#############################################\n#############################################\n  STARTING ESTIMATOR", currEst, "\n#############################################\n#############################################")
       TEMP = MakeTree(df=dfCurr, df_weights=dfCurr_weights, **paramDict) # Make the Tree for currEst
       if TEMP == "ERROR": raise UnboundLocalError("\n\nRunning Ended Early")
       treeError.append( (currEst, GetTreeError(df=dfCurr, className=paramDict['className'], df_weights=dfCurr_weights, #Getting error for MakeTree currEst
                                                idColumn=paramDict['idColumn'], nodeDecisionsFileName=paramDict['nodeDecisionsFileName'] ) ) )
       dfCurr_weights = AlterWeights(df=dfCurr, df_weights=dfCurr_weights, error=next(i[1] for i in treeError if i[0] == currEst), rateOfChange=rateOfChange, idColumn=paramDict['idColumn'],  
-                                    className=paramDict['className'], nodeDecisionsFileName=paramDict['nodeDecisionsFileName'], nodeDFIDsFileName=paramDict['nodeDFIDsFileName'],  
-                                    nodeValuesFileName=paramDict['nodeValuesFileName']) 
+                                    className=paramDict['className'], nodeDecisionsFileName=paramDict['nodeDecisionsFileName'], nodeValuesFileName=paramDict['nodeValuesFileName']) 
       print ("BEFORE: df_weights['Weights'].unique()=", df_weights['Weights'].unique() )
       IDs = dfCurr_weights[paramDict['idColumn']].tolist()  # Getting list of IDs of data points included from rowRandomness
       df_weights.loc[ df_weights[paramDict['idColumn']].isin( IDs ), 'Weights'] = dfCurr_weights['Weights'] # Changing the official weights of those points included fromt he rowRandomness
@@ -116,12 +114,11 @@ def GetTreeError(df, className, df_weights, idColumn, nodeDecisionsFileName):
   del nodeDecisionsFileReader
   return float(1 - (totalCorrWeight / sumWeights))
 
-
 ###########################################################
 # Given the df, and the nodeDecisions, node DF IDs and 
 # the nodeValues, alter the weights based upon correctness
 ###########################################################
-def AlterWeights(df, df_weights, error, idColumn, rateOfChange, className, nodeDecisionsFileName, nodeDFIDsFileName, nodeValuesFileName):
+def AlterWeights(df, df_weights, error, idColumn, rateOfChange, className, nodeDecisionsFileName, nodeValuesFileName):
   with open(nodeDecisionsFileName + ".csv") as nodeDecisionsFile:
     nodeDecisionsFileReader = csv.reader(nodeDecisionsFile)
     next(nodeDecisionsFileReader)
@@ -130,16 +127,10 @@ def AlterWeights(df, df_weights, error, idColumn, rateOfChange, className, nodeD
     nodeValuesFileReader = csv.reader(nodeValuesFile)
     next(nodeValuesFileReader)
     nodeValues = [tuple(line) for line in nodeValuesFileReader]
-  with open(nodeDFIDsFileName + ".csv") as nodeDFIDsFile:
-    nodeDFIDsFileReader = csv.reader(nodeDFIDsFile)
-    next(nodeDFIDsFileReader)
-    nodeDFIDs = [tuple(line) for line in nodeDFIDsFileReader]
   alpha = .5 * math.log1p((1 - error) / error) * rateOfChange # exponent factor for adjustment of weights
   print ("error=", error, "\talpha*rateOfChange=", alpha, "\tCorrectFactor=", math.exp(-1*alpha), "\tIncorrectFactor=", math.exp(1*alpha)  )
-  for decisionTup in nodeDecisions: 
-    dfIDs = next(iteTup[1] for iteTup in nodeDFIDs if int(iteTup[0]) == int(decisionTup[0]) )
-    dfIDs = dfIDs.replace("[", "").replace("]", "").replace(",", "").split()
-    dfIDs = [int(i) for i in dfIDs]
+  for decisionTup in nodeDecisions:
+    dfIDs = df[ df['MembershipNodeList'].apply(lambda x: True if int(decisionTup[0]) in x else False) ][idColumn].tolist() # Get the nodes that have a membership in current node number
     nodeValuesTup = next(iteTup for iteTup in nodeValues if int(iteTup[0]) == int(decisionTup[0]) )
     nodeValuesTup = (int(nodeValuesTup[0]), float(nodeValuesTup[1]), str(nodeValuesTup[2]), float(nodeValuesTup[3]), float(nodeValuesTup[4]) )
     if nodeValuesTup[2] == "ThisIsAnEndNode": # If the node is all the same class, all the weights get reduced from being all correct
@@ -155,8 +146,6 @@ def AlterWeights(df, df_weights, error, idColumn, rateOfChange, className, nodeD
       ltWrongIDs = df[ (df[idColumn].isin(dfIDs)) & (df[nodeValuesTup[2]] <= nodeValuesTup[3]) & (df[className] != int(decisionTup[1]) )][idColumn].tolist() # Get incorrectly ID'd ID's in LT group
       df_weights.loc[df_weights[idColumn].isin(ltCorrIDs ), 'Weights'] = df_weights[df_weights[idColumn].isin(ltCorrIDs )]['Weights'] * math.exp(-1*alpha) # Make weights of correct ones less
       df_weights.loc[df_weights[idColumn].isin(ltWrongIDs), 'Weights'] = df_weights[df_weights[idColumn].isin(ltWrongIDs)]['Weights'] * math.exp( 1*alpha) # Make weights of incorrect ones more
-  nodeDFIDsFile.close()
-  del nodeDFIDsFileReader
   nodeDecisionsFile.close()
   del nodeDecisionsFileReader
   nodeValuesFile.close()
